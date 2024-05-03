@@ -1,0 +1,123 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  3 2024 11:36:32[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=229b8h (141752) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=000329e0 vaddr=3fc98300 size=0476ch ( 18284) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=00037154 vaddr=40374000 size=08ec4h ( 36548) load[0m
+[0;32mI (141) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=80384h (525188) map[0m
+[0;32mI (235) esp_image: segment 4: paddr=000c03ac vaddr=4037cec4 size=0b42ch ( 46124) load[0m
+[0;32mI (254) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (254) boot: Disabling RNG early entropy source...[0m
+[0;32mI (266) cpu_start: Multicore app[0m
+[0;32mI (276) cpu_start: Pro cpu start user code[0m
+[0;32mI (276) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (276) app_init: Application information:[0m
+[0;32mI (279) app_init: Project name:     wifi[0m
+[0;32mI (283) app_init: App version:      630a7a4[0m
+[0;32mI (288) app_init: Compile time:     May  3 2024 11:36:26[0m
+[0;32mI (294) app_init: ELF file SHA256:  22ddd2d28...[0m
+[0;32mI (299) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (306) app_init: Min chip rev:     v0.0[0m
+[0;32mI (311) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (316) app_init: Chip rev:         v0.1[0m
+[0;32mI (320) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (328) heap_init: At 3FCA0510 len 00049200 (292 KiB): RAM[0m
+[0;32mI (334) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (340) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (346) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (353) spi_flash: detected chip: gd[0m
+[0;32mI (356) spi_flash: flash io: dio[0m
+[0;33mW (360) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (374) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (380) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (408) main_task: Calling app_main()[0m
+[0;32mI (408) [WI-FI] : Testing the wifi module[0m
+[0;32mI (448) [WI-FI] : Init started...[0m
+[0;32mI (448) pp: pp rom version: e7ae62f[0m
+[0;32mI (448) net80211: net80211 rom version: e7ae62f[0m
+I (458) wifi:wifi driver task: 3fcaa788, prio:23, stack:6656, core=0
+I (758) wifi:wifi firmware version: f2b9bda51
+I (758) wifi:wifi certification version: v7.0
+I (758) wifi:config NVS flash: enabled
+I (758) wifi:config nano formating: disabled
+I (758) wifi:Init data frame dynamic rx buffer num: 32
+I (768) wifi:Init static rx mgmt buffer num: 5
+I (768) wifi:Init management short buffer num: 32
+I (778) wifi:Init dynamic tx buffer num: 32
+I (778) wifi:Init static tx FG buffer num: 2
+I (778) wifi:Init static rx buffer size: 1600
+I (788) wifi:Init static rx buffer num: 10
+I (788) wifi:Init dynamic rx buffer num: 32
+[0;32mI (798) wifi_init: rx ba win: 6[0m
+[0;32mI (798) wifi_init: accept mbox: 6[0m
+[0;32mI (798) wifi_init: tcpip mbox: 32[0m
+[0;32mI (808) wifi_init: udp mbox: 6[0m
+[0;32mI (808) wifi_init: tcp mbox: 6[0m
+[0;32mI (818) wifi_init: tcp tx win: 5760[0m
+[0;32mI (818) wifi_init: tcp rx win: 5760[0m
+[0;32mI (818) wifi_init: tcp mss: 1440[0m
+[0;32mI (828) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (828) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (848) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (908) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (908) wifi:enable tsf
+[0;32mI (918) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (918) [WI-FI] : Connection success![0m
+I (918) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (928) wifi:state: init -> auth (b0)
+I (928) wifi:state: auth -> assoc (0)
+I (938) wifi:state: assoc -> run (10)
+I (1138) wifi:connected with S10 di Lorenzo, aid = 1, channel 11, BW20, bssid = 06:87:bf:ae:86:7a
+I (1138) wifi:security: WPA2-PSK, phy: bgn, rssi: -49
+I (1158) wifi:pm start, type: 1
+
+I (1158) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1158) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (1188) wifi:<ba-add>idx:0 (ifx:0, 06:87:bf:ae:86:7a), tid:0, ssn:0, winSize:64
+I (1218) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1218) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (2168) esp_netif_handlers: sta ip: 192.168.125.3, mask: 255.255.255.0, gw: 192.168.125.212[0m
+I (17298) wifi:state: run -> init (3c0)
+I (17298) wifi:pm stop, total sleep time: 14372592 us / 16133670 us
+
+I (17298) wifi:<ba-del>idx:0, tid:0
+I (17298) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;31mE (17308) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (17308) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (17318) [WI-FI] : Connection success![0m
+I (17318) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (17328) wifi:state: init -> auth (b0)
+I (18328) wifi:state: auth -> init (200)
+I (18328) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+I (18328) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;31mE (18338) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (18338) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (18348) [WI-FI] : Connection success![0m
+I (20758) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;31mE (20758) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (20758) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (20758) [WI-FI] : Connection success![0m
