@@ -1,0 +1,57 @@
+py source...[0mESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 11 2024 10:32:13[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=10e74h ( 69236) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00020e9c vaddr=3fc92200 size=03944h ( 14660) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=000247e8 vaddr=40374000 size=0b830h ( 47152) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=19370h (103280) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=00049398 vaddr=4037f830 size=02920h ( 10528) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (158) boot: Disabling RNG early entropy source...[0m
+[0;32mI (169) cpu_start: Multicore app[0m
+[0;32mI (179) cpu_start: Pro cpu start user code[0m
+[0;32mI (179) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (179) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     fft[0m
+[0;32mI (186) app_init: App version:      4809a60-dirty[0m
+[0;32mI (192) app_init: Compile time:     May 11 2024 17:13:09[0m
+[0;32mI (198) app_init: ELF file SHA256:  7befd2359...[0m
+[0;32mI (203) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (210) app_init: Min chip rev:     v0.0[0m
+[0;32mI (215) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (219) app_init: Chip rev:         v0.1[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FC97430 len 000522E0 (328 KiB): RAM[0m
+[0;32mI (237) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (243) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (257) spi_flash: detected chip: gd[0m
+[0;32mI (260) spi_flash: flash io: dio[0m
+[0;33mW (264) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (277) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (284) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (291) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (321) [FFT] : Hann window generated[0m
+1 3 4 5 6 8 8 9 10 10 11 11 11 11 11 10 10 9 9 8 7 6 5 4 4 3 2 1 1 0 -0 -0 -1 -1 -1 -0 -0 0 0 1 1 2 2 3 3 3 4 4 4 4 4 4 4 4 4 3 3 2 2 1 1 0 -0 -1 -1 -1 -2 -2 -2 -2 -2 -2 -2 -1 -1 -0 0 1 1 2 3 3 4 5 5 5 6 6 6 6 6 6 5 5 4 4 3 2 1 0 -1 -2 -3 -4 -5 -6 -6 -7 -7 -8 -8 -8 -8 -7 -7 -6 -6 -5 -4 -3 -2 -1 1 2 3 4 5 6 7 8 9 10 10 10 10 11 10 10 10 9 9 8 7 7 6 5 4 3 2 2 1 0 -0 -1 -1 -1 -2 -2 -2 -2 -2 -1 -1 -1 -1 -1 -0 -0 -0 -0 -0 -0 -0 -0 -1 -1 -1 -2 -3 -3 -4 -4 -5 -6 -6 -7 -7 -8 -8 -8 -8 -8 -8 -8 -8 -7 -7 -6 -5 -5 -4 -3 -2 -1 0 1 2 3 4 4 5 5 5 5 5 5 5 5 4 3 3 2 1 -0 -1 -2 -3 -4 -5 -5 -6 -7 -7 -7 -7 -7 -7 -7 -6 -6 -5 -4 -3 -2 -1 -0 1 2 3 4 5 6 7 8 8 9 9 10 10 10 10 9 9 9 8 8 7 6 6 5 4 4 3 3 2 2 2 2 1 1 1 1 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 2 2 1 1 -0 -1 -1 -2 -3 -4 -4 -5 -5 -6 -6 -7 -7 -7 -6 -6 -6 -5 -4 -4 -3 -2 -1 0 2 3 4 5 6 7 8 9 10 10 11 11 11 11 11 11 10 9 9 8 7 6 5 4 3 2 1 0 -1 -1 -2 -2 -3 -3 -3 -3 -3 -3 -2 -2 -1 -1 0 1 2 2 3 4 4 5 6 6 6 7 7 7 7 7 6 6 6 5 4 4 3 3 2 1 1 0 -0 -1 -1 -1 -1 -2 -2 -1 -1 -1 -1 -1 -0 -0 0 0 1 1 1 1 1 1 0 0 -0 -1 -1 -2 -3 -4 -5 -5 -6 -7 -8 -9 -10 -10 -11 -11 -12 -12 -12 -12 -12 -11 -11 -10 -9 -8 -7 -6 -5 -3 -2 -1 0 2 3 4 5 6 7 7 8 8 8 8 8 8 8 7 6 6 5 4 3 2 1 0 -1 -1 -2 -3 -3 -4 -4 -4 -4 -4 -4 -4 -3 -3 -3 -2 -1 -1 -0 0 1 1 2 2 2 3 3 3 3 3 2 2 2 1 1 0 -0 -0 -1 -1 -2 -2 -2 -3 -3 -3 -3 -3 -2 -2 -2 -1 -1 -0 0 1 1 2 3 3 3 4 4 4 4 4 4 4 3 3 2 1 1 -0 -1 -2 -3 -4 -5 -6 -6 -7 -8 -8 -8 -8 -8 -8 -8 -7 -7 -6 -5 -4 -3 -2 -0 1 2 3 5 6 7 8 9 10 11 11 12 12 12 12 12 11 11 10 10 9 8 7 6 5 5 4 3 2 1 1 0 -0 -0 -1 -1 -1 -1 -1 -1 -0 -0 0 0 1 1 1 1 1 2 2 1 1 1 1 0 -0 -1 -1 -2 -3 -3 -4 -4 -5 -6 -6 -6 -7 -7 -7 -7 -7 -6 -6 -6 -5 -4 -4 -3 -2 -2 -1 -0 1 1 2 2 3 3 3 3 3 3 2 2 1 1 -0 -1 -2 -3 -4 -5 -6 -7 -8 -9 -9 -10 -11 -11 -11 -11 -11 -11 -10 -10 -9 -8 -7 -6 -5 -4 -3 -2 -0 1 2 3 4 4 5 6 6 6 7 7 7 6 6 5 5 4 4 3 2 1 1 0 -1 -1 -2 -2 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -2 -2 -2 -2 -1 -1 -1 -1 -2 -2 -2 -2 -3 -3 -4 -4 -5 -6 -6 -7 -8 -8 -9 -9 -9 -10 -10 -10 -10 -9 -9 -8 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 6 7 7 7 7 7 7 7 6 5 5 4 3 2 1 0 -1 -2 -3 -3 -4 -5 -5 -5 -5 -5 -5 -5 -5 -4 -4 -3 -2 -1 -0 1 2 3 4 5 5 6 7 7 8 8 8 8 8 8 8 8 7 7 6 6 5 4 4 3 3 2 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 2 2 2 2 2 1 1 1 0 -0 -1 -2 -2 -3 -4 -5 -6 -7 -7 -8 -9 -9 -10 -10 -10 -11 -10 -10 -10 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 1 2 3 4 5 6 6 7 7 8 8 8 8 7 7 6 6 5 4 3 2 1 -0 -1 -2 -3 -4 -4 -5 -5 -6 -6 -6 -6 -6 -6 -5 -5 -5 -4 -3 -3 -2 -1 -1 -0 0 1 1 2 2 2 2 2 2 2 1 1 1 0 -0 -1 -1 -2 -2 -3 -3 -4 -4 -4 -4 -4 -4 -4 -4 -4 -3 -3 -3 -2 -2 -1 -1 -0 -0 0 0 1 1 1 0 0 -0 -1 -1 -2 -3 -4 -4 -5 -6 -7 -8 -9 -9 -10 -10 -11 -11 -11 -11 -11 -10 -10 -9 -8 -8 -6 -5 -4 -3 -1 0 [0;32mI (541) main_task: Returned from app_main()[0m

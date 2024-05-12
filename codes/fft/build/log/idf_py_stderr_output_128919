@@ -1,0 +1,13 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375976: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x40379a81: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4037a6d6: vApplicationStackOverflowHook at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4037b8cf: vTaskSwitchContext at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3667 (discriminator 7)
+0x4037a79c: _frxt_dispatch at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037a792: _frxt_int_exit at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m0x42006427: uart_ll_get_txfifo_len at /home/utente/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:171
+[0m
+[0m

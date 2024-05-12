@@ -1,0 +1,67 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375976: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x40379a81: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40380219: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x40376902: check_lock_nonzero at /home/utente/esp/esp-idf/components/newlib/locks.c:300 (discriminator 1)
+0x40376b19: __retarget_lock_acquire_recursive at /home/utente/esp/esp-idf/components/newlib/locks.c:312
+0x4200fe3a: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x4200f345: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201b119: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x4037ff8d: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x42008cc3: hann_multiplication at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:55 (discriminator 1)
+0x42008e12: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:13
+0x4201a97f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a2e5: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758b0: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375976: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x40379a81: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40380219: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x40376902: check_lock_nonzero at /home/utente/esp/esp-idf/components/newlib/locks.c:300 (discriminator 1)
+0x40376b19: __retarget_lock_acquire_recursive at /home/utente/esp/esp-idf/components/newlib/locks.c:312
+0x4200fe3a: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x4200f345: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201b119: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x4037ff8d: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x42008cc3: hann_multiplication at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:55 (discriminator 1)
+0x42008e12: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:13
+0x4201a97f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a2e5: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758b0: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375976: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x40379a81: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40380219: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x40376902: check_lock_nonzero at /home/utente/esp/esp-idf/components/newlib/locks.c:300 (discriminator 1)
+0x40376b19: __retarget_lock_acquire_recursive at /home/utente/esp/esp-idf/components/newlib/locks.c:312
+0x4200fe3a: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x4200f345: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201b119: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x4037ff8d: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x42008cc3: hann_multiplication at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:55 (discriminator 1)
+0x42008e12: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:13
+0x4201a97f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a2e5: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758b0: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375976: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x40379a81: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40380219: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x40376902: check_lock_nonzero at /home/utente/esp/esp-idf/components/newlib/locks.c:300 (discriminator 1)
+0x40376b19: __retarget_lock_acquire_recursive at /home/utente/esp/esp-idf/components/newlib/locks.c:312
+0x4200fe3a: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:846 (discriminator 2)
+0x4200f345: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201b119: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x4037ff8d: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x42008cc3: hann_multiplication at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:55 (discriminator 1)
+0x42008e12: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:13
+0x4201a97f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a2e5: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x403758b0: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m

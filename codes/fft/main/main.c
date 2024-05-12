@@ -9,7 +9,7 @@ void app_main(void){
     }
 
     window_gen();
-    input_populating();
+    //input_populating();
     hann_multiplication();
     fft();
 }
