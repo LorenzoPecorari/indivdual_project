@@ -1,0 +1,38 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42008f20: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:16
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x42008f1d: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:15
+0x4201b08f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x42008f20: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:16
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x42008f1d: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:15
+0x4201b08f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x42008f20: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:16
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x42008f1d: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:15
+0x4201b08f: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x42008f20: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:16
+[0m
+[0m
