@@ -1,0 +1,27 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4200aa17: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ae34: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377011: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4200650a: uart_ll_get_txfifo_len at /home/utente/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:171
+0x420073df: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008929: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x4200849a: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4200e74e: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200dfb9: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200e016: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4200e655: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42012687: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201204a: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200e7c5: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4201a63d: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x4037f751: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x42008d7d: get_values_from_adc at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/adc_utils.h:70 (discriminator 1)
+0x42008dcf: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc/main/main.c:16
+0x42019ea3: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

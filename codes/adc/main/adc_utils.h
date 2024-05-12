@@ -3,6 +3,7 @@
 
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
+
 #include <inttypes.h>
 
 #define APP_NAME_ADC "[ADC] "
@@ -11,6 +12,10 @@
 #define WIDTH ADC_WIDTH_BIT_DEFAULT
 
 static esp_adc_cal_characteristics_t adc1_chars;
+
+float* array;
+float duration;
+int n;
 
 // initialization of adc1 ch0
 void characterize_adc1_ch_0(){
@@ -26,7 +31,7 @@ void characterize_adc1_ch_0(){
 
 // gets values from the adc and puts
 // them into a buffer passed as argument of the function
-void get_values_from_adc(float* array, int n){
+void get_values_from_adc(){
     if(!array)
         ESP_LOGE(APP_NAME_ADC, "Invalid pointer!");
     else if(!n)
@@ -34,11 +39,13 @@ void get_values_from_adc(float* array, int n){
     else{
         for(int i = 0; i < n; i++){
             array[i] = esp_adc_cal_raw_to_voltage(adc1_get_raw(ADC1_CHANNEL_0), &adc1_chars);
-            ESP_LOGI(APP_NAME_ADC, "Sampled: %f mV at index %d", array[i], i);
+            //ESP_LOGI(APP_NAME_ADC, "Sampled: %f mV at index %d", array[i], i);
          
-            vTaskDelay(1000/portTICK_PERIOD_MS);
+            vTaskDelay(duration);
             // delay to define in order to achieve a different sampling frequency    
         }
+
+        ESP_LOGI(APP_NAME_ADC, "Sampling completed");
     }
 
 }

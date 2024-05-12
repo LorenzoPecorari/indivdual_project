@@ -1,0 +1,1254 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 10 2024 20:05:55[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0dd5ch ( 56668) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=0001dd84 vaddr=3fc91a00 size=02294h (  8852) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1a780h (108416) map[0m
+[0;32mI (138) esp_image: segment 3: paddr=0003a7a8 vaddr=3fc93c94 size=00720h (  1824) load[0m
+[0;32mI (138) esp_image: segment 4: paddr=0003aed0 vaddr=40374000 size=0d900h ( 55552) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     adc[0m
+[0;32mI (190) app_init: App version:      bca57de-dirty[0m
+[0;32mI (196) app_init: Compile time:     May 12 2024 09:54:28[0m
+[0;32mI (202) app_init: ELF file SHA256:  7b72cb414...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC94CE0 len 00054A30 (338 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+ciao
+duration: 10
+[0;32mI (314) main_task: Returned from app_main()[0m
+[0;32mI (324) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (324) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (334) [ADC] : Channel width and configuration done[0m
+[0;32mI (334) [ADC] : sampling at frequency : 0.635096[0m
+[0;32mI (344) [ADC] : Sampled: 830.000000 mV at index 0[0m
+[0;32mI (374) [ADC] : Sampled: 814.000000 mV at index 1[0m
+[0;32mI (394) [ADC] : Sampled: 803.000000 mV at index 2[0m
+[0;32mI (414) [ADC] : Sampled: 828.000000 mV at index 3[0m
+[0;32mI (434) [ADC] : Sampled: 822.000000 mV at index 4[0m
+[0;32mI (454) [ADC] : Sampled: 814.000000 mV at index 5[0m
+[0;32mI (474) [ADC] : Sampled: 803.000000 mV at index 6[0m
+[0;32mI (494) [ADC] : Sampled: 827.000000 mV at index 7[0m
+[0;32mI (514) [ADC] : Sampled: 818.000000 mV at index 8[0m
+[0;32mI (534) [ADC] : Sampled: 809.000000 mV at index 9[0m
+[0;32mI (554) [ADC] : Sampled: 803.000000 mV at index 10[0m
+[0;32mI (574) [ADC] : Sampled: 830.000000 mV at index 11[0m
+[0;32mI (594) [ADC] : Sampled: 819.000000 mV at index 12[0m
+[0;32mI (614) [ADC] : Sampled: 814.000000 mV at index 13[0m
+[0;32mI (634) [ADC] : Sampled: 802.000000 mV at index 14[0m
+[0;32mI (654) [ADC] : Sampled: 826.000000 mV at index 15[0m
+[0;32mI (674) [ADC] : Sampled: 816.000000 mV at index 16[0m
+[0;32mI (694) [ADC] : Sampled: 809.000000 mV at index 17[0m
+[0;32mI (714) [ADC] : Sampled: 803.000000 mV at index 18[0m
+[0;32mI (734) [ADC] : Sampled: 827.000000 mV at index 19[0m
+[0;32mI (754) [ADC] : Sampled: 815.000000 mV at index 20[0m
+[0;32mI (774) [ADC] : Sampled: 806.000000 mV at index 21[0m
+[0;32mI (794) [ADC] : Sampled: 832.000000 mV at index 22[0m
+[0;32mI (814) [ADC] : Sampled: 826.000000 mV at index 23[0m
+[0;32mI (834) [ADC] : Sampled: 815.000000 mV at index 24[0m
+[0;32mI (854) [ADC] : Sampled: 809.000000 mV at index 25[0m
+[0;32mI (874) [ADC] : Sampled: 830.000000 mV at index 26[0m
+[0;32mI (894) [ADC] : Sampled: 826.000000 mV at index 27[0m
+[0;32mI (914) [ADC] : Sampled: 815.000000 mV at index 28[0m
+[0;32mI (934) [ADC] : Sampled: 806.000000 mV at index 29[0m
+[0;32mI (954) [ADC] : Sampled: 830.000000 mV at index 30[0m
+[0;32mI (974) [ADC] : Sampled: 820.000000 mV at index 31[0m
+[0;32mI (994) [ADC] : Sampled: 814.000000 mV at index 32[0m
+[0;32mI (1014) [ADC] : Sampled: 803.000000 mV at index 33[0m
+[0;32mI (1034) [ADC] : Sampled: 828.000000 mV at index 34[0m
+[0;32mI (1054) [ADC] : Sampled: 820.000000 mV at index 35[0m
+[0;32mI (1074) [ADC] : Sampled: 814.000000 mV at index 36[0m
+[0;32mI (1094) [ADC] : Sampled: 806.000000 mV at index 37[0m
+[0;32mI (1114) [ADC] : Sampled: 830.000000 mV at index 38[0m
+[0;32mI (1134) [ADC] : Sampled: 822.000000 mV at index 39[0m
+[0;32mI (1154) [ADC] : Sampled: 815.000000 mV at index 40[0m
+[0;32mI (1174) [ADC] : Sampled: 803.000000 mV at index 41[0m
+[0;32mI (1194) [ADC] : Sampled: 827.000000 mV at index 42[0m
+[0;32mI (1214) [ADC] : Sampled: 822.000000 mV at index 43[0m
+[0;32mI (1234) [ADC] : Sampled: 809.000000 mV at index 44[0m
+[0;32mI (1254) [ADC] : Sampled: 803.000000 mV at index 45[0m
+[0;32mI (1274) [ADC] : Sampled: 830.000000 mV at index 46[0m
+[0;32mI (1294) [ADC] : Sampled: 822.000000 mV at index 47[0m
+[0;32mI (1314) [ADC] : Sampled: 814.000000 mV at index 48[0m
+[0;32mI (1334) [ADC] : Sampled: 806.000000 mV at index 49[0m
+[0;32mI (1354) [ADC] : Sampled: 827.000000 mV at index 50[0m
+[0;32mI (1374) [ADC] : Sampled: 818.000000 mV at index 51[0m
+[0;32mI (1394) [ADC] : Sampled: 814.000000 mV at index 52[0m
+[0;32mI (1414) [ADC] : Sampled: 803.000000 mV at index 53[0m
+[0;32mI (1434) [ADC] : Sampled: 827.000000 mV at index 54[0m
+[0;32mI (1454) [ADC] : Sampled: 818.000000 mV at index 55[0m
+[0;32mI (1474) [ADC] : Sampled: 809.000000 mV at index 56[0m
+[0;32mI (1494) [ADC] : Sampled: 803.000000 mV at index 57[0m
+[0;32mI (1514) [ADC] : Sampled: 826.000000 mV at index 58[0m
+[0;32mI (1534) [ADC] : Sampled: 816.000000 mV at index 59[0m
+[0;32mI (1554) [ADC] : Sampled: 809.000000 mV at index 60[0m
+[0;32mI (1574) [ADC] : Sampled: 830.000000 mV at index 61[0m
+[0;32mI (1594) [ADC] : Sampled: 822.000000 mV at index 62[0m
+[0;32mI (1614) [ADC] : Sampled: 815.000000 mV at index 63[0m
+[0;32mI (1634) [ADC] : Sampled: 805.000000 mV at index 64[0m
+[0;32mI (1654) [ADC] : Sampled: 830.000000 mV at index 65[0m
+[0;32mI (1674) [ADC] : Sampled: 820.000000 mV at index 66[0m
+[0;32mI (1694) [ADC] : Sampled: 814.000000 mV at index 67[0m
+[0;32mI (1714) [ADC] : Sampled: 803.000000 mV at index 68[0m
+[0;32mI (1734) [ADC] : Sampled: 827.000000 mV at index 69[0m
+[0;32mI (1754) [ADC] : Sampled: 816.000000 mV at index 70[0m
+[0;32mI (1774) [ADC] : Sampled: 808.000000 mV at index 71[0m
+[0;32mI (1794) [ADC] : Sampled: 801.000000 mV at index 72[0m
+[0;32mI (1814) [ADC] : Sampled: 827.000000 mV at index 73[0m
+[0;32mI (1834) [ADC] : Sampled: 816.000000 mV at index 74[0m
+[0;32mI (1854) [ADC] : Sampled: 811.000000 mV at index 75[0m
+[0;32mI (1874) [ADC] : Sampled: 801.000000 mV at index 76[0m
+[0;32mI (1894) [ADC] : Sampled: 827.000000 mV at index 77[0m
+[0;32mI (1914) [ADC] : Sampled: 818.000000 mV at index 78[0m
+[0;32mI (1934) [ADC] : Sampled: 813.000000 mV at index 79[0m
+[0;32mI (1954) [ADC] : Sampled: 803.000000 mV at index 80[0m
+[0;32mI (1974) [ADC] : Sampled: 829.000000 mV at index 81[0m
+[0;32mI (1994) [ADC] : Sampled: 818.000000 mV at index 82[0m
+[0;32mI (2014) [ADC] : Sampled: 811.000000 mV at index 83[0m
+[0;32mI (2034) [ADC] : Sampled: 803.000000 mV at index 84[0m
+[0;32mI (2054) [ADC] : Sampled: 830.000000 mV at index 85[0m
+[0;32mI (2074) [ADC] : Sampled: 822.000000 mV at index 86[0m
+[0;32mI (2094) [ADC] : Sampled: 815.000000 mV at index 87[0m
+[0;32mI (2114) [ADC] : Sampled: 805.000000 mV at index 88[0m
+[0;32mI (2134) [ADC] : Sampled: 830.000000 mV at index 89[0m
+[0;32mI (2154) [ADC] : Sampled: 822.000000 mV at index 90[0m
+[0;32mI (2174) [ADC] : Sampled: 814.000000 mV at index 91[0m
+[0;32mI (2194) [ADC] : Sampled: 803.000000 mV at index 92[0m
+[0;32mI (2214) [ADC] : Sampled: 828.000000 mV at index 93[0m
+[0;32mI (2234) [ADC] : Sampled: 818.000000 mV at index 94[0m
+[0;32mI (2254) [ADC] : Sampled: 809.000000 mV at index 95[0m
+[0;32mI (2274) [ADC] : Sampled: 803.000000 mV at index 96[0m
+[0;32mI (2294) [ADC] : Sampled: 827.000000 mV at index 97[0m
+[0;32mI (2314) [ADC] : Sampled: 820.000000 mV at index 98[0m
+[0;32mI (2334) [ADC] : Sampled: 814.000000 mV at index 99[0m
+[0;32mI (2354) [ADC] : Sampled: 803.000000 mV at index 100[0m
+[0;32mI (2374) [ADC] : Sampled: 826.000000 mV at index 101[0m
+[0;32mI (2394) [ADC] : Sampled: 815.000000 mV at index 102[0m
+[0;32mI (2414) [ADC] : Sampled: 805.000000 mV at index 103[0m
+[0;32mI (2434) [ADC] : Sampled: 830.000000 mV at index 104[0m
+[0;32mI (2454) [ADC] : Sampled: 822.000000 mV at index 105[0m
+[0;32mI (2474) [ADC] : Sampled: 814.000000 mV at index 106[0m
+[0;32mI (2494) [ADC] : Sampled: 809.000000 mV at index 107[0m
+[0;32mI (2514) [ADC] : Sampled: 830.000000 mV at index 108[0m
+[0;32mI (2534) [ADC] : Sampled: 820.000000 mV at index 109[0m
+[0;32mI (2554) [ADC] : Sampled: 813.000000 mV at index 110[0m
+[0;32mI (2574) [ADC] : Sampled: 803.000000 mV at index 111[0m
+[0;32mI (2594) [ADC] : Sampled: 827.000000 mV at index 112[0m
+[0;32mI (2614) [ADC] : Sampled: 815.000000 mV at index 113[0m
+[0;32mI (2634) [ADC] : Sampled: 809.000000 mV at index 114[0m
+[0;32mI (2654) [ADC] : Sampled: 830.000000 mV at index 115[0m
+[0;32mI (2674) [ADC] : Sampled: 820.000000 mV at index 116[0m
+[0;32mI (2694) [ADC] : Sampled: 815.000000 mV at index 117[0m
+[0;32mI (2714) [ADC] : Sampled: 806.000000 mV at index 118[0m
+[0;32mI (2734) [ADC] : Sampled: 830.000000 mV at index 119[0m
+[0;32mI (2754) [ADC] : Sampled: 820.000000 mV at index 120[0m
+[0;32mI (2774) [ADC] : Sampled: 814.000000 mV at index 121[0m
+[0;32mI (2794) [ADC] : Sampled: 803.000000 mV at index 122[0m
+[0;32mI (2814) [ADC] : Sampled: 828.000000 mV at index 123[0m
+[0;32mI (2834) [ADC] : Sampled: 820.000000 mV at index 124[0m
+[0;32mI (2854) [ADC] : Sampled: 814.000000 mV at index 125[0m
+[0;32mI (2874) [ADC] : Sampled: 803.000000 mV at index 126[0m
+[0;32mI (2894) [ADC] : Sampled: 826.000000 mV at index 127[0m
+[0;32mI (2914) [ADC] : Sampled: 816.000000 mV at index 128[0m
+[0;32mI (2934) [ADC] : Sampled: 809.000000 mV at index 129[0m
+[0;32mI (2954) [ADC] : Sampled: 801.000000 mV at index 130[0m
+[0;32mI (2974) [ADC] : Sampled: 827.000000 mV at index 131[0m
+[0;32mI (2994) [ADC] : Sampled: 815.000000 mV at index 132[0m
+[0;32mI (3014) [ADC] : Sampled: 805.000000 mV at index 133[0m
+[0;32mI (3034) [ADC] : Sampled: 828.000000 mV at index 134[0m
+[0;32mI (3054) [ADC] : Sampled: 820.000000 mV at index 135[0m
+[0;32mI (3074) [ADC] : Sampled: 815.000000 mV at index 136[0m
+[0;32mI (3094) [ADC] : Sampled: 803.000000 mV at index 137[0m
+[0;32mI (3114) [ADC] : Sampled: 827.000000 mV at index 138[0m
+[0;32mI (3134) [ADC] : Sampled: 818.000000 mV at index 139[0m
+[0;32mI (3154) [ADC] : Sampled: 809.000000 mV at index 140[0m
+[0;32mI (3174) [ADC] : Sampled: 802.000000 mV at index 141[0m
+[0;32mI (3194) [ADC] : Sampled: 826.000000 mV at index 142[0m
+[0;32mI (3214) [ADC] : Sampled: 815.000000 mV at index 143[0m
+[0;32mI (3234) [ADC] : Sampled: 806.000000 mV at index 144[0m
+[0;32mI (3254) [ADC] : Sampled: 830.000000 mV at index 145[0m
+[0;32mI (3274) [ADC] : Sampled: 822.000000 mV at index 146[0m
+[0;32mI (3294) [ADC] : Sampled: 814.000000 mV at index 147[0m
+[0;32mI (3314) [ADC] : Sampled: 809.000000 mV at index 148[0m
+[0;32mI (3334) [ADC] : Sampled: 833.000000 mV at index 149[0m
+[0;32mI (3354) [ADC] : Sampled: 826.000000 mV at index 150[0m
+[0;32mI (3374) [ADC] : Sampled: 816.000000 mV at index 151[0m
+[0;32mI (3394) [ADC] : Sampled: 809.000000 mV at index 152[0m
+[0;32mI (3414) [ADC] : Sampled: 830.000000 mV at index 153[0m
+[0;32mI (3434) [ADC] : Sampled: 822.000000 mV at index 154[0m
+[0;32mI (3454) [ADC] : Sampled: 814.000000 mV at index 155[0m
+[0;32mI (3474) [ADC] : Sampled: 803.000000 mV at index 156[0m
+[0;32mI (3494) [ADC] : Sampled: 830.000000 mV at index 157[0m
+[0;32mI (3514) [ADC] : Sampled: 816.000000 mV at index 158[0m
+[0;32mI (3534) [ADC] : Sampled: 813.000000 mV at index 159[0m
+[0;32mI (3554) [ADC] : Sampled: 801.000000 mV at index 160[0m
+[0;32mI (3574) [ADC] : Sampled: 826.000000 mV at index 161[0m
+[0;32mI (3594) [ADC] : Sampled: 815.000000 mV at index 162[0m
+[0;32mI (3614) [ADC] : Sampled: 806.000000 mV at index 163[0m
+[0;32mI (3634) [ADC] : Sampled: 830.000000 mV at index 164[0m
+[0;32mI (3654) [ADC] : Sampled: 822.000000 mV at index 165[0m
+[0;32mI (3674) [ADC] : Sampled: 814.000000 mV at index 166[0m
+[0;32mI (3694) [ADC] : Sampled: 803.000000 mV at index 167[0m
+[0;32mI (3714) [ADC] : Sampled: 827.000000 mV at index 168[0m
+[0;32mI (3734) [ADC] : Sampled: 816.000000 mV at index 169[0m
+[0;32mI (3754) [ADC] : Sampled: 809.000000 mV at index 170[0m
+[0;32mI (3774) [ADC] : Sampled: 803.000000 mV at index 171[0m
+[0;32mI (3794) [ADC] : Sampled: 827.000000 mV at index 172[0m
+[0;32mI (3814) [ADC] : Sampled: 818.000000 mV at index 173[0m
+[0;32mI (3834) [ADC] : Sampled: 809.000000 mV at index 174[0m
+[0;32mI (3854) [ADC] : Sampled: 802.000000 mV at index 175[0m
+[0;32mI (3874) [ADC] : Sampled: 822.000000 mV at index 176[0m
+[0;32mI (3894) [ADC] : Sampled: 816.000000 mV at index 177[0m
+[0;32mI (3914) [ADC] : Sampled: 811.000000 mV at index 178[0m
+[0;32mI (3934) [ADC] : Sampled: 801.000000 mV at index 179[0m
+[0;32mI (3954) [ADC] : Sampled: 826.000000 mV at index 180[0m
+[0;32mI (3974) [ADC] : Sampled: 815.000000 mV at index 181[0m
+[0;32mI (3994) [ADC] : Sampled: 808.000000 mV at index 182[0m
+[0;32mI (4014) [ADC] : Sampled: 830.000000 mV at index 183[0m
+[0;32mI (4034) [ADC] : Sampled: 822.000000 mV at index 184[0m
+[0;32mI (4054) [ADC] : Sampled: 815.000000 mV at index 185[0m
+[0;32mI (4074) [ADC] : Sampled: 803.000000 mV at index 186[0m
+[0;32mI (4094) [ADC] : Sampled: 828.000000 mV at index 187[0m
+[0;32mI (4114) [ADC] : Sampled: 816.000000 mV at index 188[0m
+[0;32mI (4134) [ADC] : Sampled: 809.000000 mV at index 189[0m
+[0;32mI (4154) [ADC] : Sampled: 833.000000 mV at index 190[0m
+[0;32mI (4174) [ADC] : Sampled: 822.000000 mV at index 191[0m
+[0;32mI (4194) [ADC] : Sampled: 814.000000 mV at index 192[0m
+[0;32mI (4214) [ADC] : Sampled: 803.000000 mV at index 193[0m
+[0;32mI (4234) [ADC] : Sampled: 827.000000 mV at index 194[0m
+[0;32mI (4254) [ADC] : Sampled: 818.000000 mV at index 195[0m
+[0;32mI (4274) [ADC] : Sampled: 809.000000 mV at index 196[0m
+[0;32mI (4294) [ADC] : Sampled: 830.000000 mV at index 197[0m
+[0;32mI (4314) [ADC] : Sampled: 822.000000 mV at index 198[0m
+[0;32mI (4334) [ADC] : Sampled: 814.000000 mV at index 199[0m
+[0;32mI (4354) [ADC] : Sampled: 802.000000 mV at index 200[0m
+[0;32mI (4374) [ADC] : Sampled: 827.000000 mV at index 201[0m
+[0;32mI (4394) [ADC] : Sampled: 816.000000 mV at index 202[0m
+[0;32mI (4414) [ADC] : Sampled: 806.000000 mV at index 203[0m
+[0;32mI (4434) [ADC] : Sampled: 830.000000 mV at index 204[0m
+[0;32mI (4454) [ADC] : Sampled: 822.000000 mV at index 205[0m
+[0;32mI (4474) [ADC] : Sampled: 815.000000 mV at index 206[0m
+[0;32mI (4494) [ADC] : Sampled: 806.000000 mV at index 207[0m
+[0;32mI (4514) [ADC] : Sampled: 829.000000 mV at index 208[0m
+[0;32mI (4534) [ADC] : Sampled: 822.000000 mV at index 209[0m
+[0;32mI (4554) [ADC] : Sampled: 814.000000 mV at index 210[0m
+[0;32mI (4574) [ADC] : Sampled: 803.000000 mV at index 211[0m
+[0;32mI (4594) [ADC] : Sampled: 826.000000 mV at index 212[0m
+[0;32mI (4614) [ADC] : Sampled: 816.000000 mV at index 213[0m
+[0;32mI (4634) [ADC] : Sampled: 809.000000 mV at index 214[0m
+[0;32mI (4654) [ADC] : Sampled: 832.000000 mV at index 215[0m
+[0;32mI (4674) [ADC] : Sampled: 826.000000 mV at index 216[0m
+[0;32mI (4694) [ADC] : Sampled: 815.000000 mV at index 217[0m
+[0;32mI (4714) [ADC] : Sampled: 806.000000 mV at index 218[0m
+[0;32mI (4734) [ADC] : Sampled: 830.000000 mV at index 219[0m
+[0;32mI (4754) [ADC] : Sampled: 822.000000 mV at index 220[0m
+[0;32mI (4774) [ADC] : Sampled: 811.000000 mV at index 221[0m
+[0;32mI (4794) [ADC] : Sampled: 803.000000 mV at index 222[0m
+[0;32mI (4814) [ADC] : Sampled: 826.000000 mV at index 223[0m
+[0;32mI (4834) [ADC] : Sampled: 816.000000 mV at index 224[0m
+[0;32mI (4854) [ADC] : Sampled: 808.000000 mV at index 225[0m
+[0;32mI (4874) [ADC] : Sampled: 830.000000 mV at index 226[0m
+[0;32mI (4894) [ADC] : Sampled: 822.000000 mV at index 227[0m
+[0;32mI (4914) [ADC] : Sampled: 814.000000 mV at index 228[0m
+[0;32mI (4934) [ADC] : Sampled: 806.000000 mV at index 229[0m
+[0;32mI (4954) [ADC] : Sampled: 832.000000 mV at index 230[0m
+[0;32mI (4974) [ADC] : Sampled: 822.000000 mV at index 231[0m
+[0;32mI (4994) [ADC] : Sampled: 814.000000 mV at index 232[0m
+[0;32mI (5014) [ADC] : Sampled: 803.000000 mV at index 233[0m
+[0;32mI (5034) [ADC] : Sampled: 829.000000 mV at index 234[0m
+[0;32mI (5054) [ADC] : Sampled: 818.000000 mV at index 235[0m
+[0;32mI (5074) [ADC] : Sampled: 809.000000 mV at index 236[0m
+[0;32mI (5094) [ADC] : Sampled: 832.000000 mV at index 237[0m
+[0;32mI (5114) [ADC] : Sampled: 822.000000 mV at index 238[0m
+[0;32mI (5134) [ADC] : Sampled: 815.000000 mV at index 239[0m
+[0;32mI (5154) [ADC] : Sampled: 806.000000 mV at index 240[0m
+[0;32mI (5174) [ADC] : Sampled: 830.000000 mV at index 241[0m
+[0;32mI (5194) [ADC] : Sampled: 820.000000 mV at index 242[0m
+[0;32mI (5214) [ADC] : Sampled: 814.000000 mV at index 243[0m
+[0;32mI (5234) [ADC] : Sampled: 802.000000 mV at index 244[0m
+[0;32mI (5254) [ADC] : Sampled: 827.000000 mV at index 245[0m
+[0;32mI (5274) [ADC] : Sampled: 816.000000 mV at index 246[0m
+[0;32mI (5294) [ADC] : Sampled: 814.000000 mV at index 247[0m
+[0;32mI (5314) [ADC] : Sampled: 803.000000 mV at index 248[0m
+[0;32mI (5334) [ADC] : Sampled: 822.000000 mV at index 249[0m
+[0;32mI (5354) [ADC] : Sampled: 814.000000 mV at index 250[0m
+[0;32mI (5374) [ADC] : Sampled: 806.000000 mV at index 251[0m
+[0;32mI (5394) [ADC] : Sampled: 828.000000 mV at index 252[0m
+[0;32mI (5414) [ADC] : Sampled: 818.000000 mV at index 253[0m
+[0;32mI (5434) [ADC] : Sampled: 809.000000 mV at index 254[0m
+[0;32mI (5454) [ADC] : Sampled: 803.000000 mV at index 255[0m
+[0;32mI (5474) [ADC] : Sampled: 822.000000 mV at index 256[0m
+[0;32mI (5494) [ADC] : Sampled: 815.000000 mV at index 257[0m
+[0;32mI (5514) [ADC] : Sampled: 806.000000 mV at index 258[0m
+[0;32mI (5534) [ADC] : Sampled: 830.000000 mV at index 259[0m
+[0;32mI (5554) [ADC] : Sampled: 818.000000 mV at index 260[0m
+[0;32mI (5574) [ADC] : Sampled: 814.000000 mV at index 261[0m
+[0;32mI (5594) [ADC] : Sampled: 830.000000 mV at index 262[0m
+[0;32mI (5614) [ADC] : Sampled: 826.000000 mV at index 263[0m
+[0;32mI (5634) [ADC] : Sampled: 816.000000 mV at index 264[0m
+[0;32mI (5654) [ADC] : Sampled: 806.000000 mV at index 265[0m
+[0;32mI (5674) [ADC] : Sampled: 833.000000 mV at index 266[0m
+[0;32mI (5694) [ADC] : Sampled: 827.000000 mV at index 267[0m
+[0;32mI (5714) [ADC] : Sampled: 815.000000 mV at index 268[0m
+[0;32mI (5734) [ADC] : Sampled: 809.000000 mV at index 269[0m
+[0;32mI (5754) [ADC] : Sampled: 832.000000 mV at index 270[0m
+[0;32mI (5774) [ADC] : Sampled: 822.000000 mV at index 271[0m
+[0;32mI (5794) [ADC] : Sampled: 815.000000 mV at index 272[0m
+[0;32mI (5814) [ADC] : Sampled: 803.000000 mV at index 273[0m
+[0;32mI (5834) [ADC] : Sampled: 829.000000 mV at index 274[0m
+[0;32mI (5854) [ADC] : Sampled: 819.000000 mV at index 275[0m
+[0;32mI (5874) [ADC] : Sampled: 814.000000 mV at index 276[0m
+[0;32mI (5894) [ADC] : Sampled: 803.000000 mV at index 277[0m
+[0;32mI (5914) [ADC] : Sampled: 829.000000 mV at index 278[0m
+[0;32mI (5934) [ADC] : Sampled: 816.000000 mV at index 279[0m
+[0;32mI (5954) [ADC] : Sampled: 809.000000 mV at index 280[0m
+[0;32mI (5974) [ADC] : Sampled: 830.000000 mV at index 281[0m
+[0;32mI (5994) [ADC] : Sampled: 822.000000 mV at index 282[0m
+[0;32mI (6014) [ADC] : Sampled: 814.000000 mV at index 283[0m
+[0;32mI (6034) [ADC] : Sampled: 803.000000 mV at index 284[0m
+[0;32mI (6054) [ADC] : Sampled: 828.000000 mV at index 285[0m
+[0;32mI (6074) [ADC] : Sampled: 818.000000 mV at index 286[0m
+[0;32mI (6094) [ADC] : Sampled: 813.000000 mV at index 287[0m
+[0;32mI (6114) [ADC] : Sampled: 802.000000 mV at index 288[0m
+[0;32mI (6134) [ADC] : Sampled: 826.000000 mV at index 289[0m
+[0;32mI (6154) [ADC] : Sampled: 815.000000 mV at index 290[0m
+[0;32mI (6174) [ADC] : Sampled: 809.000000 mV at index 291[0m
+[0;32mI (6194) [ADC] : Sampled: 830.000000 mV at index 292[0m
+[0;32mI (6214) [ADC] : Sampled: 820.000000 mV at index 293[0m
+[0;32mI (6234) [ADC] : Sampled: 814.000000 mV at index 294[0m
+[0;32mI (6254) [ADC] : Sampled: 803.000000 mV at index 295[0m
+[0;32mI (6274) [ADC] : Sampled: 822.000000 mV at index 296[0m
+[0;32mI (6294) [ADC] : Sampled: 816.000000 mV at index 297[0m
+[0;32mI (6314) [ADC] : Sampled: 809.000000 mV at index 298[0m
+[0;32mI (6334) [ADC] : Sampled: 832.000000 mV at index 299[0m
+[0;32mI (6354) [ADC] : Sampled: 822.000000 mV at index 300[0m
+[0;32mI (6374) [ADC] : Sampled: 814.000000 mV at index 301[0m
+[0;32mI (6394) [ADC] : Sampled: 803.000000 mV at index 302[0m
+[0;32mI (6414) [ADC] : Sampled: 827.000000 mV at index 303[0m
+[0;32mI (6434) [ADC] : Sampled: 816.000000 mV at index 304[0m
+[0;32mI (6454) [ADC] : Sampled: 808.000000 mV at index 305[0m
+[0;32mI (6474) [ADC] : Sampled: 832.000000 mV at index 306[0m
+[0;32mI (6494) [ADC] : Sampled: 826.000000 mV at index 307[0m
+[0;32mI (6514) [ADC] : Sampled: 814.000000 mV at index 308[0m
+[0;32mI (6534) [ADC] : Sampled: 805.000000 mV at index 309[0m
+[0;32mI (6554) [ADC] : Sampled: 830.000000 mV at index 310[0m
+[0;32mI (6574) [ADC] : Sampled: 819.000000 mV at index 311[0m
+[0;32mI (6594) [ADC] : Sampled: 809.000000 mV at index 312[0m
+[0;32mI (6614) [ADC] : Sampled: 803.000000 mV at index 313[0m
+[0;32mI (6634) [ADC] : Sampled: 826.000000 mV at index 314[0m
+[0;32mI (6654) [ADC] : Sampled: 816.000000 mV at index 315[0m
+[0;32mI (6674) [ADC] : Sampled: 809.000000 mV at index 316[0m
+[0;32mI (6694) [ADC] : Sampled: 803.000000 mV at index 317[0m
+[0;32mI (6714) [ADC] : Sampled: 826.000000 mV at index 318[0m
+[0;32mI (6734) [ADC] : Sampled: 816.000000 mV at index 319[0m
+[0;32mI (6754) [ADC] : Sampled: 809.000000 mV at index 320[0m
+[0;32mI (6774) [ADC] : Sampled: 801.000000 mV at index 321[0m
+[0;32mI (6794) [ADC] : Sampled: 826.000000 mV at index 322[0m
+[0;32mI (6814) [ADC] : Sampled: 816.000000 mV at index 323[0m
+[0;32mI (6834) [ADC] : Sampled: 806.000000 mV at index 324[0m
+[0;32mI (6854) [ADC] : Sampled: 803.000000 mV at index 325[0m
+[0;32mI (6874) [ADC] : Sampled: 826.000000 mV at index 326[0m
+[0;32mI (6894) [ADC] : Sampled: 815.000000 mV at index 327[0m
+[0;32mI (6914) [ADC] : Sampled: 803.000000 mV at index 328[0m
+[0;32mI (6934) [ADC] : Sampled: 827.000000 mV at index 329[0m
+[0;32mI (6954) [ADC] : Sampled: 816.000000 mV at index 330[0m
+[0;32mI (6974) [ADC] : Sampled: 809.000000 mV at index 331[0m
+[0;32mI (6994) [ADC] : Sampled: 832.000000 mV at index 332[0m
+[0;32mI (7014) [ADC] : Sampled: 820.000000 mV at index 333[0m
+[0;32mI (7034) [ADC] : Sampled: 813.000000 mV at index 334[0m
+[0;32mI (7054) [ADC] : Sampled: 801.000000 mV at index 335[0m
+[0;32mI (7074) [ADC] : Sampled: 826.000000 mV at index 336[0m
+[0;32mI (7094) [ADC] : Sampled: 815.000000 mV at index 337[0m
+[0;32mI (7114) [ADC] : Sampled: 809.000000 mV at index 338[0m
+[0;32mI (7134) [ADC] : Sampled: 801.000000 mV at index 339[0m
+[0;32mI (7154) [ADC] : Sampled: 822.000000 mV at index 340[0m
+[0;32mI (7174) [ADC] : Sampled: 816.000000 mV at index 341[0m
+[0;32mI (7194) [ADC] : Sampled: 806.000000 mV at index 342[0m
+[0;32mI (7214) [ADC] : Sampled: 830.000000 mV at index 343[0m
+[0;32mI (7234) [ADC] : Sampled: 822.000000 mV at index 344[0m
+[0;32mI (7254) [ADC] : Sampled: 816.000000 mV at index 345[0m
+[0;32mI (7274) [ADC] : Sampled: 805.000000 mV at index 346[0m
+[0;32mI (7294) [ADC] : Sampled: 829.000000 mV at index 347[0m
+[0;32mI (7314) [ADC] : Sampled: 818.000000 mV at index 348[0m
+[0;32mI (7334) [ADC] : Sampled: 809.000000 mV at index 349[0m
+[0;32mI (7354) [ADC] : Sampled: 800.000000 mV at index 350[0m
+[0;32mI (7374) [ADC] : Sampled: 828.000000 mV at index 351[0m
+[0;32mI (7394) [ADC] : Sampled: 818.000000 mV at index 352[0m
+[0;32mI (7414) [ADC] : Sampled: 814.000000 mV at index 353[0m
+[0;32mI (7434) [ADC] : Sampled: 801.000000 mV at index 354[0m
+[0;32mI (7454) [ADC] : Sampled: 826.000000 mV at index 355[0m
+[0;32mI (7474) [ADC] : Sampled: 816.000000 mV at index 356[0m
+[0;32mI (7494) [ADC] : Sampled: 803.000000 mV at index 357[0m
+[0;32mI (7514) [ADC] : Sampled: 830.000000 mV at index 358[0m
+[0;32mI (7534) [ADC] : Sampled: 823.000000 mV at index 359[0m
+[0;32mI (7554) [ADC] : Sampled: 814.000000 mV at index 360[0m
+[0;32mI (7574) [ADC] : Sampled: 803.000000 mV at index 361[0m
+[0;32mI (7594) [ADC] : Sampled: 829.000000 mV at index 362[0m
+[0;32mI (7614) [ADC] : Sampled: 822.000000 mV at index 363[0m
+[0;32mI (7634) [ADC] : Sampled: 815.000000 mV at index 364[0m
+[0;32mI (7654) [ADC] : Sampled: 808.000000 mV at index 365[0m
+[0;32mI (7674) [ADC] : Sampled: 830.000000 mV at index 366[0m
+[0;32mI (7694) [ADC] : Sampled: 826.000000 mV at index 367[0m
+[0;32mI (7714) [ADC] : Sampled: 816.000000 mV at index 368[0m
+[0;32mI (7734) [ADC] : Sampled: 809.000000 mV at index 369[0m
+[0;32mI (7754) [ADC] : Sampled: 830.000000 mV at index 370[0m
+[0;32mI (7774) [ADC] : Sampled: 822.000000 mV at index 371[0m
+[0;32mI (7794) [ADC] : Sampled: 815.000000 mV at index 372[0m
+[0;32mI (7814) [ADC] : Sampled: 808.000000 mV at index 373[0m
+[0;32mI (7834) [ADC] : Sampled: 830.000000 mV at index 374[0m
+[0;32mI (7854) [ADC] : Sampled: 822.000000 mV at index 375[0m
+[0;32mI (7874) [ADC] : Sampled: 814.000000 mV at index 376[0m
+[0;32mI (7894) [ADC] : Sampled: 803.000000 mV at index 377[0m
+[0;32mI (7914) [ADC] : Sampled: 828.000000 mV at index 378[0m
+[0;32mI (7934) [ADC] : Sampled: 818.000000 mV at index 379[0m
+[0;32mI (7954) [ADC] : Sampled: 814.000000 mV at index 380[0m
+[0;32mI (7974) [ADC] : Sampled: 805.000000 mV at index 381[0m
+[0;32mI (7994) [ADC] : Sampled: 827.000000 mV at index 382[0m
+[0;32mI (8014) [ADC] : Sampled: 816.000000 mV at index 383[0m
+[0;32mI (8034) [ADC] : Sampled: 809.000000 mV at index 384[0m
+[0;32mI (8054) [ADC] : Sampled: 802.000000 mV at index 385[0m
+[0;32mI (8074) [ADC] : Sampled: 820.000000 mV at index 386[0m
+[0;32mI (8094) [ADC] : Sampled: 814.000000 mV at index 387[0m
+[0;32mI (8114) [ADC] : Sampled: 803.000000 mV at index 388[0m
+[0;32mI (8134) [ADC] : Sampled: 829.000000 mV at index 389[0m
+[0;32mI (8154) [ADC] : Sampled: 820.000000 mV at index 390[0m
+[0;32mI (8174) [ADC] : Sampled: 814.000000 mV at index 391[0m
+[0;32mI (8194) [ADC] : Sampled: 803.000000 mV at index 392[0m
+[0;32mI (8214) [ADC] : Sampled: 827.000000 mV at index 393[0m
+[0;32mI (8234) [ADC] : Sampled: 816.000000 mV at index 394[0m
+[0;32mI (8254) [ADC] : Sampled: 809.000000 mV at index 395[0m
+[0;32mI (8274) [ADC] : Sampled: 830.000000 mV at index 396[0m
+[0;32mI (8294) [ADC] : Sampled: 822.000000 mV at index 397[0m
+[0;32mI (8314) [ADC] : Sampled: 816.000000 mV at index 398[0m
+[0;32mI (8334) [ADC] : Sampled: 809.000000 mV at index 399[0m
+[0;32mI (8354) [ADC] : Sampled: 814.000000 mV at index 400[0m
+[0;32mI (8374) [ADC] : Sampled: 826.000000 mV at index 401[0m
+[0;32mI (8394) [ADC] : Sampled: 816.000000 mV at index 402[0m
+[0;32mI (8414) [ADC] : Sampled: 811.000000 mV at index 403[0m
+[0;32mI (8434) [ADC] : Sampled: 803.000000 mV at index 404[0m
+[0;32mI (8454) [ADC] : Sampled: 829.000000 mV at index 405[0m
+[0;32mI (8474) [ADC] : Sampled: 816.000000 mV at index 406[0m
+[0;32mI (8494) [ADC] : Sampled: 809.000000 mV at index 407[0m
+[0;32mI (8514) [ADC] : Sampled: 801.000000 mV at index 408[0m
+[0;32mI (8534) [ADC] : Sampled: 826.000000 mV at index 409[0m
+[0;32mI (8554) [ADC] : Sampled: 815.000000 mV at index 410[0m
+[0;32mI (8574) [ADC] : Sampled: 803.000000 mV at index 411[0m
+[0;32mI (8594) [ADC] : Sampled: 830.000000 mV at index 412[0m
+[0;32mI (8614) [ADC] : Sampled: 818.000000 mV at index 413[0m
+[0;32mI (8634) [ADC] : Sampled: 814.000000 mV at index 414[0m
+[0;32mI (8654) [ADC] : Sampled: 803.000000 mV at index 415[0m
+[0;32mI (8674) [ADC] : Sampled: 826.000000 mV at index 416[0m
+[0;32mI (8694) [ADC] : Sampled: 815.000000 mV at index 417[0m
+[0;32mI (8714) [ADC] : Sampled: 806.000000 mV at index 418[0m
+[0;32mI (8734) [ADC] : Sampled: 830.000000 mV at index 419[0m
+[0;32mI (8754) [ADC] : Sampled: 820.000000 mV at index 420[0m
+[0;32mI (8774) [ADC] : Sampled: 814.000000 mV at index 421[0m
+[0;32mI (8794) [ADC] : Sampled: 803.000000 mV at index 422[0m
+[0;32mI (8814) [ADC] : Sampled: 828.000000 mV at index 423[0m
+[0;32mI (8834) [ADC] : Sampled: 816.000000 mV at index 424[0m
+[0;32mI (8854) [ADC] : Sampled: 814.000000 mV at index 425[0m
+[0;32mI (8874) [ADC] : Sampled: 803.000000 mV at index 426[0m
+[0;32mI (8894) [ADC] : Sampled: 827.000000 mV at index 427[0m
+[0;32mI (8914) [ADC] : Sampled: 816.000000 mV at index 428[0m
+[0;32mI (8934) [ADC] : Sampled: 809.000000 mV at index 429[0m
+[0;32mI (8954) [ADC] : Sampled: 833.000000 mV at index 430[0m
+[0;32mI (8974) [ADC] : Sampled: 822.000000 mV at index 431[0m
+[0;32mI (8994) [ADC] : Sampled: 816.000000 mV at index 432[0m
+[0;32mI (9014) [ADC] : Sampled: 809.000000 mV at index 433[0m
+[0;32mI (9034) [ADC] : Sampled: 832.000000 mV at index 434[0m
+[0;32mI (9054) [ADC] : Sampled: 826.000000 mV at index 435[0m
+[0;32mI (9074) [ADC] : Sampled: 815.000000 mV at index 436[0m
+[0;32mI (9094) [ADC] : Sampled: 809.000000 mV at index 437[0m
+[0;32mI (9114) [ADC] : Sampled: 832.000000 mV at index 438[0m
+[0;32mI (9134) [ADC] : Sampled: 826.000000 mV at index 439[0m
+[0;32mI (9154) [ADC] : Sampled: 816.000000 mV at index 440[0m
+[0;32mI (9174) [ADC] : Sampled: 809.000000 mV at index 441[0m
+[0;32mI (9194) [ADC] : Sampled: 832.000000 mV at index 442[0m
+[0;32mI (9214) [ADC] : Sampled: 822.000000 mV at index 443[0m
+[0;32mI (9234) [ADC] : Sampled: 814.000000 mV at index 444[0m
+[0;32mI (9254) [ADC] : Sampled: 805.000000 mV at index 445[0m
+[0;32mI (9274) [ADC] : Sampled: 828.000000 mV at index 446[0m
+[0;32mI (9294) [ADC] : Sampled: 819.000000 mV at index 447[0m
+[0;32mI (9314) [ADC] : Sampled: 811.000000 mV at index 448[0m
+[0;32mI (9334) [ADC] : Sampled: 833.000000 mV at index 449[0m
+[0;32mI (9354) [ADC] : Sampled: 826.000000 mV at index 450[0m
+[0;32mI (9374) [ADC] : Sampled: 816.000000 mV at index 451[0m
+[0;32mI (9394) [ADC] : Sampled: 809.000000 mV at index 452[0m
+[0;32mI (9414) [ADC] : Sampled: 832.000000 mV at index 453[0m
+[0;32mI (9434) [ADC] : Sampled: 822.000000 mV at index 454[0m
+[0;32mI (9454) [ADC] : Sampled: 814.000000 mV at index 455[0m
+[0;32mI (9474) [ADC] : Sampled: 806.000000 mV at index 456[0m
+[0;32mI (9494) [ADC] : Sampled: 830.000000 mV at index 457[0m
+[0;32mI (9514) [ADC] : Sampled: 820.000000 mV at index 458[0m
+[0;32mI (9534) [ADC] : Sampled: 814.000000 mV at index 459[0m
+[0;32mI (9554) [ADC] : Sampled: 802.000000 mV at index 460[0m
+[0;32mI (9574) [ADC] : Sampled: 826.000000 mV at index 461[0m
+[0;32mI (9594) [ADC] : Sampled: 816.000000 mV at index 462[0m
+[0;32mI (9614) [ADC] : Sampled: 806.000000 mV at index 463[0m
+[0;32mI (9634) [ADC] : Sampled: 830.000000 mV at index 464[0m
+[0;32mI (9654) [ADC] : Sampled: 820.000000 mV at index 465[0m
+[0;32mI (9674) [ADC] : Sampled: 814.000000 mV at index 466[0m
+[0;32mI (9694) [ADC] : Sampled: 806.000000 mV at index 467[0m
+[0;32mI (9714) [ADC] : Sampled: 830.000000 mV at index 468[0m
+[0;32mI (9734) [ADC] : Sampled: 820.000000 mV at index 469[0m
+[0;32mI (9754) [ADC] : Sampled: 814.000000 mV at index 470[0m
+[0;32mI (9774) [ADC] : Sampled: 803.000000 mV at index 471[0m
+[0;32mI (9794) [ADC] : Sampled: 830.000000 mV at index 472[0m
+[0;32mI (9814) [ADC] : Sampled: 822.000000 mV at index 473[0m
+[0;32mI (9834) [ADC] : Sampled: 814.000000 mV at index 474[0m
+[0;32mI (9854) [ADC] : Sampled: 803.000000 mV at index 475[0m
+[0;32mI (9874) [ADC] : Sampled: 826.000000 mV at index 476[0m
+[0;32mI (9894) [ADC] : Sampled: 816.000000 mV at index 477[0m
+[0;32mI (9914) [ADC] : Sampled: 809.000000 mV at index 478[0m
+[0;32mI (9934) [ADC] : Sampled: 830.000000 mV at index 479[0m
+[0;32mI (9954) [ADC] : Sampled: 822.000000 mV at index 480[0m
+[0;32mI (9974) [ADC] : Sampled: 814.000000 mV at index 481[0m
+[0;32mI (9994) [ADC] : Sampled: 806.000000 mV at index 482[0m
+[0;32mI (10014) [ADC] : Sampled: 830.000000 mV at index 483[0m
+[0;32mI (10034) [ADC] : Sampled: 820.000000 mV at index 484[0m
+[0;32mI (10054) [ADC] : Sampled: 814.000000 mV at index 485[0m
+[0;32mI (10074) [ADC] : Sampled: 801.000000 mV at index 486[0m
+[0;32mI (10094) [ADC] : Sampled: 826.000000 mV at index 487[0m
+[0;32mI (10114) [ADC] : Sampled: 815.000000 mV at index 488[0m
+[0;32mI (10134) [ADC] : Sampled: 806.000000 mV at index 489[0m
+[0;32mI (10154) [ADC] : Sampled: 829.000000 mV at index 490[0m
+[0;32mI (10174) [ADC] : Sampled: 822.000000 mV at index 491[0m
+[0;32mI (10194) [ADC] : Sampled: 814.000000 mV at index 492[0m
+[0;32mI (10214) [ADC] : Sampled: 803.000000 mV at index 493[0m
+[0;32mI (10234) [ADC] : Sampled: 829.000000 mV at index 494[0m
+Guru Meditation Error: Core  1 panic'ed (IllegalInstruction). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x444d0000  PS      : 0x00060730  A0      : 0x820084b1  A1      : 0x3fc9a4f0  
+A2      : 0x00000041  A3      : 0x3fc95ab8  A4      : 0x00000041  A5      : 0x00060323  
+A6      : 0x3fc91a98  A7      : 0x3fc94a7c  A8      : 0x82008940  A9      : 0x3fc9a4d0  
+A10     : 0x00000000  A11     : 0x3fc95ab8  A12     : 0x00000041  A13     : 0x3c02557e  
+A14     : 0x00000005  A15     : 0x00000004  SAR     : 0x00000004  EXCCAUSE: 0x00000000  
+EXCVADDR: 0x00000000  LBEG    : 0x40054bf0  LEND    : 0x40054c0f  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x444cfffd:0x3fc9a4f0 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 7b72cb414
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40378106
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (31) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 10 2024 20:05:55[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v0.1[0m
+[0;32mI (40) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (45) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0dd5ch ( 56668) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=0001dd84 vaddr=3fc91a00 size=02294h (  8852) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1a780h (108416) map[0m
+[0;32mI (142) esp_image: segment 3: paddr=0003a7a8 vaddr=3fc93c94 size=00720h (  1824) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=0003aed0 vaddr=40374000 size=0d900h ( 55552) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     adc[0m
+[0;32mI (195) app_init: App version:      bca57de-dirty[0m
+[0;32mI (200) app_init: Compile time:     May 12 2024 09:54:28[0m
+[0;32mI (206) app_init: ELF file SHA256:  7b72cb414...[0m
+[0;32mI (211) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (218) app_init: Min chip rev:     v0.0[0m
+[0;32mI (223) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (228) app_init: Chip rev:         v0.1[0m
+[0;32mI (232) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 3FC94CE0 len 00054A30 (338 KiB): RAM[0m
+[0;32mI (246) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (252) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (265) spi_flash: detected chip: gd[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (272) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (286) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (294) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+ciao
+duration: 10
+[0;32mI (318) main_task: Returned from app_main()[0m
+[0;32mI (328) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (328) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (338) [ADC] : Channel width and configuration done[0m
+[0;32mI (338) [ADC] : sampling at frequency : 0.635096[0m
+[0;32mI (348) [ADC] : Sampled: 808.000000 mV at index 0[0m
+[0;32mI (378) [ADC] : Sampled: 826.000000 mV at index 1[0m
+[0;32mI (398) [ADC] : Sampled: 815.000000 mV at index 2[0m
+[0;32mI (418) [ADC] : Sampled: 809.000000 mV at index 3[0m
+[0;32mI (438) [ADC] : Sampled: 830.000000 mV at index 4[0m
+[0;32mI (458) [ADC] : Sampled: 826.000000 mV at index 5[0m
+[0;32mI (478) [ADC] : Sampled: 814.000000 mV at index 6[0m
+[0;32mI (498) [ADC] : Sampled: 808.000000 mV at index 7[0m
+[0;32mI (518) [ADC] : Sampled: 830.000000 mV at index 8[0m
+[0;32mI (538) [ADC] : Sampled: 822.000000 mV at index 9[0m
+[0;32mI (558) [ADC] : Sampled: 814.000000 mV at index 10[0m
+[0;32mI (578) [ADC] : Sampled: 803.000000 mV at index 11[0m
+[0;32mI (598) [ADC] : Sampled: 828.000000 mV at index 12[0m
+[0;32mI (618) [ADC] : Sampled: 819.000000 mV at index 13[0m
+[0;32mI (638) [ADC] : Sampled: 814.000000 mV at index 14[0m
+[0;32mI (658) [ADC] : Sampled: 803.000000 mV at index 15[0m
+[0;32mI (678) [ADC] : Sampled: 827.000000 mV at index 16[0m
+[0;32mI (698) [ADC] : Sampled: 818.000000 mV at index 17[0m
+[0;32mI (718) [ADC] : Sampled: 809.000000 mV at index 18[0m
+[0;32mI (738) [ADC] : Sampled: 803.000000 mV at index 19[0m
+[0;32mI (758) [ADC] : Sampled: 827.000000 mV at index 20[0m
+[0;32mI (778) [ADC] : Sampled: 815.000000 mV at index 21[0m
+[0;32mI (798) [ADC] : Sampled: 809.000000 mV at index 22[0m
+[0;32mI (818) [ADC] : Sampled: 834.000000 mV at index 23[0m
+[0;32mI (838) [ADC] : Sampled: 826.000000 mV at index 24[0m
+[0;32mI (858) [ADC] : Sampled: 818.000000 mV at index 25[0m
+[0;32mI (878) [ADC] : Sampled: 806.000000 mV at index 26[0m
+[0;32mI (898) [ADC] : Sampled: 830.000000 mV at index 27[0m
+[0;32mI (918) [ADC] : Sampled: 822.000000 mV at index 28[0m
+[0;32mI (938) [ADC] : Sampled: 814.000000 mV at index 29[0m
+[0;32mI (958) [ADC] : Sampled: 805.000000 mV at index 30[0m
+[0;32mI (978) [ADC] : Sampled: 830.000000 mV at index 31[0m
+[0;32mI (998) [ADC] : Sampled: 818.000000 mV at index 32[0m
+[0;32mI (1018) [ADC] : Sampled: 814.000000 mV at index 33[0m
+[0;32mI (1038) [ADC] : Sampled: 830.000000 mV at index 34[0m
+[0;32mI (1058) [ADC] : Sampled: 822.000000 mV at index 35[0m
+[0;32mI (1078) [ADC] : Sampled: 814.000000 mV at index 36[0m
+[0;32mI (1098) [ADC] : Sampled: 805.000000 mV at index 37[0m
+[0;32mI (1118) [ADC] : Sampled: 830.000000 mV at index 38[0m
+[0;32mI (1138) [ADC] : Sampled: 826.000000 mV at index 39[0m
+[0;32mI (1158) [ADC] : Sampled: 814.000000 mV at index 40[0m
+[0;32mI (1178) [ADC] : Sampled: 803.000000 mV at index 41[0m
+[0;32mI (1198) [ADC] : Sampled: 826.000000 mV at index 42[0m
+[0;32mI (1218) [ADC] : Sampled: 816.000000 mV at index 43[0m
+[0;32mI (1238) [ADC] : Sampled: 809.000000 mV at index 44[0m
+[0;32mI (1258) [ADC] : Sampled: 803.000000 mV at index 45[0m
+[0;32mI (1278) [ADC] : Sampled: 826.000000 mV at index 46[0m
+[0;32mI (1298) [ADC] : Sampled: 816.000000 mV at index 47[0m
+[0;32mI (1318) [ADC] : Sampled: 809.000000 mV at index 48[0m
+[0;32mI (1338) [ADC] : Sampled: 830.000000 mV at index 49[0m
+[0;32mI (1358) [ADC] : Sampled: 820.000000 mV at index 50[0m
+[0;32mI (1378) [ADC] : Sampled: 814.000000 mV at index 51[0m
+[0;32mI (1398) [ADC] : Sampled: 802.000000 mV at index 52[0m
+[0;32mI (1418) [ADC] : Sampled: 827.000000 mV at index 53[0m
+[0;32mI (1438) [ADC] : Sampled: 816.000000 mV at index 54[0m
+[0;32mI (1458) [ADC] : Sampled: 809.000000 mV at index 55[0m
+[0;32mI (1478) [ADC] : Sampled: 830.000000 mV at index 56[0m
+[0;32mI (1498) [ADC] : Sampled: 820.000000 mV at index 57[0m
+[0;32mI (1518) [ADC] : Sampled: 814.000000 mV at index 58[0m
+[0;32mI (1538) [ADC] : Sampled: 803.000000 mV at index 59[0m
+[0;32mI (1558) [ADC] : Sampled: 826.000000 mV at index 60[0m
+[0;32mI (1578) [ADC] : Sampled: 815.000000 mV at index 61[0m
+[0;32mI (1598) [ADC] : Sampled: 805.000000 mV at index 62[0m
+[0;32mI (1618) [ADC] : Sampled: 828.000000 mV at index 63[0m
+[0;32mI (1638) [ADC] : Sampled: 816.000000 mV at index 64[0m
+[0;32mI (1658) [ADC] : Sampled: 811.000000 mV at index 65[0m
+[0;32mI (1678) [ADC] : Sampled: 833.000000 mV at index 66[0m
+[0;32mI (1698) [ADC] : Sampled: 828.000000 mV at index 67[0m
+[0;32mI (1718) [ADC] : Sampled: 816.000000 mV at index 68[0m
+[0;32mI (1738) [ADC] : Sampled: 809.000000 mV at index 69[0m
+[0;32mI (1758) [ADC] : Sampled: 803.000000 mV at index 70[0m
+[0;32mI (1778) [ADC] : Sampled: 827.000000 mV at index 71[0m
+[0;32mI (1798) [ADC] : Sampled: 822.000000 mV at index 72[0m
+[0;32mI (1818) [ADC] : Sampled: 822.000000 mV at index 73[0m
+[0;32mI (1838) [ADC] : Sampled: 860.000000 mV at index 74[0m
+[0;32mI (1858) [ADC] : Sampled: 854.000000 mV at index 75[0m
+[0;32mI (1878) [ADC] : Sampled: 848.000000 mV at index 76[0m
+[0;32mI (1898) [ADC] : Sampled: 843.000000 mV at index 77[0m
+[0;32mI (1918) [ADC] : Sampled: 833.000000 mV at index 78[0m
+[0;32mI (1938) [ADC] : Sampled: 849.000000 mV at index 79[0m
+[0;32mI (1958) [ADC] : Sampled: 822.000000 mV at index 80[0m
+[0;32mI (1978) [ADC] : Sampled: 815.000000 mV at index 81[0m
+[0;32mI (1998) [ADC] : Sampled: 803.000000 mV at index 82[0m
+[0;32mI (2018) [ADC] : Sampled: 830.000000 mV at index 83[0m
+[0;32mI (2038) [ADC] : Sampled: 820.000000 mV at index 84[0m
+[0;32mI (2058) [ADC] : Sampled: 814.000000 mV at index 85[0m
+[0;32mI (2078) [ADC] : Sampled: 803.000000 mV at index 86[0m
+[0;32mI (2098) [ADC] : Sampled: 827.000000 mV at index 87[0m
+[0;32mI (2118) [ADC] : Sampled: 818.000000 mV at index 88[0m
+[0;32mI (2138) [ADC] : Sampled: 814.000000 mV at index 89[0m
+[0;32mI (2158) [ADC] : Sampled: 806.000000 mV at index 90[0m
+[0;32mI (2178) [ADC] : Sampled: 830.000000 mV at index 91[0m
+[0;32mI (2198) [ADC] : Sampled: 822.000000 mV at index 92[0m
+[0;32mI (2218) [ADC] : Sampled: 815.000000 mV at index 93[0m
+[0;32mI (2238) [ADC] : Sampled: 809.000000 mV at index 94[0m
+[0;32mI (2258) [ADC] : Sampled: 832.000000 mV at index 95[0m
+[0;32mI (2278) [ADC] : Sampled: 822.000000 mV at index 96[0m
+[0;32mI (2298) [ADC] : Sampled: 814.000000 mV at index 97[0m
+[0;32mI (2318) [ADC] : Sampled: 806.000000 mV at index 98[0m
+[0;32mI (2338) [ADC] : Sampled: 832.000000 mV at index 99[0m
+[0;32mI (2358) [ADC] : Sampled: 822.000000 mV at index 100[0m
+[0;32mI (2378) [ADC] : Sampled: 815.000000 mV at index 101[0m
+[0;32mI (2398) [ADC] : Sampled: 806.000000 mV at index 102[0m
+[0;32mI (2418) [ADC] : Sampled: 830.000000 mV at index 103[0m
+[0;32mI (2438) [ADC] : Sampled: 819.000000 mV at index 104[0m
+[0;32mI (2458) [ADC] : Sampled: 811.000000 mV at index 105[0m
+[0;32mI (2478) [ADC] : Sampled: 803.000000 mV at index 106[0m
+[0;32mI (2498) [ADC] : Sampled: 828.000000 mV at index 107[0m
+[0;32mI (2518) [ADC] : Sampled: 819.000000 mV at index 108[0m
+[0;32mI (2538) [ADC] : Sampled: 815.000000 mV at index 109[0m
+[0;32mI (2558) [ADC] : Sampled: 805.000000 mV at index 110[0m
+[0;32mI (2578) [ADC] : Sampled: 830.000000 mV at index 111[0m
+[0;32mI (2598) [ADC] : Sampled: 820.000000 mV at index 112[0m
+[0;32mI (2618) [ADC] : Sampled: 814.000000 mV at index 113[0m
+[0;32mI (2638) [ADC] : Sampled: 803.000000 mV at index 114[0m
+[0;32mI (2658) [ADC] : Sampled: 827.000000 mV at index 115[0m
+[0;32mI (2678) [ADC] : Sampled: 816.000000 mV at index 116[0m
+[0;32mI (2698) [ADC] : Sampled: 806.000000 mV at index 117[0m
+[0;32mI (2718) [ADC] : Sampled: 833.000000 mV at index 118[0m
+[0;32mI (2738) [ADC] : Sampled: 826.000000 mV at index 119[0m
+[0;32mI (2758) [ADC] : Sampled: 816.000000 mV at index 120[0m
+[0;32mI (2778) [ADC] : Sampled: 809.000000 mV at index 121[0m
+[0;32mI (2798) [ADC] : Sampled: 833.000000 mV at index 122[0m
+[0;32mI (2818) [ADC] : Sampled: 826.000000 mV at index 123[0m
+[0;32mI (2838) [ADC] : Sampled: 816.000000 mV at index 124[0m
+[0;32mI (2858) [ADC] : Sampled: 805.000000 mV at index 125[0m
+[0;32mI (2878) [ADC] : Sampled: 830.000000 mV at index 126[0m
+[0;32mI (2898) [ADC] : Sampled: 826.000000 mV at index 127[0m
+[0;32mI (2918) [ADC] : Sampled: 815.000000 mV at index 128[0m
+[0;32mI (2938) [ADC] : Sampled: 805.000000 mV at index 129[0m
+[0;32mI (2958) [ADC] : Sampled: 829.000000 mV at index 130[0m
+[0;32mI (2978) [ADC] : Sampled: 818.000000 mV at index 131[0m
+[0;32mI (2998) [ADC] : Sampled: 809.000000 mV at index 132[0m
+[0;32mI (3018) [ADC] : Sampled: 803.000000 mV at index 133[0m
+[0;32mI (3038) [ADC] : Sampled: 829.000000 mV at index 134[0m
+[0;32mI (3058) [ADC] : Sampled: 820.000000 mV at index 135[0m
+[0;32mI (3078) [ADC] : Sampled: 814.000000 mV at index 136[0m
+[0;32mI (3098) [ADC] : Sampled: 802.000000 mV at index 137[0m
+[0;32mI (3118) [ADC] : Sampled: 827.000000 mV at index 138[0m
+[0;32mI (3138) [ADC] : Sampled: 816.000000 mV at index 139[0m
+[0;32mI (3158) [ADC] : Sampled: 814.000000 mV at index 140[0m
+[0;32mI (3178) [ADC] : Sampled: 803.000000 mV at index 141[0m
+[0;32mI (3198) [ADC] : Sampled: 827.000000 mV at index 142[0m
+[0;32mI (3218) [ADC] : Sampled: 816.000000 mV at index 143[0m
+[0;32mI (3238) [ADC] : Sampled: 809.000000 mV at index 144[0m
+[0;32mI (3258) [ADC] : Sampled: 802.000000 mV at index 145[0m
+[0;32mI (3278) [ADC] : Sampled: 826.000000 mV at index 146[0m
+[0;32mI (3298) [ADC] : Sampled: 816.000000 mV at index 147[0m
+[0;32mI (3318) [ADC] : Sampled: 809.000000 mV at index 148[0m
+[0;32mI (3338) [ADC] : Sampled: 801.000000 mV at index 149[0m
+[0;32mI (3358) [ADC] : Sampled: 827.000000 mV at index 150[0m
+[0;32mI (3378) [ADC] : Sampled: 816.000000 mV at index 151[0m
+[0;32mI (3398) [ADC] : Sampled: 808.000000 mV at index 152[0m
+[0;32mI (3418) [ADC] : Sampled: 830.000000 mV at index 153[0m
+[0;32mI (3438) [ADC] : Sampled: 820.000000 mV at index 154[0m
+[0;32mI (3458) [ADC] : Sampled: 815.000000 mV at index 155[0m
+[0;32mI (3478) [ADC] : Sampled: 806.000000 mV at index 156[0m
+[0;32mI (3498) [ADC] : Sampled: 830.000000 mV at index 157[0m
+[0;32mI (3518) [ADC] : Sampled: 820.000000 mV at index 158[0m
+[0;32mI (3538) [ADC] : Sampled: 815.000000 mV at index 159[0m
+[0;32mI (3558) [ADC] : Sampled: 803.000000 mV at index 160[0m
+[0;32mI (3578) [ADC] : Sampled: 828.000000 mV at index 161[0m
+[0;32mI (3598) [ADC] : Sampled: 816.000000 mV at index 162[0m
+[0;32mI (3618) [ADC] : Sampled: 809.000000 mV at index 163[0m
+[0;32mI (3638) [ADC] : Sampled: 801.000000 mV at index 164[0m
+[0;32mI (3658) [ADC] : Sampled: 826.000000 mV at index 165[0m
+[0;32mI (3678) [ADC] : Sampled: 816.000000 mV at index 166[0m
+[0;32mI (3698) [ADC] : Sampled: 808.000000 mV at index 167[0m
+[0;32mI (3718) [ADC] : Sampled: 830.000000 mV at index 168[0m
+[0;32mI (3738) [ADC] : Sampled: 820.000000 mV at index 169[0m
+[0;32mI (3758) [ADC] : Sampled: 814.000000 mV at index 170[0m
+[0;32mI (3778) [ADC] : Sampled: 803.000000 mV at index 171[0m
+[0;32mI (3798) [ADC] : Sampled: 828.000000 mV at index 172[0m
+[0;32mI (3818) [ADC] : Sampled: 818.000000 mV at index 173[0m
+[0;32mI (3838) [ADC] : Sampled: 809.000000 mV at index 174[0m
+[0;32mI (3858) [ADC] : Sampled: 803.000000 mV at index 175[0m
+[0;32mI (3878) [ADC] : Sampled: 824.000000 mV at index 176[0m
+[0;32mI (3898) [ADC] : Sampled: 815.000000 mV at index 177[0m
+[0;32mI (3918) [ADC] : Sampled: 809.000000 mV at index 178[0m
+[0;32mI (3938) [ADC] : Sampled: 834.000000 mV at index 179[0m
+[0;32mI (3958) [ADC] : Sampled: 827.000000 mV at index 180[0m
+[0;32mI (3978) [ADC] : Sampled: 816.000000 mV at index 181[0m
+[0;32mI (3998) [ADC] : Sampled: 809.000000 mV at index 182[0m
+[0;32mI (4018) [ADC] : Sampled: 803.000000 mV at index 183[0m
+[0;32mI (4038) [ADC] : Sampled: 827.000000 mV at index 184[0m
+[0;32mI (4058) [ADC] : Sampled: 815.000000 mV at index 185[0m
+[0;32mI (4078) [ADC] : Sampled: 808.000000 mV at index 186[0m
+[0;32mI (4098) [ADC] : Sampled: 830.000000 mV at index 187[0m
+[0;32mI (4118) [ADC] : Sampled: 822.000000 mV at index 188[0m
+[0;32mI (4138) [ADC] : Sampled: 816.000000 mV at index 189[0m
+[0;32mI (4158) [ADC] : Sampled: 809.000000 mV at index 190[0m
+[0;32mI (4178) [ADC] : Sampled: 832.000000 mV at index 191[0m
+[0;32mI (4198) [ADC] : Sampled: 826.000000 mV at index 192[0m
+[0;32mI (4218) [ADC] : Sampled: 818.000000 mV at index 193[0m
+[0;32mI (4238) [ADC] : Sampled: 809.000000 mV at index 194[0m
+[0;32mI (4258) [ADC] : Sampled: 830.000000 mV at index 195[0m
+[0;32mI (4278) [ADC] : Sampled: 822.000000 mV at index 196[0m
+[0;32mI (4298) [ADC] : Sampled: 814.000000 mV at index 197[0m
+[0;32mI (4318) [ADC] : Sampled: 803.000000 mV at index 198[0m
+[0;32mI (4338) [ADC] : Sampled: 830.000000 mV at index 199[0m
+[0;32mI (4358) [ADC] : Sampled: 822.000000 mV at index 200[0m
+[0;32mI (4378) [ADC] : Sampled: 814.000000 mV at index 201[0m
+[0;32mI (4398) [ADC] : Sampled: 803.000000 mV at index 202[0m
+[0;32mI (4418) [ADC] : Sampled: 828.000000 mV at index 203[0m
+[0;32mI (4438) [ADC] : Sampled: 816.000000 mV at index 204[0m
+[0;32mI (4458) [ADC] : Sampled: 809.000000 mV at index 205[0m
+[0;32mI (4478) [ADC] : Sampled: 830.000000 mV at index 206[0m
+[0;32mI (4498) [ADC] : Sampled: 822.000000 mV at index 207[0m
+[0;32mI (4518) [ADC] : Sampled: 814.000000 mV at index 208[0m
+[0;32mI (4538) [ADC] : Sampled: 806.000000 mV at index 209[0m
+[0;32mI (4558) [ADC] : Sampled: 830.000000 mV at index 210[0m
+[0;32mI (4578) [ADC] : Sampled: 826.000000 mV at index 211[0m
+[0;32mI (4598) [ADC] : Sampled: 816.000000 mV at index 212[0m
+[0;32mI (4618) [ADC] : Sampled: 809.000000 mV at index 213[0m
+[0;32mI (4638) [ADC] : Sampled: 801.000000 mV at index 214[0m
+[0;32mI (4658) [ADC] : Sampled: 827.000000 mV at index 215[0m
+[0;32mI (4678) [ADC] : Sampled: 818.000000 mV at index 216[0m
+[0;32mI (4698) [ADC] : Sampled: 809.000000 mV at index 217[0m
+[0;32mI (4718) [ADC] : Sampled: 830.000000 mV at index 218[0m
+[0;32mI (4738) [ADC] : Sampled: 819.000000 mV at index 219[0m
+[0;32mI (4758) [ADC] : Sampled: 813.000000 mV at index 220[0m
+[0;32mI (4778) [ADC] : Sampled: 803.000000 mV at index 221[0m
+[0;32mI (4798) [ADC] : Sampled: 827.000000 mV at index 222[0m
+[0;32mI (4818) [ADC] : Sampled: 815.000000 mV at index 223[0m
+[0;32mI (4838) [ADC] : Sampled: 808.000000 mV at index 224[0m
+[0;32mI (4858) [ADC] : Sampled: 833.000000 mV at index 225[0m
+[0;32mI (4878) [ADC] : Sampled: 826.000000 mV at index 226[0m
+[0;32mI (4898) [ADC] : Sampled: 815.000000 mV at index 227[0m
+[0;32mI (4918) [ADC] : Sampled: 803.000000 mV at index 228[0m
+[0;32mI (4938) [ADC] : Sampled: 828.000000 mV at index 229[0m
+[0;32mI (4958) [ADC] : Sampled: 818.000000 mV at index 230[0m
+[0;32mI (4978) [ADC] : Sampled: 814.000000 mV at index 231[0m
+[0;32mI (4998) [ADC] : Sampled: 803.000000 mV at index 232[0m
+[0;32mI (5018) [ADC] : Sampled: 828.000000 mV at index 233[0m
+[0;32mI (5038) [ADC] : Sampled: 816.000000 mV at index 234[0m
+[0;32mI (5058) [ADC] : Sampled: 809.000000 mV at index 235[0m
+[0;32mI (5078) [ADC] : Sampled: 803.000000 mV at index 236[0m
+[0;32mI (5098) [ADC] : Sampled: 826.000000 mV at index 237[0m
+[0;32mI (5118) [ADC] : Sampled: 816.000000 mV at index 238[0m
+[0;32mI (5138) [ADC] : Sampled: 805.000000 mV at index 239[0m
+[0;32mI (5158) [ADC] : Sampled: 830.000000 mV at index 240[0m
+[0;32mI (5178) [ADC] : Sampled: 824.000000 mV at index 241[0m
+[0;32mI (5198) [ADC] : Sampled: 815.000000 mV at index 242[0m
+[0;32mI (5218) [ADC] : Sampled: 806.000000 mV at index 243[0m
+[0;32mI (5238) [ADC] : Sampled: 830.000000 mV at index 244[0m
+[0;32mI (5258) [ADC] : Sampled: 822.000000 mV at index 245[0m
+[0;32mI (5278) [ADC] : Sampled: 814.000000 mV at index 246[0m
+[0;32mI (5298) [ADC] : Sampled: 803.000000 mV at index 247[0m
+[0;32mI (5318) [ADC] : Sampled: 827.000000 mV at index 248[0m
+[0;32mI (5338) [ADC] : Sampled: 820.000000 mV at index 249[0m
+[0;32mI (5358) [ADC] : Sampled: 814.000000 mV at index 250[0m
+[0;32mI (5378) [ADC] : Sampled: 803.000000 mV at index 251[0m
+[0;32mI (5398) [ADC] : Sampled: 828.000000 mV at index 252[0m
+[0;32mI (5418) [ADC] : Sampled: 819.000000 mV at index 253[0m
+[0;32mI (5438) [ADC] : Sampled: 814.000000 mV at index 254[0m
+[0;32mI (5458) [ADC] : Sampled: 803.000000 mV at index 255[0m
+[0;32mI (5478) [ADC] : Sampled: 828.000000 mV at index 256[0m
+[0;32mI (5498) [ADC] : Sampled: 816.000000 mV at index 257[0m
+[0;32mI (5518) [ADC] : Sampled: 809.000000 mV at index 258[0m
+[0;32mI (5538) [ADC] : Sampled: 801.000000 mV at index 259[0m
+[0;32mI (5558) [ADC] : Sampled: 826.000000 mV at index 260[0m
+[0;32mI (5578) [ADC] : Sampled: 815.000000 mV at index 261[0m
+[0;32mI (5598) [ADC] : Sampled: 806.000000 mV at index 262[0m
+[0;32mI (5618) [ADC] : Sampled: 830.000000 mV at index 263[0m
+[0;32mI (5638) [ADC] : Sampled: 826.000000 mV at index 264[0m
+[0;32mI (5658) [ADC] : Sampled: 814.000000 mV at index 265[0m
+[0;32mI (5678) [ADC] : Sampled: 803.000000 mV at index 266[0m
+[0;32mI (5698) [ADC] : Sampled: 830.000000 mV at index 267[0m
+[0;32mI (5718) [ADC] : Sampled: 820.000000 mV at index 268[0m
+[0;32mI (5738) [ADC] : Sampled: 814.000000 mV at index 269[0m
+[0;32mI (5758) [ADC] : Sampled: 803.000000 mV at index 270[0m
+[0;32mI (5778) [ADC] : Sampled: 827.000000 mV at index 271[0m
+[0;32mI (5798) [ADC] : Sampled: 816.000000 mV at index 272[0m
+[0;32mI (5818) [ADC] : Sampled: 809.000000 mV at index 273[0m
+[0;32mI (5838) [ADC] : Sampled: 830.000000 mV at index 274[0m
+[0;32mI (5858) [ADC] : Sampled: 826.000000 mV at index 275[0m
+[0;32mI (5878) [ADC] : Sampled: 816.000000 mV at index 276[0m
+[0;32mI (5898) [ADC] : Sampled: 809.000000 mV at index 277[0m
+[0;32mI (5918) [ADC] : Sampled: 833.000000 mV at index 278[0m
+[0;32mI (5938) [ADC] : Sampled: 823.000000 mV at index 279[0m
+[0;32mI (5958) [ADC] : Sampled: 814.000000 mV at index 280[0m
+[0;32mI (5978) [ADC] : Sampled: 806.000000 mV at index 281[0m
+[0;32mI (5998) [ADC] : Sampled: 830.000000 mV at index 282[0m
+[0;32mI (6018) [ADC] : Sampled: 822.000000 mV at index 283[0m
+[0;32mI (6038) [ADC] : Sampled: 814.000000 mV at index 284[0m
+[0;32mI (6058) [ADC] : Sampled: 803.000000 mV at index 285[0m
+[0;32mI (6078) [ADC] : Sampled: 828.000000 mV at index 286[0m
+[0;32mI (6098) [ADC] : Sampled: 819.000000 mV at index 287[0m
+[0;32mI (6118) [ADC] : Sampled: 809.000000 mV at index 288[0m
+[0;32mI (6138) [ADC] : Sampled: 803.000000 mV at index 289[0m
+[0;32mI (6158) [ADC] : Sampled: 826.000000 mV at index 290[0m
+[0;32mI (6178) [ADC] : Sampled: 816.000000 mV at index 291[0m
+[0;32mI (6198) [ADC] : Sampled: 813.000000 mV at index 292[0m
+[0;32mI (6218) [ADC] : Sampled: 830.000000 mV at index 293[0m
+[0;32mI (6238) [ADC] : Sampled: 822.000000 mV at index 294[0m
+[0;32mI (6258) [ADC] : Sampled: 815.000000 mV at index 295[0m
+[0;32mI (6278) [ADC] : Sampled: 806.000000 mV at index 296[0m
+[0;32mI (6298) [ADC] : Sampled: 828.000000 mV at index 297[0m
+[0;32mI (6318) [ADC] : Sampled: 816.000000 mV at index 298[0m
+[0;32mI (6338) [ADC] : Sampled: 809.000000 mV at index 299[0m
+[0;32mI (6358) [ADC] : Sampled: 832.000000 mV at index 300[0m
+[0;32mI (6378) [ADC] : Sampled: 822.000000 mV at index 301[0m
+[0;32mI (6398) [ADC] : Sampled: 815.000000 mV at index 302[0m
+[0;32mI (6418) [ADC] : Sampled: 806.000000 mV at index 303[0m
+[0;32mI (6438) [ADC] : Sampled: 828.000000 mV at index 304[0m
+[0;32mI (6458) [ADC] : Sampled: 818.000000 mV at index 305[0m
+[0;32mI (6478) [ADC] : Sampled: 809.000000 mV at index 306[0m
+[0;32mI (6498) [ADC] : Sampled: 803.000000 mV at index 307[0m
+[0;32mI (6518) [ADC] : Sampled: 827.000000 mV at index 308[0m
+[0;32mI (6538) [ADC] : Sampled: 818.000000 mV at index 309[0m
+[0;32mI (6558) [ADC] : Sampled: 809.000000 mV at index 310[0m
+[0;32mI (6578) [ADC] : Sampled: 801.000000 mV at index 311[0m
+[0;32mI (6598) [ADC] : Sampled: 822.000000 mV at index 312[0m
+[0;32mI (6618) [ADC] : Sampled: 815.000000 mV at index 313[0m
+[0;32mI (6638) [ADC] : Sampled: 806.000000 mV at index 314[0m
+[0;32mI (6658) [ADC] : Sampled: 830.000000 mV at index 315[0m
+[0;32mI (6678) [ADC] : Sampled: 822.000000 mV at index 316[0m
+[0;32mI (6698) [ADC] : Sampled: 814.000000 mV at index 317[0m
+[0;32mI (6718) [ADC] : Sampled: 808.000000 mV at index 318[0m
+[0;32mI (6738) [ADC] : Sampled: 828.000000 mV at index 319[0m
+[0;32mI (6758) [ADC] : Sampled: 820.000000 mV at index 320[0m
+[0;32mI (6778) [ADC] : Sampled: 814.000000 mV at index 321[0m
+[0;32mI (6798) [ADC] : Sampled: 801.000000 mV at index 322[0m
+[0;32mI (6818) [ADC] : Sampled: 826.000000 mV at index 323[0m
+[0;32mI (6838) [ADC] : Sampled: 816.000000 mV at index 324[0m
+[0;32mI (6858) [ADC] : Sampled: 809.000000 mV at index 325[0m
+[0;32mI (6878) [ADC] : Sampled: 830.000000 mV at index 326[0m
+[0;32mI (6898) [ADC] : Sampled: 820.000000 mV at index 327[0m
+[0;32mI (6918) [ADC] : Sampled: 814.000000 mV at index 328[0m
+[0;32mI (6938) [ADC] : Sampled: 803.000000 mV at index 329[0m
+[0;32mI (6958) [ADC] : Sampled: 830.000000 mV at index 330[0m
+[0;32mI (6978) [ADC] : Sampled: 820.000000 mV at index 331[0m
+[0;32mI (6998) [ADC] : Sampled: 814.000000 mV at index 332[0m
+[0;32mI (7018) [ADC] : Sampled: 806.000000 mV at index 333[0m
+[0;32mI (7038) [ADC] : Sampled: 829.000000 mV at index 334[0m
+[0;32mI (7058) [ADC] : Sampled: 822.000000 mV at index 335[0m
+[0;32mI (7078) [ADC] : Sampled: 815.000000 mV at index 336[0m
+[0;32mI (7098) [ADC] : Sampled: 806.000000 mV at index 337[0m
+[0;32mI (7118) [ADC] : Sampled: 830.000000 mV at index 338[0m
+[0;32mI (7138) [ADC] : Sampled: 816.000000 mV at index 339[0m
+[0;32mI (7158) [ADC] : Sampled: 814.000000 mV at index 340[0m
+[0;32mI (7178) [ADC] : Sampled: 803.000000 mV at index 341[0m
+[0;32mI (7198) [ADC] : Sampled: 826.000000 mV at index 342[0m
+[0;32mI (7218) [ADC] : Sampled: 816.000000 mV at index 343[0m
+[0;32mI (7238) [ADC] : Sampled: 806.000000 mV at index 344[0m
+[0;32mI (7258) [ADC] : Sampled: 832.000000 mV at index 345[0m
+[0;32mI (7278) [ADC] : Sampled: 826.000000 mV at index 346[0m
+[0;32mI (7298) [ADC] : Sampled: 815.000000 mV at index 347[0m
+[0;32mI (7318) [ADC] : Sampled: 810.000000 mV at index 348[0m
+[0;32mI (7338) [ADC] : Sampled: 802.000000 mV at index 349[0m
+[0;32mI (7358) [ADC] : Sampled: 826.000000 mV at index 350[0m
+[0;32mI (7378) [ADC] : Sampled: 815.000000 mV at index 351[0m
+[0;32mI (7398) [ADC] : Sampled: 806.000000 mV at index 352[0m
+[0;32mI (7418) [ADC] : Sampled: 830.000000 mV at index 353[0m
+[0;32mI (7438) [ADC] : Sampled: 822.000000 mV at index 354[0m
+[0;32mI (7458) [ADC] : Sampled: 814.000000 mV at index 355[0m
+[0;32mI (7478) [ADC] : Sampled: 809.000000 mV at index 356[0m
+[0;32mI (7498) [ADC] : Sampled: 801.000000 mV at index 357[0m
+[0;32mI (7518) [ADC] : Sampled: 827.000000 mV at index 358[0m
+[0;32mI (7538) [ADC] : Sampled: 818.000000 mV at index 359[0m
+[0;32mI (7558) [ADC] : Sampled: 813.000000 mV at index 360[0m
+[0;32mI (7578) [ADC] : Sampled: 803.000000 mV at index 361[0m
+[0;32mI (7598) [ADC] : Sampled: 826.000000 mV at index 362[0m
+[0;32mI (7618) [ADC] : Sampled: 815.000000 mV at index 363[0m
+[0;32mI (7638) [ADC] : Sampled: 806.000000 mV at index 364[0m
+[0;32mI (7658) [ADC] : Sampled: 830.000000 mV at index 365[0m
+[0;32mI (7678) [ADC] : Sampled: 827.000000 mV at index 366[0m
+[0;32mI (7698) [ADC] : Sampled: 818.000000 mV at index 367[0m
+[0;32mI (7718) [ADC] : Sampled: 814.000000 mV at index 368[0m
+[0;32mI (7738) [ADC] : Sampled: 803.000000 mV at index 369[0m
+[0;32mI (7758) [ADC] : Sampled: 822.000000 mV at index 370[0m
+[0;32mI (7778) [ADC] : Sampled: 814.000000 mV at index 371[0m
+[0;32mI (7798) [ADC] : Sampled: 809.000000 mV at index 372[0m
+[0;32mI (7818) [ADC] : Sampled: 809.000000 mV at index 373[0m
+[0;32mI (7838) [ADC] : Sampled: 822.000000 mV at index 374[0m
+[0;32mI (7858) [ADC] : Sampled: 815.000000 mV at index 375[0m
+[0;32mI (7878) [ADC] : Sampled: 803.000000 mV at index 376[0m
+[0;32mI (7898) [ADC] : Sampled: 830.000000 mV at index 377[0m
+[0;32mI (7918) [ADC] : Sampled: 820.000000 mV at index 378[0m
+[0;32mI (7938) [ADC] : Sampled: 814.000000 mV at index 379[0m
+[0;32mI (7958) [ADC] : Sampled: 803.000000 mV at index 380[0m
+[0;32mI (7978) [ADC] : Sampled: 826.000000 mV at index 381[0m
+[0;32mI (7998) [ADC] : Sampled: 815.000000 mV at index 382[0m
+[0;32mI (8018) [ADC] : Sampled: 806.000000 mV at index 383[0m
+[0;32mI (8038) [ADC] : Sampled: 829.000000 mV at index 384[0m
+[0;32mI (8058) [ADC] : Sampled: 820.000000 mV at index 385[0m
+[0;32mI (8078) [ADC] : Sampled: 809.000000 mV at index 386[0m
+[0;32mI (8098) [ADC] : Sampled: 803.000000 mV at index 387[0m
+[0;32mI (8118) [ADC] : Sampled: 826.000000 mV at index 388[0m
+[0;32mI (8138) [ADC] : Sampled: 816.000000 mV at index 389[0m
+[0;32mI (8158) [ADC] : Sampled: 809.000000 mV at index 390[0m
+[0;32mI (8178) [ADC] : Sampled: 833.000000 mV at index 391[0m
+[0;32mI (8198) [ADC] : Sampled: 822.000000 mV at index 392[0m
+[0;32mI (8218) [ADC] : Sampled: 815.000000 mV at index 393[0m
+[0;32mI (8238) [ADC] : Sampled: 806.000000 mV at index 394[0m
+[0;32mI (8258) [ADC] : Sampled: 828.000000 mV at index 395[0m
+[0;32mI (8278) [ADC] : Sampled: 818.000000 mV at index 396[0m
+[0;32mI (8298) [ADC] : Sampled: 809.000000 mV at index 397[0m
+[0;32mI (8318) [ADC] : Sampled: 803.000000 mV at index 398[0m
+[0;32mI (8338) [ADC] : Sampled: 827.000000 mV at index 399[0m
+[0;32mI (8358) [ADC] : Sampled: 818.000000 mV at index 400[0m
+[0;32mI (8378) [ADC] : Sampled: 809.000000 mV at index 401[0m
+[0;32mI (8398) [ADC] : Sampled: 803.000000 mV at index 402[0m
+[0;32mI (8418) [ADC] : Sampled: 824.000000 mV at index 403[0m
+[0;32mI (8438) [ADC] : Sampled: 816.000000 mV at index 404[0m
+[0;32mI (8458) [ADC] : Sampled: 809.000000 mV at index 405[0m
+[0;32mI (8478) [ADC] : Sampled: 830.000000 mV at index 406[0m
+[0;32mI (8498) [ADC] : Sampled: 820.000000 mV at index 407[0m
+[0;32mI (8518) [ADC] : Sampled: 814.000000 mV at index 408[0m
+[0;32mI (8538) [ADC] : Sampled: 803.000000 mV at index 409[0m
+[0;32mI (8558) [ADC] : Sampled: 827.000000 mV at index 410[0m
+[0;32mI (8578) [ADC] : Sampled: 816.000000 mV at index 411[0m
+[0;32mI (8598) [ADC] : Sampled: 809.000000 mV at index 412[0m
+[0;32mI (8618) [ADC] : Sampled: 830.000000 mV at index 413[0m
+[0;32mI (8638) [ADC] : Sampled: 820.000000 mV at index 414[0m
+[0;32mI (8658) [ADC] : Sampled: 814.000000 mV at index 415[0m
+[0;32mI (8678) [ADC] : Sampled: 806.000000 mV at index 416[0m
+[0;32mI (8698) [ADC] : Sampled: 830.000000 mV at index 417[0m
+[0;32mI (8718) [ADC] : Sampled: 819.000000 mV at index 418[0m
+[0;32mI (8738) [ADC] : Sampled: 814.000000 mV at index 419[0m
+[0;32mI (8758) [ADC] : Sampled: 806.000000 mV at index 420[0m
+[0;32mI (8778) [ADC] : Sampled: 830.000000 mV at index 421[0m
+[0;32mI (8798) [ADC] : Sampled: 822.000000 mV at index 422[0m
+[0;32mI (8818) [ADC] : Sampled: 814.000000 mV at index 423[0m
+[0;32mI (8838) [ADC] : Sampled: 803.000000 mV at index 424[0m
+[0;32mI (8858) [ADC] : Sampled: 828.000000 mV at index 425[0m
+[0;32mI (8878) [ADC] : Sampled: 822.000000 mV at index 426[0m
+[0;32mI (8898) [ADC] : Sampled: 815.000000 mV at index 427[0m
+[0;32mI (8918) [ADC] : Sampled: 803.000000 mV at index 428[0m
+[0;32mI (8938) [ADC] : Sampled: 829.000000 mV at index 429[0m
+[0;32mI (8958) [ADC] : Sampled: 820.000000 mV at index 430[0m
+[0;32mI (8978) [ADC] : Sampled: 814.000000 mV at index 431[0m
+[0;32mI (8998) [ADC] : Sampled: 803.000000 mV at index 432[0m
+[0;32mI (9018) [ADC] : Sampled: 827.000000 mV at index 433[0m
+[0;32mI (9038) [ADC] : Sampled: 816.000000 mV at index 434[0m
+[0;32mI (9058) [ADC] : Sampled: 809.000000 mV at index 435[0m
+[0;32mI (9078) [ADC] : Sampled: 802.000000 mV at index 436[0m
+[0;32mI (9098) [ADC] : Sampled: 822.000000 mV at index 437[0m
+[0;32mI (9118) [ADC] : Sampled: 815.000000 mV at index 438[0m
+[0;32mI (9138) [ADC] : Sampled: 809.000000 mV at index 439[0m
+[0;32mI (9158) [ADC] : Sampled: 830.000000 mV at index 440[0m
+[0;32mI (9178) [ADC] : Sampled: 820.000000 mV at index 441[0m
+[0;32mI (9198) [ADC] : Sampled: 813.000000 mV at index 442[0m
+[0;32mI (9218) [ADC] : Sampled: 802.000000 mV at index 443[0m
+[0;32mI (9238) [ADC] : Sampled: 827.000000 mV at index 444[0m
+[0;32mI (9258) [ADC] : Sampled: 819.000000 mV at index 445[0m
+[0;32mI (9278) [ADC] : Sampled: 814.000000 mV at index 446[0m
+[0;32mI (9298) [ADC] : Sampled: 830.000000 mV at index 447[0m
+[0;32mI (9318) [ADC] : Sampled: 823.000000 mV at index 448[0m
+[0;32mI (9338) [ADC] : Sampled: 815.000000 mV at index 449[0m
+[0;32mI (9358) [ADC] : Sampled: 808.000000 mV at index 450[0m
+[0;32mI (9378) [ADC] : Sampled: 829.000000 mV at index 451[0m
+[0;32mI (9398) [ADC] : Sampled: 818.000000 mV at index 452[0m
+[0;32mI (9418) [ADC] : Sampled: 814.000000 mV at index 453[0m
+[0;32mI (9438) [ADC] : Sampled: 803.000000 mV at index 454[0m
+[0;32mI (9458) [ADC] : Sampled: 830.000000 mV at index 455[0m
+[0;32mI (9478) [ADC] : Sampled: 816.000000 mV at index 456[0m
+[0;32mI (9498) [ADC] : Sampled: 809.000000 mV at index 457[0m
+[0;32mI (9518) [ADC] : Sampled: 830.000000 mV at index 458[0m
+[0;32mI (9538) [ADC] : Sampled: 826.000000 mV at index 459[0m
+[0;32mI (9558) [ADC] : Sampled: 816.000000 mV at index 460[0m
+[0;32mI (9578) [ADC] : Sampled: 809.000000 mV at index 461[0m
+[0;32mI (9598) [ADC] : Sampled: 833.000000 mV at index 462[0m
+[0;32mI (9618) [ADC] : Sampled: 826.000000 mV at index 463[0m
+[0;32mI (9638) [ADC] : Sampled: 816.000000 mV at index 464[0m
+[0;32mI (9658) [ADC] : Sampled: 809.000000 mV at index 465[0m
+[0;32mI (9678) [ADC] : Sampled: 834.000000 mV at index 466[0m
+[0;32mI (9698) [ADC] : Sampled: 826.000000 mV at index 467[0m
+[0;32mI (9718) [ADC] : Sampled: 816.000000 mV at index 468[0m
+[0;32mI (9738) [ADC] : Sampled: 809.000000 mV at index 469[0m
+[0;32mI (9758) [ADC] : Sampled: 830.000000 mV at index 470[0m
+[0;32mI (9778) [ADC] : Sampled: 822.000000 mV at index 471[0m
+[0;32mI (9798) [ADC] : Sampled: 814.000000 mV at index 472[0m
+[0;32mI (9818) [ADC] : Sampled: 803.000000 mV at index 473[0m
+[0;32mI (9838) [ADC] : Sampled: 830.000000 mV at index 474[0m
+[0;32mI (9858) [ADC] : Sampled: 822.000000 mV at index 475[0m
+[0;32mI (9878) [ADC] : Sampled: 814.000000 mV at index 476[0m
+[0;32mI (9898) [ADC] : Sampled: 803.000000 mV at index 477[0m
+[0;32mI (9918) [ADC] : Sampled: 826.000000 mV at index 478[0m
+[0;32mI (9938) [ADC] : Sampled: 816.000000 mV at index 479[0m
+[0;32mI (9958) [ADC] : Sampled: 811.000000 mV at index 480[0m
+[0;32mI (9978) [ADC] : Sampled: 803.000000 mV at index 481[0m
+[0;32mI (9998) [ADC] : Sampled: 827.000000 mV at index 482[0m
+[0;32mI (10018) [ADC] : Sampled: 816.000000 mV at index 483[0m
+[0;32mI (10038) [ADC] : Sampled: 806.000000 mV at index 484[0m
+[0;32mI (10058) [ADC] : Sampled: 803.000000 mV at index 485[0m
+[0;32mI (10078) [ADC] : Sampled: 822.000000 mV at index 486[0m
+[0;32mI (10098) [ADC] : Sampled: 814.000000 mV at index 487[0m
+[0;32mI (10118) [ADC] : Sampled: 803.000000 mV at index 488[0m
+[0;32mI (10138) [ADC] : Sampled: 830.000000 mV at index 489[0m
+[0;32mI (10158) [ADC] : Sampled: 819.000000 mV at index 490[0m
+[0;32mI (10178) [ADC] : Sampled: 814.000000 mV at index 491[0m
+[0;32mI (10198) [ADC] : Sampled: 803.000000 mV at index 492[0m
+[0;32mI (10218) [ADC] : Sampled: 827.000000 mV at index 493[0m
+[0;32mI (10238) [ADC] : Sampled: 818.000000 mV at index 494[0m
+Guru Meditation Error: Core  1 panic'ed (IllegalInstruction). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x444b8000  PS      : 0x00060730  A0      : 0x820084b1  A1      : 0x3fc9a4f0  
+A2      : 0x00000041  A3      : 0x3fc95ab8  A4      : 0x00000041  A5      : 0x00060323  
+A6      : 0x3fc91a98  A7      : 0x3fc94a7c  A8      : 0x82008940  A9      : 0x3fc9a4d0  
+A10     : 0x00000000  A11     : 0x3fc95ab8  A12     : 0x00000041  A13     : 0x3c02557e  
+A14     : 0x00000005  A15     : 0x00000004  SAR     : 0x00000004  EXCCAUSE: 0x00000000  
+EXCVADDR: 0x00000000  LBEG    : 0x40054bf0  LEND    : 0x40054c0f  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x444b7ffd:0x3fc9a4f0 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 7b72cb414
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40378106
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (31) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 10 2024 20:05:55[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v0.1[0m
+[0;32mI (40) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (45) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0dd5ch ( 56668) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=0001dd84 vaddr=3fc91a00 size=02294h (  8852) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1a780h (108416) map[0m
+[0;32mI (142) esp_image: segment 3: paddr=0003a7a8 vaddr=3fc93c94 size=00720h (  1824) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=0003aed0 vaddr=40374000 size=0d900h ( 55552) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     adc[0m
+[0;32mI (195) app_init: App version:      bca57de-dirty[0m
+[0;32mI (200) app_init: Compile time:     May 12 2024 09:54:28[0m
+[0;32mI (206) app_init: ELF file SHA256:  7b72cb414...[0m
+[0;32mI (211) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (218) app_init: Min chip rev:     v0.0[0m
+[0;32mI (223) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (228) app_init: Chip rev:         v0.1[0m
+[0;32mI (232) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 3FC94CE0 len 00054A30 (338 KiB): RAM[0m
+[0;32mI (246) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (252) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (265) spi_flash: detected chip: gd[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (272) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (286) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (294) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+ciao
+duration: 10
+[0;32mI (318) main_task: Returned from app_main()[0m
+[0;32mI (328) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (328) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (338) [ADC] : Channel width and configuration done[0m
+[0;32mI (338) [ADC] : sampling at frequency : 0.635096[0m
+[0;32mI (348) [ADC] : Sampled: 829.000000 mV at index 0[0m
+[0;32mI (378) [ADC] : Sampled: 814.000000 mV at index 1[0m
+[0;32mI (398) [ADC] : Sampled: 830.000000 mV at index 2[0m
+[0;32mI (418) [ADC] : Sampled: 826.000000 mV at index 3[0m
+[0;32mI (438) [ADC] : Sampled: 814.000000 mV at index 4[0m
+[0;32mI (458) [ADC] : Sampled: 803.000000 mV at index 5[0m
+[0;32mI (478) [ADC] : Sampled: 828.000000 mV at index 6[0m
+[0;32mI (498) [ADC] : Sampled: 818.000000 mV at index 7[0m
+[0;32mI (518) [ADC] : Sampled: 814.000000 mV at index 8[0m
+[0;32mI (538) [ADC] : Sampled: 805.000000 mV at index 9[0m
+[0;32mI (558) [ADC] : Sampled: 828.000000 mV at index 10[0m
+[0;32mI (578) [ADC] : Sampled: 820.000000 mV at index 11[0m
+[0;32mI (598) [ADC] : Sampled: 814.000000 mV at index 12[0m
+[0;32mI (618) [ADC] : Sampled: 803.000000 mV at index 13[0m
+[0;32mI (638) [ADC] : Sampled: 828.000000 mV at index 14[0m
+[0;32mI (658) [ADC] : Sampled: 816.000000 mV at index 15[0m
+[0;32mI (678) [ADC] : Sampled: 809.000000 mV at index 16[0m
+[0;32mI (698) [ADC] : Sampled: 833.000000 mV at index 17[0m
+[0;32mI (718) [ADC] : Sampled: 822.000000 mV at index 18[0m
+[0;32mI (738) [ADC] : Sampled: 816.000000 mV at index 19[0m
+[0;32mI (758) [ADC] : Sampled: 809.000000 mV at index 20[0m
+[0;32mI (778) [ADC] : Sampled: 830.000000 mV at index 21[0m
+[0;32mI (798) [ADC] : Sampled: 822.000000 mV at index 22[0m
+[0;32mI (818) [ADC] : Sampled: 815.000000 mV at index 23[0m
+[0;32mI (838) [ADC] : Sampled: 805.000000 mV at index 24[0m
+[0;32mI (858) [ADC] : Sampled: 829.000000 mV at index 25[0m
+[0;32mI (878) [ADC] : Sampled: 820.000000 mV at index 26[0m
+[0;32mI (898) [ADC] : Sampled: 814.000000 mV at index 27[0m
+[0;32mI (918) [ADC] : Sampled: 803.000000 mV at index 28[0m
+[0;32mI (938) [ADC] : Sampled: 828.000000 mV at index 29[0m
+[0;32mI (958) [ADC] : Sampled: 818.000000 mV at index 30[0m
+[0;32mI (978) [ADC] : Sampled: 814.000000 mV at index 31[0m
+[0;32mI (998) [ADC] : Sampled: 803.000000 mV at index 32[0m
+[0;32mI (1018) [ADC] : Sampled: 826.000000 mV at index 33[0m
+[0;32mI (1038) [ADC] : Sampled: 816.000000 mV at index 34[0m

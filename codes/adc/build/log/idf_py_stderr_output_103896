@@ -1,0 +1,13 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x40378106: esp_cpu_wait_for_intr at /home/utente/esp/esp-idf/components/esp_hw_support/cpu.c:150
+[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x40378106: esp_cpu_wait_for_intr at /home/utente/esp/esp-idf/components/esp_hw_support/cpu.c:150
+[0m
+[0m

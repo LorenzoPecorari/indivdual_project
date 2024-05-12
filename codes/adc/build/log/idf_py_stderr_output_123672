@@ -1,0 +1,8 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m
