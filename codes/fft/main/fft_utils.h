@@ -60,6 +60,8 @@ void hann_multiplication(){
 // computes the fft of the signal and plots it through the shell
 void fft(){
     // fft radix 2, function from library with O(N * log N) cost
+    dsps_view(input, SAMPLES, 64, 10, -128, 64, '|');
+
     dsps_fft2r_fc32(output, SAMPLES);
     
     // reverses bits and generates a single array
