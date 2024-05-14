@@ -28,6 +28,8 @@ EventGroupHandle_t group;
 // function for (mainly) handling wifi events 
 void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data){
 
+    ESP_LOGI(APP_NAME, "Event: %ld", event_id);
+
     // checks if the event is a wifi-related one
     if(event_base == WIFI_EVENT){
 
@@ -46,6 +48,12 @@ void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, voi
                 ESP_LOGI(APP_NAME, "Connection success!");
         }
     }
+
+        else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+            ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+            ESP_LOGI(APP_NAME, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
+            xEventGroupSetBits(group, CONN_BIT);
+        }
 }
 
 void wifi_init(){
@@ -75,11 +83,14 @@ void wifi_init(){
     esp_event_handler_instance_t got_ip;
     
     // registration of handlers for these types of events
-    //ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL, &any_id));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL, &any_id));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL, &got_ip));
 
+    /*
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, WIFI_EVENT_STA_START, &event_handler, NULL, &any_id));
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, WIFI_EVENT_STA_DISCONNECTED, &event_handler, NULL, &any_id));
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT, IP_EVENT_STA_GOT_IP, &event_handler, NULL, &got_ip));
+    */
 
     // structure for wifi specs of use
     wifi_config_t wifi_conf = {

@@ -1,0 +1,51 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375b0a: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x4037c259: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40383f21: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x42058d59: tcpip_inpkt at /home/utente/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:252 (discriminator 1)
+0x42058da9: tcpip_input at /home/utente/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:287
+0x4206c036: wlanif_input at /home/utente/esp/esp-idf/components/esp_netif/lwip/netif/wlanif.c:160
+0x42091da5: esp_netif_receive at /home/utente/esp/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1258
+0x4037c281: wifi_sta_receive at /home/utente/esp/esp-idf/components/esp_wifi/src/wifi_netif.c:39
+0x40383c55: sta_input at ??:?
+0x40383d09: sta_rx_cb at ??:?
+0x40385d49: ppRxPkt at ??:?
+0x4038477b: ppTask at ??:?
+0x4037cd65: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a44: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375b0a: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x4037c259: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40383f21: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x42058d59: tcpip_inpkt at /home/utente/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:252 (discriminator 1)
+0x42058da9: tcpip_input at /home/utente/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:287
+0x4206c036: wlanif_input at /home/utente/esp/esp-idf/components/esp_netif/lwip/netif/wlanif.c:160
+0x42091da5: esp_netif_receive at /home/utente/esp/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1258
+0x4037c281: wifi_sta_receive at /home/utente/esp/esp-idf/components/esp_wifi/src/wifi_netif.c:39
+0x40383c55: sta_input at ??:?
+0x40383d09: sta_rx_cb at ??:?
+0x40385d49: ppRxPkt at ??:?
+0x4038477b: ppTask at ??:?
+0x4037cd65: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a44: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x40375b0a: panic_abort at /home/utente/esp/esp-idf/components/esp_system/panic.c:469
+0x4037c259: esp_system_abort at /home/utente/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40383f21: __assert_func at /home/utente/esp/esp-idf/components/newlib/assert.c:81
+0x42058d59: tcpip_inpkt at /home/utente/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:252 (discriminator 1)
+0x42058da9: tcpip_input at /home/utente/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:287
+0x4206c036: wlanif_input at /home/utente/esp/esp-idf/components/esp_netif/lwip/netif/wlanif.c:160
+0x42091da5: esp_netif_receive at /home/utente/esp/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1258
+0x4037c281: wifi_sta_receive at /home/utente/esp/esp-idf/components/esp_wifi/src/wifi_netif.c:39
+0x40383c55: sta_input at ??:?
+0x40383d09: sta_rx_cb at ??:?
+0x40385d49: ppRxPkt at ??:?
+0x4038477b: ppTask at ??:?
+0x4037cd65: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a44: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m
