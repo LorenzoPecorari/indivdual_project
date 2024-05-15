@@ -1,8 +1,1 @@
-0000000000000000000000000000000000000000 630a7a424510f39c125568f1430ec972f59f7bb3 Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1714728394 +0200	clone: from https://github.com/LorenzoPecorari/indivdual_project.git
-630a7a424510f39c125568f1430ec972f59f7bb3 6662259718d6ab0cd4740ea314d7022c26288c80 Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1714729097 +0200	commit: [wifi] first tests code
-6662259718d6ab0cd4740ea314d7022c26288c80 29fa922fdfe86fa347a09ec4fc900cf16507d9bb Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1715364550 +0200	commit: [adc] first test code
-29fa922fdfe86fa347a09ec4fc900cf16507d9bb 4809a607d5ac800f3719181fd894fbebf4c6e8ac Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1715439900 +0200	commit: [fft] first code
-4809a607d5ac800f3719181fd894fbebf4c6e8ac bca57de10055c74cdb778c04899d033065b540a7 Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1715498772 +0200	commit: [fft] single wave tests
-bca57de10055c74cdb778c04899d033065b540a7 4a57dc6630f102ab846d1b11e2b8e4ec377effbd Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1715506355 +0200	commit: [adc] updates on sampling
-4a57dc6630f102ab846d1b11e2b8e4ec377effbd 34cdbe0783560360a0854f6f8839601c6a4c49e6 Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1715530389 +0200	commit: [adc - fft] outliers algorithm
-34cdbe0783560360a0854f6f8839601c6a4c49e6 6719b12b5cb29c91597810d444a19137f4eb6170 Lorenzo Pecorari <pecorari.1885161@studenti.uniroma1.it> 1715622674 +0200	commit: [mqtt] first code (not working)
+2276e28e08a3c1a447b105f99d32df5d2ba0ecfd

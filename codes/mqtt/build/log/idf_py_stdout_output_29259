@@ -1,0 +1,961 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 13 2024 19:48:36[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=284bch (165052) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=000384e4 vaddr=3fc98400 size=047bch ( 18364) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0003cca8 vaddr=40374000 size=03370h ( 13168) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=9a37ch (631676) map[0m
+[0;32mI (259) esp_image: segment 4: paddr=000da3a4 vaddr=40377370 size=11010h ( 69648) load[0m
+[0;32mI (282) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (283) boot: Disabling RNG early entropy source...[0m
+[0;32mI (294) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (307) app_init: Project name:     mqtt[0m
+[0;32mI (312) app_init: App version:      2276e28-dirty[0m
+[0;32mI (317) app_init: Compile time:     May 14 2024 11:13:48[0m
+[0;32mI (323) app_init: ELF file SHA256:  0feccb195...[0m
+[0;32mI (328) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (335) app_init: Min chip rev:     v0.0[0m
+[0;32mI (340) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (345) app_init: Chip rev:         v0.1[0m
+[0;32mI (349) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (357) heap_init: At 3FCA0C48 len 00048AC8 (290 KiB): RAM[0m
+[0;32mI (363) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (369) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (375) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (382) spi_flash: detected chip: gd[0m
+[0;32mI (385) spi_flash: flash io: dio[0m
+[0;33mW (389) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (403) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (409) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (417) main_task: Started on CPU0[0m
+[0;32mI (437) main_task: Calling app_main()[0m
+[0;32mI (437) [MQTT] : Main execution...[0m
+[0;32mI (437) [WI-FI] : Testing the wifi module[0m
+[0;32mI (477) [WI-FI] : Init started...[0m
+[0;32mI (477) pp: pp rom version: e7ae62f[0m
+[0;32mI (477) net80211: net80211 rom version: e7ae62f[0m
+I (487) wifi:wifi driver task: 3fcaaf18, prio:23, stack:6656, core=0
+I (787) wifi:wifi firmware version: f2b9bda51
+I (787) wifi:wifi certification version: v7.0
+I (787) wifi:config NVS flash: enabled
+I (787) wifi:config nano formating: disabled
+I (787) wifi:Init data frame dynamic rx buffer num: 32
+I (797) wifi:Init static rx mgmt buffer num: 5
+I (797) wifi:Init management short buffer num: 32
+I (807) wifi:Init dynamic tx buffer num: 32
+I (807) wifi:Init static tx FG buffer num: 2
+I (817) wifi:Init static rx buffer size: 1600
+I (817) wifi:Init static rx buffer num: 10
+I (817) wifi:Init dynamic rx buffer num: 32
+[0;32mI (827) wifi_init: rx ba win: 6[0m
+[0;32mI (827) wifi_init: accept mbox: 6[0m
+[0;32mI (837) wifi_init: tcpip mbox: 32[0m
+[0;32mI (837) wifi_init: udp mbox: 6[0m
+[0;32mI (837) wifi_init: tcp mbox: 6[0m
+[0;32mI (847) wifi_init: tcp tx win: 5760[0m
+[0;32mI (847) wifi_init: tcp rx win: 5760[0m
+[0;32mI (857) wifi_init: tcp mss: 1440[0m
+[0;32mI (857) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (857) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (877) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (937) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (937) wifi:enable tsf
+[0;32mI (937) [WI-FI] : Event: 40[0m
+[0;32mI (947) [WI-FI] : Event: 2[0m
+[0;32mI (947) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (947) [WI-FI] : Connection success![0m
+I (987) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1
+I (987) wifi:state: init -> auth (b0)
+[0;32mI (987) [WI-FI] : Event: 40[0m
+I (987) wifi:state: auth -> assoc (0)
+I (997) wifi:state: assoc -> run (10)
+I (1027) wifi:connected with Vodafone-A76372035, aid = 2, channel 7, BW20, bssid = 74:36:6d:02:de:d1
+I (1027) wifi:security: WPA2-PSK, phy: bgn, rssi: -93
+I (1047) wifi:pm start, type: 1
+
+I (1047) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1047) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (1057) [WI-FI] : Event: 4[0m
+I (1087) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1297) wifi:<ba-add>idx:0 (ifx:0, 74:36:6d:02:de:d1), tid:0, ssn:0, winSize:64
+[0;32mI (2557) esp_netif_handlers: sta ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2557) [WI-FI] : Event: 0[0m
+[0;32mI (2557) [WI-FI] : got ip:192.168.1.22[0m
+[0;32mI (2557) [WI-FI] : Connected to AP[0m
+[0;32mI (2567) [WI-FI] : Init completed[0m
+[0;32mI (2567) [MQTT] : Starting mqtt configuration...[0m
+[0;32mI (2577) [MQTT] : Configuration structure variable populated[0m
+[0;32mI (2577) [MQTT] : Client handler registered[0m
+[0;32mI (2587) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (2587) [MQTT] : Other event, 7[0m
+[0;32mI (2597) main_task: Returned from app_main()[0m
+[0;31mE (3047) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (3047) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (3047) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (3057) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (3067) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (3067) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (3077) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (3077) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (3087) mqtt_client: MQTT connect failed[0m
+[0;32mI (3097) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (3097) [MQTT] : Disconnected[0m
+W (7747) wifi:[ADDBA]rx delba, code:39, delete tid:0
+I (7747) wifi:<ba-del>idx:0, tid:0
+I (9507) wifi:<ba-add>idx:0 (ifx:0, 74:36:6d:02:de:d1), tid:0, ssn:10, winSize:64
+[0;32mI (13107) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (13107) [MQTT] : Other event, 7[0m
+[0;31mE (13387) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (13387) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (13387) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (13397) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (13407) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (13407) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (13417) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (13417) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (13427) mqtt_client: MQTT connect failed[0m
+[0;32mI (13437) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (13437) [MQTT] : Disconnected[0m
+[0;32mI (23447) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (23447) [MQTT] : Other event, 7[0m
+[0;31mE (23727) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (23727) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (23737) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (23737) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (23747) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (23747) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (23757) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (23767) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (23777) mqtt_client: MQTT connect failed[0m
+[0;32mI (23777) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (23787) [MQTT] : Disconnected[0m
+[0;32mI (33787) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (33787) [MQTT] : Other event, 7[0m
+[0;31mE (34077) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (34077) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (34087) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (34087) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (34097) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (34107) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (34107) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (34117) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (34127) mqtt_client: MQTT connect failed[0m
+[0;32mI (34127) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (34137) [MQTT] : Disconnected[0m
+[0;32mI (44137) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (44137) [MQTT] : Other event, 7[0m
+[0;31mE (44517) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (44517) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (44527) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (44527) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (44537) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (44537) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (44547) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (44557) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (44557) mqtt_client: MQTT connect failed[0m
+[0;32mI (44567) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (44567) [MQTT] : Disconnected[0m
+[0;32mI (54577) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (54577) [MQTT] : Other event, 7[0m
+[0;31mE (54867) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (54867) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (54867) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (54877) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (54877) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (54887) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (54887) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (54897) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (54907) mqtt_client: MQTT connect failed[0m
+[0;32mI (54917) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (54917) [MQTT] : Disconnected[0m
+[0;32mI (69917) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (69917) [MQTT] : Other event, 7[0m
+[0;31mE (70107) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (70107) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (70117) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (70127) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (70127) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (70137) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (70137) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (70147) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (70157) mqtt_client: MQTT connect failed[0m
+[0;32mI (70157) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (70167) [MQTT] : Disconnected[0m
+[0;32mI (80167) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (80167) [MQTT] : Other event, 7[0m
+[0;31mE (80347) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (80347) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (80357) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (80357) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (80367) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (80367) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (80377) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (80387) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (80387) mqtt_client: MQTT connect failed[0m
+[0;32mI (80397) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (80407) [MQTT] : Disconnected[0m
+[0;32mI (90407) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (90407) [MQTT] : Other event, 7[0m
+[0;31mE (90587) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (90587) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (90597) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (90597) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (90607) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (90607) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (90617) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (90627) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (90627) mqtt_client: MQTT connect failed[0m
+[0;32mI (90637) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (90647) [MQTT] : Disconnected[0m
+[0;32mI (100647) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (100647) [MQTT] : Other event, 7[0m
+[0;31mE (100827) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (100827) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (100837) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (100837) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (100847) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (100847) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (100857) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (100867) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (100867) mqtt_client: MQTT connect failed[0m
+[0;32mI (100877) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (100887) [MQTT] : Disconnected[0m
+[0;32mI (110887) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (110887) [MQTT] : Other event, 7[0m
+[0;31mE (111167) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (111167) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (111177) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (111187) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (111187) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (111197) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (111197) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (111207) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (111217) mqtt_client: MQTT connect failed[0m
+[0;32mI (111217) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (111227) [MQTT] : Disconnected[0m
+[0;32mI (126227) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (126227) [MQTT] : Other event, 7[0m
+[0;31mE (126427) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (126427) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (126427) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (126437) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (126447) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (126447) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (126457) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (126467) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (126467) mqtt_client: MQTT connect failed[0m
+[0;32mI (126477) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (126477) [MQTT] : Disconnected[0m
+[0;32mI (136487) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (136487) [MQTT] : Other event, 7[0m
+[0;31mE (136667) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (136667) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (136677) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (136677) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (136687) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (136687) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (136697) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (136707) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (136707) mqtt_client: MQTT connect failed[0m
+[0;32mI (136717) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (136727) [MQTT] : Disconnected[0m
+[0;32mI (146727) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (146727) [MQTT] : Other event, 7[0m
+[0;31mE (146907) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (146907) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (146917) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (146927) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (146927) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (146937) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (146937) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (146947) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (146957) mqtt_client: MQTT connect failed[0m
+[0;32mI (146957) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (146967) [MQTT] : Disconnected[0m
+[0;32mI (156967) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (156967) [MQTT] : Other event, 7[0m
+[0;31mE (157257) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (157257) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (157257) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (157267) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (157267) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (157277) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (157287) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (157287) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (157297) mqtt_client: MQTT connect failed[0m
+[0;32mI (157307) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (157307) [MQTT] : Disconnected[0m
+[0;32mI (167317) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (167317) [MQTT] : Other event, 7[0m
+[0;31mE (167597) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (167597) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (167597) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (167607) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (167617) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (167617) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (167627) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (167637) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (167637) mqtt_client: MQTT connect failed[0m
+[0;32mI (167647) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (167647) [MQTT] : Disconnected[0m
+[0;32mI (177657) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (177657) [MQTT] : Other event, 7[0m
+[0;31mE (177937) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (177937) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (177947) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (177947) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (177957) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (177967) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (177967) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (177977) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (177987) mqtt_client: MQTT connect failed[0m
+[0;32mI (177987) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (177997) [MQTT] : Disconnected[0m
+[0;32mI (187997) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (187997) [MQTT] : Other event, 7[0m
+[0;31mE (188887) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (188887) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (188897) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (188907) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (188907) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (188917) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (188917) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (188927) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (188937) mqtt_client: MQTT connect failed[0m
+[0;32mI (188937) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (188947) [MQTT] : Disconnected[0m
+[0;32mI (198947) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (198947) [MQTT] : Other event, 7[0m
+[0;31mE (199137) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (199137) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (199137) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (199147) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (199147) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (199157) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (199167) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (199167) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (199177) mqtt_client: MQTT connect failed[0m
+[0;32mI (199187) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (199187) [MQTT] : Disconnected[0m
+[0;32mI (209197) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (209197) [MQTT] : Other event, 7[0m
+[0;31mE (210507) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (210507) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (210507) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (210517) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (210517) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (210527) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (210537) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (210537) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (210547) mqtt_client: MQTT connect failed[0m
+[0;32mI (210557) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (210557) [MQTT] : Disconnected[0m
+[0;32mI (220567) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (220567) [MQTT] : Other event, 7[0m
+[0;31mE (221767) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (221767) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (221767) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (221777) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (221777) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (221787) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (221797) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (221797) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (221807) mqtt_client: MQTT connect failed[0m
+[0;32mI (221817) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (221817) [MQTT] : Disconnected[0m
+[0;32mI (231827) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (231827) [MQTT] : Other event, 7[0m
+[0;31mE (232107) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (232107) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (232117) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (232117) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (232127) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (232127) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (232137) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (232147) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (232157) mqtt_client: MQTT connect failed[0m
+[0;32mI (232157) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (232167) [MQTT] : Disconnected[0m
+[0;32mI (242167) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (242167) [MQTT] : Other event, 7[0m
+[0;31mE (242457) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (242457) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (242467) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (242467) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (242477) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (242487) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (242487) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (242497) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (242507) mqtt_client: MQTT connect failed[0m
+[0;32mI (242507) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (242517) [MQTT] : Disconnected[0m
+[0;32mI (252517) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (252517) [MQTT] : Other event, 7[0m
+[0;31mE (254637) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (254637) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (254637) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (254647) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (254657) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (254657) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (254667) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (254667) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (254677) mqtt_client: MQTT connect failed[0m
+[0;32mI (254687) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (254687) [MQTT] : Disconnected[0m
+[0;32mI (264697) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (264697) [MQTT] : Other event, 7[0m
+I (267277) wifi:bcn_timeout,ap_probe_send_start
+[0;32mI (267277) [WI-FI] : Event: 21[0m
+[0;31mE (269327) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (269327) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (269337) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (269337) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (269347) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (269347) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (269357) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (269367) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (269367) mqtt_client: MQTT connect failed[0m
+[0;32mI (269377) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (269387) [MQTT] : Disconnected[0m
+[0;32mI (279387) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (279387) [MQTT] : Other event, 7[0m
+[0;31mE (279717) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (279717) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (279727) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (279727) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (279737) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (279747) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (279747) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (279757) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (279767) mqtt_client: MQTT connect failed[0m
+[0;32mI (279767) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (279777) [MQTT] : Disconnected[0m
+[0;32mI (289777) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (289777) [MQTT] : Other event, 7[0m
+[0;31mE (289967) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (289967) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (289967) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (289977) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (289987) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (289987) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (289997) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (289997) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (290007) mqtt_client: MQTT connect failed[0m
+[0;32mI (290017) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (290017) [MQTT] : Disconnected[0m
+[0;32mI (300027) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (300027) [MQTT] : Other event, 7[0m
+[0;31mE (300327) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (300327) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (300337) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (300347) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (300347) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (300357) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (300357) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (300367) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (300377) mqtt_client: MQTT connect failed[0m
+[0;32mI (300377) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (300387) [MQTT] : Disconnected[0m
+[0;32mI (310387) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (310387) [MQTT] : Other event, 7[0m
+[0;31mE (310647) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (310647) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (310657) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (310657) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (310667) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (310667) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (310677) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (310687) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (310687) mqtt_client: MQTT connect failed[0m
+[0;32mI (310697) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (310707) [MQTT] : Disconnected[0m
+[0;32mI (320707) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (320707) [MQTT] : Other event, 7[0m
+[0;31mE (322337) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (322337) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (322347) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (322347) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (322357) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (322357) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (322367) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (322377) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (322387) mqtt_client: MQTT connect failed[0m
+[0;32mI (322387) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (322397) [MQTT] : Disconnected[0m
+[0;32mI (332397) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (332397) [MQTT] : Other event, 7[0m
+[0;31mE (334197) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (334197) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (334207) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (334207) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (334217) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (334217) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (334227) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (334237) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (334237) mqtt_client: MQTT connect failed[0m
+[0;32mI (334247) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (334257) [MQTT] : Disconnected[0m
+[0;32mI (344257) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (344257) [MQTT] : Other event, 7[0m
+[0;31mE (344537) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (344537) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (344547) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (344547) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (344557) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (344567) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (344567) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (344577) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (344587) mqtt_client: MQTT connect failed[0m
+[0;32mI (344587) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (344597) [MQTT] : Disconnected[0m
+[0;32mI (354597) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (354597) [MQTT] : Other event, 7[0m
+[0;31mE (354777) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (354777) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (354787) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (354787) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (354797) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (354797) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (354807) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (354817) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (354817) mqtt_client: MQTT connect failed[0m
+[0;32mI (354827) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (354837) [MQTT] : Disconnected[0m
+[0;32mI (364837) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (364837) [MQTT] : Other event, 7[0m
+[0;31mE (365017) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (365017) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (365027) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (365027) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (365037) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (365037) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (365047) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (365057) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (365057) mqtt_client: MQTT connect failed[0m
+[0;32mI (365067) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (365077) [MQTT] : Disconnected[0m
+[0;32mI (375077) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (375077) [MQTT] : Other event, 7[0m
+[0;31mE (375457) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (375467) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (375467) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (375477) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (375477) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (375487) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (375487) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (375497) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (375507) mqtt_client: MQTT connect failed[0m
+[0;32mI (375517) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (375517) [MQTT] : Disconnected[0m
+[0;32mI (390517) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (390517) [MQTT] : Other event, 7[0m
+[0;31mE (390727) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (390727) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (390727) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (390737) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (390737) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (390747) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (390757) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (390757) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (390767) mqtt_client: MQTT connect failed[0m
+[0;32mI (390777) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (390777) [MQTT] : Disconnected[0m
+[0;32mI (400787) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (400787) [MQTT] : Other event, 7[0m
+[0;31mE (401057) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (401067) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (401067) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (401077) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (401077) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (401087) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (401087) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (401097) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (401107) mqtt_client: MQTT connect failed[0m
+[0;32mI (401117) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (401117) [MQTT] : Disconnected[0m
+[0;32mI (416117) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (416117) [MQTT] : Other event, 7[0m
+[0;31mE (416247) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (416247) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (416257) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (416257) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (416267) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (416277) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (416277) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (416287) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (416297) mqtt_client: MQTT connect failed[0m
+[0;32mI (416297) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (416307) [MQTT] : Disconnected[0m
+I (421647) wifi:<ba-del>idx:0, tid:0
+I (421647) wifi:<ba-add>idx:0 (ifx:0, 74:36:6d:02:de:d1), tid:0, ssn:207, winSize:64
+[0;32mI (426307) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (426307) [MQTT] : Other event, 7[0m
+I (431017) wifi:bcn_timeout,ap_probe_send_start
+[0;32mI (431017) [WI-FI] : Event: 21[0m
+[0;31mE (433067) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (433067) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (433077) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (433077) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (433087) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (433087) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (433097) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (433107) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (433107) mqtt_client: MQTT connect failed[0m
+[0;32mI (433117) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (433127) [MQTT] : Disconnected[0m
+I (433517) wifi:ap_probe_send over, resett wifi status to disassoc
+I (433517) wifi:state: run -> init (c800)
+I (433517) wifi:pm stop, total sleep time: 313693982 us / 432474426 us
+
+I (433527) wifi:<ba-del>idx:0, tid:0
+I (433527) wifi:new:<7,0>, old:<7,0>, ap:<255,255>, sta:<7,0>, prof:1
+[0;32mI (433537) [WI-FI] : Event: 5[0m
+[0;31mE (433537) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (433547) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (433547) [WI-FI] : Connection success![0m
+I (435957) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (435957) [WI-FI] : Event: 5[0m
+[0;31mE (435957) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (435957) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (435967) [WI-FI] : Connection success![0m
+I (438377) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (438377) [WI-FI] : Event: 5[0m
+[0;31mE (438377) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (438377) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (438387) [WI-FI] : Connection success![0m
+I (440797) wifi:Coexist: Wi-Fi connect fail, apply reconnect coex policy
+
+[0;32mI (440797) [WI-FI] : Event: 5[0m
+[0;31mE (440797) [WI-FI] : Disconnected, reconnection will be tried[0m
+[0;32mI (440797) [WI-FI] : Reconnecting to wifi...[0m
+[0;32mI (440807) [WI-FI] : Connection success![0m
+I (440887) wifi:new:<7,0>, old:<7,0>, ap:<255,255>, sta:<7,0>, prof:1
+I (440887) wifi:state: init -> auth (b0)
+I (440897) wifi:state: auth -> assoc (0)
+I (440897) wifi:state: assoc -> run (10)
+I (440917) wifi:connected with Vodafone-A76372035, aid = 1, channel 7, BW20, bssid = 74:36:6d:02:de:d1
+I (440927) wifi:security: WPA2-PSK, phy: bgn, rssi: -97
+I (440937) wifi:pm start, type: 1
+
+I (440937) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (440947) [WI-FI] : Event: 4[0m
+I (440957) wifi:<ba-add>idx:0 (ifx:0, 74:36:6d:02:de:d1), tid:0, ssn:0, winSize:64
+I (441087) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (443127) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (443127) [MQTT] : Other event, 7[0m
+[0;31mE (443127) esp-tls: couldn't get hostname for :54c7f0618968409f95ff78c304b7b78e.s1.eu.hivemq.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (443137) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (443147) mqtt_client: Error transport connect[0m
+[0;32mI (443147) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (443157) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (443157) [MQTT] : Last error code reported from esp-tls: 0x8001[0m
+[0;32mI (443167) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (443167) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;32mI (443177) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (443187) [MQTT] : Disconnected[0m
+[0;32mI (445447) esp_netif_handlers: sta ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (445447) [WI-FI] : Event: 0[0m
+[0;32mI (445447) [WI-FI] : got ip:192.168.1.22[0m
+[0;32mI (453187) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (453187) [MQTT] : Other event, 7[0m
+[0;31mE (463227) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (463227) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (463227) mqtt_client: Error transport connect[0m
+[0;32mI (463227) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (463237) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (463237) [MQTT] : Last error code reported from esp-tls: 0x8006[0m
+[0;32mI (463247) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (463247) [MQTT] : Last captured errno : 0 (Success)[0m
+[0;32mI (463257) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (463267) [MQTT] : Disconnected[0m
+[0;32mI (473267) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (473267) [MQTT] : Other event, 7[0m
+[0;31mE (483277) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (483277) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (483277) mqtt_client: Error transport connect[0m
+[0;32mI (483277) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (483287) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (483287) [MQTT] : Last error code reported from esp-tls: 0x8006[0m
+[0;32mI (483297) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (483297) [MQTT] : Last captured errno : 0 (Success)[0m
+[0;32mI (483307) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (483317) [MQTT] : Disconnected[0m
+[0;32mI (493317) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (493317) [MQTT] : Other event, 7[0m
+[0;31mE (503327) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (503327) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (503327) mqtt_client: Error transport connect[0m
+[0;32mI (503327) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (503337) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (503337) [MQTT] : Last error code reported from esp-tls: 0x8006[0m
+[0;32mI (503347) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (503357) [MQTT] : Last captured errno : 0 (Success)[0m
+[0;32mI (503357) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (503367) [MQTT] : Disconnected[0m
+[0;32mI (513367) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (513367) [MQTT] : Other event, 7[0m
+[0;31mE (516987) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (516987) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (516987) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (516997) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (516997) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (517007) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (517017) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (517017) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (517027) mqtt_client: MQTT connect failed[0m
+[0;32mI (517037) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (517037) [MQTT] : Disconnected[0m
+[0;32mI (527047) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (527047) [MQTT] : Other event, 7[0m
+[0;31mE (527327) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (527327) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (527337) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (527337) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (527347) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (527347) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (527357) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (527367) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (527367) mqtt_client: MQTT connect failed[0m
+[0;32mI (527377) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (527387) [MQTT] : Disconnected[0m
+[0;32mI (537387) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (537387) [MQTT] : Other event, 7[0m
+[0;31mE (537657) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (537657) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (537667) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (537677) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (537677) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (537687) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (537687) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (537697) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (537707) mqtt_client: MQTT connect failed[0m
+[0;32mI (537707) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (537717) [MQTT] : Disconnected[0m
+[0;32mI (552717) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (552717) [MQTT] : Other event, 7[0m
+[0;31mE (552927) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (552927) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (552937) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (552947) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (552947) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (552957) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (552957) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (552967) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (552977) mqtt_client: MQTT connect failed[0m
+[0;32mI (552977) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (552987) [MQTT] : Disconnected[0m
+[0;32mI (567987) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (567987) [MQTT] : Other event, 7[0m
+[0;31mE (568177) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (568177) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (568187) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (568187) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (568197) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (568197) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (568207) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (568217) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (568217) mqtt_client: MQTT connect failed[0m
+[0;32mI (568227) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (568237) [MQTT] : Disconnected[0m
+[0;32mI (578237) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (578237) [MQTT] : Other event, 7[0m
+[0;31mE (578517) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (578517) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (578527) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (578527) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (578537) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (578547) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (578547) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (578557) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (578567) mqtt_client: MQTT connect failed[0m
+[0;32mI (578567) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (578577) [MQTT] : Disconnected[0m
+[0;32mI (588577) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (588577) [MQTT] : Other event, 7[0m
+[0;31mE (588757) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (588757) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (588767) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (588777) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (588777) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (588787) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (588787) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (588797) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (588807) mqtt_client: MQTT connect failed[0m
+[0;32mI (588807) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (588817) [MQTT] : Disconnected[0m

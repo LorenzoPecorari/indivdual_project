@@ -3,5 +3,9 @@
     "idf.adapterTargetName": "esp32s3",
     "idf.openOcdConfigs": [
         "board/esp32s3-bridge.cfg"
-    ]
+    ],
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "broker_cert.pem.h": "c"
+    }
 }

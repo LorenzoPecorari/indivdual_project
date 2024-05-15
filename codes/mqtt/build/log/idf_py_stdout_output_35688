@@ -1,0 +1,71 @@
+[1/5] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/mqtt/build/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/mqtt/build/partition_table/partition-table.bin /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/mqtt/build/mqtt.bin
+mqtt.bin binary size 0xdb4e0 bytes. Smallest app partition is 0x100000 bytes. 0x24b20 bytes (14%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/mqtt/build/bootloader/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/mqtt/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/3] cd /home/utente/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/utente/esp/esp-idf -D "SERIAL_TOOL=/home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/utente/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/mqtt/build -P /home/utente/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 mqtt.bin 0x8000 partition_table/partition-table.bin
+esptool.py vv4.8.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: f4:12:fa:9f:f4:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000ebfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21056 bytes to 13069...
+Writing at 0x00000000... (100 %)
+Wrote 21056 bytes (13069 compressed) at 0x00000000 in 0.6 seconds (effective 305.0 kbit/s)...
+Hash of data verified.
+Compressed 898272 bytes to 553618...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001dfe1... (5 %)
+Writing at 0x00027493... (8 %)
+Writing at 0x0002c2f7... (11 %)
+Writing at 0x00034dd6... (14 %)
+Writing at 0x0003fde0... (17 %)
+Writing at 0x000460cf... (20 %)
+Writing at 0x0004c470... (23 %)
+Writing at 0x000528ba... (26 %)
+Writing at 0x000586a0... (29 %)
+Writing at 0x0005e486... (32 %)
+Writing at 0x00064393... (35 %)
+Writing at 0x0006a95b... (38 %)
+Writing at 0x000706c1... (41 %)
+Writing at 0x00075df5... (44 %)
+Writing at 0x0007acb9... (47 %)
+Writing at 0x0007fe7f... (50 %)
+Writing at 0x00085321... (52 %)
+Writing at 0x0008a51a... (55 %)
+Writing at 0x0008f7bc... (58 %)
+Writing at 0x000950bc... (61 %)
+Writing at 0x0009ae02... (64 %)
+Writing at 0x000a074c... (67 %)
+Writing at 0x000a64ad... (70 %)
+Writing at 0x000ac189... (73 %)
+Writing at 0x000b198f... (76 %)
+Writing at 0x000b76b9... (79 %)
+Writing at 0x000bd4dc... (82 %)
+Writing at 0x000c28e4... (85 %)
+Writing at 0x000ccb6f... (88 %)
+Writing at 0x000d494e... (91 %)
+Writing at 0x000da598... (94 %)
+Writing at 0x000e0691... (97 %)
+Writing at 0x000e6c07... (100 %)
+Wrote 898272 bytes (553618 compressed) at 0x00010000 in 12.5 seconds (effective 573.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 599.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

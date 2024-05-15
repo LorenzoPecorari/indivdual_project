@@ -1,0 +1,25 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4037a87e: esp_cpu_wait_for_intr at /home/utente/esp/esp-idf/components/esp_hw_support/cpu.c:150
+[0m
+[0;33m0x40375eb0: ipc_task at /home/utente/esp/esp-idf/components/esp_system/esp_ipc.c:49
+[0m
+[0;33m0x4037a87b: xt_utils_wait_for_intr at /home/utente/esp/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at /home/utente/esp/esp-idf/components/esp_hw_support/cpu.c:137
+0x420038da: esp_vApplicationIdleHook at /home/utente/esp/esp-idf/components/esp_system/freertos_hooks.c:58
+0x4037dfc9: prvIdleTask at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4310 (discriminator 1)
+0x4037cd65: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037a87e: esp_cpu_wait_for_intr at /home/utente/esp/esp-idf/components/esp_hw_support/cpu.c:150
+[0m
+[0;33m0x4037a87b: xt_utils_wait_for_intr at /home/utente/esp/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at /home/utente/esp/esp-idf/components/esp_hw_support/cpu.c:137
+0x420038da: esp_vApplicationIdleHook at /home/utente/esp/esp-idf/components/esp_system/freertos_hooks.c:58
+0x4037dfc9: prvIdleTask at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4310 (discriminator 1)
+0x4037cd65: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x420031b6: panic_handler at /home/utente/esp/esp-idf/components/esp_system/port/panic_handler.c:140 (discriminator 3)
+[0m
+[0;33m0x42002bd9: panic_print_char_uart at /home/utente/esp/esp-idf/components/esp_system/panic.c:88 (discriminator 1)
+[0m
+[0m

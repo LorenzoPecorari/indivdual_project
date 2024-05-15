@@ -1,0 +1,192 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 13 2024 19:48:36[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=284bch (165052) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=000384e4 vaddr=3fc98400 size=047bch ( 18364) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0003cca8 vaddr=40374000 size=03370h ( 13168) load[0m
+[0;32mI (140) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=9a3c0h (631744) map[0m
+[0;32mI (259) esp_image: segment 4: paddr=000da3e8 vaddr=40377370 size=11010h ( 69648) load[0m
+[0;32mI (282) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (283) boot: Disabling RNG early entropy source...[0m
+[0;32mI (294) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (307) app_init: Project name:     mqtt[0m
+[0;32mI (312) app_init: App version:      2276e28-dirty[0m
+[0;32mI (317) app_init: Compile time:     May 14 2024 11:13:48[0m
+[0;32mI (323) app_init: ELF file SHA256:  5b4d202be...[0m
+[0;32mI (328) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (335) app_init: Min chip rev:     v0.0[0m
+[0;32mI (340) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (345) app_init: Chip rev:         v0.1[0m
+[0;32mI (349) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (357) heap_init: At 3FCA0C48 len 00048AC8 (290 KiB): RAM[0m
+[0;32mI (363) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (369) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (375) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (382) spi_flash: detected chip: gd[0m
+[0;32mI (385) spi_flash: flash io: dio[0m
+[0;33mW (389) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (403) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (409) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (417) main_task: Started on CPU0[0m
+[0;32mI (437) main_task: Calling app_main()[0m
+[0;32mI (437) [MQTT] : Main execution...[0m
+[0;32mI (437) [WI-FI] : Testing the wifi module[0m
+[0;32mI (447) [WI-FI] : Init started...[0m
+[0;32mI (447) pp: pp rom version: e7ae62f[0m
+[0;32mI (447) net80211: net80211 rom version: e7ae62f[0m
+I (477) wifi:wifi driver task: 3fcaadd8, prio:23, stack:6656, core=0
+I (497) wifi:wifi firmware version: f2b9bda51
+I (497) wifi:wifi certification version: v7.0
+I (497) wifi:config NVS flash: enabled
+I (497) wifi:config nano formating: disabled
+I (497) wifi:Init data frame dynamic rx buffer num: 32
+I (507) wifi:Init static rx mgmt buffer num: 5
+I (507) wifi:Init management short buffer num: 32
+I (507) wifi:Init dynamic tx buffer num: 32
+I (517) wifi:Init static tx FG buffer num: 2
+I (517) wifi:Init static rx buffer size: 1600
+I (527) wifi:Init static rx buffer num: 10
+I (527) wifi:Init dynamic rx buffer num: 32
+[0;32mI (527) wifi_init: rx ba win: 6[0m
+[0;32mI (537) wifi_init: accept mbox: 6[0m
+[0;32mI (537) wifi_init: tcpip mbox: 32[0m
+[0;32mI (547) wifi_init: udp mbox: 6[0m
+[0;32mI (547) wifi_init: tcp mbox: 6[0m
+[0;32mI (547) wifi_init: tcp tx win: 5760[0m
+[0;32mI (557) wifi_init: tcp rx win: 5760[0m
+[0;32mI (557) wifi_init: tcp mss: 1440[0m
+[0;32mI (567) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (567) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (677) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+[0;33mW (677) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+I (767) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (767) wifi:enable tsf
+[0;32mI (767) [WI-FI] : Event: 40[0m
+[0;32mI (767) [WI-FI] : Event: 2[0m
+[0;32mI (767) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (767) [WI-FI] : Connection success![0m
+I (2047) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1
+I (2047) wifi:state: init -> auth (b0)
+[0;32mI (2047) [WI-FI] : Event: 40[0m
+I (2057) wifi:state: auth -> assoc (0)
+I (2067) wifi:state: assoc -> run (10)
+I (2417) wifi:connected with Vodafone-A76372035, aid = 2, channel 7, BW20, bssid = 74:36:6d:02:de:d1
+I (2417) wifi:security: WPA2-PSK, phy: bgn, rssi: -92
+I (2457) wifi:pm start, type: 1
+
+I (2457) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (2457) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (2467) [WI-FI] : Event: 4[0m
+I (2467) wifi:<ba-add>idx:0 (ifx:0, 74:36:6d:02:de:d1), tid:0, ssn:0, winSize:64
+I (2877) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (10967) esp_netif_handlers: sta ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (10967) [WI-FI] : Event: 0[0m
+[0;32mI (10967) [WI-FI] : got ip:192.168.1.22[0m
+[0;32mI (10967) [WI-FI] : Connected to AP[0m
+[0;32mI (10977) [WI-FI] : Init completed[0m
+[0;32mI (10977) [MQTT] : Starting mqtt configuration...[0m
+[0;32mI (10987) [MQTT] : Configuration structure variable populated[0m
+[0;32mI (10987) [MQTT] : Client handler registered[0m
+[0;32mI (10997) main_task: Returned from app_main()[0m
+[0;31mE (11287) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (11287) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (11287) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (11297) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (11297) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (11307) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (11307) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (11317) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (11327) mqtt_client: MQTT connect failed[0m
+[0;32mI (11337) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (11337) [MQTT] : Disconnected[0m
+[0;31mE (26507) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (26507) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (26507) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (26517) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (26517) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (26527) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (26537) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (26537) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (26547) mqtt_client: MQTT connect failed[0m
+[0;32mI (26557) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (26557) [MQTT] : Disconnected[0m
+[0;31mE (37047) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (37047) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (37057) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (37067) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (37067) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (37077) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (37077) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (37087) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (37097) mqtt_client: MQTT connect failed[0m
+[0;32mI (37097) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (37107) [MQTT] : Disconnected[0m
+[0;31mE (47327) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (47327) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (47337) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (47337) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (47347) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (47357) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (47357) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (47367) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (47377) mqtt_client: MQTT connect failed[0m
+[0;32mI (47377) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (47387) [MQTT] : Disconnected[0m
+[0;31mE (57567) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (57567) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (57577) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (57577) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (57587) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (57587) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (57597) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (57607) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (57607) mqtt_client: MQTT connect failed[0m
+[0;32mI (57617) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (57617) [MQTT] : Disconnected[0m
+[0;31mE (67807) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (67807) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (67817) [MQTT] : Triggered event - id: 0	 base: MQTT_EVENTS
+[0m
+[0;32mI (67817) [MQTT] : MQTT_EVENT_ERROR[0m
+[0;32mI (67827) [MQTT] : Last error code reported from esp-tls: 0x8008[0m
+[0;32mI (67827) [MQTT] : Last tls stack error number: 0x0[0m
+[0;32mI (67837) [MQTT] : Last captured errno : 128 (Socket is not connected)[0m
+[0;31mE (67847) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -1[0m
+[0;31mE (67847) mqtt_client: MQTT connect failed[0m
+[0;32mI (67857) [MQTT] : Triggered event - id: 2	 base: MQTT_EVENTS
+[0m
+[0;32mI (67857) [MQTT] : Disconnected[0m
