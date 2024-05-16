@@ -1,0 +1,592 @@
+��switching of GPIO slESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 15 2024 21:20:49[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=121ech ( 74220) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022214 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024c00 vaddr=40374000 size=0b418h ( 46104) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d430h (119856) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d458 vaddr=4037f418 size=02d58h ( 11608) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     fft[0m
+[0;32mI (190) app_init: App version:      b25758c-dirty[0m
+[0;32mI (196) app_init: Compile time:     May 15 2024 21:20:39[0m
+[0;32mI (202) app_init: ELF file SHA256:  845670bbd...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC98D38 len 000509D8 (322 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (314) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (324) [ADC] : Channel width and configuration done[0m
+Max: 826.000000 - Average : 807.293945 - Stadnard dev: 9.388042 - threshold; 3.000000
+[0;32mI (384) [ADC] : Sampling completed[0m
+[0;32mI (394) [FFT] : Hann window generated[0m
+[0;32mI (394) [FFT] : Output populating completed[0m
+[0;32mI (394) view: Data min[176] = 790.000000, Data max[61] = 826.000000[0m
+ ________________________________________________________________
+0|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (464) view: Plot: Length=1024, min=-128.000000, max=64.000000[0m
+[0;32mI (474) [FFT] : FFT computed[0m
+ampl: 82.213013, idx: 0
+ampl: 82.226379, idx: 1
+ampl: 27.679882, idx: 2
+ampl: 9.660474, idx: 3
+ampl: 7.909013, idx: 4
+ampl: 12.401580, idx: 5
+ampl: 5.043174, idx: 6
+ampl: 12.947781, idx: 7
+ampl: 6.057956, idx: 8
+ampl: 13.463789, idx: 9
+ampl: 14.609075, idx: 10
+ampl: 10.427369, idx: 11
+ampl: 12.197543, idx: 12
+ampl: 12.349700, idx: 13
+ampl: 6.700092, idx: 14
+ampl: 17.268604, idx: 15
+ampl: 29.687996, idx: 16
+ampl: 40.834641, idx: 17
+ampl: 38.476810, idx: 18
+ampl: 20.541708, idx: 19
+ampl: 8.048176, idx: 20
+ampl: 10.909311, idx: 21
+ampl: 10.370307, idx: 22
+ampl: 8.768348, idx: 23
+ampl: 10.568495, idx: 24
+ampl: 10.334024, idx: 25
+ampl: 5.346865, idx: 27
+ampl: 2.310875, idx: 28
+ampl: 15.765648, idx: 29
+ampl: 32.701008, idx: 30
+ampl: 34.996078, idx: 31
+ampl: 25.119247, idx: 32
+ampl: 16.188908, idx: 33
+ampl: 35.231041, idx: 34
+ampl: 36.394215, idx: 35
+ampl: 25.100147, idx: 36
+ampl: 6.272854, idx: 37
+ampl: 4.247849, idx: 38
+ampl: 5.504438, idx: 39
+ampl: 4.081982, idx: 40
+ampl: 5.245493, idx: 41
+ampl: 3.201128, idx: 42
+ampl: 20.428822, idx: 43
+ampl: 27.613022, idx: 44
+ampl: 22.578289, idx: 45
+ampl: 4.441904, idx: 46
+ampl: 12.674271, idx: 47
+ampl: 9.090986, idx: 48
+ampl: 11.957659, idx: 49
+ampl: 9.891706, idx: 50
+ampl: 26.521683, idx: 51
+ampl: 30.453339, idx: 52
+ampl: 24.710562, idx: 53
+ampl: 12.866222, idx: 54
+ampl: 10.451159, idx: 55
+ampl: 7.949729, idx: 56
+ampl: 8.060580, idx: 57
+ampl: 11.794912, idx: 58
+ampl: 14.415971, idx: 59
+ampl: 10.154648, idx: 60
+ampl: 8.495579, idx: 61
+ampl: 11.872875, idx: 62
+ampl: 9.449080, idx: 63
+ampl: 11.623632, idx: 64
+ampl: 10.469948, idx: 65
+ampl: 12.708967, idx: 66
+ampl: 8.067720, idx: 67
+ampl: 2.984289, idx: 68
+ampl: 10.478111, idx: 69
+ampl: 11.692234, idx: 70
+ampl: 18.742727, idx: 71
+ampl: 13.573658, idx: 72
+ampl: 10.805856, idx: 73
+ampl: 10.382425, idx: 74
+ampl: 6.121289, idx: 75
+ampl: 9.457747, idx: 76
+ampl: 7.647914, idx: 77
+ampl: 9.818639, idx: 78
+ampl: 12.298782, idx: 79
+ampl: 11.783758, idx: 80
+ampl: 11.404585, idx: 81
+ampl: 9.324237, idx: 82
+ampl: 9.173948, idx: 83
+ampl: 13.009483, idx: 84
+ampl: 5.650086, idx: 85
+ampl: 25.107468, idx: 86
+ampl: 24.784214, idx: 87
+ampl: 13.586824, idx: 88
+ampl: 12.539711, idx: 89
+ampl: 6.509920, idx: 90
+ampl: 9.331420, idx: 91
+ampl: 9.709214, idx: 92
+ampl: 10.416493, idx: 93
+ampl: 10.774064, idx: 94
+ampl: 4.739651, idx: 95
+ampl: 9.172127, idx: 96
+ampl: 9.164204, idx: 97
+ampl: 9.663905, idx: 98
+ampl: 8.844663, idx: 99
+ampl: 8.194397, idx: 100
+ampl: 15.615805, idx: 101
+ampl: 11.730050, idx: 102
+ampl: 23.632359, idx: 103
+ampl: 27.510899, idx: 104
+ampl: 23.322685, idx: 105
+ampl: 20.665779, idx: 106
+ampl: 11.368113, idx: 107
+ampl: 4.068444, idx: 108
+ampl: 5.961403, idx: 110
+ampl: 6.104975, idx: 111
+ampl: 6.722936, idx: 112
+ampl: 2.037697, idx: 113
+ampl: 8.497948, idx: 116
+ampl: 8.303445, idx: 117
+ampl: 9.775707, idx: 118
+ampl: 9.311294, idx: 119
+ampl: 16.786341, idx: 120
+ampl: 24.907572, idx: 121
+ampl: 25.476837, idx: 122
+ampl: 26.472960, idx: 123
+ampl: 18.122137, idx: 124
+ampl: 10.563540, idx: 125
+ampl: 7.982287, idx: 126
+ampl: 9.257339, idx: 127
+ampl: 14.535378, idx: 128
+ampl: 13.604842, idx: 129
+ampl: 4.208483, idx: 130
+ampl: 13.635296, idx: 131
+ampl: 12.917575, idx: 132
+ampl: 15.230362, idx: 133
+ampl: 15.654229, idx: 134
+ampl: 10.680604, idx: 135
+ampl: 7.040606, idx: 136
+ampl: 6.677980, idx: 137
+ampl: 13.178141, idx: 138
+ampl: 6.932218, idx: 139
+ampl: 7.034154, idx: 140
+ampl: 6.914200, idx: 141
+ampl: 9.465547, idx: 142
+ampl: 11.714934, idx: 143
+ampl: 8.549216, idx: 144
+ampl: 12.009754, idx: 145
+ampl: 13.275784, idx: 146
+ampl: 10.177006, idx: 147
+ampl: 8.988401, idx: 148
+ampl: 9.461710, idx: 149
+ampl: 8.607161, idx: 150
+ampl: 9.740483, idx: 151
+ampl: 10.795642, idx: 152
+ampl: 12.825541, idx: 153
+ampl: 10.556952, idx: 154
+ampl: 20.630173, idx: 155
+ampl: 23.252682, idx: 156
+ampl: 13.658609, idx: 157
+ampl: 12.592597, idx: 158
+ampl: 13.341384, idx: 159
+ampl: 6.077878, idx: 160
+ampl: 3.563465, idx: 161
+ampl: 4.307725, idx: 162
+ampl: 6.951952, idx: 163
+ampl: 10.220348, idx: 164
+ampl: 8.818203, idx: 165
+ampl: 7.017154, idx: 166
+ampl: 2.421329, idx: 167
+ampl: 4.359054, idx: 168
+ampl: 6.435486, idx: 169
+ampl: 10.294213, idx: 170
+ampl: 8.328485, idx: 171
+ampl: 17.049215, idx: 172
+ampl: 22.399784, idx: 173
+ampl: 17.076702, idx: 174
+ampl: 12.573584, idx: 175
+ampl: 16.038153, idx: 176
+ampl: 13.762869, idx: 177
+ampl: 7.471205, idx: 179
+ampl: 6.488871, idx: 180
+ampl: 5.373892, idx: 181
+ampl: 3.535299, idx: 182
+ampl: 10.164386, idx: 183
+ampl: 6.842673, idx: 184
+ampl: 8.494915, idx: 185
+ampl: 11.595153, idx: 186
+ampl: 9.625073, idx: 187
+ampl: 8.659945, idx: 188
+ampl: 9.811351, idx: 189
+ampl: 14.644660, idx: 190
+ampl: 15.471000, idx: 191
+ampl: 11.285090, idx: 192
+ampl: 15.772877, idx: 193
+ampl: 17.094589, idx: 194
+ampl: 2.856826, idx: 195
+ampl: 10.990983, idx: 196
+ampl: 12.753659, idx: 197
+ampl: 13.887710, idx: 198
+ampl: 6.242641, idx: 199
+ampl: 10.007822, idx: 200
+ampl: 10.078629, idx: 201
+ampl: 8.333550, idx: 202
+ampl: 11.164782, idx: 203
+ampl: 11.797964, idx: 204
+ampl: 9.145922, idx: 205
+ampl: 10.046974, idx: 206
+ampl: 7.138205, idx: 207
+ampl: 2.665800, idx: 208
+ampl: 7.685300, idx: 209
+ampl: 11.579014, idx: 210
+ampl: 12.516527, idx: 211
+ampl: 7.077647, idx: 212
+ampl: 3.546787, idx: 213
+ampl: 9.847218, idx: 214
+ampl: 15.356764, idx: 215
+ampl: 12.321305, idx: 216
+ampl: 12.620839, idx: 217
+ampl: 11.551317, idx: 218
+ampl: 12.551020, idx: 219
+ampl: 6.509731, idx: 220
+ampl: 9.740784, idx: 221
+ampl: 14.049269, idx: 222
+ampl: 13.596146, idx: 223
+ampl: 12.073860, idx: 224
+ampl: 18.463730, idx: 225
+ampl: 12.262926, idx: 226
+ampl: 12.047970, idx: 227
+ampl: 16.073757, idx: 228
+ampl: 12.134182, idx: 229
+ampl: 0.344737, idx: 230
+ampl: 7.880602, idx: 231
+ampl: 5.724591, idx: 232
+ampl: 8.103913, idx: 233
+ampl: 8.431921, idx: 234
+ampl: 10.577683, idx: 235
+ampl: 7.728226, idx: 236
+ampl: 4.018427, idx: 237
+ampl: 12.276258, idx: 238
+ampl: 8.995413, idx: 239
+ampl: 10.022311, idx: 240
+ampl: 9.908283, idx: 241
+ampl: 19.219513, idx: 242
+ampl: 17.258640, idx: 243
+ampl: 13.009706, idx: 244
+ampl: 18.318594, idx: 245
+ampl: 18.763760, idx: 246
+ampl: 7.598610, idx: 247
+ampl: 7.117345, idx: 248
+ampl: 8.930385, idx: 249
+ampl: 6.241877, idx: 250
+ampl: 0.433109, idx: 251
+ampl: 12.142923, idx: 252
+ampl: 11.476177, idx: 253
+ampl: 12.253693, idx: 254
+ampl: 14.834003, idx: 255
+ampl: 9.915560, idx: 256
+ampl: 3.254267, idx: 257
+ampl: 8.044597, idx: 258
+ampl: 13.700436, idx: 259
+ampl: 16.351492, idx: 260
+ampl: 14.605876, idx: 261
+ampl: 9.709205, idx: 262
+ampl: 6.146655, idx: 263
+ampl: 6.122030, idx: 264
+ampl: 0.189354, idx: 265
+ampl: 11.089673, idx: 266
+ampl: 15.457772, idx: 267
+ampl: 8.034697, idx: 268
+ampl: 8.157262, idx: 270
+ampl: 11.311056, idx: 271
+ampl: 13.030254, idx: 272
+ampl: 11.292675, idx: 273
+ampl: 9.263784, idx: 274
+ampl: 7.573521, idx: 275
+ampl: 6.808753, idx: 276
+ampl: 7.808332, idx: 277
+ampl: 7.676178, idx: 278
+ampl: 7.334785, idx: 279
+ampl: 9.042849, idx: 280
+ampl: 5.834072, idx: 281
+ampl: 3.141563, idx: 282
+ampl: 6.923521, idx: 283
+ampl: 14.340624, idx: 284
+ampl: 12.130100, idx: 285
+ampl: 10.464549, idx: 286
+ampl: 12.244387, idx: 287
+ampl: 9.415399, idx: 288
+ampl: 0.467379, idx: 289
+ampl: 4.784296, idx: 290
+ampl: 8.456099, idx: 291
+ampl: 8.605801, idx: 292
+ampl: 8.974882, idx: 293
+ampl: 14.706498, idx: 294
+ampl: 8.098625, idx: 295
+ampl: 2.379967, idx: 296
+ampl: 4.130185, idx: 297
+ampl: 1.580166, idx: 298
+ampl: 3.839818, idx: 302
+ampl: 10.092287, idx: 303
+ampl: 16.741026, idx: 304
+ampl: 16.247208, idx: 305
+ampl: 8.603530, idx: 307
+ampl: 2.428075, idx: 308
+ampl: 2.983798, idx: 309
+ampl: 2.657151, idx: 310
+ampl: 11.683007, idx: 311
+ampl: 12.751938, idx: 312
+ampl: 9.502896, idx: 313
+ampl: 6.404006, idx: 314
+ampl: 4.655616, idx: 315
+ampl: 4.845086, idx: 316
+ampl: 4.993556, idx: 317
+ampl: 6.757512, idx: 318
+ampl: 4.694962, idx: 319
+ampl: 2.760607, idx: 320
+ampl: 14.089557, idx: 321
+ampl: 17.502705, idx: 322
+ampl: 12.019109, idx: 323
+ampl: 12.217975, idx: 324
+ampl: 6.526736, idx: 325
+ampl: 6.117073, idx: 326
+ampl: 6.676764, idx: 327
+ampl: 12.273068, idx: 328
+ampl: 13.439030, idx: 329
+ampl: 12.115450, idx: 330
+ampl: 8.665610, idx: 331
+ampl: 10.772638, idx: 332
+ampl: 6.929044, idx: 333
+ampl: 8.264399, idx: 334
+ampl: 7.323895, idx: 335
+ampl: 14.973741, idx: 336
+ampl: 11.149360, idx: 337
+ampl: 0.420608, idx: 338
+ampl: 10.528986, idx: 339
+ampl: 13.522935, idx: 340
+ampl: 12.319460, idx: 341
+ampl: 11.660154, idx: 342
+ampl: 10.470484, idx: 343
+ampl: 10.482984, idx: 344
+ampl: 9.237546, idx: 345
+ampl: 7.994246, idx: 346
+ampl: 6.297736, idx: 347
+ampl: 4.620191, idx: 348
+ampl: 9.958505, idx: 349
+ampl: 5.536907, idx: 350
+ampl: 2.607262, idx: 351
+ampl: 6.094844, idx: 352
+ampl: 13.619524, idx: 353
+ampl: 12.505892, idx: 354
+ampl: 13.525447, idx: 355
+ampl: 16.990616, idx: 356
+ampl: 13.642206, idx: 357
+ampl: 7.843928, idx: 358
+ampl: 9.985479, idx: 359
+ampl: 11.694074, idx: 360
+ampl: 9.566948, idx: 361
+ampl: 7.132812, idx: 362
+ampl: 11.547366, idx: 363
+ampl: 7.373860, idx: 364
+ampl: 6.368932, idx: 366
+ampl: 5.177747, idx: 367
+ampl: 2.541363, idx: 368
+ampl: 3.101300, idx: 369
+ampl: 2.220570, idx: 370
+ampl: 7.529231, idx: 371
+ampl: 11.444196, idx: 372
+ampl: 19.327789, idx: 373
+ampl: 20.264595, idx: 374
+ampl: 8.674927, idx: 375
+ampl: 9.974863, idx: 376
+ampl: 6.937088, idx: 377
+ampl: 3.510612, idx: 378
+ampl: 4.718512, idx: 379
+ampl: 11.521926, idx: 380
+ampl: 10.179291, idx: 381
+ampl: 7.943609, idx: 382
+ampl: 5.721193, idx: 383
+ampl: 6.195885, idx: 384
+ampl: 4.959260, idx: 385
+ampl: 9.388943, idx: 386
+ampl: 6.035753, idx: 387
+ampl: 10.913315, idx: 388
+ampl: 3.871372, idx: 389
+ampl: 11.292614, idx: 390
+ampl: 18.408075, idx: 391
+ampl: 11.918340, idx: 392
+ampl: 12.875347, idx: 393
+ampl: 10.888654, idx: 394
+ampl: 1.677212, idx: 395
+ampl: 6.456788, idx: 396
+ampl: 11.949827, idx: 397
+ampl: 13.089198, idx: 398
+ampl: 11.314003, idx: 399
+ampl: 6.250203, idx: 400
+ampl: 7.581301, idx: 401
+ampl: 1.336595, idx: 402
+ampl: 6.989279, idx: 403
+ampl: 9.121646, idx: 404
+ampl: 12.951241, idx: 405
+ampl: 7.048583, idx: 406
+ampl: 10.369825, idx: 408
+ampl: 11.815514, idx: 409
+ampl: 9.953100, idx: 410
+ampl: 12.224247, idx: 411
+ampl: 11.487076, idx: 412
+ampl: 10.435160, idx: 413
+ampl: 8.078439, idx: 414
+ampl: 9.270133, idx: 415
+ampl: 7.410480, idx: 416
+ampl: 5.287329, idx: 417
+ampl: 7.694488, idx: 418
+ampl: 7.659509, idx: 419
+ampl: 7.346928, idx: 420
+ampl: 9.532891, idx: 421
+ampl: 9.234887, idx: 422
+ampl: 9.394854, idx: 423
+ampl: 13.936930, idx: 424
+ampl: 20.367256, idx: 425
+ampl: 19.506681, idx: 426
+ampl: 9.422562, idx: 427
+ampl: 5.676471, idx: 428
+ampl: 11.895630, idx: 429
+ampl: 10.121515, idx: 430
+ampl: 7.471935, idx: 431
+ampl: 2.391140, idx: 432
+ampl: 8.041074, idx: 433
+ampl: 3.045925, idx: 434
+ampl: 3.439426, idx: 438
+ampl: 10.075459, idx: 439
+ampl: 12.353969, idx: 440
+ampl: 12.931571, idx: 441
+ampl: 23.416311, idx: 442
+ampl: 26.277952, idx: 443
+ampl: 17.526552, idx: 444
+ampl: 12.171888, idx: 445
+ampl: 8.720950, idx: 446
+ampl: 4.775555, idx: 447
+ampl: 0.558456, idx: 448
+ampl: 8.657318, idx: 449
+ampl: 8.858844, idx: 450
+ampl: 7.549932, idx: 451
+ampl: 4.295153, idx: 452
+ampl: 5.169449, idx: 453
+ampl: 1.994526, idx: 454
+ampl: 8.241873, idx: 455
+ampl: 5.016794, idx: 456
+ampl: 9.822823, idx: 457
+ampl: 4.261342, idx: 458
+ampl: 20.824930, idx: 459
+ampl: 27.974918, idx: 460
+ampl: 23.371681, idx: 461
+ampl: 11.224946, idx: 462
+ampl: 9.520760, idx: 463
+ampl: 6.808234, idx: 464
+ampl: 5.901401, idx: 465
+ampl: 14.086131, idx: 466
+ampl: 16.069195, idx: 467
+ampl: 13.219066, idx: 468
+ampl: 6.239327, idx: 469
+ampl: 10.180182, idx: 470
+ampl: 7.319313, idx: 471
+ampl: 10.338499, idx: 472
+ampl: 12.478802, idx: 473
+ampl: 14.043984, idx: 474
+ampl: 13.796311, idx: 475
+ampl: 11.818983, idx: 476
+ampl: 3.007866, idx: 477
+ampl: 7.878743, idx: 478
+ampl: 10.167114, idx: 479
+ampl: 12.715617, idx: 480
+ampl: 11.038251, idx: 481
+ampl: 7.986245, idx: 482
+ampl: 8.212671, idx: 483
+ampl: 9.247678, idx: 484
+ampl: 7.090518, idx: 485
+ampl: 7.793623, idx: 486
+ampl: 7.823023, idx: 487
+ampl: 6.424581, idx: 488
+ampl: 5.694685, idx: 489
+ampl: 7.394996, idx: 490
+ampl: 11.596268, idx: 491
+ampl: 13.855456, idx: 492
+ampl: 17.411613, idx: 493
+ampl: 33.138126, idx: 494
+ampl: 35.113647, idx: 495
+ampl: 24.918348, idx: 496
+ampl: 10.395756, idx: 497
+ampl: 10.537647, idx: 498
+ampl: 8.062508, idx: 499
+ampl: 2.919193, idx: 500
+ampl: 0.712408, idx: 503
+ampl: 5.064437, idx: 505
+ampl: 6.874400, idx: 506
+ampl: 9.806259, idx: 507
+ampl: 12.551521, idx: 508
+ampl: 10.072551, idx: 509
+ampl: 3.713700, idx: 510
+ampl: 26.575645, idx: 511
+Index of max freq: 511
+intermediate ret: 0.249512
+intermediate ret: 255.500000
+[0;32mI (474) [FFT] : Maximum frequency: 255.500000[0m
+[0;32mI (1614) view: Data min[300] = -8.042675, Data max[1] = 82.226379[0m
+ ________________________________________________________________
+0|                                                               |
+1| |||||   | || |   | |                                 | |   ||||
+2|||||||||| | || ||| | |||||||||||||||||||||||||||||||||||||||||||
+3                      |                                         |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (1694) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (1704) [FFT] : FFT graph view computed[0m
+[0;32mI (1704) main_task: Returned from app_main()[0m

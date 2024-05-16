@@ -1,0 +1,607 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 15 2024 21:20:49[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1219ch ( 74140) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=000221c4 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024bb0 vaddr=40374000 size=0b468h ( 46184) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d370h (119664) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d398 vaddr=4037f468 size=02d08h ( 11528) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     fft[0m
+[0;32mI (190) app_init: App version:      b25758c-dirty[0m
+[0;32mI (196) app_init: Compile time:     May 15 2024 21:20:39[0m
+[0;32mI (202) app_init: ELF file SHA256:  2d2bce7ba...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC98D38 len 000509D8 (322 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (314) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (324) [ADC] : Channel width and configuration done[0m
+Max: 840.000000 - Average : 807.363281 - Stadnard dev: 9.352554 - threshold; 3.000000
+[0;32mI (384) [ADC] : Sampling completed[0m
+[0;32mI (384) [ADC] : Outlier 0 : 840.000000[0m
+[0;32mI (394) [FFT] : Hann window generated[0m
+[0;32mI (394) [FFT] : Output populating completed[0m
+[0;32mI (394) view: Data min[593] = 790.000000, Data max[0] = 840.000000[0m
+ ________________________________________________________________
+0|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (474) view: Plot: Length=1024, min=-128.000000, max=64.000000[0m
+[0;32mI (484) [FFT] : FFT computed[0m
+magnitude: 82.213806, idx: 0
+magnitude: 82.226494, idx: 1
+magnitude: 26.561058, idx: 2
+magnitude: 14.213905, idx: 3
+magnitude: 6.207526, idx: 4
+magnitude: 11.340551, idx: 5
+magnitude: 10.185867, idx: 6
+magnitude: 6.637823, idx: 7
+magnitude: 5.997372, idx: 8
+magnitude: 15.320573, idx: 9
+magnitude: 10.952023, idx: 10
+magnitude: 11.507090, idx: 11
+magnitude: 12.165918, idx: 12
+magnitude: 15.356730, idx: 13
+magnitude: 11.490997, idx: 14
+magnitude: 12.192768, idx: 15
+magnitude: 31.973030, idx: 16
+magnitude: 39.664074, idx: 17
+magnitude: 36.238750, idx: 18
+magnitude: 19.104340, idx: 19
+magnitude: 8.671316, idx: 20
+magnitude: 3.553163, idx: 21
+magnitude: 3.170668, idx: 22
+magnitude: 2.858632, idx: 23
+magnitude: 11.104258, idx: 24
+magnitude: 10.355872, idx: 25
+magnitude: 10.782068, idx: 26
+magnitude: 12.385583, idx: 27
+magnitude: 8.480785, idx: 28
+magnitude: 7.404356, idx: 29
+magnitude: 32.550091, idx: 30
+magnitude: 36.379009, idx: 31
+magnitude: 27.681330, idx: 32
+magnitude: 25.507973, idx: 33
+magnitude: 36.256668, idx: 34
+magnitude: 34.666756, idx: 35
+magnitude: 19.807898, idx: 36
+magnitude: 3.509660, idx: 37
+magnitude: 4.679809, idx: 38
+magnitude: 6.979347, idx: 39
+magnitude: 3.526740, idx: 40
+magnitude: 7.722261, idx: 41
+magnitude: 11.125513, idx: 42
+magnitude: 16.487207, idx: 43
+magnitude: 24.117735, idx: 44
+magnitude: 23.016531, idx: 45
+magnitude: 15.385924, idx: 46
+magnitude: 9.665049, idx: 47
+magnitude: 12.009793, idx: 48
+magnitude: 14.372897, idx: 49
+magnitude: 13.604326, idx: 50
+magnitude: 31.995060, idx: 51
+magnitude: 32.353523, idx: 52
+magnitude: 15.422619, idx: 53
+magnitude: 10.251328, idx: 54
+magnitude: 8.818795, idx: 55
+magnitude: 10.282845, idx: 56
+magnitude: 6.431260, idx: 57
+magnitude: 6.355841, idx: 58
+magnitude: 10.304404, idx: 59
+magnitude: 7.855415, idx: 60
+magnitude: 16.527332, idx: 61
+magnitude: 19.027842, idx: 62
+magnitude: 8.774312, idx: 63
+magnitude: 11.299189, idx: 64
+magnitude: -3.612533, idx: 65
+magnitude: 10.636086, idx: 66
+magnitude: 12.661742, idx: 67
+magnitude: 20.235203, idx: 68
+magnitude: 24.253384, idx: 69
+magnitude: 13.340398, idx: 70
+magnitude: 16.787802, idx: 71
+magnitude: 12.922002, idx: 72
+magnitude: 7.946916, idx: 73
+magnitude: 11.099749, idx: 74
+magnitude: -3.508974, idx: 75
+magnitude: 1.568348, idx: 76
+magnitude: 4.877825, idx: 77
+magnitude: 5.730899, idx: 78
+magnitude: 4.573064, idx: 79
+magnitude: 9.029308, idx: 80
+magnitude: 12.169598, idx: 81
+magnitude: 9.198533, idx: 82
+magnitude: 7.112966, idx: 83
+magnitude: 13.195533, idx: 84
+magnitude: 10.324848, idx: 85
+magnitude: 9.488127, idx: 86
+magnitude: 16.534058, idx: 87
+magnitude: 17.668726, idx: 88
+magnitude: 18.772987, idx: 89
+magnitude: 9.459875, idx: 90
+magnitude: 2.128306, idx: 91
+magnitude: -6.482589, idx: 92
+magnitude: 1.403020, idx: 93
+magnitude: 10.539730, idx: 94
+magnitude: 13.368897, idx: 95
+magnitude: 9.281523, idx: 96
+magnitude: 6.414683, idx: 97
+magnitude: 13.171553, idx: 98
+magnitude: 15.588448, idx: 99
+magnitude: 8.987142, idx: 100
+magnitude: 7.359992, idx: 101
+magnitude: 20.619392, idx: 102
+magnitude: 26.137781, idx: 103
+magnitude: 22.475252, idx: 104
+magnitude: 17.009047, idx: 105
+magnitude: 23.427362, idx: 106
+magnitude: 19.313051, idx: 107
+magnitude: 4.183472, idx: 108
+magnitude: 1.203558, idx: 109
+magnitude: 9.352883, idx: 110
+magnitude: 10.455103, idx: 111
+magnitude: 15.122195, idx: 112
+magnitude: 14.720594, idx: 113
+magnitude: 11.655323, idx: 114
+magnitude: 10.453842, idx: 115
+magnitude: 11.656732, idx: 116
+magnitude: 8.370532, idx: 117
+magnitude: 5.098817, idx: 118
+magnitude: 16.637381, idx: 119
+magnitude: 25.358000, idx: 120
+magnitude: 23.359564, idx: 121
+magnitude: 17.571924, idx: 122
+magnitude: 25.092293, idx: 123
+magnitude: 23.051149, idx: 124
+magnitude: 12.615037, idx: 125
+magnitude: 4.360124, idx: 126
+magnitude: 8.917377, idx: 127
+magnitude: 12.109526, idx: 128
+magnitude: 7.222455, idx: 129
+magnitude: 13.436242, idx: 130
+magnitude: 15.744787, idx: 131
+magnitude: 13.123066, idx: 132
+magnitude: 8.739723, idx: 133
+magnitude: 5.563918, idx: 134
+magnitude: 2.823802, idx: 135
+magnitude: 1.870159, idx: 136
+magnitude: 21.786129, idx: 137
+magnitude: 19.231928, idx: 138
+magnitude: 11.129184, idx: 139
+magnitude: 10.061427, idx: 140
+magnitude: 7.431168, idx: 141
+magnitude: 12.681995, idx: 142
+magnitude: 14.098477, idx: 143
+magnitude: 9.832806, idx: 144
+magnitude: 3.805947, idx: 145
+magnitude: -2.715600, idx: 146
+magnitude: 5.627089, idx: 147
+magnitude: 8.618273, idx: 148
+magnitude: 10.277729, idx: 149
+magnitude: 10.818519, idx: 150
+magnitude: 11.916795, idx: 151
+magnitude: 11.057886, idx: 152
+magnitude: 10.369691, idx: 153
+magnitude: 12.706768, idx: 154
+magnitude: 12.767755, idx: 155
+magnitude: 16.215813, idx: 156
+magnitude: 18.368927, idx: 157
+magnitude: 12.166571, idx: 158
+magnitude: 12.457033, idx: 159
+magnitude: 12.446008, idx: 160
+magnitude: 9.282333, idx: 161
+magnitude: 9.008787, idx: 162
+magnitude: 6.077564, idx: 163
+magnitude: 9.001543, idx: 164
+magnitude: 8.969481, idx: 165
+magnitude: 3.794238, idx: 166
+magnitude: 3.922452, idx: 167
+magnitude: 11.310245, idx: 168
+magnitude: 11.971602, idx: 169
+magnitude: 12.812901, idx: 170
+magnitude: 11.880081, idx: 171
+magnitude: 11.058377, idx: 172
+magnitude: 16.354576, idx: 173
+magnitude: 17.381088, idx: 174
+magnitude: 11.183528, idx: 175
+magnitude: 13.822087, idx: 176
+magnitude: 7.995876, idx: 177
+magnitude: -0.619130, idx: 178
+magnitude: 6.946586, idx: 179
+magnitude: 13.024665, idx: 180
+magnitude: 13.612908, idx: 181
+magnitude: 11.160827, idx: 182
+magnitude: 3.231476, idx: 183
+magnitude: 9.735477, idx: 184
+magnitude: 13.820342, idx: 185
+magnitude: 11.502802, idx: 186
+magnitude: 5.876856, idx: 187
+magnitude: 12.765400, idx: 188
+magnitude: 18.975756, idx: 189
+magnitude: 16.617867, idx: 190
+magnitude: 11.868908, idx: 191
+magnitude: 10.571545, idx: 192
+magnitude: 15.102929, idx: 193
+magnitude: 9.723072, idx: 194
+magnitude: 12.471319, idx: 195
+magnitude: 5.460863, idx: 196
+magnitude: 10.810417, idx: 197
+magnitude: 11.512023, idx: 198
+magnitude: 10.460462, idx: 199
+magnitude: 9.179599, idx: 200
+magnitude: 10.380973, idx: 201
+magnitude: 10.210954, idx: 202
+magnitude: 8.535934, idx: 203
+magnitude: 3.141695, idx: 204
+magnitude: 11.054886, idx: 205
+magnitude: 18.308338, idx: 206
+magnitude: 14.187881, idx: 207
+magnitude: 7.916409, idx: 208
+magnitude: 8.130075, idx: 209
+magnitude: 9.178132, idx: 210
+magnitude: 11.063986, idx: 211
+magnitude: 14.977396, idx: 212
+magnitude: 13.422641, idx: 213
+magnitude: 4.126482, idx: 214
+magnitude: -1.761874, idx: 215
+magnitude: 11.098858, idx: 216
+magnitude: 15.098135, idx: 217
+magnitude: 14.199705, idx: 218
+magnitude: 11.853617, idx: 219
+magnitude: 11.348891, idx: 220
+magnitude: 8.702406, idx: 221
+magnitude: 8.441072, idx: 222
+magnitude: 16.786959, idx: 223
+magnitude: 10.750063, idx: 224
+magnitude: 12.680551, idx: 225
+magnitude: 10.434864, idx: 226
+magnitude: 10.040602, idx: 227
+magnitude: 16.126673, idx: 228
+magnitude: 19.478224, idx: 229
+magnitude: 16.914116, idx: 230
+magnitude: 5.711451, idx: 231
+magnitude: 6.565907, idx: 232
+magnitude: 5.398664, idx: 233
+magnitude: 9.537357, idx: 234
+magnitude: 10.503790, idx: 235
+magnitude: 10.336169, idx: 236
+magnitude: 14.197217, idx: 237
+magnitude: 11.867181, idx: 238
+magnitude: 5.721354, idx: 239
+magnitude: 7.878561, idx: 240
+magnitude: 2.449576, idx: 241
+magnitude: 16.555468, idx: 242
+magnitude: 16.165445, idx: 243
+magnitude: 7.302861, idx: 244
+magnitude: 10.138273, idx: 245
+magnitude: 15.026593, idx: 246
+magnitude: 13.904329, idx: 247
+magnitude: 9.752843, idx: 248
+magnitude: 11.515665, idx: 249
+magnitude: 9.538546, idx: 250
+magnitude: 8.019787, idx: 251
+magnitude: 7.802380, idx: 252
+magnitude: 0.736487, idx: 253
+magnitude: 11.454382, idx: 254
+magnitude: 11.758318, idx: 255
+magnitude: 4.709184, idx: 256
+magnitude: 4.773996, idx: 257
+magnitude: 9.069905, idx: 258
+magnitude: 16.208460, idx: 259
+magnitude: 16.617453, idx: 260
+magnitude: 11.554790, idx: 261
+magnitude: 7.218018, idx: 262
+magnitude: 7.114692, idx: 263
+magnitude: 8.275145, idx: 264
+magnitude: 1.826800, idx: 265
+magnitude: 11.245713, idx: 266
+magnitude: 15.182835, idx: 267
+magnitude: 13.191477, idx: 268
+magnitude: 6.419106, idx: 269
+magnitude: 8.220731, idx: 270
+magnitude: 14.991609, idx: 271
+magnitude: 14.254709, idx: 272
+magnitude: 4.538093, idx: 273
+magnitude: 9.312516, idx: 274
+magnitude: 14.357367, idx: 275
+magnitude: 11.878351, idx: 276
+magnitude: 7.764639, idx: 277
+magnitude: 9.541275, idx: 278
+magnitude: 9.556509, idx: 279
+magnitude: 9.617708, idx: 280
+magnitude: 5.502339, idx: 281
+magnitude: -4.296196, idx: 282
+magnitude: 3.697789, idx: 283
+magnitude: 6.177680, idx: 284
+magnitude: 10.521107, idx: 285
+magnitude: 12.259928, idx: 286
+magnitude: 11.746225, idx: 287
+magnitude: 13.241693, idx: 288
+magnitude: 12.465225, idx: 289
+magnitude: 7.702589, idx: 290
+magnitude: 8.398067, idx: 291
+magnitude: 14.329134, idx: 292
+magnitude: 5.428344, idx: 293
+magnitude: 6.157264, idx: 294
+magnitude: 8.521402, idx: 295
+magnitude: 9.482308, idx: 296
+magnitude: 7.576964, idx: 297
+magnitude: 8.778757, idx: 298
+magnitude: -6.328694, idx: 299
+magnitude: 1.290397, idx: 300
+magnitude: 1.049800, idx: 301
+magnitude: 9.061085, idx: 302
+magnitude: 13.638132, idx: 303
+magnitude: 13.708841, idx: 304
+magnitude: 9.078129, idx: 305
+magnitude: 10.488391, idx: 306
+magnitude: 10.397764, idx: 307
+magnitude: 11.200769, idx: 308
+magnitude: 13.068256, idx: 309
+magnitude: 6.610493, idx: 310
+magnitude: 12.825790, idx: 311
+magnitude: 9.288328, idx: 312
+magnitude: 1.966466, idx: 313
+magnitude: 5.696766, idx: 314
+magnitude: 8.672192, idx: 315
+magnitude: 2.640524, idx: 316
+magnitude: 6.560667, idx: 317
+magnitude: 10.469189, idx: 318
+magnitude: 6.802150, idx: 319
+magnitude: 11.317711, idx: 320
+magnitude: 12.310240, idx: 321
+magnitude: 6.332562, idx: 322
+magnitude: 12.100813, idx: 323
+magnitude: 6.215022, idx: 324
+magnitude: 0.611312, idx: 325
+magnitude: 7.578763, idx: 326
+magnitude: 5.826315, idx: 327
+magnitude: 13.146450, idx: 328
+magnitude: 12.601746, idx: 329
+magnitude: 9.024061, idx: 330
+magnitude: 1.687972, idx: 331
+magnitude: -0.659962, idx: 332
+magnitude: 5.851631, idx: 333
+magnitude: 0.884683, idx: 334
+magnitude: 12.138835, idx: 335
+magnitude: 13.384092, idx: 336
+magnitude: 11.774187, idx: 337
+magnitude: 8.320520, idx: 338
+magnitude: 7.752180, idx: 339
+magnitude: 16.157263, idx: 340
+magnitude: 14.509565, idx: 341
+magnitude: 3.255737, idx: 342
+magnitude: 1.459814, idx: 343
+magnitude: 4.099877, idx: 344
+magnitude: 9.946340, idx: 345
+magnitude: 10.927982, idx: 346
+magnitude: 8.810945, idx: 347
+magnitude: 7.768669, idx: 348
+magnitude: 11.548441, idx: 349
+magnitude: 12.257919, idx: 350
+magnitude: -4.548049, idx: 351
+magnitude: 11.070835, idx: 352
+magnitude: 13.275534, idx: 353
+magnitude: 10.913349, idx: 354
+magnitude: 10.173202, idx: 355
+magnitude: 12.644382, idx: 356
+magnitude: 18.203863, idx: 357
+magnitude: 17.519436, idx: 358
+magnitude: 12.216427, idx: 359
+magnitude: 12.906059, idx: 360
+magnitude: 12.300487, idx: 361
+magnitude: 8.908978, idx: 362
+magnitude: 6.198400, idx: 363
+magnitude: 10.194124, idx: 364
+magnitude: 9.285338, idx: 365
+magnitude: 10.896220, idx: 366
+magnitude: 7.819102, idx: 367
+magnitude: 0.557138, idx: 368
+magnitude: -1.046837, idx: 369
+magnitude: 7.601592, idx: 370
+magnitude: 7.680760, idx: 371
+magnitude: 9.148255, idx: 372
+magnitude: 11.720736, idx: 373
+magnitude: 16.210701, idx: 374
+magnitude: 16.797092, idx: 375
+magnitude: 11.717196, idx: 376
+magnitude: 9.079408, idx: 377
+magnitude: 11.328435, idx: 378
+magnitude: 10.217071, idx: 379
+magnitude: 7.388057, idx: 380
+magnitude: 6.945126, idx: 381
+magnitude: 8.875631, idx: 382
+magnitude: 9.811763, idx: 383
+magnitude: 9.106862, idx: 384
+magnitude: -2.071882, idx: 385
+magnitude: 2.800191, idx: 386
+magnitude: 5.122301, idx: 387
+magnitude: 7.583466, idx: 388
+magnitude: 11.304785, idx: 389
+magnitude: 12.004742, idx: 390
+magnitude: -0.722467, idx: 391
+magnitude: 11.559190, idx: 392
+magnitude: 9.600128, idx: 393
+magnitude: 11.451564, idx: 394
+magnitude: 12.132382, idx: 395
+magnitude: 3.842242, idx: 396
+magnitude: 11.857855, idx: 397
+magnitude: 9.298002, idx: 398
+magnitude: 6.485455, idx: 399
+magnitude: 1.143294, idx: 400
+magnitude: 1.764281, idx: 401
+magnitude: 0.404279, idx: 402
+magnitude: 5.986833, idx: 403
+magnitude: 8.060652, idx: 404
+magnitude: 8.540323, idx: 405
+magnitude: 9.090193, idx: 406
+magnitude: 11.482527, idx: 407
+magnitude: 12.373974, idx: 408
+magnitude: 18.718102, idx: 409
+magnitude: 12.977265, idx: 410
+magnitude: 5.434210, idx: 411
+magnitude: 8.575945, idx: 412
+magnitude: 2.263625, idx: 413
+magnitude: 9.833675, idx: 414
+magnitude: 10.216331, idx: 415
+magnitude: 9.597990, idx: 416
+magnitude: 4.805505, idx: 417
+magnitude: 12.340316, idx: 418
+magnitude: 11.457052, idx: 419
+magnitude: -0.853763, idx: 420
+magnitude: 11.989650, idx: 421
+magnitude: 11.467185, idx: 422
+magnitude: 11.380396, idx: 423
+magnitude: 13.423092, idx: 424
+magnitude: 18.823753, idx: 425
+magnitude: 23.760201, idx: 426
+magnitude: 19.596592, idx: 427
+magnitude: 6.813845, idx: 428
+magnitude: 1.278839, idx: 429
+magnitude: 6.364691, idx: 430
+magnitude: 7.780217, idx: 431
+magnitude: 7.520285, idx: 432
+magnitude: 9.948482, idx: 433
+magnitude: 8.936659, idx: 434
+magnitude: 9.973455, idx: 435
+magnitude: 10.681501, idx: 436
+magnitude: 4.201221, idx: 437
+magnitude: 7.653749, idx: 438
+magnitude: 8.889555, idx: 439
+magnitude: 6.189167, idx: 440
+magnitude: 7.715874, idx: 441
+magnitude: 18.200613, idx: 442
+magnitude: 24.958944, idx: 443
+magnitude: 22.372459, idx: 444
+magnitude: 9.280569, idx: 445
+magnitude: 3.633812, idx: 446
+magnitude: 9.034231, idx: 447
+magnitude: 11.195057, idx: 448
+magnitude: 6.635352, idx: 449
+magnitude: 11.724567, idx: 450
+magnitude: 9.219559, idx: 451
+magnitude: 3.717240, idx: 452
+magnitude: 6.086063, idx: 453
+magnitude: 4.311662, idx: 454
+magnitude: 5.593825, idx: 455
+magnitude: 4.409625, idx: 456
+magnitude: 10.733149, idx: 457
+magnitude: 12.984062, idx: 458
+magnitude: 18.063589, idx: 459
+magnitude: 23.819729, idx: 460
+magnitude: 22.877262, idx: 461
+magnitude: 14.829529, idx: 462
+magnitude: 11.526608, idx: 463
+magnitude: 11.461813, idx: 464
+magnitude: 12.752938, idx: 465
+magnitude: 11.691447, idx: 466
+magnitude: 8.944675, idx: 467
+magnitude: 5.302562, idx: 468
+magnitude: 6.046076, idx: 469
+magnitude: 5.525811, idx: 470
+magnitude: -3.385400, idx: 471
+magnitude: -2.558340, idx: 472
+magnitude: 10.648935, idx: 473
+magnitude: 13.481845, idx: 474
+magnitude: 10.046201, idx: 475
+magnitude: 5.747504, idx: 476
+magnitude: 16.341757, idx: 477
+magnitude: 18.506401, idx: 478
+magnitude: 8.447746, idx: 479
+magnitude: 9.707253, idx: 480
+magnitude: 8.173359, idx: 481
+magnitude: 7.847135, idx: 482
+magnitude: 12.362265, idx: 483
+magnitude: 12.136347, idx: 484
+magnitude: 10.736559, idx: 485
+magnitude: 2.941928, idx: 486
+magnitude: 5.993936, idx: 487
+magnitude: 5.614947, idx: 488
+magnitude: -7.077560, idx: 489
+magnitude: 7.444826, idx: 490
+magnitude: 12.969986, idx: 491
+magnitude: 11.504030, idx: 492
+magnitude: 13.893567, idx: 493
+magnitude: 32.716290, idx: 494
+magnitude: 36.361099, idx: 495
+magnitude: 27.588369, idx: 496
+magnitude: 14.226295, idx: 497
+magnitude: 10.465411, idx: 498
+magnitude: 10.772964, idx: 499
+magnitude: 10.270363, idx: 500
+magnitude: 6.820452, idx: 501
+magnitude: 7.627870, idx: 502
+magnitude: 5.446875, idx: 503
+magnitude: 8.115324, idx: 504
+magnitude: 10.022517, idx: 505
+magnitude: 10.680214, idx: 506
+magnitude: 7.335602, idx: 507
+magnitude: 9.406169, idx: 508
+magnitude: 8.761216, idx: 509
+magnitude: 9.968320, idx: 510
+magnitude: 26.815355, idx: 511
+[0;32mI (1874) view: Data min[489] = -7.077560, Data max[1] = 82.226494[0m
+ ________________________________________________________________
+0|                                                               |
+1| ||||| |   || | |                                   | | |   ||||
+2||||| |||||| || | ||||||||||||||||||||||||||||||||||||| | ||||| |
+3           |                                                 |  |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (1954) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (1954) [FFT] : FFT graph view computed[0m
+[0;32mI (1964) main_task: Returned from app_main()[0m

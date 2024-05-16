@@ -1,0 +1,164 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006781: uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:169
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201101d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420111c7: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x420111ff: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200984d: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:92
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006786: uart_ll_get_txfifo_len at /home/utente/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:171
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201138e: __swbuf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/wbuf.c:81
+0x42011106: __sputc_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:699
+ (inlined by) _putc_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/putc.c:88
+0x42011165: putchar at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/putchar.c:85
+0x42009807: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:86
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006781: uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:169
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201101d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420111c7: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x420111ff: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200984d: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:92
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4037be00: xTaskGetSchedulerState at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4954
+0x4037a121: xQueueSemaphoreTake at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1718
+0x4037a23a: xQueueTakeMutexRecursive at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x40376989: lock_acquire_generic at /home/utente/esp/esp-idf/components/newlib/locks.c:144
+0x40376a69: _lock_acquire_recursive at /home/utente/esp/esp-idf/components/newlib/locks.c:158
+0x40376b33: __retarget_lock_acquire_recursive at /home/utente/esp/esp-idf/components/newlib/locks.c:314
+0x420110d6: _putc_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/putc.c:87 (discriminator 2)
+0x42011165: putchar at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/putchar.c:85
+0x42009841: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:90
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006781: uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:169
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201101d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420111c7: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x420111ff: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200984d: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:92
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006781: uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:169
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201101d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420111c7: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x420111ff: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200984d: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:92
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006786: uart_ll_get_txfifo_len at /home/utente/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:171
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201101d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420111c7: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x420111ff: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200984d: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:92
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200b58b: task_wdt_timeout_handling at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200b9a8: task_wdt_isr at /home/utente/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377169: _xt_lowint1 at /home/utente/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006786: uart_ll_get_txfifo_len at /home/utente/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:387
+ (inlined by) uart_tx_char at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:171
+0x4200765b: uart_write at /home/utente/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:224
+0x42008ba5: console_write at /home/utente/esp/esp-idf/components/vfs/vfs_console.c:76 (discriminator 1)
+0x42008716: esp_vfs_write at /home/utente/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x42011276: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42010981: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x420109de: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+0x4201101d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x420111c7: _puts_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:91
+0x420111ff: puts at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/puts.c:129 (discriminator 1)
+0x4200984d: dsps_view at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/managed_components/espressif__esp-dsp/modules/support/view/dsps_view.cpp:92
+0x4200930b: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/fft_utils.h:94
+0x4200937a: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/main/main.c:11
+0x4201cb4b: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a305: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

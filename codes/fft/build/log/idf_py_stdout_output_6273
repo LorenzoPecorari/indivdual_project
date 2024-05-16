@@ -1,6 +1,0 @@
-[0/1] Re-running CMake...
--- Building ESP-IDF components for target esp32s3
--- Configuring incomplete, errors occurred!
-See also "/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build/CMakeFiles/CMakeOutput.log".
-FAILED: build.ninja 
-/usr/bin/cmake --regenerate-during-build -S/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft -B/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build

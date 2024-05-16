@@ -1,0 +1,387 @@
+��00040020 vaddr=42ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 13 2024 19:48:36[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=2851ch (165148) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=00038544 vaddr=3fc98400 size=04edch ( 20188) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0003d428 vaddr=40374000 size=02bf0h ( 11248) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=9a3e8h (631784) map[0m
+[0;32mI (259) esp_image: segment 4: paddr=000da410 vaddr=40376bf0 size=11790h ( 71568) load[0m
+[0;32mI (283) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (283) boot: Disabling RNG early entropy source...[0m
+[0;32mI (295) cpu_start: Multicore app[0m
+[0;32mI (305) cpu_start: Pro cpu start user code[0m
+[0;32mI (305) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (305) app_init: Application information:[0m
+[0;32mI (308) app_init: Project name:     mqtt[0m
+[0;32mI (312) app_init: App version:      b25758c-dirty[0m
+[0;32mI (318) app_init: Compile time:     May 15 2024 13:38:52[0m
+[0;32mI (324) app_init: ELF file SHA256:  9254059b8...[0m
+[0;32mI (329) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (336) app_init: Min chip rev:     v0.0[0m
+[0;32mI (340) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (345) app_init: Chip rev:         v0.1[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (357) heap_init: At 3FCA1370 len 000483A0 (288 KiB): RAM[0m
+[0;32mI (363) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (369) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (375) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: gd[0m
+[0;32mI (386) spi_flash: flash io: dio[0m
+[0;33mW (390) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (403) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (410) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (417) main_task: Started on CPU0[0m
+[0;32mI (437) main_task: Calling app_main()[0m
+[0;32mI (437) [MQTT] : Main execution...[0m
+[0;32mI (437) [WI-FI] : Testing the wifi module[0m
+[0;32mI (477) [WI-FI] : Init started...[0m
+[0;32mI (477) pp: pp rom version: e7ae62f[0m
+[0;32mI (477) net80211: net80211 rom version: e7ae62f[0m
+I (487) wifi:wifi driver task: 3fcab640, prio:23, stack:6656, core=0
+I (787) wifi:wifi firmware version: f2b9bda51
+I (787) wifi:wifi certification version: v7.0
+I (787) wifi:config NVS flash: enabled
+I (787) wifi:config nano formating: disabled
+I (797) wifi:Init data frame dynamic rx buffer num: 32
+I (797) wifi:Init static rx mgmt buffer num: 5
+I (797) wifi:Init management short buffer num: 32
+I (807) wifi:Init dynamic tx buffer num: 32
+I (807) wifi:Init static tx FG buffer num: 2
+I (817) wifi:Init static rx buffer size: 1600
+I (817) wifi:Init static rx buffer num: 10
+I (817) wifi:Init dynamic rx buffer num: 32
+[0;32mI (827) wifi_init: rx ba win: 6[0m
+[0;32mI (827) wifi_init: accept mbox: 6[0m
+[0;32mI (837) wifi_init: tcpip mbox: 32[0m
+[0;32mI (837) wifi_init: udp mbox: 6[0m
+[0;32mI (837) wifi_init: tcp mbox: 6[0m
+[0;32mI (847) wifi_init: tcp tx win: 5760[0m
+[0;32mI (847) wifi_init: tcp rx win: 5760[0m
+[0;32mI (857) wifi_init: tcp mss: 1440[0m
+[0;32mI (857) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (857) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (877) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (937) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (937) wifi:enable tsf
+[0;32mI (937) [WI-FI] : Event: 40[0m
+[0;32mI (947) [WI-FI] : Event: 2[0m
+[0;32mI (947) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (947) [WI-FI] : Connection success![0m
+I (1017) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (1017) wifi:state: init -> auth (b0)
+[0;32mI (1017) [WI-FI] : Event: 40[0m
+I (1017) wifi:state: auth -> assoc (0)
+I (1027) wifi:state: assoc -> run (10)
+I (1067) wifi:connected with S10 di Lorenzo, aid = 1, channel 11, BW20, bssid = 06:87:bf:ae:86:7a
+I (1067) wifi:security: WPA2-PSK, phy: bgn, rssi: -65
+I (1087) wifi:pm start, type: 1
+
+I (1087) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1087) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (1097) [WI-FI] : Event: 4[0m
+I (1107) wifi:<ba-add>idx:0 (ifx:0, 06:87:bf:ae:86:7a), tid:0, ssn:0, winSize:64
+I (1117) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1117) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (2097) esp_netif_handlers: sta ip: 192.168.125.3, mask: 255.255.255.0, gw: 192.168.125.212[0m
+[0;32mI (2097) [WI-FI] : Event: 0[0m
+[0;32mI (2097) [WI-FI] : got ip:192.168.125.3[0m
+[0;32mI (2097) [WI-FI] : Connected to AP[0m
+[0;32mI (2107) [WI-FI] : Init completed[0m
+[0;32mI (2107) [MQTT] : Starting mqtt configuration...[0m
+[0;32mI (2117) [MQTT] : Configuration structure variable populated[0m
+[0;32mI (2117) [MQTT] : Client handler registered[0m
+[0;32mI (2127) [MQTT] : Triggered event - id: 7	 base: MQTT_EVENTS
+[0m
+[0;32mI (2127) [MQTT] : Other event, 7[0m
+[0;32mI (2137) main_task: Returned from app_main()[0m
+[0;32mI (3687) [MQTT] : Triggered event - id: 1	 base: MQTT_EVENTS
+[0m
+[0;32mI (3687) [MQTT] : Subscription - id_message: 46049[0m
+[0;32mI (3887) [MQTT] : Triggered event - id: 3	 base: MQTT_EVENTS
+[0m
+[0;32mI (3887) [MQTT] : Publish - id_message: 30461[0m
+[0;32mI (4097) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (4097) [MQTT] : Data received -Topic: /topic/individual_project
+		Data : ESP32-S3 subscribed!
+[0m
+[0;32mI (4097) [MQTT] : Response: Ping pong! - id_message: 5902[0m
+[0;32mI (4107) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (4107) [MQTT] : Published - id_message* : 30461[0m
+[0;32mI (4297) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (4297) [MQTT] : Published - id_message* : 5902[0m
+[0;32mI (4477) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (4477) [MQTT] : Data received -Topic: /topic/individual_project
+		Data : Ping pong!
+[0m
+[0;32mI (4487) [MQTT] : Response: Ping pong! - id_message: 23391[0m
+[0;32mI (4707) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (4707) [MQTT] : Published - id_message* : 23391[0m
+[0;32mI (4907) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (4917) [MQTT] : Data received -Topic: /topic/individual_project
+		Data : Ping pong!
+[0m
+[0;32mI (4917) [MQTT] : Response: Ping pong! - id_message: 24454[0m
+[0;32mI (5117) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (5117) [MQTT] : Published - id_message* : 24454[0m
+[0;32mI (5317) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (5327) [MQTT] : Data received -Topic: /topic/individual_project
+		Data : Ping pong!
+[0m
+[0;32mI (5327) [MQTT] : Response: Ping pong! - id_message: 44594[0m
+[0;32mI (5477) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (5477) [MQTT] : Published - id_message* : 44594[0m
+[0;32mI (5727) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (5727) [MQTT] : Data received -Topic: /topic/individual_project
+		Data : Ping pong!
+[0m
+[0;32mI (5737) [MQTT] : Response: Ping pong! - id_message: 37553[0m
+[0;32mI (5937) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (5937) [MQTT] : Published - id_message* : 37553[0m
+[0;32mI (6137) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (6137) [MQTT] : Data received -Topic: /topic/individual_project-Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (6147) [MQTT] : Response: Ping pong! - id_message: 38320[0m
+[0;32mI (6347) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (6347) [MQTT] : Published - id_message* : 38320[0m
+[0;32mI (6547) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (6547) [MQTT] : Data received -Topic: /topic/individual_project_Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (6557) [MQTT] : Response: Ping pong! - id_message: 23140[0m
+[0;32mI (6757) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (6757) [MQTT] : Published - id_message* : 23140[0m
+[0;32mI (6957) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (6957) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (6967) [MQTT] : Response: Ping pong! - id_message: 40764[0m
+[0;32mI (7167) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (7167) [MQTT] : Published - id_message* : 40764[0m
+[0;32mI (7367) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (7367) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (7377) [MQTT] : Response: Ping pong! - id_message: 16098[0m
+[0;32mI (7577) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (7577) [MQTT] : Published - id_message* : 16098[0m
+[0;32mI (7777) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (7777) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (7787) [MQTT] : Response: Ping pong! - id_message: 6934[0m
+[0;32mI (7987) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (7987) [MQTT] : Published - id_message* : 6934[0m
+[0;32mI (8187) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (8187) [MQTT] : Data received -Topic: /topic/individual_project'Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (8197) [MQTT] : Response: Ping pong! - id_message: 43570[0m
+[0;32mI (8397) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (8397) [MQTT] : Published - id_message* : 43570[0m
+[0;32mI (8597) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (8597) [MQTT] : Data received -Topic: /topic/individual_projectYPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (8607) [MQTT] : Response: Ping pong! - id_message: 62493[0m
+[0;32mI (8807) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (8807) [MQTT] : Published - id_message* : 62493[0m
+[0;32mI (9007) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (9007) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (9017) [MQTT] : Response: Ping pong! - id_message: 25614[0m
+[0;32mI (9217) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (9217) [MQTT] : Published - id_message* : 25614[0m
+[0;32mI (9417) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (9417) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (9427) [MQTT] : Response: Ping pong! - id_message: 8171[0m
+[0;32mI (9627) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (9627) [MQTT] : Published - id_message* : 8171[0m
+[0;32mI (9837) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (9837) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (9847) [MQTT] : Response: Ping pong! - id_message: 58282[0m
+[0;32mI (10037) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (10037) [MQTT] : Published - id_message* : 58282[0m
+[0;32mI (10237) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (10237) [MQTT] : Data received -Topic: /topic/individual_project!Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (10247) [MQTT] : Response: Ping pong! - id_message: 18628[0m
+[0;32mI (10547) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (10547) [MQTT] : Published - id_message* : 18628[0m
+[0;32mI (10867) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (10867) [MQTT] : Data received -Topic: /topic/individual_projectSPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (10867) [MQTT] : Response: Ping pong! - id_message: 37195[0m
+[0;32mI (11057) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (11057) [MQTT] : Published - id_message* : 37195[0m
+[0;32mI (11267) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (11267) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (11277) [MQTT] : Response: Ping pong! - id_message: 59123[0m
+[0;32mI (11467) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (11467) [MQTT] : Published - id_message* : 59123[0m
+[0;32mI (11677) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (11677) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (11687) [MQTT] : Response: Ping pong! - id_message: 21023[0m
+[0;32mI (11877) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (11877) [MQTT] : Published - id_message* : 21023[0m
+[0;32mI (12087) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (12087) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (12097) [MQTT] : Response: Ping pong! - id_message: 37701[0m
+[0;32mI (12287) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (12287) [MQTT] : Published - id_message* : 37701[0m
+[0;32mI (12487) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (12487) [MQTT] : Data received -Topic: /topic/individual_projectPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (12497) [MQTT] : Response: Ping pong! - id_message: 55818[0m
+[0;32mI (12697) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (12697) [MQTT] : Published - id_message* : 55818[0m
+[0;32mI (12897) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (12897) [MQTT] : Data received -Topic: /topic/individual_projectMPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (12907) [MQTT] : Response: Ping pong! - id_message: 57972[0m
+[0;32mI (13107) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (13107) [MQTT] : Published - id_message* : 57972[0m
+[0;32mI (13307) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (13307) [MQTT] : Data received -Topic: /topic/individual_projectPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (13317) [MQTT] : Response: Ping pong! - id_message: 50878[0m
+[0;32mI (13517) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (13517) [MQTT] : Published - id_message* : 50878[0m
+[0;32mI (13717) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (13717) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (13727) [MQTT] : Response: Ping pong! - id_message: 7458[0m
+[0;32mI (13927) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (13927) [MQTT] : Published - id_message* : 7458[0m
+[0;32mI (14127) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (14127) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (14137) [MQTT] : Response: Ping pong! - id_message: 17252[0m
+[0;32mI (14337) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (14337) [MQTT] : Published - id_message* : 17252[0m
+[0;32mI (14537) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (14537) [MQTT] : Data received -Topic: /topic/individual_projectPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (14547) [MQTT] : Response: Ping pong! - id_message: 41836[0m
+[0;32mI (14747) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (14747) [MQTT] : Published - id_message* : 41836[0m
+[0;32mI (14947) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (14947) [MQTT] : Data received -Topic: /topic/individual_projectGPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (14957) [MQTT] : Response: Ping pong! - id_message: 50288[0m
+[0;32mI (15157) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (15157) [MQTT] : Published - id_message* : 50288[0m
+[0;32mI (15357) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (15357) [MQTT] : Data received -Topic: /topic/individual_projectyPing pong!
+		Data : Ping pong!
+[0m
+[0;32mI (15367) [MQTT] : Response: Ping pong! - id_message: 11385[0m
+[0;32mI (15557) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (15567) [MQTT] : Published - id_message* : 11385[0m
+[0;32mI (15767) [MQTT] : Triggered event - id: 6	 base: MQTT_EVENTS
+[0m
+[0;32mI (15767) [MQTT] : Data received -Topic: /topic/individual_project�Ping pong!
+		Data : Ping pong!
+[0m
+[0;32mI (15777) [MQTT] : Response: Ping pong! - id_message: 6214[0m
+[0;32mI (15967) [MQTT] : Triggered event - id: 5	 base: MQTT_EVENTS
+[0m
+[0;32mI (15977) [MQTT] : Published - id_message* : 6214[0m
