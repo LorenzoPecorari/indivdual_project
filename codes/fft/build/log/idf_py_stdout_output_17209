@@ -1,0 +1,214 @@
+) cpu_start: Pro�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 16 2024 15:40:55[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=11dcch ( 73164) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00021df4 vaddr=3fc92200 size=079a4h ( 31140) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=000297a0 vaddr=40374000 size=06878h ( 26744) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d280h (119424) map[0m
+[0;32mI (150) esp_image: segment 4: paddr=0004d2a8 vaddr=4037a878 size=078d8h ( 30936) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (186) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (186) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     fft[0m
+[0;32mI (193) app_init: App version:      3f180a0-dirty[0m
+[0;32mI (199) app_init: Compile time:     May 16 2024 15:40:49[0m
+[0;32mI (205) app_init: ELF file SHA256:  42152f7f3...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (217) app_init: Min chip rev:     v0.0[0m
+[0;32mI (221) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (226) app_init: Chip rev:         v0.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FC9E4F0 len 0004B220 (300 KiB): RAM[0m
+[0;32mI (244) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (250) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: gd[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (284) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (292) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (299) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (317) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (327) [ADC] : Channel width and configuration done[0m
+[0;32mI (377) [FFT] : Hann window generated[0m
+[0;32mI (377) [FFT] : Output populating completed[0m
+[0;32mI (377) view: Data min[437] = -11.945392, Data max[585] = 11.945392[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2||||||||||  || |||| ||||||| |||| ||||||| | |||  || |||| || |||| |
+3          ||  |    |       |    |       | |   ||  |    |  |    ||
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (447) view: Plot: Length=1024, min=-128.000000, max=64.000000[0m
+[0;32mI (457) [FFT] : FFT computed[0m
+[0;32mI (457) view: Data min[481] = -56.429863, Data max[23] = 31.930216[0m
+ ________________________________________________________________
+0                                                                |
+1 ||||                                                       |||||
+2|||||                                                       |||||
+3|||||                                                       |||||
+4|||||   ||||||||||||||||||||||||||||||||||||||||||||||||    |||||
+5     |||                                                |||||   |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (537) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (547) [FFT] : FFT graph view computed[0m
+Outliers:
+idx: 2 - value: 18.052290
+idx: 3 - value: 18.069424
+idx: 4 - value: 12.200199
+idx: 7 - value: 18.060776
+idx: 8 - value: 24.098627
+idx: 9 - value: 24.164927
+idx: 10 - value: 2.914536
+idx: 14 - value: 21.572132
+idx: 15 - value: 27.652409
+idx: 16 - value: 22.624302
+idx: 17 - value: 10.199050
+idx: 22 - value: 25.917912
+idx: 23 - value: 31.930216
+idx: 24 - value: 26.307402
+idx: 25 - value: 21.735718
+idx: 26 - value: 15.898230
+idx: 31 - value: 24.041510
+idx: 32 - value: 30.052851
+idx: 486 - value: 25.917912
+idx: 487 - value: 31.930214
+idx: 488 - value: 25.926064
+idx: 495 - value: 24.041510
+idx: 496 - value: 30.052851
+idx: 497 - value: 24.046709
+idx: 502 - value: 21.572132
+idx: 503 - value: 27.582941
+idx: 504 - value: 21.574978
+idx: 507 - value: 18.060772
+idx: 508 - value: 24.072073
+idx: 509 - value: 18.061420
+idx: 510 - value: 12.036001
+idx: 511 - value: 18.051926
+idx: 514 - value: 18.051922
+idx: 515 - value: 18.061420
+idx: 516 - value: 12.036001
+idx: 519 - value: 18.060772
+idx: 520 - value: 24.072073
+idx: 521 - value: 24.046709
+idx: 526 - value: 21.572132
+idx: 527 - value: 27.582941
+idx: 528 - value: 21.574976
+idx: 533 - value: inf
+idx: 534 - value: inf
+idx: 535 - value: 31.930216
+idx: 536 - value: 25.926064
+idx: 543 - value: 24.041510
+idx: 544 - value: 30.052851
+idx: 553 - value: 0.080459
+idx: 554 - value: 3.080481
+idx: 555 - value: 0.070274
+idx: 566 - value: 0.080459
+idx: 567 - value: 3.080481
+idx: 568 - value: 0.070274
+idx: 579 - value: 0.080459
+idx: 580 - value: 3.080481
+idx: 581 - value: 0.070274
+idx: 588 - value: 0.078515
+idx: 591 - value: inf
+idx: 825 - value: inf
+idx: 826 - value: inf
+idx: 827 - value: inf
+idx: 838 - value: 0.030991
+idx: 839 - value: 0.030810
+idx: 841 - value: 3.040833
+idx: 842 - value: 0.030599
+idx: 848 - value: 0.030492
+idx: 849 - value: 0.030735
+idx: 850 - value: 0.030315
+idx: 852 - value: 3.039240
+idx: 853 - value: 3.038697
+idx: 855 - value: 0.027672
+idx: 858 - value: inf
+idx: 859 - value: inf
+idx: 863 - value: 0.034296
+idx: 864 - value: 0.034445
+idx: 865 - value: 0.033587
+idx: 866 - value: 3.084799
+idx: 873 - value: 0.033839
+idx: 874 - value: 0.034044
+idx: 876 - value: 0.034193
+idx: 877 - value: 3.044344
+idx: 878 - value: 0.033818
+idx: 883 - value: inf
+idx: 884 - value: inf
+idx: 887 - value: 0.036705
+idx: 888 - value: 0.036825
+idx: 890 - value: 3.047018
+idx: 891 - value: 0.036759
+idx: 897 - value: 0.036858
+idx: 898 - value: 0.036895
+idx: 899 - value: 0.036928
+idx: 901 - value: 3.047329
+idx: 902 - value: 3.047393
+idx: 904 - value: 0.037138
+idx: 907 - value: inf
+idx: 908 - value: inf
+idx: 950 - value: 0.080464
+idx: 951 - value: 3.080481
+idx: 952 - value: 0.070274
+idx: 963 - value: 0.080464
+idx: 964 - value: 3.080481
+idx: 965 - value: 0.070274
+idx: 976 - value: 0.080464
+idx: 977 - value: 3.080481
+idx: 978 - value: 0.070274
+idx: 998 - value: 25.917912
+idx: 999 - value: 31.930214
+idx: 1000 - value: 25.926064
+idx: 1007 - value: 24.041510
+idx: 1008 - value: 30.052849
+idx: 1009 - value: 24.046709
+idx: 1014 - value: 21.572132
+idx: 1015 - value: 27.582941
+idx: 1016 - value: 21.574978
+idx: 1018 - value: inf
+idx: 1019 - value: 18.060772
+idx: 1020 - value: 24.072073
+idx: 1021 - value: 18.061420
+idx: 1022 - value: 12.036001
+idx: 1023 - value: 18.051926
+[0;32mI (837) [FFT] : Maximum frequency index: 1023 max frequency: 1023.000000[0m
+[0;32mI (847) main_task: Returned from app_main()[0m

@@ -2,7 +2,8 @@
 
 void app_main(void){
     adc_init();
-    get_values_from_adc();
+    test_init_array();
+    //get_values_from_adc();
 
     fft_init();
     //input_populating(); // TEST PURPOSES ONLY FUNCTION!

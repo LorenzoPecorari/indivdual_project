@@ -29,7 +29,10 @@ float* input;
 float window[SAMPLES];
 float output[2 * SAMPLES];
 
-float final[SUM_SIZE];
+float final[FINAL_SIZE];
+
+int max_freq_idx = 0;
+float max_freq = 0.0;
 
 // generator of hann window
 void window_gen(){
@@ -56,30 +59,20 @@ void hann_multiplication(){
     ESP_LOGI(APP_NAME_FFT, "Output populating completed");
 }
 
-// computes the maximum frequency of a relevant value of the fft
-// (it is based on the concept of z-score)
-float compute_maximum_frequency_index(){
-    int idx = 0;
-    for(int i = 0; i < SUM_SIZE; i++)
-        if(final[i] > 0.0){
-            printf("ampl: %f, idx: %d\n", final[i], i);
-            idx = i;
-        }
-
-    printf("Index of max freq: %d\n", idx);
-
-    float ret = (float) ((float )idx / (float) SUM_SIZE);
-    printf("intermediate ret: %f\n", ret);
-    ret = (ret * (SAMPLES / duration));
-    printf("intermediate ret: %f\n", ret);
-
-    return ret;
-}
-
 // computes the fft of the signal and plots it through the shell
 void fft(){
+
+    /*
+    - SAMPLES = 1024
+    - FINAL_SIZE  = SAMPLES / 2
+
+    - input is an array of floats with size SAMPLES
+    - output is an array of floats with size 2 * SAMPLES
+    - final is an array of floats with size FINAL_SIZE
+    */
+
     // fft radix 2, function from library with O(N * log N) cost
-    dsps_view(input, SAMPLES, 64, 10, -128, 64, '|');
+    //dsps_view(input, SAMPLES, 64, 10, -128, 64, '|');
 
     dsps_fft2r_fc32(output, SAMPLES);
     
@@ -92,9 +85,11 @@ void fft(){
     float temp_2 = 0.0;
  
     int j = 0;
+
+    float max_amp = 0.0;
     
-    for(int i = 0; i < SUM_SIZE; i++){
-        j = i + SUM_SIZE;
+    for(int i = 0; i < FINAL_SIZE; i++){
+        j = i + FINAL_SIZE;
 
         // power spectrum of the output coming from the fft (dB_10)
         temp_1 = 10 * log10f(((output[(i * 2) + 0] * output[(i * 2) + 0]) + (output[(i * 2) + 1] * output[(i * 2) + 1])) / SAMPLES);
@@ -105,19 +100,38 @@ void fft(){
             final[i] = temp_2;
         else
             final[i] = temp_1;
+
+        if(final[i] > max_amp){
+            max_amp = final[i];
+            max_freq_idx = i;
+        }
+
     }
     
+    max_freq = (max_freq_idx / duration);
+
+    printf("Max idx : %d - max amp: %f - max freq : %f\n", max_freq_idx, max_amp, max_freq);
+
     ESP_LOGI(APP_NAME_FFT, "FFT computed");
-    //for(int i = 0; i < SUM_SIZE; i++)
+    //for(int i = 0; i < FINAL_SIZE; i++)
         //printf("magnitude: %f, idx: %d\n", final[i], i);
 
     // arguments: buffer, buffer size, # bins, min showed, max showed, char for viewing
-    ESP_LOGI(APP_NAME_FFT, "Maximum frequency: %f", compute_maximum_frequency_index());
 
-    dsps_view(final, SUM_SIZE, 64, 10, -128, 64, '|');
+    dsps_view(final, FINAL_SIZE, 64, 10, -128, 64, '|');
     ESP_LOGI(APP_NAME_FFT, "FFT graph view computed");
 
-    outliers_finder_test(final, SUM_SIZE);
+    /*
+    outliers_finder_test(final, FINAL_SIZE);
+
+    maximum_idx_frequency = max_outlier_finder(final, FINAL_SIZE);
+    max_freq = ((float )maximum_idx_frequency / SAMPLES) * ((float) SAMPLES / (float)duration);
+    ESP_LOGI(APP_NAME_FFT, "Maximum frequency index: %d max frequency: %f", maximum_idx_frequency, max_freq);
+
+    float old_duration = duration;
+    duration = maximum_idx_frequency / (2 * duration);
+    ESP_LOGI(APP_NAME_FFT, "Old period: %f - new period: %f", old_duration, (float)duration);
+    */
 }
 
 void fft_init(){

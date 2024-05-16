@@ -1,5 +1,0 @@
-[1/4] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build/partition_table/partition-table.bin /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build/fft.bin
-fft.bin binary size 0x40120 bytes. Smallest app partition is 0x100000 bytes. 0xbfee0 bytes (75%) free.
-[2/4] Performing build step for 'bootloader'
-[1/1] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build/bootloader/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/fft/build/bootloader/bootloader.bin
-Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.

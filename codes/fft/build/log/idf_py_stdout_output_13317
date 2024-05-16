@@ -1,0 +1,390 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 16 2024 15:40:55[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=11dfch ( 73212) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00021e24 vaddr=3fc92200 size=079a4h ( 31140) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=000297d0 vaddr=40374000 size=06848h ( 26696) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d2c8h (119496) map[0m
+[0;32mI (150) esp_image: segment 4: paddr=0004d2f0 vaddr=4037a848 size=07908h ( 30984) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (176) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (186) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (186) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     fft[0m
+[0;32mI (193) app_init: App version:      3f180a0-dirty[0m
+[0;32mI (199) app_init: Compile time:     May 16 2024 15:40:49[0m
+[0;32mI (205) app_init: ELF file SHA256:  dd41028c5...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (217) app_init: Min chip rev:     v0.0[0m
+[0;32mI (221) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (226) app_init: Chip rev:         v0.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FC9DCF0 len 0004BA20 (302 KiB): RAM[0m
+[0;32mI (244) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (250) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: gd[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (284) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (292) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (299) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (317) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (327) [ADC] : Channel width and configuration done[0m
+[0;32mI (377) [FFT] : Hann window generated[0m
+[0;32mI (377) [FFT] : Output populating completed[0m
+[0;32mI (377) view: Data min[437] = -11.945392, Data max[585] = 11.945392[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2||||||||||  || |||| ||||||| |||| ||||||| | |||  || |||| || |||| |
+3          ||  |    |       |    |       | |   ||  |    |  |    ||
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (447) view: Plot: Length=1024, min=-128.000000, max=64.000000[0m
+[0;32mI (457) [FFT] : FFT computed[0m
+[0;32mI (457) view: Data min[270] = -128.857819, Data max[23] = 31.930216[0m
+ ________________________________________________________________
+0                                                                |
+1 ||||                                                       |||||
+2|||||                                                       |||||
+3|||||                                                       |||||
+4|||||                                                       |||||
+5    |  ||                                                  ||   |
+6    ||| |                                                ||     |
+7         ||||||||                                ||||||||       |
+8                 ||||||||||||||||||||||||||||||||               |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (537) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (547) [FFT] : FFT graph view computed[0m
+Outliers:
+idx: 2 - value: 18.052290
+idx: 3 - value: 18.069424
+idx: 4 - value: 12.200199
+idx: 7 - value: 18.060776
+idx: 8 - value: 24.098627
+idx: 9 - value: 24.164927
+idx: 10 - value: 2.914536
+idx: 14 - value: 21.572132
+idx: 15 - value: 27.652409
+idx: 16 - value: 22.624302
+idx: 17 - value: 10.199050
+idx: 22 - value: 25.917912
+idx: 23 - value: 31.930216
+idx: 24 - value: 26.307402
+idx: 25 - value: 21.735718
+idx: 26 - value: 15.898230
+idx: 31 - value: 24.041510
+idx: 32 - value: 30.052851
+idx: 486 - value: 25.917912
+idx: 487 - value: 31.930214
+idx: 488 - value: 25.926064
+idx: 495 - value: 24.041510
+idx: 496 - value: 30.052851
+idx: 497 - value: 24.046709
+idx: 502 - value: 21.572132
+idx: 503 - value: 27.582941
+idx: 504 - value: 21.574978
+idx: 507 - value: 18.060772
+idx: 508 - value: 24.072073
+idx: 509 - value: 18.061420
+idx: 510 - value: 12.036001
+idx: 511 - value: 18.051926
+idx: 514 - value: 3.143367
+idx: 519 - value: 255.988800
+idx: 520 - value: 25.110905
+idx: 521 - value: 127.923386
+idx: 524 - value: 0.021489
+idx: 526 - value: 0.031791
+idx: 527 - value: 255.969772
+idx: 530 - value: 84.703407
+idx: 531 - value: 509.900421
+idx: 534 - value: 0.040094
+idx: 536 - value: 0.026081
+idx: 538 - value: 0.031716
+idx: 540 - value: 0.068887
+idx: 541 - value: 383.492188
+idx: 544 - value: 200.549850
+idx: 545 - value: 383.617981
+idx: 548 - value: 0.078258
+idx: 550 - value: 0.037999
+idx: 552 - value: 0.030343
+idx: 554 - value: 0.034054
+idx: 556 - value: 0.052621
+idx: 557 - value: 632.478210
+idx: 558 - value: 0.128451
+idx: 561 - value: 633.072021
+idx: 562 - value: 390.782928
+idx: 566 - value: 0.135436
+idx: 568 - value: 0.053062
+idx: 570 - value: 0.029614
+idx: 572 - value: 0.019366
+idx: 574 - value: 0.013860
+idx: 575 - value: 509.595337
+idx: 576 - value: 0.010549
+idx: 578 - value: 0.008373
+idx: 580 - value: 0.006842
+idx: 582 - value: 0.005743
+idx: 584 - value: 0.004896
+idx: 586 - value: 0.004253
+idx: 588 - value: 0.003729
+idx: 590 - value: 0.003309
+idx: 592 - value: 0.002999
+idx: 594 - value: 0.002648
+idx: 596 - value: 0.002420
+idx: 598 - value: 0.002215
+idx: 600 - value: 0.002030
+idx: 602 - value: 0.001879
+idx: 604 - value: 0.001736
+idx: 606 - value: 0.001600
+idx: 608 - value: 0.001509
+idx: 610 - value: 0.001413
+idx: 612 - value: 0.001317
+idx: 614 - value: 0.001248
+idx: 616 - value: 0.001190
+idx: 618 - value: 0.001107
+idx: 620 - value: 0.001048
+idx: 622 - value: 0.001017
+idx: 624 - value: 0.000957
+idx: 626 - value: 0.000900
+idx: 628 - value: 0.000851
+idx: 630 - value: 0.000800
+idx: 632 - value: 0.000757
+idx: 634 - value: 0.000740
+idx: 636 - value: 0.000738
+idx: 638 - value: 0.000686
+idx: 640 - value: 0.000643
+idx: 642 - value: 0.000633
+idx: 644 - value: 0.000598
+idx: 646 - value: 0.000592
+idx: 648 - value: 0.000553
+idx: 650 - value: 0.000529
+idx: 652 - value: 0.000510
+idx: 654 - value: 0.000516
+idx: 656 - value: 0.000505
+idx: 658 - value: 0.000414
+idx: 660 - value: 0.000456
+idx: 662 - value: 0.000429
+idx: 664 - value: 0.000419
+idx: 666 - value: 0.000406
+idx: 668 - value: 0.000420
+idx: 670 - value: 0.000411
+idx: 672 - value: 0.000385
+idx: 674 - value: 0.000360
+idx: 676 - value: 0.000342
+idx: 678 - value: 0.000350
+idx: 680 - value: 0.000336
+idx: 682 - value: 0.000317
+idx: 684 - value: 0.000319
+idx: 686 - value: 0.000309
+idx: 688 - value: 0.000270
+idx: 690 - value: 0.000285
+idx: 692 - value: 0.000293
+idx: 694 - value: 0.000277
+idx: 696 - value: 0.000247
+idx: 698 - value: 0.000281
+idx: 700 - value: 0.000257
+idx: 702 - value: 0.000263
+idx: 704 - value: 0.000247
+idx: 706 - value: 0.000220
+idx: 708 - value: 0.000238
+idx: 710 - value: 0.000208
+idx: 712 - value: 0.000255
+idx: 714 - value: 0.000219
+idx: 716 - value: 0.000244
+idx: 718 - value: 0.000180
+idx: 720 - value: 0.000181
+idx: 722 - value: 0.000186
+idx: 724 - value: 0.000183
+idx: 726 - value: 0.000208
+idx: 728 - value: 0.000180
+idx: 730 - value: 0.000192
+idx: 732 - value: 0.000179
+idx: 734 - value: 0.000182
+idx: 736 - value: 0.000111
+idx: 738 - value: 0.000134
+idx: 740 - value: 0.000182
+idx: 742 - value: 0.000156
+idx: 744 - value: 0.000164
+idx: 746 - value: 0.000161
+idx: 748 - value: 0.000164
+idx: 750 - value: 0.000146
+idx: 752 - value: 0.000155
+idx: 754 - value: 0.000136
+idx: 756 - value: 0.000138
+idx: 758 - value: 0.000149
+idx: 760 - value: 0.000136
+idx: 762 - value: 0.000139
+idx: 764 - value: 0.000137
+idx: 766 - value: 0.000141
+idx: 768 - value: 0.000122
+idx: 770 - value: 0.000109
+idx: 772 - value: 0.000135
+idx: 774 - value: 0.000129
+idx: 776 - value: 0.000102
+idx: 777 - value: 0.000002
+idx: 778 - value: 0.000110
+idx: 780 - value: 0.000111
+idx: 782 - value: 0.000111
+idx: 783 - value: 0.000003
+idx: 784 - value: 0.000107
+idx: 786 - value: 0.000058
+idx: 788 - value: 0.000117
+idx: 789 - value: 0.000003
+idx: 790 - value: 0.000108
+idx: 792 - value: 0.000107
+idx: 794 - value: 0.000099
+idx: 795 - value: 0.000001
+idx: 796 - value: 0.000113
+idx: 798 - value: 0.000092
+idx: 800 - value: 0.000066
+idx: 802 - value: 0.000105
+idx: 803 - value: 0.000019
+idx: 804 - value: 0.000100
+idx: 806 - value: 0.000111
+idx: 808 - value: 0.000076
+idx: 810 - value: 0.000079
+idx: 812 - value: 0.000083
+idx: 814 - value: 0.000095
+idx: 815 - value: 0.000002
+idx: 816 - value: 0.000073
+idx: 817 - value: 0.000030
+idx: 818 - value: 0.000070
+idx: 819 - value: 0.000042
+idx: 820 - value: 0.000097
+idx: 822 - value: 0.000088
+idx: 824 - value: 0.000090
+idx: 826 - value: 0.000077
+idx: 828 - value: 0.000078
+idx: 830 - value: 0.000079
+idx: 832 - value: 0.000064
+idx: 834 - value: 0.000057
+idx: 836 - value: 0.000082
+idx: 838 - value: 0.000094
+idx: 840 - value: 0.000071
+idx: 842 - value: 0.000070
+idx: 844 - value: 0.000081
+idx: 845 - value: 0.000004
+idx: 846 - value: 0.000094
+idx: 848 - value: 0.000078
+idx: 850 - value: 0.000077
+idx: 852 - value: 0.000061
+idx: 854 - value: 0.000069
+idx: 856 - value: 0.000066
+idx: 858 - value: 0.000043
+idx: 860 - value: 0.000071
+idx: 862 - value: 0.000080
+idx: 864 - value: 0.000053
+idx: 866 - value: 0.000059
+idx: 867 - value: 0.000006
+idx: 868 - value: 0.000076
+idx: 870 - value: 0.000054
+idx: 872 - value: 0.000065
+idx: 874 - value: 0.000061
+idx: 876 - value: 0.000046
+idx: 878 - value: 0.000092
+idx: 880 - value: 0.000081
+idx: 882 - value: 0.000043
+idx: 884 - value: 0.000045
+idx: 886 - value: 0.000065
+idx: 888 - value: 0.000043
+idx: 890 - value: 0.000052
+idx: 892 - value: 0.000073
+idx: 894 - value: 0.000040
+idx: 896 - value: 0.000055
+idx: 898 - value: 0.000083
+idx: 899 - value: 0.000002
+idx: 900 - value: 0.000033
+idx: 902 - value: 0.000053
+idx: 904 - value: 0.000038
+idx: 906 - value: 0.000032
+idx: 908 - value: 0.000053
+idx: 910 - value: 0.000074
+idx: 912 - value: 0.000035
+idx: 914 - value: 0.000007
+idx: 916 - value: 0.000085
+idx: 918 - value: 0.000039
+idx: 920 - value: 0.000061
+idx: 922 - value: 0.000047
+idx: 924 - value: 0.000054
+idx: 926 - value: 0.000024
+idx: 928 - value: 0.000042
+idx: 930 - value: 0.000030
+idx: 932 - value: 0.000041
+idx: 934 - value: 0.000057
+idx: 936 - value: 0.000021
+idx: 938 - value: 0.000043
+idx: 940 - value: 0.000045
+idx: 942 - value: 0.000036
+idx: 944 - value: 0.000036
+idx: 946 - value: 0.000019
+idx: 948 - value: 0.000024
+idx: 950 - value: 0.000030
+idx: 952 - value: 0.000045
+idx: 954 - value: 0.000027
+idx: 956 - value: 0.000037
+idx: 958 - value: 0.000037
+idx: 960 - value: 0.000038
+idx: 962 - value: 0.000025
+idx: 964 - value: 0.000046
+idx: 966 - value: 0.000039
+idx: 968 - value: 0.000034
+idx: 970 - value: 0.000049
+idx: 972 - value: 0.000095
+idx: 976 - value: 0.000038
+idx: 978 - value: 0.000033
+idx: 980 - value: 0.000007
+idx: 982 - value: 0.000036
+idx: 984 - value: 0.000045
+idx: 986 - value: 0.000015
+idx: 988 - value: 0.000035
+idx: 990 - value: 0.000038
+idx: 994 - value: 0.000042
+idx: 996 - value: 0.000025
+idx: 998 - value: 0.000019
+idx: 1000 - value: 0.000035
+idx: 1002 - value: 0.000039
+idx: 1004 - value: 0.000038
+idx: 1008 - value: 0.000037
+idx: 1010 - value: 0.000001
+idx: 1012 - value: 0.000027
+idx: 1014 - value: 0.000022
+idx: 1016 - value: 0.000005
+idx: 1018 - value: 0.000036
+idx: 1020 - value: 0.000032
+idx: 1022 - value: 0.000025
+[0;32mI (1267) [FFT] : Maximum frequency index: 1022 max frequency: 1022.000000[0m
+[0;32mI (1277) [FFT] : Old period: 1.000000 - new period: 511.000000[0m
+[0;32mI (1287) main_task: Returned from app_main()[0m
