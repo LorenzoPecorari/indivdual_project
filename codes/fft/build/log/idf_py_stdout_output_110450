@@ -1,0 +1,618 @@
+%�(303) main_task:�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 17 2024 21:32:48[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1214ch ( 74060) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022174 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b60 vaddr=40374000 size=0b4b8h ( 46264) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d2e8h (119528) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d310 vaddr=4037f4b8 size=02ca8h ( 11432) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     fft[0m
+[0;32mI (190) app_init: App version:      723f97b-dirty[0m
+[0;32mI (196) app_init: Compile time:     May 17 2024 21:32:46[0m
+[0;32mI (202) app_init: ELF file SHA256:  cc87cbecf...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC98D38 len 000509D8 (322 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (312) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (317) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;32mI (1352) [ADC] : Sampling completed[0m
+[0;32mI (1360) [FFT] : Hann window generated[0m
+[0;32mI (1361) [FFT] : Output populating completed[0m
+mean: 37.738102 - std_dev: 4.255752
+z-score: 13.586374
+outliers at index : 0
+z-score: -0.955244
+z-score: -1.662999
+z-score: -1.333739
+z-score: -0.040334
+z-score: -1.666781
+z-score: -1.062419
+z-score: -0.334172
+z-score: -0.230317
+z-score: 0.129647
+z-score: 0.774979
+z-score: 0.838429
+z-score: 0.546922
+z-score: -0.305970
+z-score: 0.499321
+z-score: 1.260558
+z-score: 1.346298
+z-score: 0.941055
+z-score: -0.383861
+z-score: 0.505041
+z-score: 1.322453
+z-score: 1.319581
+z-score: 0.645147
+z-score: 0.245427
+z-score: 1.162680
+z-score: 1.510605
+z-score: 1.216542
+z-score: 0.292137
+z-score: -0.000989
+z-score: 0.777429
+z-score: 1.094905
+z-score: 0.606627
+z-score: -2.169518
+z-score: -0.496817
+z-score: 0.291927
+z-score: 0.159522
+z-score: -0.205588
+z-score: -0.488038
+z-score: -0.674162
+z-score: -0.721047
+z-score: -0.507913
+z-score: -1.020132
+z-score: -1.582134
+z-score: -0.999548
+z-score: -0.428288
+z-score: -0.406470
+z-score: 0.017043
+z-score: -0.552815
+z-score: -1.014762
+z-score: -0.460850
+z-score: -0.549598
+z-score: 0.297652
+z-score: -0.293238
+z-score: -0.541200
+z-score: -1.126613
+z-score: -2.074256
+z-score: -0.709745
+z-score: -0.787655
+z-score: -0.197008
+z-score: -0.585660
+z-score: 0.503314
+z-score: 0.629698
+z-score: 0.247495
+z-score: -0.487877
+z-score: -0.338813
+z-score: 0.376459
+z-score: 0.683529
+z-score: -0.888329
+z-score: -2.373698
+z-score: -1.397020
+z-score: -0.001039
+z-score: 0.473234
+z-score: 0.021496
+z-score: 0.747510
+z-score: 0.973476
+z-score: 0.662302
+z-score: -0.535008
+z-score: -0.274623
+z-score: 0.457251
+z-score: 0.863199
+z-score: 0.560516
+z-score: 1.053861
+z-score: 1.540951
+z-score: 1.595413
+z-score: 1.117158
+z-score: 1.775742
+z-score: 2.570130
+outliers at index : 86
+z-score: 3.132502
+outliers at index : 87
+z-score: 3.848326
+outliers at index : 88
+z-score: 5.660234
+outliers at index : 89
+z-score: 6.453239
+outliers at index : 90
+z-score: 4.148935
+outliers at index : 91
+z-score: 3.155370
+outliers at index : 92
+z-score: 2.472400
+outliers at index : 93
+z-score: 2.311236
+outliers at index : 94
+z-score: 1.991143
+z-score: 1.248744
+z-score: 0.455794
+z-score: 0.893468
+z-score: 0.826624
+z-score: 1.252291
+z-score: 2.340622
+outliers at index : 101
+z-score: 4.234061
+outliers at index : 102
+z-score: 3.109865
+outliers at index : 103
+z-score: 1.688724
+z-score: 1.059558
+z-score: 0.661828
+z-score: 0.109873
+z-score: -1.226577
+z-score: -2.880365
+z-score: -1.122514
+z-score: -0.217372
+z-score: -0.039371
+z-score: -0.262652
+z-score: -1.015239
+z-score: -0.923897
+z-score: -1.029612
+z-score: -1.405789
+z-score: -1.834300
+z-score: -1.358170
+z-score: -0.435970
+z-score: 0.242515
+z-score: 0.365582
+z-score: -0.664410
+z-score: -1.624951
+z-score: -1.744969
+z-score: -1.430341
+z-score: -0.831709
+z-score: -2.292681
+z-score: -0.890497
+z-score: 0.213517
+z-score: 0.294504
+z-score: 0.383890
+z-score: -0.025666
+z-score: -2.018785
+z-score: -1.421606
+z-score: 0.345319
+z-score: 0.423942
+z-score: -0.211794
+z-score: -0.175351
+z-score: 0.279155
+z-score: 0.549651
+z-score: 0.006768
+z-score: -0.494456
+z-score: -0.073866
+z-score: 0.614440
+z-score: 0.647889
+z-score: 0.385821
+z-score: -0.087961
+z-score: 0.217096
+z-score: 0.761339
+z-score: 0.419327
+z-score: -0.803626
+z-score: -0.482518
+z-score: 0.847472
+z-score: 1.015726
+z-score: 0.643681
+z-score: -0.598129
+z-score: -0.352825
+z-score: 0.503067
+z-score: 0.445551
+z-score: -0.475680
+z-score: -1.259751
+z-score: 0.139998
+z-score: 0.369129
+z-score: 0.062317
+z-score: -0.590707
+z-score: -0.244761
+z-score: -0.071957
+z-score: -0.381567
+z-score: -0.325382
+z-score: -0.106776
+z-score: -0.302290
+z-score: -0.267888
+z-score: 0.244137
+z-score: 0.730348
+z-score: 0.633536
+z-score: -0.201882
+z-score: -1.606604
+z-score: -0.097950
+z-score: -0.226951
+z-score: -1.400275
+z-score: -0.249207
+z-score: 0.955751
+z-score: 0.739151
+z-score: -0.456535
+z-score: -1.666434
+z-score: 0.621906
+z-score: 0.841426
+z-score: -0.113297
+z-score: -0.840379
+z-score: 0.524302
+z-score: 1.282339
+z-score: 1.311497
+z-score: 0.859140
+z-score: 0.264153
+z-score: -0.242336
+z-score: -0.156944
+z-score: -0.161263
+z-score: -0.769109
+z-score: -1.434180
+z-score: -0.544168
+z-score: 0.332464
+z-score: 0.717354
+z-score: -0.007683
+z-score: -1.140784
+z-score: -0.757789
+z-score: -0.389255
+z-score: -0.312644
+z-score: -0.327534
+z-score: 0.182288
+z-score: -0.107478
+z-score: 0.285535
+z-score: -0.416437
+z-score: -1.335777
+z-score: -2.833785
+z-score: -2.337837
+z-score: -1.357075
+z-score: -1.003109
+z-score: -0.687187
+z-score: -0.640140
+z-score: -0.228087
+z-score: -0.748840
+z-score: -1.539339
+z-score: -2.079375
+z-score: -1.279474
+z-score: -0.818467
+z-score: -0.188510
+z-score: -0.132776
+z-score: -0.124134
+z-score: 0.135946
+z-score: 0.632344
+z-score: 0.465712
+z-score: -0.594378
+z-score: -1.543268
+z-score: -0.361000
+z-score: 0.233041
+z-score: 0.400652
+z-score: 0.428495
+z-score: 0.532053
+z-score: 0.206076
+z-score: -0.442480
+z-score: -1.238611
+z-score: -0.958924
+z-score: -0.199731
+z-score: 0.528033
+z-score: 0.645029
+z-score: 0.402257
+z-score: 0.425517
+z-score: 0.805137
+z-score: 0.546736
+z-score: -0.595198
+z-score: -1.435559
+z-score: 0.376189
+z-score: 1.216777
+z-score: 1.276832
+z-score: 0.989552
+z-score: -0.428681
+z-score: 0.057640
+z-score: -0.044915
+z-score: 0.056115
+z-score: 0.178052
+z-score: -0.213197
+z-score: 0.189974
+z-score: 0.090361
+z-score: 0.504377
+z-score: 0.749297
+z-score: 0.345161
+z-score: -0.582548
+z-score: -0.041300
+z-score: 0.279541
+z-score: 0.002563
+z-score: -1.205486
+z-score: -0.566808
+z-score: 0.339699
+z-score: 0.239373
+z-score: 0.349545
+z-score: 0.076636
+z-score: 0.322443
+z-score: -0.006188
+z-score: -0.901901
+z-score: -2.324944
+z-score: -0.337951
+z-score: 0.253462
+z-score: 0.582315
+z-score: 0.382968
+z-score: -0.214113
+z-score: -0.697909
+z-score: -1.242468
+z-score: -2.756433
+z-score: -2.705483
+z-score: -1.170195
+z-score: -0.619790
+z-score: -0.992113
+z-score: -1.562950
+z-score: -2.063450
+z-score: -2.243712
+z-score: -1.206823
+z-score: -2.056365
+z-score: -1.486235
+z-score: -0.213815
+z-score: -0.480268
+z-score: -0.289293
+z-score: -1.121365
+z-score: -0.644382
+z-score: 0.333246
+z-score: 0.333801
+z-score: -0.262891
+z-score: -1.771315
+z-score: -0.392296
+z-score: -0.268753
+z-score: -0.723859
+z-score: -0.870282
+z-score: -0.451660
+z-score: -0.570175
+z-score: -2.042043
+z-score: -1.549388
+z-score: 0.330707
+z-score: 0.438846
+z-score: -0.675161
+z-score: -1.647756
+z-score: 0.629726
+z-score: 1.127451
+z-score: 0.457417
+z-score: -1.231897
+z-score: -0.168987
+z-score: 0.634677
+z-score: 0.167689
+z-score: -2.672727
+z-score: -0.172204
+z-score: 0.770496
+z-score: 0.672163
+z-score: 0.008454
+z-score: 0.716543
+z-score: 0.811409
+z-score: 0.130976
+z-score: -1.604293
+z-score: 0.277904
+z-score: 0.983953
+z-score: 0.964992
+z-score: 0.068353
+z-score: 0.818981
+z-score: 1.125701
+z-score: 0.431478
+z-score: -1.165396
+z-score: 0.751720
+z-score: 1.439836
+z-score: 1.245423
+z-score: -0.060054
+z-score: 0.265945
+z-score: 1.151103
+z-score: 1.197570
+z-score: -0.246329
+z-score: -0.700577
+z-score: 1.413293
+z-score: 1.927170
+z-score: 1.308218
+z-score: -0.842291
+z-score: -0.215315
+z-score: 1.363560
+z-score: 1.345348
+z-score: -0.513236
+z-score: -0.653789
+z-score: 1.176910
+z-score: 1.305563
+z-score: 0.197876
+z-score: -0.069311
+z-score: 0.272441
+z-score: 0.953589
+z-score: 0.751502
+z-score: -0.856398
+z-score: -1.408717
+z-score: -0.055920
+z-score: 0.019045
+z-score: -0.435487
+z-score: -0.319331
+z-score: -1.580240
+z-score: -0.999947
+z-score: -1.655548
+z-score: -2.327243
+z-score: -2.951653
+z-score: -2.522726
+z-score: -0.347180
+z-score: 0.090613
+z-score: -0.001948
+z-score: -0.803134
+z-score: -1.453808
+z-score: -1.676568
+z-score: -2.606757
+z-score: -3.964629
+z-score: -1.445755
+z-score: -0.537529
+z-score: 0.479143
+z-score: 0.810884
+z-score: 0.621191
+z-score: 0.108197
+z-score: -0.518692
+z-score: -0.167495
+z-score: 0.125049
+z-score: 0.393324
+z-score: 0.701356
+z-score: 1.295634
+z-score: 1.685910
+z-score: 1.767542
+z-score: 1.359071
+z-score: 1.668632
+z-score: 2.465360
+outliers at index : 406
+z-score: 3.068681
+outliers at index : 407
+z-score: 3.831568
+outliers at index : 408
+z-score: 5.648207
+outliers at index : 409
+z-score: 6.451324
+outliers at index : 410
+z-score: 4.164239
+outliers at index : 411
+z-score: 3.253412
+outliers at index : 412
+z-score: 2.402044
+outliers at index : 413
+z-score: 2.313470
+outliers at index : 414
+z-score: 2.385261
+outliers at index : 415
+z-score: 2.035687
+outliers at index : 416
+z-score: 0.919002
+z-score: 0.116316
+z-score: 1.089453
+z-score: 0.944224
+z-score: 0.718750
+z-score: 0.323103
+z-score: 1.910611
+z-score: 2.076667
+outliers at index : 424
+z-score: 1.279520
+z-score: -0.090696
+z-score: 0.563069
+z-score: 1.108398
+z-score: 0.025709
+z-score: -1.447767
+z-score: 0.699759
+z-score: 1.146347
+z-score: 0.519798
+z-score: -0.907911
+z-score: 0.091500
+z-score: 0.320979
+z-score: -0.945902
+z-score: -1.033459
+z-score: 0.166919
+z-score: 0.526904
+z-score: -0.206535
+z-score: -4.633989
+z-score: 0.112016
+z-score: 0.354495
+z-score: -0.686868
+z-score: -3.155871
+z-score: 0.216922
+z-score: 0.628150
+z-score: 0.382483
+z-score: -1.569027
+z-score: -1.363438
+z-score: -0.221001
+z-score: -0.078634
+z-score: -1.023239
+z-score: -1.095034
+z-score: -0.401087
+z-score: -0.362400
+z-score: -1.658134
+z-score: -1.168647
+z-score: -0.258138
+z-score: -0.674501
+z-score: -0.747675
+z-score: -0.676425
+z-score: 0.353876
+z-score: 0.225361
+z-score: -0.395537
+z-score: -2.522465
+z-score: -1.674344
+z-score: -1.450113
+z-score: -1.060348
+z-score: -2.398516
+z-score: -1.669697
+z-score: -1.389485
+z-score: -0.568559
+z-score: -0.234009
+z-score: -1.073524
+z-score: -3.378845
+z-score: -0.786790
+z-score: -0.741483
+z-score: -0.146829
+z-score: -0.819241
+z-score: -0.581407
+z-score: 0.029127
+z-score: 0.152586
+z-score: 0.443448
+z-score: 0.395845
+z-score: 0.586217
+z-score: -0.168011
+z-score: 0.292821
+z-score: 0.347564
+z-score: 0.221115
+z-score: 0.133303
+z-score: 0.411333
+z-score: 0.751365
+z-score: 0.586922
+z-score: 0.674514
+z-score: 0.207751
+z-score: -0.146999
+z-score: -0.105365
+z-score: 0.283425
+z-score: -0.036503
+z-score: -0.137099
+z-score: 0.193943
+z-score: -0.062067
+z-score: 0.258378
+z-score: -0.318773
+z-score: -0.812872
+z-score: -1.624697
+z-score: -1.785721
+z-score: -1.129960
+z-score: -0.054865
+Max idx : 424 - max amp: 0.000000 - max freq : 0.000000
+[0;32mI (2288) [FFT] : FFT computed[0m
+[0;32mI (2292) view: Data min[442] = 18.016994, Data max[0] = 95.558334[0m
+ ________________________________________________________________
+0||||      ||||          |      |           |||    ||||          |
+1|   ||||||    |||||||||| |||||| |||||||||||   ||||    |||||||||||
+2                                                       |        |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (2369) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (2375) [FFT] : FFT graph view computed[0m
+[0;32mI (2380) main_task: Returned from app_main()[0m

@@ -1,0 +1,592 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 16 2024 15:40:55[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1214ch ( 74060) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022174 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b60 vaddr=40374000 size=0b4b8h ( 46264) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d31ch (119580) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d344 vaddr=4037f4b8 size=02cb8h ( 11448) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     fft[0m
+[0;32mI (190) app_init: App version:      723f97b-dirty[0m
+[0;32mI (196) app_init: Compile time:     May 17 2024 20:59:53[0m
+[0;32mI (202) app_init: ELF file SHA256:  99ace4ccc...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC98D38 len 000509D8 (322 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+[0;32mI (314) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (314) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (324) [ADC] : Channel width and configuration done[0m
+[0;32mI (374) [ADC] : Sampling completed[0m
+[0;32mI (384) [FFT] : Hann window generated[0m
+[0;32mI (384) [FFT] : Output populating completed[0m
+idx: 0, power: 3450.036008 - value: 89.519867 
+idx: 1, power: 3451.437894 - value: 89.531799 
+idx: 2, power: 28.855594 - value: 36.154598 
+idx: 3, power: 83.764733 - value: 39.935165 
+idx: 4, power: 894.073167 - value: 60.683914 
+idx: 5, power: 1068.537996 - value: 63.471359 
+idx: 6, power: 591.971728 - value: 55.113327 
+idx: 7, power: 795.750566 - value: 58.991909 
+idx: 8, power: 642.464710 - value: 56.129745 
+idx: 9, power: 0.154164 - value: 31.175495 
+idx: 10, power: 0.333032 - value: 31.359947 
+idx: 11, power: 1.285975 - value: 29.648849 
+idx: 12, power: 5.857047 - value: 28.362724 
+idx: 13, power: 1.834985 - value: 29.428242 
+idx: 14, power: 68.968626 - value: 22.478123 
+idx: 15, power: 7.918452 - value: 27.968884 
+idx: 16, power: 3.075184 - value: 29.029238 
+idx: 17, power: 64.179080 - value: 22.771673 
+idx: 18, power: 54.342246 - value: 23.411139 
+idx: 19, power: 0.905058 - value: 29.831512 
+idx: 20, power: 5.648773 - value: 33.159573 
+idx: 21, power: 5.429317 - value: 28.452768 
+idx: 22, power: 4.439346 - value: 28.675882 
+idx: 23, power: 0.543829 - value: 31.520306 
+idx: 24, power: 13.696428 - value: 27.081989 
+idx: 25, power: 0.367700 - value: 30.176476 
+idx: 26, power: 36.780345 - value: 36.847538 
+idx: 27, power: 26.202418 - value: 35.901688 
+idx: 28, power: 20.359823 - value: 26.270672 
+idx: 29, power: 20.743354 - value: 26.228371 
+idx: 30, power: 12.440714 - value: 27.255718 
+idx: 31, power: 75.994752 - value: 22.065361 
+idx: 32, power: 12.524140 - value: 34.321804 
+idx: 33, power: 35.398900 - value: 36.732555 
+idx: 34, power: 2.466247 - value: 29.212429 
+idx: 35, power: 0.369425 - value: 30.175055 
+idx: 36, power: 6.084362 - value: 33.249508 
+idx: 37, power: 3.411304 - value: 32.629829 
+idx: 38, power: 10.968600 - value: 34.094746 
+idx: 39, power: 21.790199 - value: 35.450855 
+idx: 40, power: 0.005317 - value: 30.855774 
+idx: 41, power: 6.707103 - value: 28.193050 
+idx: 42, power: 5.175276 - value: 33.057781 
+idx: 43, power: 15.529737 - value: 34.723637 
+idx: 44, power: 3.961952 - value: 32.773323 
+idx: 45, power: 0.041210 - value: 30.579855 
+idx: 46, power: 1.037823 - value: 29.764122 
+idx: 47, power: 8.302076 - value: 27.901525 
+idx: 48, power: 7.891145 - value: 33.591976 
+idx: 49, power: 31.173916 - value: 36.366219 
+idx: 50, power: 31.054119 - value: 36.355480 
+idx: 51, power: 3.988252 - value: 32.779919 
+idx: 52, power: 1.325932 - value: 31.934349 
+idx: 53, power: 3.773044 - value: 28.840425 
+idx: 54, power: 0.316320 - value: 31.345282 
+idx: 55, power: 24.791866 - value: 35.762001 
+idx: 56, power: 14.132008 - value: 34.542114 
+idx: 57, power: 0.586261 - value: 31.548534 
+idx: 58, power: 0.879768 - value: 31.720818 
+idx: 59, power: 7.034148 - value: 28.130661 
+idx: 60, power: 41.010084 - value: 24.378946 
+idx: 61, power: 16.155727 - value: 34.802277 
+idx: 62, power: 43.622466 - value: 37.387589 
+idx: 63, power: 7.646814 - value: 33.548145 
+idx: 64, power: 55.552171 - value: 23.329525 
+idx: 65, power: 233.489933 - value: 15.502481 
+idx: 66, power: 14.912521 - value: 26.921185 
+idx: 67, power: 1.012125 - value: 31.788902 
+idx: 68, power: 18.953646 - value: 35.136436 
+idx: 69, power: 36.601868 - value: 36.832806 
+idx: 70, power: 8.028603 - value: 27.949379 
+idx: 71, power: 11.441007 - value: 27.400402 
+idx: 72, power: 0.702419 - value: 29.944754 
+idx: 73, power: 0.014878 - value: 30.904835 
+idx: 74, power: 11.224675 - value: 34.133183 
+idx: 75, power: 37.573476 - value: 36.912579 
+idx: 76, power: 4.597108 - value: 32.926945 
+idx: 77, power: 110.409474 - value: 20.275267 
+idx: 78, power: 4.624057 - value: 28.632496 
+idx: 79, power: 3.694498 - value: 28.860750 
+idx: 80, power: 2.485935 - value: 29.206173 
+idx: 81, power: 1.207635 - value: 31.881783 
+idx: 82, power: 7.821539 - value: 33.579559 
+idx: 83, power: 67.452230 - value: 22.569927 
+idx: 84, power: 15.049628 - value: 26.903473 
+idx: 85, power: 5.337842 - value: 33.093235 
+idx: 86, power: 2.311347 - value: 32.303169 
+idx: 87, power: 11.823672 - value: 27.344301 
+idx: 88, power: 0.353586 - value: 30.188227 
+idx: 89, power: 9.748907 - value: 27.660534 
+idx: 90, power: 32.393234 - value: 25.091352 
+idx: 91, power: 0.084611 - value: 31.073738 
+idx: 92, power: 3.846301 - value: 32.744057 
+idx: 93, power: 0.406770 - value: 30.145073 
+idx: 94, power: 34.677467 - value: 24.894100 
+idx: 95, power: 153.003284 - value: 18.413408 
+idx: 96, power: 30.372316 - value: 25.271749 
+idx: 97, power: 0.002141 - value: 30.736591 
+idx: 98, power: 5.806178 - value: 33.192459 
+idx: 99, power: 0.546725 - value: 31.522266 
+idx: 100, power: 135.493715 - value: 19.142681 
+idx: 101, power: 2.707865 - value: 29.137299 
+idx: 102, power: 0.663107 - value: 31.597172 
+idx: 103, power: 6.329482 - value: 28.267012 
+idx: 104, power: 0.792411 - value: 29.892683 
+idx: 105, power: 11.299540 - value: 27.421379 
+idx: 106, power: 1.973646 - value: 29.377993 
+idx: 107, power: 21.514463 - value: 26.144489 
+idx: 108, power: 2.717793 - value: 32.431431 
+idx: 109, power: 17.522842 - value: 34.968887 
+idx: 110, power: 0.251073 - value: 31.283930 
+idx: 111, power: 28.962351 - value: 25.401190 
+idx: 112, power: 85.878000 - value: 21.515820 
+idx: 113, power: 34.891923 - value: 24.875919 
+idx: 114, power: 1.242859 - value: 29.668022 
+idx: 115, power: 7.319439 - value: 33.488304 
+idx: 116, power: 0.930382 - value: 31.747421 
+idx: 117, power: 16.285257 - value: 26.747358 
+idx: 118, power: 1.386326 - value: 31.960281 
+idx: 119, power: 81.613956 - value: 21.748814 
+idx: 120, power: 0.132007 - value: 30.419531 
+idx: 121, power: 14.019117 - value: 34.527069 
+idx: 122, power: 7.663448 - value: 33.551151 
+idx: 123, power: 6.012340 - value: 28.330851 
+idx: 124, power: 0.001230 - value: 30.817924 
+idx: 125, power: 10.163403 - value: 33.970867 
+idx: 126, power: 0.676921 - value: 31.605610 
+idx: 127, power: 17.026532 - value: 34.909180 
+idx: 128, power: 10.196119 - value: 33.975994 
+idx: 129, power: 36.971919 - value: 24.702404 
+idx: 130, power: 0.037794 - value: 30.588451 
+idx: 131, power: 8.974829 - value: 33.778660 
+idx: 132, power: 0.253324 - value: 31.286171 
+idx: 133, power: 0.791508 - value: 29.893190 
+idx: 134, power: 0.860518 - value: 31.710499 
+idx: 135, power: 0.044258 - value: 30.572481 
+idx: 136, power: 24.712497 - value: 25.811691 
+idx: 137, power: 0.489104 - value: 31.482218 
+idx: 138, power: 11.209344 - value: 34.130894 
+idx: 139, power: 0.000209 - value: 30.797306 
+idx: 140, power: 5.844092 - value: 28.365402 
+idx: 141, power: 8.258596 - value: 27.909081 
+idx: 142, power: 20.997178 - value: 26.200590 
+idx: 143, power: 12.712847 - value: 34.348366 
+idx: 144, power: 15.774467 - value: 34.754566 
+idx: 145, power: 2.723393 - value: 32.433128 
+idx: 146, power: 3.070630 - value: 29.030537 
+idx: 147, power: 7.052209 - value: 28.127258 
+idx: 148, power: 65.083158 - value: 22.715445 
+idx: 149, power: 12.306140 - value: 27.274847 
+idx: 150, power: 12.366580 - value: 34.299473 
+idx: 151, power: 21.136356 - value: 35.380287 
+idx: 152, power: 0.253157 - value: 30.279711 
+idx: 153, power: 3.491042 - value: 28.914425 
+idx: 154, power: 11.380405 - value: 27.409372 
+idx: 155, power: 118.921494 - value: 19.877745 
+idx: 156, power: 0.026987 - value: 30.618580 
+idx: 157, power: 21.850429 - value: 35.457302 
+idx: 158, power: 17.533958 - value: 34.970215 
+idx: 159, power: 63.171128 - value: 22.834831 
+idx: 160, power: 44.953520 - value: 24.078119 
+idx: 161, power: 0.004851 - value: 30.852505 
+idx: 162, power: 5.429415 - value: 33.112968 
+idx: 163, power: 10.459368 - value: 34.016953 
+idx: 164, power: 17.142327 - value: 34.923187 
+idx: 165, power: 12.303250 - value: 27.275259 
+idx: 166, power: 52.882724 - value: 23.510807 
+idx: 167, power: 0.024637 - value: 30.939819 
+idx: 168, power: 7.138478 - value: 33.454651 
+idx: 169, power: 8.029403 - value: 33.616478 
+idx: 170, power: 1.535727 - value: 32.022102 
+idx: 171, power: 30.126068 - value: 25.294136 
+idx: 172, power: 1.127857 - value: 29.720852 
+idx: 173, power: 6.136357 - value: 33.260025 
+idx: 174, power: 8.103835 - value: 33.629581 
+idx: 175, power: 8.584421 - value: 33.712776 
+idx: 176, power: 12.152157 - value: 34.268852 
+idx: 177, power: 8.887686 - value: 33.764080 
+idx: 178, power: 3.615154 - value: 28.881502 
+idx: 179, power: 7.996964 - value: 33.610748 
+idx: 180, power: 5.350471 - value: 33.095966 
+idx: 181, power: 0.380412 - value: 30.166082 
+idx: 182, power: 15.269102 - value: 26.875288 
+idx: 183, power: 0.006869 - value: 30.699976 
+idx: 184, power: 1.803240 - value: 29.440010 
+idx: 185, power: 5.451686 - value: 28.447973 
+idx: 186, power: 8.567932 - value: 33.709961 
+idx: 187, power: 3.625410 - value: 32.686909 
+idx: 188, power: 21.891800 - value: 26.103991 
+idx: 189, power: 3.329660 - value: 28.958122 
+idx: 190, power: 2.604418 - value: 32.396679 
+idx: 191, power: 0.063749 - value: 31.035343 
+idx: 192, power: 5.811124 - value: 33.193485 
+idx: 193, power: 22.272884 - value: 35.502274 
+idx: 194, power: 0.079969 - value: 31.065645 
+idx: 195, power: 8.468021 - value: 27.872871 
+idx: 196, power: 6.534451 - value: 33.339115 
+idx: 197, power: 8.759551 - value: 33.742512 
+idx: 198, power: 1.690201 - value: 32.082935 
+idx: 199, power: 6.513055 - value: 33.334927 
+idx: 200, power: 2.446947 - value: 32.347130 
+idx: 201, power: 56.023378 - value: 23.297981 
+idx: 202, power: 0.129242 - value: 30.423355 
+idx: 203, power: 0.004124 - value: 30.847075 
+idx: 204, power: 4.045900 - value: 28.771416 
+idx: 205, power: 0.025311 - value: 30.623762 
+idx: 206, power: 0.157775 - value: 30.385649 
+idx: 207, power: 0.847267 - value: 29.862387 
+idx: 208, power: 7.673505 - value: 28.012749 
+idx: 209, power: 2.313087 - value: 29.261974 
+idx: 210, power: 0.433570 - value: 30.124397 
+idx: 211, power: 0.020002 - value: 30.641430 
+idx: 212, power: 3.231715 - value: 32.580555 
+idx: 213, power: 2.218866 - value: 29.293272 
+idx: 214, power: 12.375785 - value: 27.264935 
+idx: 215, power: 0.410916 - value: 31.423885 
+idx: 216, power: 5.586586 - value: 28.419262 
+idx: 217, power: 0.330312 - value: 31.357586 
+idx: 218, power: 2.809630 - value: 32.459053 
+idx: 219, power: 0.188681 - value: 30.348484 
+idx: 220, power: 29.344734 - value: 25.365780 
+idx: 221, power: 2.687878 - value: 29.143383 
+idx: 222, power: 0.719165 - value: 31.630894 
+idx: 223, power: 0.840759 - value: 31.699787 
+idx: 224, power: 1.915089 - value: 32.166725 
+idx: 225, power: 4.277945 - value: 32.851177 
+idx: 226, power: 0.637980 - value: 31.581594 
+idx: 227, power: 20.393022 - value: 26.266994 
+idx: 228, power: 1.933260 - value: 32.173275 
+idx: 229, power: 2.712940 - value: 32.429958 
+idx: 230, power: 0.000505 - value: 30.805336 
+idx: 231, power: 5.627577 - value: 28.410606 
+idx: 232, power: 12.710670 - value: 34.348061 
+idx: 233, power: 16.314226 - value: 34.821945 
+idx: 234, power: 0.178185 - value: 31.204977 
+idx: 235, power: 7.541754 - value: 33.529083 
+idx: 236, power: 0.563147 - value: 30.032427 
+idx: 237, power: 3.399027 - value: 28.939213 
+idx: 238, power: 5.443237 - value: 33.115932 
+idx: 239, power: 7.565469 - value: 33.533398 
+idx: 240, power: 0.459412 - value: 30.105059 
+idx: 241, power: 0.161347 - value: 31.184538 
+idx: 242, power: 0.337139 - value: 30.202221 
+idx: 243, power: 49.206042 - value: 23.768156 
+idx: 244, power: 0.146303 - value: 30.400362 
+idx: 245, power: 0.227685 - value: 31.260021 
+idx: 246, power: 6.336750 - value: 33.300148 
+idx: 247, power: 1.024088 - value: 29.770885 
+idx: 248, power: 6.241144 - value: 28.284630 
+idx: 249, power: 30.735562 - value: 25.238892 
+idx: 250, power: 1.724880 - value: 29.469511 
+idx: 251, power: 0.288743 - value: 31.320206 
+idx: 252, power: 7.096142 - value: 33.446716 
+idx: 253, power: 11.442917 - value: 34.165596 
+idx: 254, power: 32.376171 - value: 25.092852 
+idx: 255, power: 54.807372 - value: 23.379658 
+idx: 256, power: 50.387338 - value: 23.684454 
+idx: 257, power: 0.033142 - value: 30.600807 
+idx: 258, power: 27.493830 - value: 36.026314 
+idx: 259, power: 48.776832 - value: 37.766899 
+idx: 260, power: 0.102688 - value: 31.103308 
+idx: 261, power: 3.572300 - value: 28.892805 
+idx: 262, power: 2.123135 - value: 32.239956 
+idx: 263, power: 0.479283 - value: 31.475161 
+idx: 264, power: 0.302848 - value: 30.232542 
+idx: 265, power: 0.034966 - value: 30.969849 
+idx: 266, power: 0.267775 - value: 31.300327 
+idx: 267, power: 14.043166 - value: 27.035437 
+idx: 268, power: 4.419171 - value: 32.885040 
+idx: 269, power: 12.436705 - value: 34.309429 
+idx: 270, power: 0.172894 - value: 31.198664 
+idx: 271, power: 1.763718 - value: 32.110909 
+idx: 272, power: 0.799057 - value: 31.676758 
+idx: 273, power: 139.350647 - value: 18.978170 
+idx: 274, power: 1.317069 - value: 31.930494 
+idx: 275, power: 11.542469 - value: 34.180279 
+idx: 276, power: 4.438470 - value: 32.889626 
+idx: 277, power: 11.946489 - value: 27.326488 
+idx: 278, power: 0.878795 - value: 29.845417 
+idx: 279, power: 0.166944 - value: 30.374269 
+idx: 280, power: 0.211173 - value: 31.242393 
+idx: 281, power: 7.556742 - value: 33.531811 
+idx: 282, power: 10.027653 - value: 33.949505 
+idx: 283, power: 7.083100 - value: 28.121449 
+idx: 284, power: 25.712208 - value: 25.712137 
+idx: 285, power: 9.589957 - value: 27.686092 
+idx: 286, power: 0.142668 - value: 31.160572 
+idx: 287, power: 20.070926 - value: 35.262917 
+idx: 288, power: 15.424236 - value: 34.710228 
+idx: 289, power: 0.800217 - value: 31.677406 
+idx: 290, power: 50.875300 - value: 23.650166 
+idx: 291, power: 0.785841 - value: 31.669334 
+idx: 292, power: 0.927757 - value: 31.746059 
+idx: 293, power: 7.566225 - value: 33.533535 
+idx: 294, power: 0.035336 - value: 30.594879 
+idx: 295, power: 14.131162 - value: 27.023714 
+idx: 296, power: 59.962350 - value: 23.039322 
+idx: 297, power: 30.015492 - value: 36.261497 
+idx: 298, power: 27.105607 - value: 35.989162 
+idx: 299, power: 1.983761 - value: 32.191319 
+idx: 300, power: 0.379082 - value: 31.398554 
+idx: 301, power: 0.198295 - value: 31.228161 
+idx: 302, power: 49.576841 - value: 23.741776 
+idx: 303, power: 2.371479 - value: 32.322819 
+idx: 304, power: 26.086713 - value: 35.890373 
+idx: 305, power: 1.395909 - value: 31.964344 
+idx: 306, power: 8.607091 - value: 27.849073 
+idx: 307, power: 20.410615 - value: 26.265047 
+idx: 308, power: 8.972064 - value: 27.787518 
+idx: 309, power: 143.926035 - value: 18.785940 
+idx: 310, power: 12.369264 - value: 34.299854 
+idx: 311, power: 5.497358 - value: 33.127502 
+idx: 312, power: 9.619441 - value: 27.681335 
+idx: 313, power: 64.075920 - value: 22.778114 
+idx: 314, power: 139.059582 - value: 18.990505 
+idx: 315, power: 369.175624 - value: 11.568913 
+idx: 316, power: 0.051356 - value: 31.009476 
+idx: 317, power: 25.218543 - value: 35.804665 
+idx: 318, power: 9.971055 - value: 33.940556 
+idx: 319, power: 8.660670 - value: 27.839956 
+idx: 320, power: 36.813273 - value: 24.715464 
+idx: 321, power: 25.502261 - value: 25.732882 
+idx: 322, power: 5.042410 - value: 28.537327 
+idx: 323, power: 0.049221 - value: 31.004717 
+idx: 324, power: 0.546917 - value: 30.043320 
+idx: 325, power: 13.282942 - value: 27.138281 
+idx: 326, power: 61.314873 - value: 22.952477 
+idx: 327, power: 0.246942 - value: 31.279791 
+idx: 328, power: 0.574271 - value: 31.540665 
+idx: 329, power: 2.731463 - value: 29.130144 
+idx: 330, power: 2.305203 - value: 32.301147 
+idx: 331, power: 101.935084 - value: 20.686567 
+idx: 332, power: 153.089268 - value: 18.409933 
+idx: 333, power: 6.020855 - value: 28.329115 
+idx: 334, power: 1.255492 - value: 31.903345 
+idx: 335, power: 4.848290 - value: 32.984741 
+idx: 336, power: 0.495950 - value: 30.078621 
+idx: 337, power: 5.640063 - value: 28.407976 
+idx: 338, power: 211.041832 - value: 16.255579 
+idx: 339, power: 20.432232 - value: 26.262655 
+idx: 340, power: 1.380749 - value: 31.957911 
+idx: 341, power: 7.821347 - value: 33.579525 
+idx: 342, power: 1.719248 - value: 29.471657 
+idx: 343, power: 0.434078 - value: 30.124012 
+idx: 344, power: 0.048295 - value: 31.002619 
+idx: 345, power: 12.459397 - value: 27.253071 
+idx: 346, power: 3.715432 - value: 32.710403 
+idx: 347, power: 14.139581 - value: 34.543121 
+idx: 348, power: 4.826409 - value: 32.979767 
+idx: 349, power: 4.637963 - value: 28.629265 
+idx: 350, power: 3.841170 - value: 28.822968 
+idx: 351, power: 11.016168 - value: 27.463797 
+idx: 352, power: 0.457810 - value: 31.459475 
+idx: 353, power: 12.807633 - value: 34.361633 
+idx: 354, power: 13.780388 - value: 34.495052 
+idx: 355, power: 0.724477 - value: 29.931696 
+idx: 356, power: 1.116485 - value: 29.726219 
+idx: 357, power: 3.827411 - value: 32.739235 
+idx: 358, power: 3.578019 - value: 32.674423 
+idx: 359, power: 4.120005 - value: 32.812637 
+idx: 360, power: 3.336193 - value: 32.609383 
+idx: 361, power: 2.057625 - value: 29.348415 
+idx: 362, power: 0.989169 - value: 29.788288 
+idx: 363, power: 3.399970 - value: 32.626759 
+idx: 364, power: 6.416645 - value: 33.315968 
+idx: 365, power: 3.897644 - value: 32.757103 
+idx: 366, power: 0.618848 - value: 29.996189 
+idx: 367, power: 8.482414 - value: 27.870399 
+idx: 368, power: 125.686445 - value: 19.571861 
+idx: 369, power: 0.039254 - value: 30.980984 
+idx: 370, power: 1.194050 - value: 31.875584 
+idx: 371, power: 0.798764 - value: 31.676594 
+idx: 372, power: 0.749463 - value: 29.917143 
+idx: 373, power: 11.117245 - value: 27.448605 
+idx: 374, power: 28.785822 - value: 25.417616 
+idx: 375, power: 1.220957 - value: 29.677889 
+idx: 376, power: 4.510690 - value: 32.906696 
+idx: 377, power: 2.476670 - value: 32.356602 
+idx: 378, power: 3.372936 - value: 28.946302 
+idx: 379, power: 23.099944 - value: 25.976618 
+idx: 380, power: 11.769037 - value: 27.352255 
+idx: 381, power: 14.549631 - value: 26.968460 
+idx: 382, power: 5.038522 - value: 33.027523 
+idx: 383, power: 20.869785 - value: 35.351204 
+idx: 384, power: 7.925968 - value: 33.598167 
+idx: 385, power: 37.016050 - value: 24.698776 
+idx: 386, power: 12.936722 - value: 34.379623 
+idx: 387, power: 0.375630 - value: 31.395744 
+idx: 388, power: 5.938106 - value: 28.346035 
+idx: 389, power: 0.419831 - value: 30.134914 
+idx: 390, power: 0.748885 - value: 29.917477 
+idx: 391, power: 1.002431 - value: 29.781643 
+idx: 392, power: 19.741866 - value: 35.226040 
+idx: 393, power: 24.810560 - value: 35.763878 
+idx: 394, power: 4.108027 - value: 32.809685 
+idx: 395, power: 1.300899 - value: 29.642288 
+idx: 396, power: 1.659681 - value: 29.494572 
+idx: 397, power: 12.911324 - value: 27.189625 
+idx: 398, power: 13.011662 - value: 34.390026 
+idx: 399, power: 37.414779 - value: 36.899620 
+idx: 400, power: 13.245999 - value: 34.422363 
+idx: 401, power: 3.389090 - value: 32.623806 
+idx: 402, power: 2.125581 - value: 29.324921 
+idx: 403, power: 1.574755 - value: 29.527966 
+idx: 404, power: 2.189620 - value: 29.303122 
+idx: 405, power: 33.519009 - value: 36.572418 
+idx: 406, power: 34.907878 - value: 36.691147 
+idx: 407, power: 0.405501 - value: 30.146069 
+idx: 408, power: 162.594164 - value: 18.031616 
+idx: 409, power: 42.093809 - value: 24.294884 
+idx: 410, power: 2.876251 - value: 29.086906 
+idx: 411, power: 26.082933 - value: 35.890003 
+idx: 412, power: 63.608663 - value: 38.758362 
+idx: 413, power: 23.987384 - value: 35.680550 
+idx: 414, power: 9.469805 - value: 27.705553 
+idx: 415, power: 15.900363 - value: 26.795332 
+idx: 416, power: 40.848986 - value: 24.391537 
+idx: 417, power: 6.565028 - value: 28.220627 
+idx: 418, power: 25.654153 - value: 35.847851 
+idx: 419, power: 18.352480 - value: 35.066837 
+idx: 420, power: 9.745036 - value: 27.661154 
+idx: 421, power: 43.100985 - value: 24.217724 
+idx: 422, power: 4.041788 - value: 32.793278 
+idx: 423, power: 3.336666 - value: 28.956203 
+idx: 424, power: 13.441153 - value: 27.116640 
+idx: 425, power: 1.040082 - value: 31.802702 
+idx: 426, power: 6.040068 - value: 28.325203 
+idx: 427, power: 208.383362 - value: 16.347368 
+idx: 428, power: 4.163440 - value: 28.742407 
+idx: 429, power: 0.078836 - value: 31.063635 
+idx: 430, power: 0.118486 - value: 31.127075 
+idx: 431, power: 14.719436 - value: 26.946266 
+idx: 432, power: 0.956537 - value: 29.804831 
+idx: 433, power: 20.562452 - value: 26.248274 
+idx: 434, power: 10.578909 - value: 27.530334 
+idx: 435, power: 2.064416 - value: 32.219666 
+idx: 436, power: 16.318494 - value: 26.743242 
+idx: 437, power: 33.827054 - value: 24.966755 
+idx: 438, power: 6.135714 - value: 28.305820 
+idx: 439, power: 75.722906 - value: 22.080967 
+idx: 440, power: 16.039438 - value: 26.777931 
+idx: 441, power: 3.854415 - value: 32.746124 
+idx: 442, power: 1.619958 - value: 29.510082 
+idx: 443, power: 1.156135 - value: 29.707621 
+idx: 444, power: 25.669091 - value: 25.716391 
+idx: 445, power: 0.057941 - value: 30.542149 
+idx: 446, power: 0.493972 - value: 31.485689 
+idx: 447, power: 4.599922 - value: 32.927601 
+idx: 448, power: 2.124691 - value: 32.240490 
+idx: 449, power: 0.211617 - value: 30.322840 
+idx: 450, power: 3.367320 - value: 28.947832 
+idx: 451, power: 0.052582 - value: 30.553551 
+idx: 452, power: 10.283227 - value: 33.989605 
+idx: 453, power: 5.125393 - value: 33.046791 
+idx: 454, power: 3.145250 - value: 32.556343 
+idx: 455, power: 0.135937 - value: 30.414162 
+idx: 456, power: 0.692755 - value: 29.950539 
+idx: 457, power: 2.671274 - value: 29.148455 
+idx: 458, power: 9.878255 - value: 33.925827 
+idx: 459, power: 13.563397 - value: 34.465710 
+idx: 460, power: 9.548396 - value: 33.872906 
+idx: 461, power: 3.763069 - value: 28.842995 
+idx: 462, power: 38.818052 - value: 24.552444 
+idx: 463, power: 4.093736 - value: 28.759560 
+idx: 464, power: 0.754683 - value: 31.651583 
+idx: 465, power: 8.751401 - value: 33.741135 
+idx: 466, power: 3.230138 - value: 32.580116 
+idx: 467, power: 1.885975 - value: 29.409550 
+idx: 468, power: 5.794235 - value: 28.375736 
+idx: 469, power: 6.710433 - value: 28.192408 
+idx: 470, power: 0.004766 - value: 30.713823 
+idx: 471, power: 12.688403 - value: 34.344936 
+idx: 472, power: 4.660747 - value: 32.941734 
+idx: 473, power: 19.002704 - value: 26.423649 
+idx: 474, power: 82.366059 - value: 21.707283 
+idx: 475, power: 38.020666 - value: 24.616768 
+idx: 476, power: 51.060599 - value: 23.637188 
+idx: 477, power: 2.091404 - value: 32.229027 
+idx: 478, power: 7.032590 - value: 33.434761 
+idx: 479, power: 1.339240 - value: 29.625603 
+idx: 480, power: 17.626198 - value: 26.584501 
+idx: 481, power: 0.349220 - value: 30.191910 
+idx: 482, power: 74.378287 - value: 22.158573 
+idx: 483, power: 14.165872 - value: 27.019100 
+idx: 484, power: 0.291416 - value: 31.322687 
+idx: 485, power: 6.587283 - value: 28.216288 
+idx: 486, power: 12.253111 - value: 27.282413 
+idx: 487, power: 0.236330 - value: 31.268995 
+idx: 488, power: 0.332506 - value: 31.359491 
+idx: 489, power: 5.409248 - value: 28.457079 
+idx: 490, power: 2.900089 - value: 29.079893 
+idx: 491, power: 5.166376 - value: 28.509892 
+idx: 492, power: 84.030179 - value: 21.616060 
+idx: 493, power: 0.383548 - value: 30.163546 
+idx: 494, power: 26.241290 - value: 35.905483 
+idx: 495, power: 0.299795 - value: 31.330393 
+idx: 496, power: 13.326480 - value: 27.132313 
+idx: 497, power: 0.191785 - value: 31.220791 
+idx: 498, power: 10.130958 - value: 33.965775 
+idx: 499, power: 4.225449 - value: 32.838448 
+idx: 500, power: 12.239762 - value: 34.281395 
+idx: 501, power: 25.514727 - value: 35.834068 
+idx: 502, power: 0.370717 - value: 31.391724 
+idx: 503, power: 41.150646 - value: 24.367981 
+idx: 504, power: 6.047514 - value: 33.242027 
+idx: 505, power: 26.566560 - value: 35.937134 
+idx: 506, power: 350.430519 - value: 49.502647 
+idx: 507, power: 798.463114 - value: 59.039948 
+idx: 508, power: 646.846055 - value: 56.216026 
+idx: 509, power: 22.690044 - value: 35.546265 
+idx: 510, power: 0.058859 - value: 31.025467 
+idx: 511, power: 21.909848 - value: 35.463654 
+mean: 30.782858 - std_dev: 4.526582Max idx : 508 - max amp: 0.000000 - max freq : 508.000000
+[0;32mI (2494) [FFT] : FFT computed[0m
+[0;32mI (2494) view: Data min[315] = 11.568913, Data max[1] = 89.531799[0m
+ ________________________________________________________________
+0||                                                             ||
+1|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+2                                       |                        |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (2574) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (2574) [FFT] : FFT graph view computed[0m
+[0;32mI (2584) main_task: Returned from app_main()[0m

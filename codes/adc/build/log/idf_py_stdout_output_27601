@@ -1,0 +1,74 @@
+0;32mI (184) cpu_st�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 10 2024 20:05:55[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0dd7ch ( 56700) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=0001dda4 vaddr=3fc91a00 size=02274h (  8820) load[0m
+[0;32mI (114) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1b964h (112996) map[0m
+[0;32mI (139) esp_image: segment 3: paddr=0003b98c vaddr=3fc93c74 size=00740h (  1856) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=0003c0d4 vaddr=40374000 size=0d900h ( 55552) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (174) cpu_start: Multicore app[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (184) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     adc[0m
+[0;32mI (191) app_init: App version:      723f97b-dirty[0m
+[0;32mI (196) app_init: Compile time:     May 17 2024 13:11:00[0m
+[0;32mI (202) app_init: ELF file SHA256:  8198d991a...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (215) app_init: Min chip rev:     v0.0[0m
+[0;32mI (219) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (224) app_init: Chip rev:         v0.1[0m
+[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FC94CF8 len 00054A18 (338 KiB): RAM[0m
+[0;32mI (242) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (248) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (262) spi_flash: detected chip: gd[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (269) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (282) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (290) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (297) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) main_task: Started on CPU0[0m
+[0;32mI (314) main_task: Calling app_main()[0m
+Duration: 1 (ticks) - Sampling frequency : idk (1 / ticks)
+[0;32mI (314) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (324) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (324) [ADC] : Channel width and configuration done[0m
+Max: 2272.000000 - Average : 1865.938477 - Stadnard dev: 19.576908 - threshold; 3.000000
+[0;32mI (384) [ADC] : Sampling completed[0m
+[0;32mI (384) [ADC] : Outlier 0 : 1794.000000[0m
+[0;32mI (394) [ADC] : Outlier 1 : 1955.000000[0m
+[0;32mI (394) [ADC] : Outlier 2 : 1955.000000[0m
+[0;32mI (404) [ADC] : Outlier 3 : 2272.000000[0m
+[0;32mI (404) [ADC] : Outlier 4 : 1929.000000[0m
+[0;32mI (404) [ADC] : Outlier 5 : 1943.000000[0m
+[0;32mI (414) [ADC] : Outlier 6 : 1935.000000[0m
+[0;32mI (414) [ADC] : Outlier 7 : 1805.000000[0m
+[0;32mI (424) [ADC] : Outlier 8 : 1770.000000[0m
+[0;32mI (424) [ADC] : Outlier 9 : 1700.000000[0m
+[0;32mI (434) [ADC] : Outlier 10 : 1560.000000[0m
+[0;32mI (434) main_task: Returned from app_main()[0m

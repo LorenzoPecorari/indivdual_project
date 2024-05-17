@@ -26,53 +26,75 @@
 
 // global vars
 float* input;
-float window[SAMPLES];
 float output[2 * SAMPLES];
 
 float final[FINAL_SIZE];
 
-int max_freq_idx = 0;
+int max_idx = 0;
 float max_freq = 0.0;
 
-// generator of hann window
-void window_gen(){
-    dsps_wind_hann_f32(window, SAMPLES);
-    ESP_LOGI(APP_NAME_FFT, "Hann window generated");
+// variables for z-score calculation
+float mean = 0.0;
+float std_dev = 0.0;
+float threshold = 3.0;
+
+// calculates standard deviation of the sampled values
+void std_dev_calc(){
+    for(int i = 0; i < FINAL_SIZE; i++)
+        std_dev += pow(final[i] - mean, 2);
+
+    std_dev = sqrt(std_dev / FINAL_SIZE);
 }
 
-// test purposes function only
-// generates a random signal
-void input_populating(){
-    dsps_tone_gen_f32(input, SAMPLES, WAVE_AMPLITUDE, WAVE_FREQUENCY, WAVE_PHASE);
-    ESP_LOGI(APP_NAME_FFT, "Input test wave generated");
+// using z-score, it computes if the value is an outlier
+int outlier_calc(float value){
+    float z = (value - mean) / std_dev;
+
+    if(z > threshold)
+        return 1;
+    else
+        return 0;
 }
 
-// multiplies the hann window for the input signal;
+int max_outlier_finder(){
+    int max_idx = 0;
+
+    for(int i = 0; i < FINAL_SIZE; i++){
+        if(outlier_calc(final[i])){
+            max_idx = i;
+        }
+    }
+
+    return max_idx;
+}
+
+// generates hann window and multiplies it for the input signal;
 // only the first part of the "output" is being populated
 // for handling one input signal
-void hann_multiplication(){
+
+void window_gen(){
+    
+    float* window = malloc(sizeof(float) * SAMPLES);
+    dsps_wind_hann_f32(window, SAMPLES);
+
     for(int i = 0; i < SAMPLES; i++){
         output[i * 2 + 0] = input[i] * window[i];
         output[i * 2 + 1] = 0.0;
     }
     
-    ESP_LOGI(APP_NAME_FFT, "Output populating completed");
+    free(window);
+
+    ESP_LOGI(APP_NAME_FFT, "Hann window generated");
 }
+
+void input_populating(){
+    dsps_tone_gen_f32(input, SAMPLES, WAVE_AMPLITUDE, WAVE_FREQUENCY, WAVE_PHASE);
+    ESP_LOGI(APP_NAME_FFT, "Input test wave generated");
+}
+
 
 // computes the fft of the signal and plots it through the shell
 void fft(){
-
-    /*
-    - SAMPLES = 1024
-    - FINAL_SIZE  = SAMPLES / 2
-
-    - input is an array of floats with size SAMPLES
-    - output is an array of floats with size 2 * SAMPLES
-    - final is an array of floats with size FINAL_SIZE
-    */
-
-    // fft radix 2, function from library with O(N * log N) cost
-    //dsps_view(input, SAMPLES, 64, 10, -128, 64, '|');
 
     dsps_fft2r_fc32(output, SAMPLES);
     
@@ -85,53 +107,27 @@ void fft(){
     float temp_2 = 0.0;
  
     int j = 0;
-
-    float max_amp = 0.0;
     
     for(int i = 0; i < FINAL_SIZE; i++){
         j = i + FINAL_SIZE;
 
         // power spectrum of the output coming from the fft (dB_10)
         temp_1 = 10 * log10f(((output[(i * 2) + 0] * output[(i * 2) + 0]) + (output[(i * 2) + 1] * output[(i * 2) + 1])) / SAMPLES);
-        temp_2 = 10 * log10f(((output[(j * 2) + 0] * output[(j * 2) + 0]) + (output[(j * 2) + 1] * output[(j * 2) + 1])) / SAMPLES);
+        final[i] = temp_1;
 
-        // takes the greater value from the two computed
-        if(temp_1 < temp_2)
-            final[i] = temp_2;
-        else
-            final[i] = temp_1;
-
-        if(final[i] > max_amp){
-            max_amp = final[i];
-            max_freq_idx = i;
-        }
+        mean = mean + final[i];
 
     }
     
-    max_freq = (max_freq_idx / duration);
+    mean = mean / FINAL_SIZE;
+    dsps_view(final, FINAL_SIZE, 64, 10, -10, 90, '|');
 
-    printf("Max idx : %d - max amp: %f - max freq : %f\n", max_freq_idx, max_amp, max_freq);
+    std_dev_calc();
+    max_idx = max_outlier_finder();
 
-    ESP_LOGI(APP_NAME_FFT, "FFT computed");
-    //for(int i = 0; i < FINAL_SIZE; i++)
-        //printf("magnitude: %f, idx: %d\n", final[i], i);
+    max_freq = (max_idx * 20 / duration);
+    ESP_LOGI(APP_NAME_FFT, "max_frequency: %f\n", max_freq);
 
-    // arguments: buffer, buffer size, # bins, min showed, max showed, char for viewing
-
-    dsps_view(final, FINAL_SIZE, 64, 10, -128, 64, '|');
-    ESP_LOGI(APP_NAME_FFT, "FFT graph view computed");
-
-    /*
-    outliers_finder_test(final, FINAL_SIZE);
-
-    maximum_idx_frequency = max_outlier_finder(final, FINAL_SIZE);
-    max_freq = ((float )maximum_idx_frequency / SAMPLES) * ((float) SAMPLES / (float)duration);
-    ESP_LOGI(APP_NAME_FFT, "Maximum frequency index: %d max frequency: %f", maximum_idx_frequency, max_freq);
-
-    float old_duration = duration;
-    duration = maximum_idx_frequency / (2 * duration);
-    ESP_LOGI(APP_NAME_FFT, "Old period: %f - new period: %f", old_duration, (float)duration);
-    */
 }
 
 void fft_init(){
@@ -144,12 +140,3 @@ void fft_init(){
 
     window_gen();
 }
-
-/*
-    === NOTES ===
-
-    # analysis of maximum frequency:
-        in order to achieve the maximum frequency, find the outlier value with higher frequency,
-        once that it is possible to compute the new sampling frequency
-
-*/

@@ -1,0 +1,594 @@
+��}������ segment 4�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 17 2024 22:24:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1212ch ( 74028) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022154 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b40 vaddr=40374000 size=0b4d8h ( 46296) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d25ch (119388) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d284 vaddr=4037f4d8 size=02c98h ( 11416) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     fft[0m
+[0;32mI (190) app_init: App version:      723f97b-dirty[0m
+[0;32mI (195) app_init: Compile time:     May 17 2024 22:24:12[0m
+[0;32mI (201) app_init: ELF file SHA256:  a0b6a9657...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC98D38 len 000509D8 (322 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+[0;32mI (313) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (313) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;32mI (373) [ADC] : Sampling completed[0m
+[0;32mI (383) [FFT] : Hann window generated[0m
+[0;32mI (383) [FFT] : Output populating completed[0m
+std_dev: 4598.967773
+std_dev: 9199.947266
+std_dev: 9411.404297
+std_dev: 9447.086914
+std_dev: 9448.544922
+std_dev: 9460.055664
+std_dev: 9461.803711
+std_dev: 9465.567383
+std_dev: 9472.304688
+std_dev: 9479.119141
+std_dev: 9494.915039
+std_dev: 9501.382812
+std_dev: 9509.972656
+std_dev: 9521.033203
+std_dev: 9521.110352
+std_dev: 9529.426758
+std_dev: 9568.559570
+std_dev: 9618.850586
+std_dev: 9619.502930
+std_dev: 9630.028320
+std_dev: 9630.144531
+std_dev: 9655.102539
+std_dev: 9655.201172
+std_dev: 9655.309570
+std_dev: 9672.583984
+std_dev: 9693.447266
+std_dev: 9711.613281
+std_dev: 9737.112305
+std_dev: 9741.711914
+std_dev: 9747.655273
+std_dev: 9754.649414
+std_dev: 9760.665039
+std_dev: 9761.241211
+std_dev: 9779.168945
+std_dev: 9789.702148
+std_dev: 9792.638672
+std_dev: 9802.628906
+std_dev: 9824.539062
+std_dev: 9828.240234
+std_dev: 9832.317383
+std_dev: 9839.459961
+std_dev: 9843.940430
+std_dev: 9849.445312
+std_dev: 9859.644531
+std_dev: 9903.786133
+std_dev: 9905.982422
+std_dev: 9921.749023
+std_dev: 9926.197266
+std_dev: 9963.810547
+std_dev: 9986.237305
+std_dev: 10032.200195
+std_dev: 10042.825195
+std_dev: 10071.845703
+std_dev: 10094.604492
+std_dev: 10102.960938
+std_dev: 10102.994141
+std_dev: 10118.457031
+std_dev: 10126.413086
+std_dev: 10145.071289
+std_dev: 10147.359375
+std_dev: 10147.582031
+std_dev: 10169.321289
+std_dev: 10279.760742
+std_dev: 10307.438477
+std_dev: 10309.310547
+std_dev: 10404.108398
+std_dev: 10411.870117
+std_dev: 10473.780273
+std_dev: 10501.793945
+std_dev: 10502.247070
+std_dev: 10525.149414
+std_dev: 10538.511719
+std_dev: 10563.670898
+std_dev: 10614.185547
+std_dev: 10615.073242
+std_dev: 10618.696289
+std_dev: 10624.269531
+std_dev: 10634.715820
+std_dev: 10638.096680
+std_dev: 10651.070312
+std_dev: 10651.196289
+std_dev: 10663.963867
+std_dev: 10674.642578
+std_dev: 10676.996094
+std_dev: 10680.321289
+std_dev: 10682.447266
+std_dev: 10773.613281
+std_dev: 10792.328125
+std_dev: 10800.192383
+std_dev: 10827.638672
+std_dev: 10843.564453
+std_dev: 10843.623047
+std_dev: 10845.530273
+std_dev: 10853.577148
+std_dev: 10870.436523
+std_dev: 10885.559570
+std_dev: 10962.255859
+std_dev: 11002.179688
+std_dev: 11019.332031
+std_dev: 11020.478516
+std_dev: 11036.288086
+std_dev: 11036.577148
+std_dev: 11040.294922
+std_dev: 11083.893555
+std_dev: 11083.973633
+std_dev: 11147.363281
+std_dev: 11153.199219
+std_dev: 11154.227539
+std_dev: 11157.094727
+std_dev: 11164.201172
+std_dev: 11181.799805
+std_dev: 11182.249023
+std_dev: 11183.074219
+std_dev: 11183.505859
+std_dev: 11197.268555
+std_dev: 11198.234375
+std_dev: 11300.711914
+std_dev: 11312.852539
+std_dev: 11346.792969
+std_dev: 11362.546875
+std_dev: 11376.067383
+std_dev: 11411.449219
+std_dev: 11445.993164
+std_dev: 11451.524414
+std_dev: 11454.097656
+std_dev: 11455.510742
+std_dev: 11458.483398
+std_dev: 11458.567383
+std_dev: 11467.006836
+std_dev: 11474.543945
+std_dev: 11481.255859
+std_dev: 11498.261719
+std_dev: 11517.775391
+std_dev: 11517.899414
+std_dev: 11548.684570
+std_dev: 11550.710938
+std_dev: 11550.712891
+std_dev: 11567.490234
+std_dev: 11590.811523
+std_dev: 11595.744141
+std_dev: 11596.711914
+std_dev: 11598.134766
+std_dev: 11603.609375
+std_dev: 11612.236328
+std_dev: 11657.889648
+std_dev: 11658.048828
+std_dev: 11665.228516
+std_dev: 11667.475586
+std_dev: 11670.607422
+std_dev: 11670.685547
+std_dev: 11704.221680
+std_dev: 11759.960938
+std_dev: 11762.173828
+std_dev: 11768.802734
+std_dev: 11769.540039
+std_dev: 11773.475586
+std_dev: 11774.103516
+std_dev: 11783.634766
+std_dev: 11788.910156
+std_dev: 11789.109375
+std_dev: 11797.648438
+std_dev: 11806.232422
+std_dev: 11830.019531
+std_dev: 11831.968750
+std_dev: 11832.531250
+std_dev: 11844.603516
+std_dev: 11844.605469
+std_dev: 11848.166016
+std_dev: 11851.220703
+std_dev: 11851.266602
+std_dev: 11877.559570
+std_dev: 11895.806641
+std_dev: 11925.066406
+std_dev: 11927.872070
+std_dev: 11935.554688
+std_dev: 11951.697266
+std_dev: 11989.407227
+std_dev: 12010.649414
+std_dev: 12012.085938
+std_dev: 12012.341797
+std_dev: 12015.055664
+std_dev: 12017.848633
+std_dev: 12079.152344
+std_dev: 12079.426758
+std_dev: 12110.575195
+std_dev: 12243.366211
+std_dev: 12265.634766
+std_dev: 12272.127930
+std_dev: 12320.213867
+std_dev: 12381.659180
+std_dev: 12388.010742
+std_dev: 12397.171875
+std_dev: 12409.220703
+std_dev: 12430.030273
+std_dev: 12431.470703
+std_dev: 12446.386719
+std_dev: 12456.713867
+std_dev: 12490.959961
+std_dev: 12501.786133
+std_dev: 12501.939453
+std_dev: 12505.610352
+std_dev: 12575.869141
+std_dev: 12671.237305
+std_dev: 12687.207031
+std_dev: 12721.265625
+std_dev: 12724.627930
+std_dev: 12732.151367
+std_dev: 12733.717773
+std_dev: 12737.815430
+std_dev: 12742.672852
+std_dev: 12753.903320
+std_dev: 12753.903320
+std_dev: 12796.109375
+std_dev: 12797.679688
+std_dev: 12804.305664
+std_dev: 12804.375000
+std_dev: 12814.065430
+std_dev: 12848.011719
+std_dev: 12893.250977
+std_dev: 12902.166016
+std_dev: 12902.169922
+std_dev: 12902.903320
+std_dev: 12906.104492
+std_dev: 13043.730469
+std_dev: 13066.977539
+std_dev: 13070.708984
+std_dev: 13132.581055
+std_dev: 13146.842773
+std_dev: 13152.044922
+std_dev: 13210.049805
+std_dev: 13262.100586
+std_dev: 13271.942383
+std_dev: 13287.478516
+std_dev: 13300.549805
+std_dev: 13301.127930
+std_dev: 13319.281250
+std_dev: 13355.903320
+std_dev: 13359.372070
+std_dev: 13361.312500
+std_dev: 13361.383789
+std_dev: 13361.529297
+std_dev: 13423.924805
+std_dev: 13460.294922
+std_dev: 13460.898438
+std_dev: 13480.699219
+std_dev: 13482.696289
+std_dev: 13494.361328
+std_dev: 13496.556641
+std_dev: 13511.913086
+std_dev: 13539.863281
+std_dev: 13589.306641
+std_dev: 13597.928711
+std_dev: 13604.083984
+std_dev: 13630.755859
+std_dev: 13632.125000
+std_dev: 13632.163086
+std_dev: 13653.342773
+std_dev: 13659.165039
+std_dev: 13670.177734
+std_dev: 13671.208008
+std_dev: 13671.208008
+std_dev: 13704.084961
+std_dev: 13747.166992
+std_dev: 13753.720703
+std_dev: 13773.487305
+std_dev: 13812.110352
+std_dev: 13813.147461
+std_dev: 13816.674805
+std_dev: 13826.815430
+std_dev: 13827.813477
+std_dev: 13827.817383
+std_dev: 13855.965820
+std_dev: 13909.751953
+std_dev: 13909.789062
+std_dev: 13910.233398
+std_dev: 13917.453125
+std_dev: 13928.495117
+std_dev: 13945.571289
+std_dev: 13958.054688
+std_dev: 13958.799805
+std_dev: 13960.827148
+std_dev: 13990.458984
+std_dev: 14019.233398
+std_dev: 14024.536133
+std_dev: 14035.196289
+std_dev: 14054.512695
+std_dev: 14076.291016
+std_dev: 14084.113281
+std_dev: 14084.900391
+std_dev: 14092.429688
+std_dev: 14126.717773
+std_dev: 14126.806641
+std_dev: 14130.870117
+std_dev: 14133.463867
+std_dev: 14154.840820
+std_dev: 14157.241211
+std_dev: 14165.701172
+std_dev: 14166.449219
+std_dev: 14178.956055
+std_dev: 14226.279297
+std_dev: 14261.616211
+std_dev: 14271.232422
+std_dev: 14297.471680
+std_dev: 14306.937500
+std_dev: 14308.354492
+std_dev: 14317.363281
+std_dev: 14405.116211
+std_dev: 14405.809570
+std_dev: 14413.856445
+std_dev: 14445.667969
+std_dev: 14499.801758
+std_dev: 14502.443359
+std_dev: 14535.403320
+std_dev: 14562.305664
+std_dev: 14570.843750
+std_dev: 14573.761719
+std_dev: 14585.864258
+std_dev: 14608.154297
+std_dev: 14627.279297
+std_dev: 14631.497070
+std_dev: 14687.960938
+std_dev: 14690.824219
+std_dev: 14692.120117
+std_dev: 14693.389648
+std_dev: 14718.963867
+std_dev: 14724.724609
+std_dev: 14725.229492
+std_dev: 14727.104492
+std_dev: 14727.391602
+std_dev: 14768.477539
+std_dev: 14781.028320
+std_dev: 14783.637695
+std_dev: 14784.322266
+std_dev: 14784.688477
+std_dev: 14797.311523
+std_dev: 14821.143555
+std_dev: 14822.353516
+std_dev: 15165.363281
+std_dev: 15166.657227
+std_dev: 15170.282227
+std_dev: 15215.497070
+std_dev: 15215.505859
+std_dev: 15226.831055
+std_dev: 15227.971680
+std_dev: 15244.404297
+std_dev: 15263.040039
+std_dev: 15276.220703
+std_dev: 15322.361328
+std_dev: 15324.475586
+std_dev: 15343.132812
+std_dev: 15355.131836
+std_dev: 15399.192383
+std_dev: 15401.681641
+std_dev: 15445.623047
+std_dev: 15447.477539
+std_dev: 15450.933594
+std_dev: 15453.250000
+std_dev: 15461.638672
+std_dev: 15468.017578
+std_dev: 15468.357422
+std_dev: 15522.641602
+std_dev: 15531.657227
+std_dev: 15531.793945
+std_dev: 15663.374023
+std_dev: 15671.444336
+std_dev: 15694.179688
+std_dev: 15694.318359
+std_dev: 15694.574219
+std_dev: 15757.356445
+std_dev: 15759.368164
+std_dev: 15774.447266
+std_dev: 15779.486328
+std_dev: 15888.893555
+std_dev: 15901.066406
+std_dev: 15910.720703
+std_dev: 15913.211914
+std_dev: 16001.084961
+std_dev: 16005.643555
+std_dev: 16014.978516
+std_dev: 16043.004883
+std_dev: 16043.363281
+std_dev: 16046.286133
+std_dev: 16049.428711
+std_dev: 16065.207031
+std_dev: 16100.069336
+std_dev: 16108.051758
+std_dev: 16130.774414
+std_dev: 16185.160156
+std_dev: 16269.729492
+std_dev: 16280.398438
+std_dev: 16306.653320
+std_dev: 16327.021484
+std_dev: 16351.148438
+std_dev: 16357.025391
+std_dev: 16372.280273
+std_dev: 16374.775391
+std_dev: 16387.312500
+std_dev: 16391.755859
+std_dev: 16394.115234
+std_dev: 16400.371094
+std_dev: 16400.826172
+std_dev: 16413.322266
+std_dev: 16431.421875
+std_dev: 16437.878906
+std_dev: 16437.882812
+std_dev: 16438.156250
+std_dev: 16438.833984
+std_dev: 16438.873047
+std_dev: 16484.169922
+std_dev: 16519.435547
+std_dev: 16539.050781
+std_dev: 16643.171875
+std_dev: 16644.445312
+std_dev: 16675.714844
+std_dev: 16850.367188
+std_dev: 16850.484375
+std_dev: 16884.988281
+std_dev: 16925.363281
+std_dev: 16925.898438
+std_dev: 16940.333984
+std_dev: 16944.476562
+std_dev: 16945.306641
+std_dev: 17025.654297
+std_dev: 17051.410156
+std_dev: 17052.507812
+std_dev: 17081.382812
+std_dev: 17081.457031
+std_dev: 17093.679688
+std_dev: 17176.916016
+std_dev: 17180.333984
+std_dev: 17181.875000
+std_dev: 17208.142578
+std_dev: 17372.546875
+std_dev: 17504.781250
+std_dev: 17504.906250
+std_dev: 17506.382812
+std_dev: 17708.169922
+std_dev: 17713.095703
+std_dev: 17721.841797
+std_dev: 17723.585938
+std_dev: 17728.058594
+std_dev: 17741.640625
+std_dev: 17744.029297
+std_dev: 17745.367188
+std_dev: 17748.755859
+std_dev: 17752.435547
+std_dev: 17753.828125
+std_dev: 17822.595703
+std_dev: 17835.796875
+std_dev: 17839.652344
+std_dev: 17841.882812
+std_dev: 17861.357422
+std_dev: 17875.134766
+std_dev: 17875.160156
+std_dev: 17876.142578
+std_dev: 17877.593750
+std_dev: 17878.427734
+std_dev: 17887.304688
+std_dev: 17894.974609
+std_dev: 17900.949219
+std_dev: 17910.802734
+std_dev: 17924.791016
+std_dev: 17933.914062
+std_dev: 17962.818359
+std_dev: 17972.632812
+std_dev: 17976.144531
+std_dev: 17976.884766
+std_dev: 17986.285156
+std_dev: 18001.472656
+std_dev: 18011.667969
+std_dev: 18033.197266
+std_dev: 18041.763672
+std_dev: 18114.687500
+std_dev: 18116.378906
+std_dev: 18124.529297
+std_dev: 18125.449219
+std_dev: 18171.083984
+std_dev: 18174.972656
+std_dev: 18214.445312
+std_dev: 18214.515625
+std_dev: 18215.062500
+std_dev: 18247.500000
+std_dev: 18247.500000
+std_dev: 18256.335938
+std_dev: 18256.431641
+std_dev: 18260.867188
+std_dev: 18276.101562
+std_dev: 18299.617188
+std_dev: 18307.138672
+std_dev: 18316.144531
+std_dev: 18411.681641
+std_dev: 18422.539062
+std_dev: 18430.568359
+std_dev: 18441.324219
+std_dev: 18458.150391
+std_dev: 18469.943359
+std_dev: 18487.310547
+std_dev: 18524.511719
+std_dev: 18545.279297
+std_dev: 18556.431641
+std_dev: 18558.542969
+std_dev: 18578.142578
+std_dev: 18605.798828
+std_dev: 18636.775391
+std_dev: 18642.425781
+std_dev: 18642.724609
+std_dev: 18652.673828
+std_dev: 18690.027344
+std_dev: 18694.216797
+std_dev: 18762.066406
+std_dev: 18769.267578
+std_dev: 18944.054688
+std_dev: 6.082771
+mean: 21.673616 - std_dev: 6.082771
+Max idx : 0 - max freq : 0.000000
+[0;32mI (1403) [FFT] : FFT computed[0m
+[0;32mI (1413) view: Data min[337] = 3.153092, Data max[1] = 89.504135[0m
+ ________________________________________________________________
+0|                                                               |
+1|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+2|                                         |                    ||
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (1493) view: Plot: Length=512, min=-128.000000, max=64.000000[0m
+[0;32mI (1493) [FFT] : FFT graph view computed[0m
+[0;32mI (1503) main_task: Returned from app_main()[0m
