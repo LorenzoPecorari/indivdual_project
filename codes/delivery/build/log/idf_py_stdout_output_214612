@@ -1,0 +1,438 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 22:14:18[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=2d754h (186196) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003d77c vaddr=3fc98d00 size=0289ch ( 10396) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=9f168h (651624) map[0m
+[0;32mI (257) esp_image: segment 3: paddr=000df190 vaddr=3fc9b59c size=02700h (  9984) load[0m
+[0;32mI (260) esp_image: segment 4: paddr=000e1898 vaddr=40374000 size=14bf8h ( 84984) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Multicore app[0m
+[0;32mI (312) cpu_start: Pro cpu start user code[0m
+[0;32mI (312) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (312) app_init: Application information:[0m
+[0;32mI (315) app_init: Project name:     adc_fft[0m
+[0;32mI (320) app_init: App version:      b126964-dirty[0m
+[0;32mI (325) app_init: Compile time:     May 18 2024 23:06:09[0m
+[0;32mI (331) app_init: ELF file SHA256:  753590f72...[0m
+[0;32mI (337) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (344) app_init: Min chip rev:     v0.0[0m
+[0;32mI (348) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (353) app_init: Chip rev:         v0.1[0m
+[0;32mI (358) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (365) heap_init: At 3FCA6590 len 00043180 (268 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (377) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (383) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (390) spi_flash: detected chip: gd[0m
+[0;32mI (394) spi_flash: flash io: dio[0m
+[0;33mW (398) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (411) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (419) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (426) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (433) main_task: Started on CPU0[0m
+[0;32mI (440) main_task: Calling app_main()[0m
+[0;32mI (441) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (446) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (451) [ADC] : Channel width and configuration done[0m
+[0;32mI (1486) [FFT] : Initialization done[0m
+[0;32mI (1490) [FFT] : Hann window generated[0m
+[0;33mW (2514) [ADC] : Values sampled[0m
+[0;32mI (2515) [FFT] : Intermediate result computed[0m
+[0;33mW (2518) [FFT] : Final result computed[0m
+[0;32mI (2518) view: Data min[253] = -10.572014, Data max[1] = 89.548256[0m
+ ________________________________________________________________
+0                                                                |
+1|                                                               |
+2|                                                               |
+3|                                                   |           |
+4|           || |            |        |              || |        |
+5 |||||||||||  | ||||||||||||||||||||| ||||||||||||||| | |||||||||
+6          |             |      |  |     |     |             |   |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (2593) view: Plot: Length=512, min=-60.000000, max=120.000000[0m
+current frequency: 999.999939 - current duration: 1.024000
+[0;32mI (2607) [FFT] : Mean: 11.818047 - Standard dev: 8.072558[0m
+[0;33mW (2612) [FFT] : Index: 423 - Max frequency: 413.085907 -> New ampling frequency : 826.171814[0m
+[0;32mI (2620) [FFT] : Secure sampling frequency: 830.302673[0m
+new frequency: 830.302673 - new duration: 1.233285
+T: 5.000000 - #samples: 4055 - cycles: 4
+final_mean: 1856.000000
+[0;32mI (6730) [WI-FI] : Testing the wifi module[0m
+[0;32mI (6769) pp: pp rom version: e7ae62f[0m
+[0;32mI (6769) net80211: net80211 rom version: e7ae62f[0m
+I (6771) wifi:wifi driver task: 3fcb6924, prio:23, stack:6656, core=0
+I (7078) wifi:wifi firmware version: f2b9bda51
+I (7079) wifi:wifi certification version: v7.0
+I (7079) wifi:config NVS flash: enabled
+I (7079) wifi:config nano formating: disabled
+I (7084) wifi:Init data frame dynamic rx buffer num: 32
+I (7089) wifi:Init static rx mgmt buffer num: 5
+I (7093) wifi:Init management short buffer num: 32
+I (7097) wifi:Init dynamic tx buffer num: 32
+I (7101) wifi:Init static tx FG buffer num: 2
+I (7105) wifi:Init static rx buffer size: 1600
+I (7110) wifi:Init static rx buffer num: 10
+I (7113) wifi:Init dynamic rx buffer num: 32
+[0;32mI (7118) wifi_init: rx ba win: 6[0m
+[0;32mI (7121) wifi_init: accept mbox: 6[0m
+[0;32mI (7125) wifi_init: tcpip mbox: 32[0m
+[0;32mI (7129) wifi_init: udp mbox: 6[0m
+[0;32mI (7133) wifi_init: tcp mbox: 6[0m
+[0;32mI (7137) wifi_init: tcp tx win: 5760[0m
+[0;32mI (7141) wifi_init: tcp rx win: 5760[0m
+[0;32mI (7146) wifi_init: tcp mss: 1440[0m
+[0;32mI (7150) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (7154) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (7175) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (7238) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (7238) wifi:enable tsf
+[0;32mI (7239) [WI-FI] : Event: 40[0m
+[0;32mI (7240) [WI-FI] : Event: 2[0m
+[0;32mI (7241) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (7247) [WI-FI] : Connection success![0m
+I (7252) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1
+I (7256) wifi:state: init -> auth (b0)
+[0;32mI (7259) [WI-FI] : Event: 40[0m
+I (7262) wifi:state: auth -> assoc (0)
+I (7270) wifi:state: assoc -> run (10)
+I (7499) wifi:connected with S10 di Lorenzo, aid = 1, channel 2, BW20, bssid = 06:87:bf:ae:86:7a
+I (7499) wifi:security: WPA2-PSK, phy: bgn, rssi: -62
+I (7518) wifi:pm start, type: 1
+
+I (7518) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (7519) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (7528) [WI-FI] : Event: 4[0m
+I (7547) wifi:<ba-add>idx:0 (ifx:0, 06:87:bf:ae:86:7a), tid:0, ssn:0, winSize:64
+I (7579) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (7580) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (8528) esp_netif_handlers: sta ip: 192.168.217.3, mask: 255.255.255.0, gw: 192.168.217.49[0m
+[0;32mI (8529) [WI-FI] : Event: 0[0m
+[0;32mI (8530) [WI-FI] : got ip:192.168.217.3[0m
+[0;32mI (8535) [WI-FI] : Connected to AP[0m
+[0;32mI (8539) [WI-FI] : Init completed[0m
+[0;32mI (8544) [MQTT] : Initialization completed[0m
+[0;32mI (8548) [MQTT] : Other event, 7[0m
+[0;32mI (9735) [MQTT] : Connected to HiveMQ broker[0m
+[0;32mI (9744) main_task: Returned from app_main()[0m
+[0;32mI (9819) [MQTT] : Subscribed to /topic/individual_project[0m
+[0;32mI (9940) [MQTT] : Topic: /topic/individual_project 	 Data: Computed mean: 1856.00[0m
+[0;32mI (9947) [MQTT] : Published Computed mean: 1856.00 	 id_message* : 27117[0m
+[0;32mI (10349) [MQTT] : Unsubscribed 	 id_message* : 18116[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 22:14:18[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=2d754h (186196) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003d77c vaddr=3fc98d00 size=0289ch ( 10396) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=9f168h (651624) map[0m
+[0;32mI (257) esp_image: segment 3: paddr=000df190 vaddr=3fc9b59c size=02700h (  9984) load[0m
+[0;32mI (260) esp_image: segment 4: paddr=000e1898 vaddr=40374000 size=14bf8h ( 84984) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Multicore app[0m
+[0;32mI (312) cpu_start: Pro cpu start user code[0m
+[0;32mI (312) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (312) app_init: Application information:[0m
+[0;32mI (315) app_init: Project name:     adc_fft[0m
+[0;32mI (320) app_init: App version:      b126964-dirty[0m
+[0;32mI (325) app_init: Compile time:     May 18 2024 23:06:09[0m
+[0;32mI (331) app_init: ELF file SHA256:  753590f72...[0m
+[0;32mI (337) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (344) app_init: Min chip rev:     v0.0[0m
+[0;32mI (348) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (353) app_init: Chip rev:         v0.1[0m
+[0;32mI (358) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (365) heap_init: At 3FCA6590 len 00043180 (268 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (377) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (383) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (390) spi_flash: detected chip: gd[0m
+[0;32mI (394) spi_flash: flash io: dio[0m
+[0;33mW (398) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (411) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (419) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (426) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (433) main_task: Started on CPU0[0m
+[0;32mI (440) main_task: Calling app_main()[0m
+[0;32mI (441) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (446) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (451) [ADC] : Channel width and configuration done[0m
+[0;32mI (1486) [FFT] : Initialization done[0m
+[0;32mI (1490) [FFT] : Hann window generated[0m
+[0;33mW (2514) [ADC] : Values sampled[0m
+[0;32mI (2515) [FFT] : Intermediate result computed[0m
+[0;33mW (2518) [FFT] : Final result computed[0m
+[0;32mI (2518) view: Data min[347] = -11.684820, Data max[1] = 89.549805[0m
+ ________________________________________________________________
+0                                                                |
+1|                                                               |
+2|                                                               |
+3|                                                   |           |
+4|  |   |    |                        |              ||  |       |
+5||| ||| |||| |||||||||||||||||||||||||||||||||||||||| || ||||||||
+6      |          |              |          |              |     |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (2593) view: Plot: Length=512, min=-60.000000, max=120.000000[0m
+current frequency: 999.999939 - current duration: 1.024000
+[0;32mI (2607) [FFT] : Mean: 12.316841 - Standard dev: 7.753221[0m
+[0;33mW (2612) [FFT] : Index: 423 - Max frequency: 413.085907 -> New ampling frequency : 826.171814[0m
+[0;32mI (2620) [FFT] : Secure sampling frequency: 830.302673[0m
+new frequency: 830.302673 - new duration: 1.233285
+T: 5.000000 - #samples: 4055 - cycles: 4
+final_mean: 1853.750000
+[0;32mI (6730) [WI-FI] : Testing the wifi module[0m
+[0;32mI (6769) pp: pp rom version: e7ae62f[0m
+[0;32mI (6769) net80211: net80211 rom version: e7ae62f[0m
+I (6771) wifi:wifi driver task: 3fcb6924, prio:23, stack:6656, core=0
+I (7078) wifi:wifi firmware version: f2b9bda51
+I (7079) wifi:wifi certification version: v7.0
+I (7079) wifi:config NVS flash: enabled
+I (7079) wifi:config nano formating: disabled
+I (7084) wifi:Init data frame dynamic rx buffer num: 32
+I (7089) wifi:Init static rx mgmt buffer num: 5
+I (7093) wifi:Init management short buffer num: 32
+I (7097) wifi:Init dynamic tx buffer num: 32
+I (7101) wifi:Init static tx FG buffer num: 2
+I (7105) wifi:Init static rx buffer size: 1600
+I (7110) wifi:Init static rx buffer num: 10
+I (7113) wifi:Init dynamic rx buffer num: 32
+[0;32mI (7118) wifi_init: rx ba win: 6[0m
+[0;32mI (7121) wifi_init: accept mbox: 6[0m
+[0;32mI (7125) wifi_init: tcpip mbox: 32[0m
+[0;32mI (7130) wifi_init: udp mbox: 6[0m
+[0;32mI (7133) wifi_init: tcp mbox: 6[0m
+[0;32mI (7137) wifi_init: tcp tx win: 5760[0m
+[0;32mI (7141) wifi_init: tcp rx win: 5760[0m
+[0;32mI (7146) wifi_init: tcp mss: 1440[0m
+[0;32mI (7150) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (7154) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (7175) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (7237) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (7238) wifi:enable tsf
+[0;32mI (7239) [WI-FI] : Event: 40[0m
+[0;32mI (7240) [WI-FI] : Event: 2[0m
+[0;32mI (7240) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (7246) [WI-FI] : Connection success![0m
+I (7252) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1
+I (7255) wifi:state: init -> auth (b0)
+[0;32mI (7259) [WI-FI] : Event: 40[0m
+I (7262) wifi:state: auth -> assoc (0)
+I (7269) wifi:state: assoc -> run (10)
+I (7508) wifi:connected with S10 di Lorenzo, aid = 1, channel 2, BW20, bssid = 06:87:bf:ae:86:7a
+I (7509) wifi:security: WPA2-PSK, phy: bgn, rssi: -62
+I (7527) wifi:pm start, type: 1
+
+I (7528) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (7528) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (7537) [WI-FI] : Event: 4[0m
+I (7553) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (7553) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (7558) wifi:<ba-add>idx:0 (ifx:0, 06:87:bf:ae:86:7a), tid:0, ssn:0, winSize:64
+[0;32mI (8537) esp_netif_handlers: sta ip: 192.168.217.3, mask: 255.255.255.0, gw: 192.168.217.49[0m
+[0;32mI (8538) [WI-FI] : Event: 0[0m
+[0;32mI (8539) [WI-FI] : got ip:192.168.217.3[0m
+[0;32mI (8544) [WI-FI] : Connected to AP[0m
+[0;32mI (8548) [WI-FI] : Init completed[0m
+[0;32mI (8553) [MQTT] : Initialization completed[0m
+[0;32mI (8557) [MQTT] : Other event, 7[0m
+[0;32mI (9709) [MQTT] : Connected to HiveMQ broker[0m
+[0;32mI (9716) main_task: Returned from app_main()[0m
+[0;32mI (9795) [MQTT] : Subscribed to /topic/individual_project[0m
+[0;32mI (9914) [MQTT] : Topic: /topic/individual_project 	 Data: Computed mean: 1853.75[0m
+[0;32mI (9920) [MQTT] : Published Computed mean: 1853.75 	 id_message* : 737[0m
+[0;32mI (10324) [MQTT] : Unsubscribed 	 id_message* : 51095[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 22:14:18[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=2d754h (186196) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003d77c vaddr=3fc98d00 size=0289ch ( 10396) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=9f168h (651624) map[0m
+[0;32mI (257) esp_image: segment 3: paddr=000df190 vaddr=3fc9b59c size=02700h (  9984) load[0m
+[0;32mI (260) esp_image: segment 4: paddr=000e1898 vaddr=40374000 size=14bf8h ( 84984) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Multicore app[0m
+[0;32mI (312) cpu_start: Pro cpu start user code[0m
+[0;32mI (312) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (312) app_init: Application information:[0m
+[0;32mI (315) app_init: Project name:     adc_fft[0m
+[0;32mI (320) app_init: App version:      b126964-dirty[0m
+[0;32mI (325) app_init: Compile time:     May 18 2024 23:06:09[0m
+[0;32mI (331) app_init: ELF file SHA256:  753590f72...[0m
+[0;32mI (337) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (344) app_init: Min chip rev:     v0.0[0m
+[0;32mI (348) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (353) app_init: Chip rev:         v0.1[0m
+[0;32mI (358) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (365) heap_init: At 3FCA6590 len 00043180 (268 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (377) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (383) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (390) spi_flash: detected chip: gd[0m
+[0;32mI (394) spi_flash: flash io: dio[0m
+[0;33mW (398) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (411) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (419) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (426) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (433) main_task: Started on CPU0[0m
+[0;32mI (440) main_task: Calling app_main()[0m
+[0;32mI (441) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (446) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (451) [ADC] : Channel width and configuration done[0m
+[0;32mI (1486) [FFT] : Initialization done[0m
+[0;32mI (1490) [FFT] : Hann window generated[0m
+[0;33mW (2514) [ADC] : Values sampled[0m
+[0;32mI (2515) [FFT] : Intermediate result computed[0m
+[0;33mW (2518) [FFT] : Final result computed[0m
+[0;32mI (2518) view: Data min[434] = -15.855848, Data max[1] = 89.549545[0m
+ ________________________________________________________________
+0                                                                |
+1|                                                               |
+2|                                                               |
+3|                                            |                  |
+4|           ||          |      | |   |    |  |  |               |
+5||||||||||||| |||||||||| |||||| | ||| |||| || |||||||||||||||||||
+6           |      |   |                ||  |          |         |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (2593) view: Plot: Length=512, min=-60.000000, max=120.000000[0m
+current frequency: 999.999939 - current duration: 1.024000
+[0;32mI (2607) [FFT] : Mean: 12.017293 - Standard dev: 8.046036[0m
+[0;33mW (2612) [FFT] : Index: 366 - Max frequency: 357.421844 -> New ampling frequency : 714.843689[0m
+[0;32mI (2620) [FFT] : Secure sampling frequency: 718.417907[0m
+new frequency: 718.417908 - new duration: 1.425354
+T: 5.000000 - #samples: 3508 - cycles: 4
+final_mean: 1885.250000
+[0;32mI (6730) [WI-FI] : Testing the wifi module[0m
+[0;32mI (6769) pp: pp rom version: e7ae62f[0m
+[0;32mI (6769) net80211: net80211 rom version: e7ae62f[0m
+I (6771) wifi:wifi driver task: 3fcb6924, prio:23, stack:6656, core=0
+I (7078) wifi:wifi firmware version: f2b9bda51
+I (7079) wifi:wifi certification version: v7.0
+I (7079) wifi:config NVS flash: enabled
+I (7079) wifi:config nano formating: disabled
+I (7084) wifi:Init data frame dynamic rx buffer num: 32
+I (7089) wifi:Init static rx mgmt buffer num: 5
+I (7093) wifi:Init management short buffer num: 32
+I (7097) wifi:Init dynamic tx buffer num: 32
+I (7101) wifi:Init static tx FG buffer num: 2
+I (7105) wifi:Init static rx buffer size: 1600
+I (7110) wifi:Init static rx buffer num: 10
+I (7113) wifi:Init dynamic rx buffer num: 32
+[0;32mI (7118) wifi_init: rx ba win: 6[0m
+[0;32mI (7121) wifi_init: accept mbox: 6[0m
+[0;32mI (7125) wifi_init: tcpip mbox: 32[0m
+[0;32mI (7129) wifi_init: udp mbox: 6[0m
+[0;32mI (7133) wifi_init: tcp mbox: 6[0m
+[0;32mI (7137) wifi_init: tcp tx win: 5760[0m
+[0;32mI (7141) wifi_init: tcp rx win: 5760[0m
+[0;32mI (7146) wifi_init: tcp mss: 1440[0m
+[0;32mI (7150) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (7154) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (7175) phy_init: phy_version 640,cd64a1a,Jan 24 2024,17:28:12[0m
+I (7237) wifi:mode : sta (f4:12:fa:9f:f4:70)
+I (7238) wifi:enable tsf
+[0;32mI (7238) [WI-FI] : Event: 40[0m
+[0;32mI (7240) [WI-FI] : Event: 2[0m
+[0;32mI (7240) [WI-FI] : Connecting to wifi...[0m
+[0;32mI (7246) [WI-FI] : Connection success![0m
+I (7252) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1
+I (7255) wifi:state: init -> auth (b0)
+[0;32mI (7259) [WI-FI] : Event: 40[0m
+I (7262) wifi:state: auth -> assoc (0)
+I (7269) wifi:state: assoc -> run (10)
+I (7496) wifi:connected with S10 di Lorenzo, aid = 1, channel 2, BW20, bssid = 06:87:bf:ae:86:7a
+I (7496) wifi:security: WPA2-PSK, phy: bgn, rssi: -63
+I (7515) wifi:pm start, type: 1
+
+I (7515) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (7516) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[0;32mI (7525) [WI-FI] : Event: 4[0m
+I (7539) wifi:<ba-add>idx:0 (ifx:0, 06:87:bf:ae:86:7a), tid:0, ssn:0, winSize:64
+I (7544) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (7545) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (8525) esp_netif_handlers: sta ip: 192.168.217.3, mask: 255.255.255.0, gw: 192.168.217.49[0m
+[0;32mI (8526) [WI-FI] : Event: 0[0m
+[0;32mI (8527) [WI-FI] : got ip:192.168.217.3[0m
+[0;32mI (8532) [WI-FI] : Connected to AP[0m
+[0;32mI (8536) [WI-FI] : Init completed[0m
+[0;32mI (8541) [MQTT] : Initialization completed[0m
+[0;32mI (8545) [MQTT] : Other event, 7[0m
+[0;32mI (9699) [MQTT] : Connected to HiveMQ broker[0m
+[0;32mI (9706) main_task: Returned from app_main()[0m
+[0;32mI (9781) [MQTT] : Subscribed to /topic/individual_project[0m
+[0;32mI (9905) [MQTT] : Topic: /topic/individual_project 	 Data: Computed mean: 1885.25[0m
+[0;32mI (9911) [MQTT] : Published Computed mean: 1885.25 	 id_message* : 8573[0m
+[0;32mI (10313) [MQTT] : Unsubscribed 	 id_message* : 48480[0m

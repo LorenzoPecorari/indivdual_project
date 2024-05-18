@@ -28,8 +28,8 @@
 #define SAMPLES 1024
 #define FINAL_SIZE (SAMPLES/2)
 
-float duration = 1.0; // time between each sampling
-int period = pdMS_TO_TICKS(1.0); // ticks between each sampling
+float duration = ((float) SAMPLES) / 1000; // time between each sampling
+float period = 0.0; // ticks between each sampling
 
 float mean = 0.0;
 float std_dev = 0.0;
@@ -59,6 +59,7 @@ void init_adc(){
 
 // gets values from ADC using unit 1 and channel 0
 void get_adc_values(){
+    period = duration / portTICK_PERIOD_MS;
 
     for(int i = 0; i < SAMPLES; i++){
         input[i] = esp_adc_cal_raw_to_voltage(adc1_get_raw(ADC1_CHANNEL_0), &adc1_chars);
