@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/CMakeFiles/bootloader
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/CMakeFiles/bootloader.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/CMakeFiles/bootloader-complete.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

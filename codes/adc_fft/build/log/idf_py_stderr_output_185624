@@ -1,0 +1,55 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42019e4a: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:103
+[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x42019e47: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:101
+0x42008df4: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/adc_fft_utils.h:122
+0x42008ed6: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/main.c:5
+0x4201b4ab: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x42019e4a: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:103
+[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x42019e47: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:101
+0x42008df4: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/adc_fft_utils.h:122
+0x42008ed6: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/main.c:5
+0x4201b4ab: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x42019e4a: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:103
+[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x42019e47: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:101
+0x42008df4: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/adc_fft_utils.h:122
+0x42008ed6: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/main.c:5
+0x4201b4ab: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x42019e4a: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:103
+[0m
+[0;33m0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m0x42019e47: .fft2r_l2 at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/managed_components/espressif__esp-dsp/modules/fft/float/dsps_fft2r_fc32_aes3_.S:101
+0x42008df4: fft at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/adc_fft_utils.h:122
+0x42008ed6: app_main at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/main/main.c:5
+0x4201b4ab: main_task at /home/utente/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a1ad: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4037589c: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m

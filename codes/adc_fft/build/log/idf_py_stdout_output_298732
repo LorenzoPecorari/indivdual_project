@@ -1,0 +1,581 @@
+�sleep state[0m
+[0ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 11:30:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1210ch ( 73996) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022134 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b20 vaddr=40374000 size=0b4f8h ( 46328) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d3a0h (119712) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d3c8 vaddr=4037f4f8 size=02c78h ( 11384) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     adc_fft[0m
+[0;32mI (191) app_init: App version:      b8de82f[0m
+[0;32mI (195) app_init: Compile time:     May 18 2024 11:30:22[0m
+[0;32mI (201) app_init: ELF file SHA256:  cdca13f02...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC99D30 len 0004F9E0 (318 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+[0;32mI (313) original_code : Start Example.[0m
+[0;32mI (323) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (323) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;33mW (383) original_code : Signal input[0m
+[0;32mI (383) view: Data min[213] = -0.216254, Data max[1] = 89.535149[0m
+ ________________________________________________________________
+0||||||| |||||||||||| |||||||| ||| |   || |||||||||||| ||||||||| |
+1| | ||||||||| ||  |||| |  |||||  |||||||||   | || || | || |||||||
+2| |     |           |     |         ||   |                      |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (453) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (463) original_code : Signal input_im[0m
+[0;32mI (463) view: Data min[0] = -inf, Data max[0] = 0.000000[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7|                                                               |
+8|                                                               |
+9 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (543) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (553) original_code : Signals input and input_im on one plot[0m
+[0;32mI (553) view: Data min[213] = -0.216254, Data max[1] = 89.535149[0m
+ ________________________________________________________________
+0||||||| |||||||||||| |||||||| ||| |   || |||||||||||| ||||||||| |
+1| | ||||||||| ||  |||| |  |||||  |||||||||   | || || | || |||||||
+2| |     |           |     |         ||   |                      |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (633) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;32mI (643) original_code : FFT for 1024 complex points take 129813 cycles[0m
+[0;32mI (643) original_code : Mean: 25.872042 - Standard dev: 4.802210[0m
+outlier 0 - value 89.521149
+outlier 1 - value 89.535149
+outlier 18 - value 55.330158
+outlier 19 - value 60.743027
+outlier 20 - value 54.027740
+max idx 20
+Max frequency: 40.000000 -> f_s : 800.000000
+[0;32mI (673) original_code : End Example.[0m
+[0;32mI (673) main_task: Returned from app_main()[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 11:30:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1210ch ( 73996) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022134 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b20 vaddr=40374000 size=0b4f8h ( 46328) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d3a0h (119712) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d3c8 vaddr=4037f4f8 size=02c78h ( 11384) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     adc_fft[0m
+[0;32mI (191) app_init: App version:      b8de82f[0m
+[0;32mI (195) app_init: Compile time:     May 18 2024 11:30:22[0m
+[0;32mI (201) app_init: ELF file SHA256:  cdca13f02...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC99D30 len 0004F9E0 (318 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+[0;32mI (313) original_code : Start Example.[0m
+[0;32mI (323) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (323) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;33mW (383) original_code : Signal input[0m
+[0;32mI (383) view: Data min[35] = -0.126885, Data max[1] = 89.521057[0m
+ ________________________________________________________________
+0||||  ||  ||||||  | |  |||||  |||||| |  |   ||| ||     ||||     |
+1| ||||||||     ||||||||     ||    ||||||||||   ||||||||    ||||||
+2    ||  |       ||   ||                  ||      | ||||        ||
+3        |                                                       |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (453) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (463) original_code : Signal input_im[0m
+[0;32mI (463) view: Data min[0] = -inf, Data max[0] = 0.000000[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7|                                                               |
+8|                                                               |
+9 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (543) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (553) original_code : Signals input and input_im on one plot[0m
+[0;32mI (553) view: Data min[35] = -0.126885, Data max[1] = 89.521057[0m
+ ________________________________________________________________
+0||||  ||  ||||||  | |  |||||  |||||| |  |   ||| ||     ||||     |
+1| ||||||||     ||||||||     ||    ||||||||||   ||||||||    ||||||
+2    ||  |       ||   ||                  ||      | ||||        ||
+3        |                                                       |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (633) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;32mI (643) original_code : FFT for 1024 complex points take 129813 cycles[0m
+[0;32mI (643) original_code : Mean: 24.964804 - Standard dev: 4.989067[0m
+outlier 0 - value 89.513588
+outlier 1 - value 89.521057
+outlier 18 - value 55.556835
+outlier 19 - value 60.858036
+outlier 20 - value 54.167213
+max idx 20
+Max frequency: 40.000000 -> f_s : 800.000000
+[0;32mI (673) original_code : End Example.[0m
+[0;32mI (673) main_task: Returned from app_main()[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 11:30:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1210ch ( 73996) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022134 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b20 vaddr=40374000 size=0b4f8h ( 46328) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d3a0h (119712) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d3c8 vaddr=4037f4f8 size=02c78h ( 11384) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     adc_fft[0m
+[0;32mI (191) app_init: App version:      b8de82f[0m
+[0;32mI (195) app_init: Compile time:     May 18 2024 11:30:22[0m
+[0;32mI (201) app_init: ELF file SHA256:  cdca13f02...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC99D30 len 0004F9E0 (318 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+[0;32mI (313) original_code : Start Example.[0m
+[0;32mI (323) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (323) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;33mW (383) original_code : Signal input[0m
+[0;32mI (383) view: Data min[451] = -0.453432, Data max[1] = 89.536255[0m
+ ________________________________________________________________
+0|||| |   |      |                |       |  |          |||    | |
+1||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||
+2 |  |       |  | | |  | | |    |   ||| ||  | | |   || | |   |||||
+3            |  |                                   |            |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (453) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (463) original_code : Signal input_im[0m
+[0;32mI (463) view: Data min[0] = -inf, Data max[0] = 0.000000[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7|                                                               |
+8|                                                               |
+9 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (543) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (553) original_code : Signals input and input_im on one plot[0m
+[0;32mI (553) view: Data min[451] = -0.453432, Data max[1] = 89.536255[0m
+ ________________________________________________________________
+0|||| |   |      |                |       |  |          |||    | |
+1||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||
+2 |  |       |  | | |  | | |    |   ||| ||  | | |   || | |   |||||
+3            |  |                                   |            |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (633) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;32mI (643) original_code : FFT for 1024 complex points take 129813 cycles[0m
+[0;32mI (643) original_code : Mean: 22.577160 - Standard dev: 5.011486[0m
+outlier 0 - value 89.523178
+outlier 1 - value 89.536255
+outlier 18 - value 55.370445
+outlier 19 - value 60.870270
+outlier 20 - value 54.615715
+max idx 20
+Max frequency: 40.000000 -> f_s : 800.000000
+[0;32mI (673) original_code : End Example.[0m
+[0;32mI (673) main_task: Returned from app_main()[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 11:30:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1210ch ( 73996) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022134 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b20 vaddr=40374000 size=0b4f8h ( 46328) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d3a0h (119712) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d3c8 vaddr=4037f4f8 size=02c78h ( 11384) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     adc_fft[0m
+[0;32mI (191) app_init: App version:      b8de82f[0m
+[0;32mI (195) app_init: Compile time:     May 18 2024 11:30:22[0m
+[0;32mI (201) app_init: ELF file SHA256:  cdca13f02...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC99D30 len 0004F9E0 (318 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+[0;32mI (313) original_code : Start Example.[0m
+[0;32mI (323) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (323) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;33mW (383) original_code : Signal input[0m
+[0;32mI (383) view: Data min[501] = -9.359264, Data max[1] = 89.534920[0m
+ ________________________________________________________________
+0| |        |   |   |     | |             |               | |    |
+1||||||||||| ||||||||||||||||||||||||||||||||||||||||||||| |||||||
+2| | ||  |||  ||| ||  | || |  | |||||| ||| ||| ||| || ||||  || |||
+3    |     |            |           |  |   | |   |     |       | |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (453) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (463) original_code : Signal input_im[0m
+[0;32mI (463) view: Data min[0] = -inf, Data max[0] = 0.000000[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7|                                                               |
+8|      |                                                        |
+9 |||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (543) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (553) original_code : Signals input and input_im on one plot[0m
+[0;32mI (553) view: Data min[501] = -9.359264, Data max[1] = 89.534920[0m
+ ________________________________________________________________
+0| |        |   |   |     | |             |               | |    |
+1||||||||||| ||||||||||||||||||||||||||||||||||||||||||||| |||||||
+2| | ||  |||  ||| ||  | || |  | |||||| ||| ||| ||| || ||||  || |||
+3    |     |            |           |  |   | |   |     |       | |
+4                                                                |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (633) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;32mI (643) original_code : FFT for 1024 complex points take 129813 cycles[0m
+[0;32mI (643) original_code : Mean: 20.879898 - Standard dev: 5.483108[0m
+outlier 0 - value 89.521858
+outlier 1 - value 89.534920
+outlier 18 - value 55.048386
+outlier 19 - value 60.663029
+outlier 20 - value 54.054367
+max idx 20
+Max frequency: 40.000000 -> f_s : 800.000000
+[0;32mI (673) original_code : End Example.[0m
+[0;32mI (673) main_task: Returned from app_main()[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xa (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2d9c
+entry 0x403c8914
+[0;32mI (27) boot: ESP-IDF v5.3-dev-2265-gfdb7a43752-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 18 2024 11:30:31[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (41) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=1210ch ( 73996) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=00022134 vaddr=3fc92200 size=029e4h ( 10724) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00024b20 vaddr=40374000 size=0b4f8h ( 46328) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=1d3a0h (119712) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004d3c8 vaddr=4037f4f8 size=02c78h ( 11384) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (183) cpu_start: Pro cpu start user code[0m
+[0;32mI (183) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     adc_fft[0m
+[0;32mI (191) app_init: App version:      b8de82f[0m
+[0;32mI (195) app_init: Compile time:     May 18 2024 11:30:22[0m
+[0;32mI (201) app_init: ELF file SHA256:  cdca13f02...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.3-dev-2265-gfdb7a43752-dirty[0m
+[0;32mI (214) app_init: Min chip rev:     v0.0[0m
+[0;32mI (218) app_init: Max chip rev:     v0.99 [0m
+[0;32mI (223) app_init: Chip rev:         v0.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (235) heap_init: At 3FC99D30 len 0004F9E0 (318 KiB): RAM[0m
+[0;32mI (241) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (247) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: gd[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) main_task: Started on CPU0[0m
+[0;32mI (313) main_task: Calling app_main()[0m
+[0;32mI (313) original_code : Start Example.[0m
+[0;32mI (323) [ADC] : Initializing ADC_1 CH_0...[0m
+[0;32mI (323) [ADC] : Characterization ADC_1 CH_0 : done[0m
+[0;32mI (323) [ADC] : Channel width and configuration done[0m
+[0;33mW (383) original_code : Signal input[0m
+[0;32mI (383) view: Data min[2] = -6.441718, Data max[1] = 89.531471[0m
+ ________________________________________________________________
+0|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+1| ||| |  | ||  | |||| || |     | ||   || |   | |||| ||||  |||| ||
+2|                                     |      |                  |
+3|                                     |                         |
+4|                                                               |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (453) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (463) original_code : Signal input_im[0m
+[0;32mI (463) view: Data min[0] = -inf, Data max[0] = 0.000000[0m
+ ________________________________________________________________
+0                                                                |
+1                                                                |
+2                                                                |
+3                                                                |
+4                                                                |
+5                                                                |
+6                                                                |
+7|                                                               |
+8|       |                                                      ||
+9 ||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||| |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (543) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;33mW (543) original_code : Signals input and input_im on one plot[0m
+[0;32mI (553) view: Data min[2] = -6.441718, Data max[1] = 89.531471[0m
+ ________________________________________________________________
+0|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+1| ||| |  | ||  | |||| || |     | ||   || |   | |||| ||||  |||| ||
+2|                                     |      |                  |
+3|                                     |                         |
+4|                                                               |
+5                                                                |
+6                                                                |
+7                                                                |
+8                                                                |
+9                                                                |
+ 0123456789012345678901234567890123456789012345678901234567890123
+[0;32mI (633) view: Plot: Length=512, min=-60.000000, max=40.000000[0m
+[0;32mI (643) original_code : FFT for 1024 complex points take 129813 cycles[0m
+[0;32mI (643) original_code : Mean: 30.469566 - Standard dev: 4.814586[0m
+outlier 0 - value 89.520416
+outlier 1 - value 89.531471
+outlier 18 - value 55.043106
+outlier 19 - value 60.625633
+outlier 20 - value 53.893276
+max idx 20
+Max frequency: 40.000000 -> f_s : 800.000000
+[0;32mI (673) original_code : End Example.[0m
+[0;32mI (673) main_task: Returned from app_main()[0m
