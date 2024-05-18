@@ -44,8 +44,8 @@ float final[FINAL_SIZE];
 
 static esp_adc_cal_characteristics_t adc1_chars;
 
-// gets values from ADC using unit 1 and channel 0
-void get_adc_values(){
+// initializes the adc
+void init_adc(){
     ESP_LOGI(APP_NAME_ADC, "Initializing ADC_1 CH_0...");
 
     esp_adc_cal_characterize(ADC_UNIT_1, ATTENUATION, WIDTH, 0, &adc1_chars);
@@ -54,6 +54,11 @@ void get_adc_values(){
     ESP_ERROR_CHECK(adc1_config_width(ADC_WIDTH_BIT_DEFAULT));
     ESP_ERROR_CHECK(adc1_config_channel_atten(ADC1_CHANNEL_0, ADC_ATTEN_DB_11));
     ESP_LOGI(APP_NAME_ADC, "Channel width and configuration done");
+
+}
+
+// gets values from ADC using unit 1 and channel 0
+void get_adc_values(){
 
     for(int i = 0; i < SAMPLES; i++){
         input[i] = esp_adc_cal_raw_to_voltage(adc1_get_raw(ADC1_CHANNEL_0), &adc1_chars);
@@ -109,14 +114,12 @@ void fft_init(){
         ESP_LOGE(APP_NAME_FFT, "FFT init error");
         return;
     }
+    ESP_LOGI(APP_NAME_FFT, "Initialization done");
+
 }
 
 // main fft function, multiplies for window, computes fft and power spectrum
 void fft(){
-    
-    fft_init();
-    ESP_LOGI(APP_NAME_FFT, "Initialization done");
-
     dsps_wind_hann_f32(window, SAMPLES);
     ESP_LOGI(APP_NAME_FFT, "Hann window generated");
 
@@ -153,30 +156,6 @@ void fft(){
     dsps_view(final, FINAL_SIZE, 64, 10,  -60, 120, '|');
 }
 
-float aggregate_over_window(float time){
-    int s = (int) ceil((time * 1000) / duration);
-    int cycles = ceil(s / SAMPLES);
-
-    printf("T: %f - #samples: %d - cycles: %f\n", time, s, ceil(s / SAMPLES));
-
-    float means[cycles];
-    float final_mean = 0.0;
-
-    for(int i = 0; i < cycles; i++){
-        fft();
-        for(int j = 0; j < FINAL_SIZE; j++){
-            means[i] += final[j];
-        }
-        final_mean += means[i];
-        //printf("Cycle %d - mean : %f\n", i, final_mean);
-    }
-
-    final_mean = final_mean / cycles;
-
-    printf("final_mean: %f\n", final_mean);
-    return final_mean;
-}
-
 // calculates maximum frequency and sampling frequqncy (sampling theorem application)
 void max_freq_calc(){
     mean_and_std_dev();
@@ -187,5 +166,33 @@ void max_freq_calc(){
     float max_f = max_idx / duration; // (maxi_idx / SAMPLES) * (SAMPLES / duration) = max_idx / duration 
     duration = SAMPLES / (2.01 * max_f);
     ESP_LOGW(APP_NAME_FFT, "Index: %d - Max frequency: %f -> New ampling frequency : %f", max_idx, max_f, (2 * max_f));
-    ESP_LOGI(APP_NAME_FFT, "Secure sampling frequency: %f", max_f * 2.1);
+    ESP_LOGI(APP_NAME_FFT, "Secure sampling frequency: %f", max_f * 2.01);
+}
+
+// aggregate function over a window of time in seconds;
+// using sampling frequency computed through fft,
+// getting adc values should consume less energy
+float aggregate_over_window(float time){
+    int s = (int) ceil((time * 1000) / duration);
+    int cycles = (int) (ceil((float)s / SAMPLES));
+
+    printf("T: %f - #samples: %d - cycles: %d\n", time, s, cycles);
+
+    float means[cycles];
+    float final_mean = 0.0;
+
+    for(int i = 0; i < cycles; i++){
+        get_adc_values();
+        for(int j = 0; j < SAMPLES; j++){
+            means[i] += input[j];
+        }
+        means[i] /= SAMPLES;
+        final_mean += input[i];
+        //printf("Cycle %d - mean : %f\n", i, final_mean);
+    }
+
+    final_mean = final_mean / cycles;
+
+    printf("final_mean: %f\n", final_mean);
+    return final_mean;
 }
