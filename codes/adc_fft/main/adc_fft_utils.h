@@ -25,8 +25,6 @@
 #define ATTENUATION ADC_ATTEN_DB_12
 #define WIDTH ADC_WIDTH_BIT_DEFAULT
 
-// This example shows how to use FFT from esp-dsp library
-
 #define SAMPLES 1024
 #define FINAL_SIZE (SAMPLES/2)
 
@@ -165,11 +163,9 @@ void max_freq_calc(){
     ESP_LOGI(APP_NAME_FFT, "Mean: %f - Standard dev: %f", mean, std_dev);
 
     int max_idx = max_f_idx();
-    //printf("max idx %d\n", max_idx);
 
-    float max_f = ((float)max_idx / ((float) FINAL_SIZE));
-    max_f = max_f * SAMPLES * 10;
-    max_f = max_f / duration;
-    ESP_LOGW(APP_NAME_FFT, "Max frequency: %f -> New ampling frequency : %f", max_f, (2 * max_f));
+    float max_f = max_idx / duration; // (maxi_idx / SAMPLES) * (SAMPLES / duration) = max_idx / duration 
+    
+    ESP_LOGW(APP_NAME_FFT, "Index: %d - Max frequency: %f -> New ampling frequency : %f", max_idx, max_f, (2 * max_f));
     ESP_LOGI(APP_NAME_FFT, "Secure sampling frequency: %f", max_f * 2.1);
 }

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "adc_fft",
-    "project_version":    "b8de82f",
+    "project_version":    "e8bef4e-dirty",
     "project_path":       "/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft",
     "idf_path":           "/home/utente/esp/esp-idf",
     "build_dir":          "/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/adc_fft/build",
