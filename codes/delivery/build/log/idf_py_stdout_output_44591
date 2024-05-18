@@ -1,0 +1,106 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/bootloader/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:15,
+                 from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/main.c:1:
+/home/utente/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:16:
+/home/utente/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h: In function 'init_adc':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:55:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   55 |     ESP_ERROR_CHECK(adc1_config_channel_atten(ADC1_CHANNEL_0, ADC_ATTEN_DB_11));
+      |     ^~~~~~~~~~~~~~~
+In file included from /home/utente/esp/esp-idf/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from /home/utente/esp/esp-idf/components/driver/deprecated/driver/adc.h:15:
+/home/utente/esp/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/main.c:3:
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: In function 'mqtt_event_handler':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:31:9: warning: unused variable 'id_message' [-Wunused-variable]
+   31 |     int id_message = 0;
+      |         ^~~~~~~~~~
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable adc_fft.elf
+[6/8] Generating binary image from built executable
+esptool.py vv4.8.dev1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/adc_fft.bin
+[7/8] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/partition_table/partition-table.bin /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/adc_fft.bin
+adc_fft.bin binary size 0xe6690 bytes. Smallest app partition is 0x100000 bytes. 0x19970 bytes (10%) free.
+[7/8] cd /home/utente/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/utente/esp/esp-idf -D "SERIAL_TOOL=/home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/utente/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build -P /home/utente/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 adc_fft.bin 0x8000 partition_table/partition-table.bin
+esptool.py vv4.8.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: f4:12:fa:9f:f4:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000f6fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21056 bytes to 13069...
+Writing at 0x00000000... (100 %)
+Wrote 21056 bytes (13069 compressed) at 0x00000000 in 0.6 seconds (effective 300.9 kbit/s)...
+Hash of data verified.
+Compressed 943760 bytes to 586472...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e17e... (5 %)
+Writing at 0x00026c5d... (8 %)
+Writing at 0x0002cb48... (11 %)
+Writing at 0x00031830... (13 %)
+Writing at 0x0003a79c... (16 %)
+Writing at 0x00043d1a... (19 %)
+Writing at 0x0004a36c... (22 %)
+Writing at 0x00050538... (25 %)
+Writing at 0x000566bc... (27 %)
+Writing at 0x0005c713... (30 %)
+Writing at 0x00062267... (33 %)
+Writing at 0x0006891f... (36 %)
+Writing at 0x0006e718... (38 %)
+Writing at 0x000745f3... (41 %)
+Writing at 0x000797d2... (44 %)
+Writing at 0x0007e6af... (47 %)
+Writing at 0x000839ee... (50 %)
+Writing at 0x00088e4b... (52 %)
+Writing at 0x0008dfdb... (55 %)
+Writing at 0x0009324a... (58 %)
+Writing at 0x00098fdf... (61 %)
+Writing at 0x0009ed1e... (63 %)
+Writing at 0x000a460b... (66 %)
+Writing at 0x000aa1b3... (69 %)
+Writing at 0x000b0062... (72 %)
+Writing at 0x000b58ec... (75 %)
+Writing at 0x000bb576... (77 %)
+Writing at 0x000c1320... (80 %)
+Writing at 0x000c68d5... (83 %)
+Writing at 0x000cfdd6... (86 %)
+Writing at 0x000d8561... (88 %)
+Writing at 0x000de387... (91 %)
+Writing at 0x000e57ab... (94 %)
+Writing at 0x000eb86a... (97 %)
+Writing at 0x000f1d40... (100 %)
+Wrote 943760 bytes (586472 compressed) at 0x00010000 in 13.2 seconds (effective 572.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 587.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

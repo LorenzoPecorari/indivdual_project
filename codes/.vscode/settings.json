@@ -7,6 +7,7 @@
     "files.associations": {
         "*.embeddedhtml": "html",
         "random": "c",
-        "fft_utils.h": "c"
+        "fft_utils.h": "c",
+        "wifi_mqtt_utils.h": "c"
     }
 }

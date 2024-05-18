@@ -1,0 +1,45 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x400556d5: strlen in ROM
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x400556d2: strlen in ROM
+0x4208db72: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x42087f5d: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4209f0f1: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x403837dd: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x4200a902: mqtt_event_handler at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:45 (discriminator 1)
+0x4209c0d9: handler_execute at /home/utente/esp/esp-idf/components/esp_event/esp_event.c:135
+0x4209bb4e: esp_event_loop_run at /home/utente/esp/esp-idf/components/esp_event/esp_event.c:584
+0x4200b56e: esp_mqtt_dispatch_event at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1013
+0x4200ba3f: esp_mqtt_dispatch_event_with_msgid at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:991
+0x4200c321: mqtt_process_receive at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1394
+0x4200c7c0: esp_mqtt_task at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1626
+0x4037cec1: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a58: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0;33m0x400556d5: strlen in ROM
+[0m
+[0;33m0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m0x400556d2: strlen in ROM
+0x4208db72: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1521
+0x42087f5d: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4209f0f1: esp_log_writev at /home/utente/esp/esp-idf/components/log/log.c:213
+0x403837dd: esp_log_write at /home/utente/esp/esp-idf/components/log/log.c:223
+0x4200a902: mqtt_event_handler at /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:45 (discriminator 1)
+0x4209c0d9: handler_execute at /home/utente/esp/esp-idf/components/esp_event/esp_event.c:135
+0x4209bb4e: esp_event_loop_run at /home/utente/esp/esp-idf/components/esp_event/esp_event.c:584
+0x4200b56e: esp_mqtt_dispatch_event at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1013
+0x4200ba3f: esp_mqtt_dispatch_event_with_msgid at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:991
+0x4200c321: mqtt_process_receive at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1394
+0x4200c7c0: esp_mqtt_task at /home/utente/esp/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c:1626
+0x4037cec1: vPortTaskWrapper at /home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a58: esp_restart_noos at /home/utente/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:158
+[0m
+[0m
