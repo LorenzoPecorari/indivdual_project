@@ -28,21 +28,19 @@
 #define SAMPLES 1024
 #define FINAL_SIZE (SAMPLES/2)
 
-float duration = 1.0;
-int period = pdMS_TO_TICKS(1.0);
+float duration = 1.0; // time between each sampling
+int period = pdMS_TO_TICKS(1.0); // ticks between each sampling
 
 float mean = 0.0;
 float std_dev = 0.0;
 float t = 3.0;
-
-int N = SAMPLES;
 
 float input[SAMPLES];
 
 float window[SAMPLES];
 float output[SAMPLES * 2];
 
-float final[SAMPLES / 2];
+float final[FINAL_SIZE];
 
 static esp_adc_cal_characteristics_t adc1_chars;
 
@@ -146,8 +144,6 @@ void fft(){
         temp_1 = 10 * log10f((output[i * 2 + 0] * output[i * 2 + 0] + output[i * 2 + 1] * output[i * 2 + 1]) / SAMPLES);
         temp_2 = 10 * log10f((output[j * 2 + 0] * output[j * 2 + 0] + output[j * 2 + 1] * output[j * 2 + 1]) / SAMPLES);
 
-        //printf("y1: %f - y2: %f\n", y1_cf[i], y2_cf[i]);
-        // Simple way to show two power spectrums as one plot
         final[i] = fmax(temp_1, temp_2);
     }
 
@@ -155,6 +151,30 @@ void fft(){
 
     // shows the final result
     dsps_view(final, FINAL_SIZE, 64, 10,  -60, 120, '|');
+}
+
+float aggregate_over_window(float time){
+    int s = (int) ceil((time * 1000) / duration);
+    int cycles = ceil(s / SAMPLES);
+
+    printf("T: %f - #samples: %d - cycles: %f\n", time, s, ceil(s / SAMPLES));
+
+    float means[cycles];
+    float final_mean = 0.0;
+
+    for(int i = 0; i < cycles; i++){
+        fft();
+        for(int j = 0; j < FINAL_SIZE; j++){
+            means[i] += final[j];
+        }
+        final_mean += means[i];
+        //printf("Cycle %d - mean : %f\n", i, final_mean);
+    }
+
+    final_mean = final_mean / cycles;
+
+    printf("final_mean: %f\n", final_mean);
+    return final_mean;
 }
 
 // calculates maximum frequency and sampling frequqncy (sampling theorem application)
@@ -165,7 +185,7 @@ void max_freq_calc(){
     int max_idx = max_f_idx();
 
     float max_f = max_idx / duration; // (maxi_idx / SAMPLES) * (SAMPLES / duration) = max_idx / duration 
-    
+    duration = SAMPLES / (2.01 * max_f);
     ESP_LOGW(APP_NAME_FFT, "Index: %d - Max frequency: %f -> New ampling frequency : %f", max_idx, max_f, (2 * max_f));
     ESP_LOGI(APP_NAME_FFT, "Secure sampling frequency: %f", max_f * 2.1);
 }
