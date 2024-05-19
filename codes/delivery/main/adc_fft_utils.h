@@ -28,7 +28,7 @@
 #define SAMPLES 1024
 #define FINAL_SIZE (SAMPLES/2)
 
-float duration = ((float) SAMPLES) / 1000; // time between each sampling
+float duration = ((float) SAMPLES) / 1000; // time between each sampling (oversampling frequency = 1000Hz)
 float period = 0.0; // ticks between each sampling
 
 float mean = 0.0;
@@ -180,6 +180,9 @@ float aggregate_over_window(float time){
     printf("T: %f - #samples: %d - cycles: %d\n", time, s, cycles);
 
     float means[cycles];
+    for(int i = 0; i < cycles; i++)
+        means[i] = 0.0;
+
     float final_mean = 0.0;
 
     for(int i = 0; i < cycles; i++){
@@ -188,7 +191,7 @@ float aggregate_over_window(float time){
             means[i] += input[j];
         }
         means[i] /= SAMPLES;
-        final_mean += input[i];
+        final_mean += means[i];
         //printf("Cycle %d - mean : %f\n", i, final_mean);
     }
 

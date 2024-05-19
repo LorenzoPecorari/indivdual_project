@@ -43,7 +43,6 @@ void mqtt_event_handler(void* args, esp_event_base_t base, int32_t id, void* dat
     }
     else if(id == MQTT_EVENT_PUBLISHED){
         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
-        esp_mqtt_client_unsubscribe(client, TOPIC);
     }
     else if(id == MQTT_EVENT_DATA){
         event->data[event->data_len] = '\0';
@@ -87,15 +86,29 @@ void subscribe_to_topic(){
     esp_mqtt_client_subscribe(client, TOPIC, QOS);
 }
 
-void send_value_to_broker(float message){
+void unsubscribe_to_topic(){
+    esp_mqtt_client_unsubscribe(client, TOPIC);
+}
 
-    char str[32];
-    char* prefix = "Computed mean: ";
+int send_value_to_broker(float message, const char* arg){
+    int volume = 0;
+    volume += 2; // mqtt fixed overhead in bytes
+
+    char str[64];
+    char* prefix = "Computed mean ";
     int offset = strlen(prefix);
-    
-    memset(str, '\0', 32);
+
+    memset(str, '\0', 64);
     sprintf(str, "%s", prefix);
+    strcat(str, arg);
+    offset = offset + strlen(arg);
+
     sprintf(str + offset, "%.2f", message);
+    strcat(str, " mV");
+
+    volume += (strlen(TOPIC) + strlen(str));
     
     esp_mqtt_client_publish(client, TOPIC, str, 0, QOS, 0);
+    return volume;
 }
+
