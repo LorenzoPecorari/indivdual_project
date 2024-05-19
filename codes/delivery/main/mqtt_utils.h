@@ -5,6 +5,7 @@
 #include "esp_partition.h"
 #include "esp_netif.h"
 #include "esp_tls.h"
+#include "esp_timer.h"
 
 #include "mqtt_client.h"
 
@@ -14,11 +15,14 @@
 
 #define URI "mqtts://54c7f0618968409f95ff78c304b7b78e.s1.eu.hivemq.cloud:8883"
 #define TOPIC "/topic/individual_project"
+#define QOS 1
 
 #define CREDENTIAL_USERNAME "lorenzo_tester"
 #define CREDENTIAL_PWD "HiveMQ1_credentials"
 
-#define QOS 1
+int64_t start_time;
+int64_t end_time;
+
 
 esp_mqtt_client_handle_t client = {0};
 
@@ -45,6 +49,9 @@ void mqtt_event_handler(void* args, esp_event_base_t base, int32_t id, void* dat
         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
     }
     else if(id == MQTT_EVENT_DATA){
+        end_time = esp_timer_get_time();
+        printf("Latency %lld ms\n", (end_time - start_time) / 1000);
+        
         event->data[event->data_len] = '\0';
         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
     }
@@ -108,7 +115,12 @@ int send_value_to_broker(float message, const char* arg){
 
     volume += (strlen(TOPIC) + strlen(str));
     
+    start_time = esp_timer_get_time();
+    start_time = esp_timer_get_time();
+    printf("start_time: %lld\n", start_time);
+
     esp_mqtt_client_publish(client, TOPIC, str, 0, QOS, 0);
+
     return volume;
 }
 

@@ -16,6 +16,7 @@ void app_main(void){
 
     float k = aggregate_over_window(5.0);
     int volume_oversampling = send_value_to_broker(k, "(oversampling) : ");
+    printf("Latency %lld ms\n", end_time - start_time);
 
     printf("current frequency: %f - current duration: %f\n", (SAMPLES / duration), duration);
     max_freq_calc();
