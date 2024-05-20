@@ -1,0 +1,504 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+Processing 2 dependencies:
+[1/2] espressif/esp-dsp (1.4.12)
+[2/2] idf (5.3.0)
+-- Project sdkconfig file /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "adc_fft" version: c96b862-dirty
+-- Adding linker script /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/utente/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/utente/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/utente/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/utente/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/utente/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/utente/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__esp-dsp esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/utente/esp/esp-idf/components/app_trace /home/utente/esp/esp-idf/components/app_update /home/utente/esp/esp-idf/components/bootloader /home/utente/esp/esp-idf/components/bootloader_support /home/utente/esp/esp-idf/components/bt /home/utente/esp/esp-idf/components/cmock /home/utente/esp/esp-idf/components/console /home/utente/esp/esp-idf/components/cxx /home/utente/esp/esp-idf/components/driver /home/utente/esp/esp-idf/components/efuse /home/utente/esp/esp-idf/components/esp-tls /home/utente/esp/esp-idf/components/esp_adc /home/utente/esp/esp-idf/components/esp_app_format /home/utente/esp/esp-idf/components/esp_bootloader_format /home/utente/esp/esp-idf/components/esp_coex /home/utente/esp/esp-idf/components/esp_common /home/utente/esp/esp-idf/components/esp_driver_ana_cmpr /home/utente/esp/esp-idf/components/esp_driver_cam /home/utente/esp/esp-idf/components/esp_driver_dac /home/utente/esp/esp-idf/components/esp_driver_gpio /home/utente/esp/esp-idf/components/esp_driver_gptimer /home/utente/esp/esp-idf/components/esp_driver_i2c /home/utente/esp/esp-idf/components/esp_driver_i2s /home/utente/esp/esp-idf/components/esp_driver_ledc /home/utente/esp/esp-idf/components/esp_driver_mcpwm /home/utente/esp/esp-idf/components/esp_driver_parlio /home/utente/esp/esp-idf/components/esp_driver_pcnt /home/utente/esp/esp-idf/components/esp_driver_rmt /home/utente/esp/esp-idf/components/esp_driver_sdio /home/utente/esp/esp-idf/components/esp_driver_sdm /home/utente/esp/esp-idf/components/esp_driver_sdmmc /home/utente/esp/esp-idf/components/esp_driver_sdspi /home/utente/esp/esp-idf/components/esp_driver_spi /home/utente/esp/esp-idf/components/esp_driver_tsens /home/utente/esp/esp-idf/components/esp_driver_uart /home/utente/esp/esp-idf/components/esp_driver_usb_serial_jtag /home/utente/esp/esp-idf/components/esp_eth /home/utente/esp/esp-idf/components/esp_event /home/utente/esp/esp-idf/components/esp_gdbstub /home/utente/esp/esp-idf/components/esp_hid /home/utente/esp/esp-idf/components/esp_http_client /home/utente/esp/esp-idf/components/esp_http_server /home/utente/esp/esp-idf/components/esp_https_ota /home/utente/esp/esp-idf/components/esp_https_server /home/utente/esp/esp-idf/components/esp_hw_support /home/utente/esp/esp-idf/components/esp_lcd /home/utente/esp/esp-idf/components/esp_local_ctrl /home/utente/esp/esp-idf/components/esp_mm /home/utente/esp/esp-idf/components/esp_netif /home/utente/esp/esp-idf/components/esp_netif_stack /home/utente/esp/esp-idf/components/esp_partition /home/utente/esp/esp-idf/components/esp_phy /home/utente/esp/esp-idf/components/esp_pm /home/utente/esp/esp-idf/components/esp_psram /home/utente/esp/esp-idf/components/esp_ringbuf /home/utente/esp/esp-idf/components/esp_rom /home/utente/esp/esp-idf/components/esp_system /home/utente/esp/esp-idf/components/esp_timer /home/utente/esp/esp-idf/components/esp_wifi /home/utente/esp/esp-idf/components/espcoredump /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp /home/utente/esp/esp-idf/components/esptool_py /home/utente/esp/esp-idf/components/fatfs /home/utente/esp/esp-idf/components/freertos /home/utente/esp/esp-idf/components/hal /home/utente/esp/esp-idf/components/heap /home/utente/esp/esp-idf/components/http_parser /home/utente/esp/esp-idf/components/idf_test /home/utente/esp/esp-idf/components/ieee802154 /home/utente/esp/esp-idf/components/json /home/utente/esp/esp-idf/components/log /home/utente/esp/esp-idf/components/lwip /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main /home/utente/esp/esp-idf/components/mbedtls /home/utente/esp/esp-idf/components/mqtt /home/utente/esp/esp-idf/components/newlib /home/utente/esp/esp-idf/components/nvs_flash /home/utente/esp/esp-idf/components/nvs_sec_provider /home/utente/esp/esp-idf/components/openthread /home/utente/esp/esp-idf/components/partition_table /home/utente/esp/esp-idf/components/perfmon /home/utente/esp/esp-idf/components/protobuf-c /home/utente/esp/esp-idf/components/protocomm /home/utente/esp/esp-idf/components/pthread /home/utente/esp/esp-idf/components/sdmmc /home/utente/esp/esp-idf/components/soc /home/utente/esp/esp-idf/components/spi_flash /home/utente/esp/esp-idf/components/spiffs /home/utente/esp/esp-idf/components/tcp_transport /home/utente/esp/esp-idf/components/touch_element /home/utente/esp/esp-idf/components/ulp /home/utente/esp/esp-idf/components/unity /home/utente/esp/esp-idf/components/usb /home/utente/esp/esp-idf/components/vfs /home/utente/esp/esp-idf/components/wear_levelling /home/utente/esp/esp-idf/components/wifi_provisioning /home/utente/esp/esp-idf/components/wpa_supplicant /home/utente/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/bootloader/esp-idf/esptool_py && /home/utente/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/utente/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/9] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[3/9] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/home/utente/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3-dev-2265-gfdb7a43752-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/build/config -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main -I/home/utente/esp/esp-idf/components/newlib/platform_include -I/home/utente/esp/esp-idf/components/freertos/config/include -I/home/utente/esp/esp-idf/components/freertos/config/include/freertos -I/home/utente/esp/esp-idf/components/freertos/config/xtensa/include -I/home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/utente/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/utente/esp/esp-idf/components/freertos/esp_additions/include -I/home/utente/esp/esp-idf/components/esp_hw_support/include -I/home/utente/esp/esp-idf/components/esp_hw_support/include/soc -I/home/utente/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/utente/esp/esp-idf/components/esp_hw_support/dma/include -I/home/utente/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/utente/esp/esp-idf/components/esp_hw_support/port/esp32s3/include -I/home/utente/esp/esp-idf/components/heap/include -I/home/utente/esp/esp-idf/components/log/include -I/home/utente/esp/esp-idf/components/soc/include -I/home/utente/esp/esp-idf/components/soc/esp32s3 -I/home/utente/esp/esp-idf/components/soc/esp32s3/include -I/home/utente/esp/esp-idf/components/hal/platform_port/include -I/home/utente/esp/esp-idf/components/hal/esp32s3/include -I/home/utente/esp/esp-idf/components/hal/include -I/home/utente/esp/esp-idf/components/esp_rom/include -I/home/utente/esp/esp-idf/components/esp_rom/include/esp32s3 -I/home/utente/esp/esp-idf/components/esp_rom/esp32s3 -I/home/utente/esp/esp-idf/components/esp_common/include -I/home/utente/esp/esp-idf/components/esp_system/include -I/home/utente/esp/esp-idf/components/esp_system/port/soc -I/home/utente/esp/esp-idf/components/esp_system/port/include/private -I/home/utente/esp/esp-idf/components/xtensa/esp32s3/include -I/home/utente/esp/esp-idf/components/xtensa/include -I/home/utente/esp/esp-idf/components/xtensa/deprecated_include -I/home/utente/esp/esp-idf/components/lwip/include -I/home/utente/esp/esp-idf/components/lwip/include/apps -I/home/utente/esp/esp-idf/components/lwip/include/apps/sntp -I/home/utente/esp/esp-idf/components/lwip/lwip/src/include -I/home/utente/esp/esp-idf/components/lwip/port/include -I/home/utente/esp/esp-idf/components/lwip/port/freertos/include -I/home/utente/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/utente/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/utente/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/dotprod/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/support/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/support/mem/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/hann/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/blackman/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/blackman_harris/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/blackman_nuttall/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/nuttall/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/windows/flat_top/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/iir/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/fir/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/add/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/sub/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/mul/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/addc/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/mulc/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/math/sqrt/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/mul/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/add/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/addc/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/mulc/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/sub/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/fft/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/dct/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/conv/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/common/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/matrix/mul/test/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/kalman/ekf/include -I/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/managed_components/espressif__esp-dsp/modules/kalman/ekf_imu13states/include -I/home/utente/esp/esp-idf/components/esp_driver_gpio/include -I/home/utente/esp/esp-idf/components/esp_pm/include -I/home/utente/esp/esp-idf/components/mbedtls/port/include -I/home/utente/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/utente/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/utente/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/utente/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/utente/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/utente/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/utente/esp/esp-idf/components/efuse/include -I/home/utente/esp/esp-idf/components/efuse/esp32s3/include -I/home/utente/esp/esp-idf/components/esp_bootloader_format/include -I/home/utente/esp/esp-idf/components/esp_app_format/include -I/home/utente/esp/esp-idf/components/bootloader_support/include -I/home/utente/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/utente/esp/esp-idf/components/esp_partition/include -I/home/utente/esp/esp-idf/components/app_update/include -I/home/utente/esp/esp-idf/components/esp_mm/include -I/home/utente/esp/esp-idf/components/spi_flash/include -I/home/utente/esp/esp-idf/components/pthread/include -I/home/utente/esp/esp-idf/components/esp_timer/include -I/home/utente/esp/esp-idf/components/esp_driver_gptimer/include -I/home/utente/esp/esp-idf/components/esp_ringbuf/include -I/home/utente/esp/esp-idf/components/esp_driver_uart/include -I/home/utente/esp/esp-idf/components/vfs/include -I/home/utente/esp/esp-idf/components/app_trace/include -I/home/utente/esp/esp-idf/components/esp_event/include -I/home/utente/esp/esp-idf/components/nvs_flash/include -I/home/utente/esp/esp-idf/components/esp_driver_pcnt/include -I/home/utente/esp/esp-idf/components/esp_driver_spi/include -I/home/utente/esp/esp-idf/components/esp_driver_mcpwm/include -I/home/utente/esp/esp-idf/components/esp_driver_ana_cmpr/include -I/home/utente/esp/esp-idf/components/esp_driver_i2s/include -I/home/utente/esp/esp-idf/components/sdmmc/include -I/home/utente/esp/esp-idf/components/esp_driver_sdmmc/include -I/home/utente/esp/esp-idf/components/esp_driver_sdspi/include -I/home/utente/esp/esp-idf/components/esp_driver_sdio/include -I/home/utente/esp/esp-idf/components/esp_driver_dac/include -I/home/utente/esp/esp-idf/components/esp_driver_rmt/include -I/home/utente/esp/esp-idf/components/esp_driver_tsens/include -I/home/utente/esp/esp-idf/components/esp_driver_sdm/include -I/home/utente/esp/esp-idf/components/esp_driver_i2c/include -I/home/utente/esp/esp-idf/components/esp_driver_ledc/include -I/home/utente/esp/esp-idf/components/esp_driver_parlio/include -I/home/utente/esp/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/utente/esp/esp-idf/components/driver/deprecated -I/home/utente/esp/esp-idf/components/driver/i2c/include -I/home/utente/esp/esp-idf/components/driver/touch_sensor/include -I/home/utente/esp/esp-idf/components/driver/twai/include -I/home/utente/esp/esp-idf/components/driver/touch_sensor/esp32s3/include -I/home/utente/esp/esp-idf/components/esp_phy/include -I/home/utente/esp/esp-idf/components/esp_phy/esp32s3/include -I/home/utente/esp/esp-idf/components/esp_netif/include -I/home/utente/esp/esp-idf/components/wpa_supplicant/include -I/home/utente/esp/esp-idf/components/wpa_supplicant/port/include -I/home/utente/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/utente/esp/esp-idf/components/esp_coex/include -I/home/utente/esp/esp-idf/components/esp_wifi/include -I/home/utente/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/utente/esp/esp-idf/components/esp_wifi/include/local -I/home/utente/esp/esp-idf/components/unity/include -I/home/utente/esp/esp-idf/components/unity/unity/src -I/home/utente/esp/esp-idf/components/cmock/CMock/src -I/home/utente/esp/esp-idf/components/console -I/home/utente/esp/esp-idf/components/http_parser -I/home/utente/esp/esp-idf/components/esp-tls -I/home/utente/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/utente/esp/esp-idf/components/esp_adc/include -I/home/utente/esp/esp-idf/components/esp_adc/interface -I/home/utente/esp/esp-idf/components/esp_adc/esp32s3/include -I/home/utente/esp/esp-idf/components/esp_adc/deprecated/include -I/home/utente/esp/esp-idf/components/esp_driver_cam/include -I/home/utente/esp/esp-idf/components/esp_driver_cam/interface -I/home/utente/esp/esp-idf/components/esp_eth/include -I/home/utente/esp/esp-idf/components/esp_gdbstub/include -I/home/utente/esp/esp-idf/components/esp_hid/include -I/home/utente/esp/esp-idf/components/tcp_transport/include -I/home/utente/esp/esp-idf/components/esp_http_client/include -I/home/utente/esp/esp-idf/components/esp_http_server/include -I/home/utente/esp/esp-idf/components/esp_https_ota/include -I/home/utente/esp/esp-idf/components/esp_https_server/include -I/home/utente/esp/esp-idf/components/esp_psram/include -I/home/utente/esp/esp-idf/components/esp_lcd/include -I/home/utente/esp/esp-idf/components/esp_lcd/interface -I/home/utente/esp/esp-idf/components/esp_lcd/rgb/include -I/home/utente/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/utente/esp/esp-idf/components/protocomm/include/common -I/home/utente/esp/esp-idf/components/protocomm/include/security -I/home/utente/esp/esp-idf/components/protocomm/include/transports -I/home/utente/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/home/utente/esp/esp-idf/components/esp_local_ctrl/include -I/home/utente/esp/esp-idf/components/espcoredump/include -I/home/utente/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/utente/esp/esp-idf/components/wear_levelling/include -I/home/utente/esp/esp-idf/components/fatfs/diskio -I/home/utente/esp/esp-idf/components/fatfs/src -I/home/utente/esp/esp-idf/components/fatfs/vfs -I/home/utente/esp/esp-idf/components/idf_test/include -I/home/utente/esp/esp-idf/components/idf_test/include/esp32s3 -I/home/utente/esp/esp-idf/components/ieee802154/include -I/home/utente/esp/esp-idf/components/json/cJSON -I/home/utente/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/utente/esp/esp-idf/components/nvs_sec_provider/include -I/home/utente/esp/esp-idf/components/perfmon/include -I/home/utente/esp/esp-idf/components/spiffs/include -I/home/utente/esp/esp-idf/components/touch_element/include -I/home/utente/esp/esp-idf/components/usb/include -I/home/utente/esp/esp-idf/components/wifi_provisioning/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery=. -fmacro-prefix-map=/home/utente/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/main.c
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:15,
+                 from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/main.c:1:
+/home/utente/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:16:
+/home/utente/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h: In function 'init_adc':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:55:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   55 |     ESP_ERROR_CHECK(adc1_config_channel_atten(ADC1_CHANNEL_0, ADC_ATTEN_DB_11));
+      |     ^~~~~~~~~~~~~~~
+In file included from /home/utente/esp/esp-idf/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from /home/utente/esp/esp-idf/components/driver/deprecated/driver/adc.h:15:
+/home/utente/esp/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/main.c:3:
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: At top level:
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:27:1: error: unknown type name 'esp_mqtt_client_handle_t'; did you mean 'esp_etm_event_handle_t'?
+   27 | esp_mqtt_client_handle_t client = {0};
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+      | esp_etm_event_handle_t
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: In function 'mqtt_event_handler':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:31:5: error: unknown type name 'esp_mqtt_event_handle_t'; did you mean 'esp_etm_event_handle_t'?
+   31 |     esp_mqtt_event_handle_t event = data;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_etm_event_handle_t
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:31:37: warning: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   31 |     esp_mqtt_event_handle_t event = data;
+      |                                     ^~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:32:19: error: invalid type argument of '->' (have 'int')
+   32 |     client = event->client;
+      |                   ^~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:34:14: error: 'MQTT_EVENT_CONNECTED' undeclared (first use in this function); did you mean 'WIFI_EVENT_STA_CONNECTED'?
+   34 |     if(id == MQTT_EVENT_CONNECTED){
+      |              ^~~~~~~~~~~~~~~~~~~~
+      |              WIFI_EVENT_STA_CONNECTED
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:34:14: note: each undeclared identifier is reported only once for each function it appears in
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:37:19: error: 'MQTT_EVENT_DISCONNECTED' undeclared (first use in this function); did you mean 'WIFI_EVENT_STA_DISCONNECTED'?
+   37 |     else if(id == MQTT_EVENT_DISCONNECTED){
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+      |                   WIFI_EVENT_STA_DISCONNECTED
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:40:19: error: 'MQTT_EVENT_SUBSCRIBED' undeclared (first use in this function)
+   40 |     else if(id == MQTT_EVENT_SUBSCRIBED){
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:45:19: error: 'MQTT_EVENT_UNSUBSCRIBED' undeclared (first use in this function)
+   45 |     else if(id == MQTT_EVENT_UNSUBSCRIBED){
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/adc_fft_utils.h:17:
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:74: error: invalid type argument of '->' (have 'int')
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:435:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  435 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:9: note: in expansion of macro 'ESP_LOGI'
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:74: error: invalid type argument of '->' (have 'int')
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:9: note: in expansion of macro 'ESP_LOGI'
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:74: error: invalid type argument of '->' (have 'int')
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:9: note: in expansion of macro 'ESP_LOGI'
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:74: error: invalid type argument of '->' (have 'int')
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:9: note: in expansion of macro 'ESP_LOGI'
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:74: error: invalid type argument of '->' (have 'int')
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:46:9: note: in expansion of macro 'ESP_LOGI'
+   46 |         ESP_LOGI(APP_NAME_MQTT, "Unsubscribed \t id_message* : %d", event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:48:19: error: 'MQTT_EVENT_PUBLISHED' undeclared (first use in this function)
+   48 |     else if(id == MQTT_EVENT_PUBLISHED){
+      |                   ^~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:74: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:435:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  435 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:87: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                                       ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:435:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  435 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:74: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:87: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                                       ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:74: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:87: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                                       ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:74: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:87: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                                       ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:74: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                          ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:87: error: invalid type argument of '->' (have 'int')
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |                                                                                       ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:49:9: note: in expansion of macro 'ESP_LOGI'
+   49 |         ESP_LOGI(APP_NAME_MQTT, "Published %s \t id_message* : %d", event->data, event->msg_id);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:51:19: error: 'MQTT_EVENT_DATA' undeclared (first use in this function)
+   51 |     else if(id == MQTT_EVENT_DATA){
+      |                   ^~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:55:14: error: invalid type argument of '->' (have 'int')
+   55 |         event->data[event->data_len] = '\0';
+      |              ^~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:55:26: error: invalid type argument of '->' (have 'int')
+   55 |         event->data[event->data_len] = '\0';
+      |                          ^~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:63: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                               ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:435:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  435 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:77: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                                             ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:435:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  435 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:63: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                               ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:77: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                                             ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:436:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:63: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                               ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:77: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                                             ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:437:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  437 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:63: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                               ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:77: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                                             ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:438:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  438 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:63: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                               ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:77: error: invalid type argument of '->' (have 'int')
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |                                                                             ^~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:439:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  439 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/utente/esp/esp-idf/components/log/include/esp_log.h:367:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  367 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:56:9: note: in expansion of macro 'ESP_LOGI'
+   56 |         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
+      |         ^~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:58:19: error: 'MQTT_EVENT_ERROR' undeclared (first use in this function)
+   58 |     else if(id == MQTT_EVENT_ERROR){
+      |                   ^~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:59:18: error: invalid type argument of '->' (have 'int')
+   59 |         if (event->error_handle->error_type == MQTT_ERROR_TYPE_TCP_TRANSPORT)
+      |                  ^~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:59:48: error: 'MQTT_ERROR_TYPE_TCP_TRANSPORT' undeclared (first use in this function)
+   59 |         if (event->error_handle->error_type == MQTT_ERROR_TYPE_TCP_TRANSPORT)
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:62:23: error: invalid type argument of '->' (have 'int')
+   62 |         else if (event->error_handle->error_type == MQTT_ERROR_TYPE_CONNECTION_REFUSED)
+      |                       ^~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:62:53: error: 'MQTT_ERROR_TYPE_CONNECTION_REFUSED' undeclared (first use in this function)
+   62 |         else if (event->error_handle->error_type == MQTT_ERROR_TYPE_CONNECTION_REFUSED)
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: In function 'start_mqtt':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:73:5: error: unknown type name 'esp_mqtt_client_config_t'; did you mean 'esp_etm_channel_config_t'?
+   73 |     esp_mqtt_client_config_t conf = {
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_etm_channel_config_t
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:74:9: error: field name not in record or union initializer
+   74 |         .broker = {
+      |         ^
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:74:9: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:74:9: warning: braces around scalar initializer
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:74:9: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:75:13: error: field name not in record or union initializer
+   75 |             .address.uri = URI,
+      |             ^
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:75:13: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:16:13: warning: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   16 | #define URI "mqtts://54c7f0618968409f95ff78c304b7b78e.s1.eu.hivemq.cloud:8883"
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:75:28: note: in expansion of macro 'URI'
+   75 |             .address.uri = URI,
+      |                            ^~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:16:13: note: (near initialization for 'conf')
+   16 | #define URI "mqtts://54c7f0618968409f95ff78c304b7b78e.s1.eu.hivemq.cloud:8883"
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:75:28: note: in expansion of macro 'URI'
+   75 |             .address.uri = URI,
+      |                            ^~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:76:13: error: field name not in record or union initializer
+   76 |             .verification.certificate = (const char*) broker_cert_pem,
+      |             ^
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:76:13: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:76:41: warning: excess elements in scalar initializer
+   76 |             .verification.certificate = (const char*) broker_cert_pem,
+      |                                         ^
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:76:41: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:80:9: error: field name not in record or union initializer
+   80 |         .credentials.username = CREDENTIAL_USERNAME,
+      |         ^
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:80:9: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:20:29: warning: excess elements in scalar initializer
+   20 | #define CREDENTIAL_USERNAME "lorenzo_tester"
+      |                             ^~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:80:33: note: in expansion of macro 'CREDENTIAL_USERNAME'
+   80 |         .credentials.username = CREDENTIAL_USERNAME,
+      |                                 ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:20:29: note: (near initialization for 'conf')
+   20 | #define CREDENTIAL_USERNAME "lorenzo_tester"
+      |                             ^~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:80:33: note: in expansion of macro 'CREDENTIAL_USERNAME'
+   80 |         .credentials.username = CREDENTIAL_USERNAME,
+      |                                 ^~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:81:9: error: field name not in record or union initializer
+   81 |         .credentials.authentication.password = CREDENTIAL_PWD,
+      |         ^
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:81:9: note: (near initialization for 'conf')
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:21:24: warning: excess elements in scalar initializer
+   21 | #define CREDENTIAL_PWD "HiveMQ1_credentials"
+      |                        ^~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:81:48: note: in expansion of macro 'CREDENTIAL_PWD'
+   81 |         .credentials.authentication.password = CREDENTIAL_PWD,
+      |                                                ^~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:21:24: note: (near initialization for 'conf')
+   21 | #define CREDENTIAL_PWD "HiveMQ1_credentials"
+      |                        ^~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:81:48: note: in expansion of macro 'CREDENTIAL_PWD'
+   81 |         .credentials.authentication.password = CREDENTIAL_PWD,
+      |                                                ^~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:84:5: error: unknown type name 'esp_mqtt_client_handle_t'; did you mean 'esp_etm_event_handle_t'?
+   84 |     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&conf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_etm_event_handle_t
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:84:39: error: implicit declaration of function 'esp_mqtt_client_init' [-Werror=implicit-function-declaration]
+   84 |     esp_mqtt_client_handle_t client = esp_mqtt_client_init(&conf);
+      |                                       ^~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:85:5: error: implicit declaration of function 'esp_mqtt_client_register_event' [-Werror=implicit-function-declaration]
+   85 |     esp_mqtt_client_register_event(client, MQTT_EVENT_ANY, mqtt_event_handler, NULL);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:85:44: error: 'MQTT_EVENT_ANY' undeclared (first use in this function)
+   85 |     esp_mqtt_client_register_event(client, MQTT_EVENT_ANY, mqtt_event_handler, NULL);
+      |                                            ^~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:89:5: error: implicit declaration of function 'esp_mqtt_client_start' [-Werror=implicit-function-declaration]
+   89 |     esp_mqtt_client_start(client);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: In function 'subscribe_to_topic':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:93:5: error: implicit declaration of function 'esp_mqtt_client_subscribe' [-Werror=implicit-function-declaration]
+   93 |     esp_mqtt_client_subscribe(client, TOPIC, QOS);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: In function 'unsubscribe_to_topic':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:97:5: error: implicit declaration of function 'esp_mqtt_client_unsubscribe' [-Werror=implicit-function-declaration]
+   97 |     esp_mqtt_client_unsubscribe(client, TOPIC);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h: In function 'send_value_to_broker':
+/home/utente/Scrivania/univ/iot_as/indiv_proj/indivdual_project/codes/delivery/main/mqtt_utils.h:122:5: error: implicit declaration of function 'esp_mqtt_client_publish' [-Werror=implicit-function-declaration]
+  122 |     esp_mqtt_client_publish(client, TOPIC, str, 0, QOS, 0);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

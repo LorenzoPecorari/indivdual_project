@@ -16,11 +16,11 @@
 // define section
 #define APP_NAME "[WI-FI] "
 
-// #define SSID "S10 di Lorenzo"
-// #define PASSWORD "1W1llH4ckY0ur4cc0unt"
+#define SSID "S10 di Lorenzo"
+#define PASSWORD "1W1llH4ckY0ur4cc0unt"
 
-#define SSID "Vodafone-A76372035"
-#define PASSWORD "bhhuy6w9v82zyds4"
+// #define SSID "Vodafone-A76372035"
+// #define PASSWORD "bhhuy6w9v82zyds4"
 
 #define CONN_BIT BIT0
 #define FAIL_BIT BIT1
