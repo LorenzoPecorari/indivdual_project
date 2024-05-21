@@ -34,7 +34,7 @@ def plot_and_save(power):
     plt.xlabel('Sample')
     plt.ylabel('Value')
     plt.title('Energy consumption')
-    plt.savefig('consumption_data_particular.pdf')
+    plt.savefig('consumption_data_particular.jpg')
     plt.close()
     
     with open('consumption_data_particular.txt', 'w') as f:
