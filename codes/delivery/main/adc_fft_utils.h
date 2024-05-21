@@ -177,13 +177,13 @@ float aggregate_over_window(float time){
     int s = (int) ceil((time * 1000) / duration);
     int cycles = (int) (ceil((float)s / SAMPLES));
 
-    printf("T: %f - #samples: %d - cycles: %d\n", time, s, cycles);
-
     float means[cycles];
     for(int i = 0; i < cycles; i++)
         means[i] = 0.0;
 
     float final_mean = 0.0;
+
+    ESP_LOGI(APP_NAME_ADC, "Aggregate function over window => T: %f - #samples: %d - cycles: %d", time, s, cycles);
 
     for(int i = 0; i < cycles; i++){
         get_adc_values();

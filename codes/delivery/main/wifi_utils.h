@@ -1,10 +1,6 @@
 // include section
-#include <stdio.h>
+#include "../../common/common.h"
 #include <string.h>
-
-#include "freertos/FreeRTOS.h"
-#include "freertos/event_groups.h"
-#include "freertos/task.h"
 
 #include "nvs_flash.h"
 
@@ -14,7 +10,7 @@
 #include "esp_log.h"
 
 // define section
-#define APP_NAME "[WI-FI] "
+#define APP_NAME_WIFI "[WI-FI] "
 
 #define SSID "S10 di Lorenzo"
 #define PASSWORD "1W1llH4ckY0ur4cc0unt"
@@ -28,33 +24,37 @@
 // global vars
 EventGroupHandle_t group;
 
+int DISC_BIT = 0;
+
 // function for (mainly) handling wifi events 
 void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data){
 
-    ESP_LOGI(APP_NAME, "Event: %ld", event_id);
+    ESP_LOGI(APP_NAME_WIFI, "Event: %ld", event_id);
 
     // checks if the event is a wifi-related one
     if(event_base == WIFI_EVENT){
 
         // if event is about the starting of station session and tries to conenct to AP 
         if (event_id == WIFI_EVENT_STA_START){
-            ESP_LOGI(APP_NAME, "Connecting to wifi...");
+            ESP_LOGI(APP_NAME_WIFI, "Connecting to wifi...");
             if (esp_wifi_connect() == ESP_OK)
-                ESP_LOGI(APP_NAME, "Connection success!");
+                ESP_LOGI(APP_NAME_WIFI, "Connection success!");
         }
 
         // if event is related to a disconnection it will try to reconnect to it
         else if(event_id == WIFI_EVENT_STA_DISCONNECTED){
-            ESP_LOGE(APP_NAME, "Disconnected, reconnection will be tried");
-            ESP_LOGI(APP_NAME, "Reconnecting to wifi...");
-            if (esp_wifi_connect() == ESP_OK)
-                ESP_LOGI(APP_NAME, "Connection success!");
+            if(!DISC_BIT){
+                ESP_LOGE(APP_NAME_WIFI, "Disconnected, reconnection will be tried");
+                ESP_LOGI(APP_NAME_WIFI, "Reconnecting to wifi...");
+                if (esp_wifi_connect() == ESP_OK)
+                    ESP_LOGI(APP_NAME_WIFI, "Connection success!");
+                }
+            }
         }
-    }
 
     else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-        ESP_LOGI(APP_NAME, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
+        ESP_LOGI(APP_NAME_WIFI, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
         xEventGroupSetBits(group, CONN_BIT);
     }
 }
@@ -107,17 +107,17 @@ void wifi_init(){
 
     // checking for these bits, each one is referred to a certain event
     if(notification_bits & CONN_BIT)
-        ESP_LOGI(APP_NAME, "Connected to AP");
+        ESP_LOGI(APP_NAME_WIFI, "Connected to AP");
     else if (notification_bits & FAIL_BIT)
-        ESP_LOGE(APP_NAME, "Failed to connect to AP");
+        ESP_LOGE(APP_NAME_WIFI, "Failed to connect to AP");
     else
-        ESP_LOGE(APP_NAME, "Unknown event");
+        ESP_LOGE(APP_NAME_WIFI, "Unknown event");
 
-    ESP_LOGI(APP_NAME, "Init completed");
+    ESP_LOGI(APP_NAME_WIFI, "Init completed");
 }
 
 void wifi_init_main(void) {
-    ESP_LOGI(APP_NAME, "Testing the wifi module");
+    ESP_LOGI(APP_NAME_WIFI, "Testing the wifi module");
 
     // initialization of non-volatile storage memory    
     esp_err_t error = nvs_flash_init();
@@ -129,4 +129,18 @@ void wifi_init_main(void) {
 
     // execution of wifi initialization function previously defined
     wifi_init();
+}
+
+void wifi_termination(){
+    DISC_BIT += 1;
+    if(esp_wifi_disconnect() == ESP_OK)
+        ESP_LOGI(APP_NAME_WIFI, "Disconnected from WiFi");
+    else{
+        ESP_LOGI(APP_NAME_WIFI, "WiFi disconnection error");
+    }
+
+    if(esp_wifi_stop() == ESP_OK)
+        ESP_LOGI(APP_NAME_WIFI, "WiFi driver stopped");
+    else
+        ESP_LOGI(APP_NAME_WIFI, "WiFi driver stopping error");
 }
