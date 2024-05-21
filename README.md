@@ -3,7 +3,29 @@ Individual project for "IoT - Alogorithms and Services 2023-2024" course.
 
 Lorenzo Pecorari - 1885161 - pecorari.1885161@studenti.uniroma1.it
 
-The main goal of the project is to provide a system that should be able to collect information, compute an aggregate function and communicate the results to a server. Through sensors and the Fast Fourirer Transofrm, the microcontroller have to compute the maximum frequency of an unknown signal given as input in order to find the new sampling frequency and compute a new collection of data: the adaptation to this new frequency should allow to increase the energy saving. After computing a new collection of data basing on this new frequency, the ESP32 have to send the new computation to a server using the WiFi connection.
+The main goal of the project is to provide a system that should be able to collect information, compute an aggregate function and communicate the results to a server. Through sensors and the Fast Fourirer Transofrm, the microcontroller have to compute the maximum frequency of an unknown signal given as input in order to find the new sampling frequency and compute a new collection of data: the adaptation to this new frequency should allow to increase the energy saving. After computing a new collection of data basing on this new frequency, the ESP32-S3 have to send the new computation to a server using the WiFi connection.
+
+## Hardware and Software
+The required material for this project is the following:
+<li>Espressif ESP32-S3 v3.1</li>
+<li>Arduino Uno</li>
+<li>Ina219</li>
+<li>"Analog audio input" circuit</li>
+<li>Jumper cables</li>
+<li>2x USB Type-C cables</li>
+<br>
+Software, frameworks, libraries and services used for the handling the hardware are the following:
+<li>FreeRTOS</li>
+<li>ESP-IDF</li>
+<li>ESP-DSC</li>
+<li>HiveMQ</li>
+<li>MQTT Explorer</li>
+<li>Arduino IDE</li>
+
+## Setting up everything
+In order to make working the code contained into this repository, is needed to open an ESP-IDF terminal into the folder <code>codes/delivery</code> and executing the command <code>idf.py build</code>. After that, connect the ESP32 to the audio circuit in order to give power supply and same ground to this last one but the output pin conencted to the GPIO_NUM_1. Once that, execute <code>idf.py flash</code> and connect the audio connector to the dedicated output port of the device that will reproduce the signal to be given as input to the microcontroller. After starting to play the signal, it is possible to start to monitor what the ESP32 does through <code>idf.py monitor</code>. A visible output is returned to the user thanks to some prints on the terminal window.
+
+For the energy consumption monitoring, is needed to connect the Ina219 between the power supply and the ESP32 itself while the pins to the equivalent ones on the Arduino Uno. The output of this microcontroller can be visualized using a serial monitor with baud rate 115200.
 
 ## Maximum sampling frequency
 Since the device offers the possibility to capture analog signal from the external world, using the ADC (analog to digital converter) is possible to convert that signal into a flow of digital values. 
@@ -53,6 +75,8 @@ Starting from the time given as input to the function, the number of samples the
 
 The locally computed values have to be send to an edge server using MQTT in a secure way.
 
+The following cited functions are implemented into <code>mqtt_utils.h</code> and <code>wifi_utils.h</code>.
+
 ### Connecting to a WiFi router
 The essential step for connecting to the server is inside the connection to a WiFi router that allows to connect over the Internet.
 
@@ -60,8 +84,12 @@ Most of events of that are related to it being caputered by the ad hoc function 
 
 Through some library functions, the microcontroller tries to connect to the router in "station" mode, a way to behave as a client into the network, having its own MAC and IP address. It is also required to being authenticated using credentials if the router requires them.
 
-### MQTT broker communication
+### MQTT communication
 
 As soon as the system is connected to the router, it will try to connect to the server that behaves as a broker. 
 
-... TODO
+Using HiveMQ with an authenticated communication using credentials and a TLS certificate, the ESP32 is capable to communicate with the broker, connecting, subscribing and subscribing to a certain topic other than publishing and receiving messages. The certificate is manually given by using the command <code>openssl s_client -connect HOSTNAME.s1.eu.hivemq.cloud:PORT -showcerts > CERTIFICATE_NAME.txt</code>. The result stores information into a txt file and, from it, is needed to take the take the second certificate in it, representing the CA root certificate, and saving it into a file with one of the compatible extensions for certificates (ex. <code>pem</code>). After converting the certificate into a stream of bytes through the command <code>xxd -i CERTIFICATE_NAME.pem > CERTIFICATE_NAME.h</code>, the system retrieves it by the include into the file that needed it. In this project, the population of the fields <code>broker</code> and <code>credentials</code> of the structure <code>conf</codez>, which type is <code>esp_mqtt_client_config_t</code>, guarantees correct connection to the broker.
+
+Through <code>start_mqtt()</code> the system can initializate the connection to the server and start the client, managing events with the function <code>esp_mqtt_client_init()</code>.
+
+After the computation of the aggregate function into the previously called functions, it is possible to send those vales thanks to thr function <code>send_value_to_broker()</code>: it takes two variables as input and generate a string representing the message to send to the broker. More in detail, the message is published using the library function <code>esp_mqtt_client_publish()</code>.
