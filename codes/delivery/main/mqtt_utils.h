@@ -134,7 +134,7 @@ void send_value_to_broker(float message, const char* arg){
     
     start_time = esp_timer_get_time();
     start_time = esp_timer_get_time();
-    printf("start_time: %lld\n", start_time);
+    //printf("start_time: %lld\n", start_time);
 
     esp_mqtt_client_publish(client, TOPIC, str, 0, QOS, 0);
 }

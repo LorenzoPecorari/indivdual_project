@@ -29,7 +29,6 @@ void app_main(void){
     wifi_termination();
 
     // CODE FOR ENERGY CONSUMPTION
-    
     // init_adc();
     // fft_init();
     
