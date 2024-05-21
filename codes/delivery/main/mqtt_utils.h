@@ -72,7 +72,7 @@ void mqtt_event_handler(void* args, esp_event_base_t base, int32_t id, void* dat
     }
     else if(id == MQTT_EVENT_DATA){
         end_time = esp_timer_get_time();
-        printf("Latency %lld ms\n", (end_time - start_time) / 1000);
+        printf("Latency %lld ms\n", ((end_time - start_time) / 2) / 1000);
         
         event->data[event->data_len] = '\0';
         ESP_LOGI(APP_NAME_MQTT, "Topic: %s \t Data: %s", event->topic, event->data);
@@ -119,10 +119,7 @@ void unsubscribe_to_topic(){
     esp_mqtt_client_unsubscribe(client, TOPIC);
 }
 
-int send_value_to_broker(float message, const char* arg){
-    int volume = 0;
-    volume += 2; // mqtt fixed overhead in bytes
-
+void send_value_to_broker(float message, const char* arg){
     char str[64];
     char* prefix = "Computed mean ";
     int offset = strlen(prefix);
@@ -134,15 +131,11 @@ int send_value_to_broker(float message, const char* arg){
 
     sprintf(str + offset, "%.2f", message);
     strcat(str, " mV");
-
-    volume += (strlen(TOPIC) + strlen(str));
     
     start_time = esp_timer_get_time();
     start_time = esp_timer_get_time();
     printf("start_time: %lld\n", start_time);
 
     esp_mqtt_client_publish(client, TOPIC, str, 0, QOS, 0);
-
-    return volume;
 }
 

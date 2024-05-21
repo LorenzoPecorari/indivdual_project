@@ -56,15 +56,21 @@ This mathematical-statistical tools allows to compute the "weight" of a specific
 After executing the function <code>max_freq_calc()</code>, the system finds the outlier value with higher frequency: in other words, the value with a relevant weight that has the higher value. That index, return value of <code>max_f_idx()</code>, will be divided by the value of <code>duration</code>.
  The follwing result is obtained by the formula that allows to find the sampling frequqncy:<br>
 
- $ \text{maximum frequency} = \left( \frac{\text{maximum index}}{\text{SAMPLES}} \right) \times \text{(sampling frequency)} = \left( \frac{\text{maximum index}}{\text{SAMPLES}} \right) \times \left( \frac{\text{SAMPLES}}{\text{duration}} \right) = \left( \frac{\text{maximum index}}{\text{duration}} \right)$ .
+ $$
+\text{maximum frequency} = \left( \frac{\text{maximum index}}{\text{SAMPLES}} \right) \times \text{(sampling frequency)} = \left( \frac{\text{maximum index}}{\text{SAMPLES}} \right) \times \left( \frac{\text{SAMPLES}}{\text{duration}} \right) = \left( \frac{\text{maximum index}}{\text{duration}} \right)
+$$ .
 
  That new frequency represents the maximum frequqncy of the input signal and, thanks to the Sampling theorem, it is possible to set the new sampling frequqncy to: <br>
 
-$ \text {samping frequency} \geq 2 \times \text {maximum frequqncy}  = 2 \times\left( \frac{\text{maximum index}}{\text{duration}} \right)$ .
+$$
+\text{samping frequency} \geq 2 \times \text{maximum frequency} = 2 \times \left( \frac{\text{maximum index}}{\text{duration}} \right)
+$$ .
 
 In order to avoid possible leaks during the sampling, the new sampling frequqncy adopted by the system is equal to 2,01 times that new maximum frequqncy found. Consequently, the new value of duration will be: <br>
 
-$ \text {duration} = 2.01 \times \text {maximum frequqncy} $ .
+$$
+\text {duration} = \left(\frac{\text{SAMPLES}}{\text{2.01 sampling frequqncy}} \right)
+$$ .
 
 ### Aggregate function over a window
 Once the optimal frequqncy is known, it can be sampled a new set of values that allows to save a certain amount of energy with respect to the oversampling situation. The aggregate function over a temporal window can now be computed using that and, given a time interval, the system will perform the collection of values. Using the function <code>aggregate_over_window()</code> it is possible to do that.
@@ -72,7 +78,6 @@ Once the optimal frequqncy is known, it can be sampled a new set of values that 
 Starting from the time given as input to the function, the number of samples the system have to take, is obtained from the ceil of the quotient betweer the time expressed in seconds above the variable <code>duration</code>. Analogously, the ceil of those samples and <code>SAMPLES</code> returns the number of cycles needed to satisfy that window. With a double cycle, the system takes the input from ADC and uses an array to track the intermediate values computed over each cycle. In the end, the sum of those average values will be divided by the number of cycles.
 
 ## Communication with the nearby server
-
 The locally computed values have to be send to an edge server using MQTT in a secure way.
 
 The following cited functions are implemented into <code>mqtt_utils.h</code> and <code>wifi_utils.h</code>.
@@ -85,11 +90,29 @@ Most of events of that are related to it being caputered by the ad hoc function 
 Through some library functions, the microcontroller tries to connect to the router in "station" mode, a way to behave as a client into the network, having its own MAC and IP address. It is also required to being authenticated using credentials if the router requires them.
 
 ### MQTT communication
-
 As soon as the system is connected to the router, it will try to connect to the server that behaves as a broker. 
 
-Using HiveMQ with an authenticated communication using credentials and a TLS certificate, the ESP32 is capable to communicate with the broker, connecting, subscribing and subscribing to a certain topic other than publishing and receiving messages. The certificate is manually given by using the command <code>openssl s_client -connect HOSTNAME.s1.eu.hivemq.cloud:PORT -showcerts > CERTIFICATE_NAME.txt</code>. The result stores information into a txt file and, from it, is needed to take the take the second certificate in it, representing the CA root certificate, and saving it into a file with one of the compatible extensions for certificates (ex. <code>pem</code>). After converting the certificate into a stream of bytes through the command <code>xxd -i CERTIFICATE_NAME.pem > CERTIFICATE_NAME.h</code>, the system retrieves it by the include into the file that needed it. In this project, the population of the fields <code>broker</code> and <code>credentials</code> of the structure <code>conf</codez>, which type is <code>esp_mqtt_client_config_t</code>, guarantees correct connection to the broker.
+Using HiveMQ with an authenticated communication using credentials and a TLS certificate, the ESP32 is capable to communicate with the broker, connecting, subscribing and subscribing to a certain topic other than publishing and receiving messages. The certificate is manually given by using the command <code>openssl s_client -connect HOSTNAME.s1.eu.hivemq.cloud:PORT -showcerts > CERTIFICATE_NAME.txt</code>. The result stores information into a txt file and, from it, is needed to take the take the second certificate in it, representing the CA root certificate, and saving it into a file with one of the compatible extensions for certificates (ex. <code>pem</code>). After converting the certificate into a stream of bytes through the command <code>xxd -i CERTIFICATE_NAME.pem > CERTIFICATE_NAME.h</code>, the system retrieves it by the include into the file that needed it. In this project, the population of the fields <code>broker</code> and <code>credentials</code> of the structure <code>conf</code>, which type is <code>esp_mqtt_client_config_t</code>, guarantees correct connection to the broker.
 
 Through <code>start_mqtt()</code> the system can initializate the connection to the server and start the client, managing events with the function <code>esp_mqtt_client_init()</code>.
 
-After the computation of the aggregate function into the previously called functions, it is possible to send those vales thanks to thr function <code>send_value_to_broker()</code>: it takes two variables as input and generate a string representing the message to send to the broker. More in detail, the message is published using the library function <code>esp_mqtt_client_publish()</code>.
+After the computation of the aggregate function into the previously called functions, it is possible to send those vales thanks to the function <code>send_value_to_broker()</code>: it takes two variables as input and generate a string representing the message to send to the broker. More in detail, the message is published using the library function <code>esp_mqtt_client_publish()</code>.
+
+Sended/published messages can be simply seen using the software "MQTT Explorer" with same credentials, host and port inserted into the code.
+
+### Closing the communication
+When all the tasks the system have to execute are done, it close the connection to the client, destroys the variable that handles it and procedes with the disconnection from the router that provides access to the Internet. Note: for achieving the connection closure with the nroker, it is needed a new and different <code>task</code> performing the function <code>client_stop_task()</code> that uses the library functions dedicate to this job. 
+
+## Energy consumption
+For analysing better how the optimized sampling frequqncy affects energy consumption, inside <code>main.c</code> is implemented a little set of instructions that performs 20 cycles of oversampling, a delay, computes the FFT for finding the maximum and optimal sampling frequencies, newly a delay and other 20 cycles of sampling using the new sampling rate. The adaptation of the frequqncy to a reasonably rate for the input signal generates, as predicted, an improvements in terms of power utilization. In fact, the values of the mW decreases between the two set of sampling-cycles but not so significantly as expected. Even if this may be caused by noises or a not so high accuracy of the instruments used for the measurements, there are no peaks higher than the ones revealed during the oversampling and there are also some "lower" peaks that in the previous case are not detected. Here the plot with the results:</br>
+
+<img src = "/measurements/consumption_data_particular.pdf"></br>
+
+The obtained results are obtained from the sampling of a sum of three different sinusoids with different frequencies (71, 183, 260 Hz) and they were played by the Python script <code>wave_sound.py</code> and detected using the "audio" circuit.
+
+Since it can be difficult to appreciate values from the graph, with the project is also provided a txt file containing the values sampled by the Arduino. For plotting and saving the results it was used a Python script (<code>plotter_uno.py</code>), included into the folder containing the "measurements" folder; for detecting the values from the Ina219 using the Arduino Uno it was used the script provided during the lectures with some modifications in order to achieve the goal for this project: also this is available in the previously cited directory.
+
+## Latency
+The end-to-end latency is calculated by and estimation of the times from the generation of the data to the reaching of them by the server. In fact, before invoking <code>esp_mqtt_client_publish()</code> and after detecting the capture of the event "MQTT_EVENT_DATA" it is taken the time of the microcontroller through <code>esp_timer_get_time()</code>. Computing the difference between these two values makes the system aware, with a good approximation, of the latency requested. After some execution, the average values of latency are included into the range from 70ms to 100ms.
+
+## Volume of transmitted data
