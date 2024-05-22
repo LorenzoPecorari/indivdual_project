@@ -36,11 +36,6 @@ def plot_and_save(power):
     plt.title('Energy consumption')
     plt.savefig('consumption_data_particular.jpg')
     plt.close()
-    
-    with open('consumption_data_particular.txt', 'w') as f:
-        f.write('Sample\tPower (mW)\n')
-        for i, value in enumerate(power):
-            f.write(f'{i}\t{value}\n')
             
 collect_data(sampling_time)
 plot_and_save(power)
